@@ -187,7 +187,7 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
       <a href="#method">Μεθοδολογία</a>
       <a href="#tools">Εργαλεία</a>
       <a href="/blog/">Blog</a>
-      <a href="/odigos/EU-AI-Act-Odigos-MME-thetaai.pdf" target="_blank" rel="noopener">Οδηγός</a>
+      <a href="#guide">Οδηγός</a>
       <a href="#faq">Συχνές ερωτήσεις</a>
     </nav>
   </div>
@@ -203,7 +203,7 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
     <div class="hero-cta">
       <a href="#contact" class="btn">Συνεδρία χαρτογράφησης 45&#8242;</a>
       <a href="#method" class="btn btn-ghost">Πώς δουλεύουμε →</a>
-      <a href="/odigos/EU-AI-Act-Odigos-MME-thetaai.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Δωρεάν οδηγός EU AI Act (PDF)</a>
+      <a href="#guide" class="btn btn-ghost">Δωρεάν οδηγός EU AI Act</a>
     </div>
   </div>
   <div class="hero-mark">
@@ -450,6 +450,67 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
         <p>Ο Έλεγχος Θωράκισης ξεκινά μέσα στην εβδομάδα και παραδίδεται σε 5–7 εργάσιμες. Προηγείται μια δωρεάν συνεδρία 45 λεπτών, στην οποία χαρτογραφούμε το σύστημά σας και ορίζουμε το ακριβές αντικείμενο του ελέγχου.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<section id="guide" class="ta-guide">
+  <style>
+    .ta-guide{--ink:#1B1E27;--blue:#2F4FE0;--cream:#F6F5F1;--muted:#6B6F7A;--line:#DCDAD2;
+      background:var(--cream);color:var(--ink);padding:72px 24px;font-family:inherit;}
+    .ta-guide .wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+    .ta-guide .eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+    .ta-guide h2{font-size:34px;line-height:1.1;font-weight:800;margin:0 0 16px;letter-spacing:-.5px;}
+    .ta-guide p.sub{font-size:17px;color:#3a3d47;margin:0 0 22px;}
+    .ta-guide ul{list-style:none;padding:0;margin:0;}
+    .ta-guide ul li{padding:8px 0 8px 28px;position:relative;color:#2c2f38;}
+    .ta-guide ul li::before{content:"";position:absolute;left:0;top:14px;width:10px;height:10px;
+      border:2px solid var(--blue);border-radius:50%;}
+    .ta-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(27,30,39,.06);}
+    .ta-card .ct{font-weight:800;font-size:19px;margin:0 0 6px;}
+    .ta-card .cd{color:var(--muted);font-size:14px;margin:0 0 18px;}
+    .ta-card label{display:block;font-size:13px;font-weight:700;margin:0 0 6px;}
+    .ta-card input[type=email]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:9px;
+      font-size:15px;font-family:inherit;box-sizing:border-box;}
+    .ta-card .consent{display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12.5px;color:var(--muted);line-height:1.45;}
+    .ta-card .consent input{margin-top:3px;}
+    .ta-card .consent a{color:var(--blue);}
+    .ta-card button{width:100%;background:var(--blue);color:#fff;border:0;border-radius:9px;
+      padding:14px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;}
+    .ta-card button:hover{filter:brightness(.94);}
+    .ta-card .micro{text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0;}
+    @media(max-width:780px){.ta-guide .wrap{grid-template-columns:1fr;gap:32px;}.ta-guide h2{font-size:28px;}}
+  </style>
+
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Δωρεάν οδηγός</div>
+      <h2>EU AI Act: τι αλλάζει για την επιχείρησή σου</h2>
+      <p class="sub">Ο πρακτικός οδηγός για ελληνικές ΜμΕ — πού πέφτει το AI σας στην πυραμίδα ρίσκου, ποιες προθεσμίες σας αφορούν, και οι 3 υποχρεώσεις που πιθανότατα ήδη σας δεσμεύουν. Διαβάζεται σε 15 λεπτά.</p>
+      <ul>
+        <li>Η πυραμίδα ρίσκου — και πού βρίσκεστε εσείς</li>
+        <li>Το χρονοδιάγραμμα με το update του 2026</li>
+        <li>AI Act &amp; GDPR: τι ισχύει παράλληλα</li>
+        <li>Self-check 7 ερωτήσεων για να δείτε πού στέκεστε</li>
+      </ul>
+    </div>
+
+    <form class="ta-card" name="guide-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/odigos/EU-AI-Act-Odigos-MME-thetaai.pdf">
+      <input type="hidden" name="form-name" value="guide-download">
+      <p hidden><label>Μην το συμπληρώνετε: <input name="bot-field"></label></p>
+      <p class="ct">Στείλτε μου τον οδηγό</p>
+      <p class="cd">Ένα email, ο οδηγός, τέλος.</p>
+
+      <label for="ta-email">Email</label>
+      <input id="ta-email" type="email" name="email" required placeholder="you@company.gr">
+
+      <div class="consent">
+        <input id="ta-consent" type="checkbox" name="consent" required>
+        <label for="ta-consent" style="font-weight:400;margin:0;">Συμφωνώ να λάβω τον οδηγό και περιστασιακή ενημέρωση από τη θita ai. Μπορώ να διαγραφώ ανά πάσα στιγμή. <a href="/privacy">Πολιτική απορρήτου</a>.</label>
+      </div>
+
+      <button type="submit">Στείλτε μου τον οδηγό →</button>
+      <p class="micro">Χωρίς spam. Τα δεδομένα σας δεν πωλούνται ποτέ.</p>
+    </form>
   </div>
 </section>
 
