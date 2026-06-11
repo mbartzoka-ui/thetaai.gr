@@ -494,7 +494,7 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
       </ul>
     </div>
 
-    <form class="ta-card" method="POST" action="https://formspree.io/f/meewrqgz">
+    <form class="ta-card" id="guideForm" method="POST" action="https://formspree.io/f/meewrqgz">
       <input type="hidden" name="_next" value="https://thetaai.gr/odigos/efxaristo/">
       <input type="hidden" name="_subject" value="Νέα λήψη οδηγού EU AI Act — thetaai.gr">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -512,6 +512,9 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
       <button type="submit">Στείλτε μου τον οδηγό →</button>
       <p class="micro">Χωρίς spam. Τα δεδομένα σας δεν πωλούνται ποτέ.</p>
     </form>
+<script>
+(function(){var f=document.getElementById("guideForm");if(!f)return;f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button[type=submit]");if(b){b.disabled=true;b.textContent="Στέλνεται…";}fetch(f.action,{method:"POST",body:new FormData(f),headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){window.location.href="/odigos/efxaristo/";}else{r.json().then(function(d){alert((d.errors&&d.errors[0]&&d.errors[0].message)||"Κάτι πήγε στραβά. Δοκίμασε ξανά.");if(b){b.disabled=false;b.textContent="Στείλτε μου τον οδηγό →";}});}}).catch(function(){f.submit();});});})();
+</script>
   </div>
 </section>
 
