@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  :root{
+    --cream:#F6F5F1;
+    --ink:#1B1E27;
+    --blue:#2F4FE0;
+    --blue-soft:#ECEFFD;
+    --muted:#6B6F7A;
+    --line:#DCDAD2;
+    --row:#ECEBE5;
+    --gray-box:#EEEDE8;
+  }
+  *{box-sizing:border-box;}
+  html{font-family:"Lato",sans-serif;}
+  body{margin:0;color:var(--ink);font-size:10.5pt;line-height:1.5;}
+
+  .page{
+    position:relative;
+    width:210mm;height:297mm;
+    background:var(--cream);
+    padding:22mm 20mm 18mm 20mm;
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto;}
+
+  /* logo */
+  .logo{display:flex;align-items:center;gap:7px;font-weight:900;font-size:15pt;letter-spacing:.2px;}
+  .logo .mark{width:26px;height:26px;}
+  .logo .ai{color:var(--blue);}
+
+  /* footer */
+  .footer{
+    position:absolute;left:20mm;right:20mm;bottom:13mm;
+    border-top:1px solid var(--line);padding-top:6px;
+    display:flex;justify-content:space-between;
+    font-size:8pt;color:var(--muted);
+  }
+  .footer .brand{font-weight:700;color:var(--ink);}
+
+  .eyebrow{color:var(--blue);font-weight:800;font-size:8.5pt;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:10px;}
+  h1.title{font-weight:900;font-size:34pt;line-height:1.06;margin:0 0 16px;letter-spacing:-.5px;}
+  h2{font-weight:900;font-size:21pt;line-height:1.12;margin:0 0 14px;letter-spacing:-.3px;}
+  h3{font-weight:800;font-size:12pt;margin:22px 0 7px;}
+  p{margin:0 0 11px;}
+  .lead{font-size:11pt;color:#3a3d47;}
+  b,strong{font-weight:800;}
+  .accent{color:var(--blue);}
+
+  /* cover */
+  .cover{display:flex;flex-direction:column;}
+  .cover .logo{margin-bottom:60px;}
+  .cover-sub{font-size:10.5pt;color:#3a3d47;max-width:118mm;margin-top:6px;}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:9.5pt;}
+  thead th{background:var(--ink);color:#fff;text-align:left;padding:8px 11px;font-weight:700;}
+  tbody td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(odd){background:var(--row);}
+
+  .callout{background:var(--blue-soft);border-left:3px solid var(--blue);padding:13px 16px;margin:14px 0;border-radius:2px;}
+  .callout .ct{font-weight:800;margin-bottom:5px;}
+  .box-gray{background:var(--gray-box);border-left:3px solid #9a9890;padding:13px 16px;margin:14px 0;border-radius:2px;}
+  .box-gray .ct{font-weight:800;margin-bottom:5px;}
+
+  ul.toc{list-style:none;padding:0;margin:18px 0 0;}
+  ul.toc li{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);}
+  ul.toc .num{color:var(--blue);font-weight:900;font-size:13pt;min-width:26px;}
+  ul.toc .tt{font-weight:800;font-size:11.5pt;}
+  ul.toc .td{color:var(--muted);font-size:9.5pt;}
+
+  .two{display:flex;gap:16px;margin:8px 0 12px;}
+  .two .col{flex:1;background:#fff;border:1px solid var(--line);border-radius:4px;padding:12px 14px;}
+  .two .col .h{font-weight:800;color:var(--blue);margin-bottom:4px;}
+  .two .col.you .h{color:var(--ink);}
+
+  .note-small{font-size:8.5pt;color:var(--muted);line-height:1.45;}
+
+  /* self-check list */
+  ol.checks{list-style:none;counter-reset:c;padding:0;margin:16px 0 0;}
+  ol.checks li{counter-increment:c;display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);}
+  ol.checks li::before{content:counter(c);background:var(--blue);color:#fff;font-weight:800;font-size:9pt;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 22px;margin-top:1px;}
+
+  /* myths */
+  .myth{margin:0 0 13px;}
+  .myth .m{font-weight:800;}
+  .myth .a{color:#3a3d47;}
+
+  /* closing page (light) */
+  .close-steps{margin:20px 0 8px;}
+  .close-steps .step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .close-steps .n{color:var(--blue);font-weight:900;font-size:14pt;min-width:24px;}
+  .close-steps .st{font-weight:800;font-size:11.5pt;}
+  .close-steps .sd{color:#3a3d47;font-size:9.5pt;}
+  .cta-band{background:var(--blue);color:#fff;border-radius:6px;padding:18px 22px;margin:18px 0 0;}
+  .cta-band .small{font-size:9pt;opacity:.85;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;}
+  .cta-band .url{font-weight:900;font-size:19pt;margin-top:4px;}
+  .legal{position:absolute;left:20mm;right:20mm;bottom:13mm;font-size:7.6pt;color:var(--muted);line-height:1.5;}
+  .legal .lt{font-weight:800;color:#3a3d47;}
+  .legal .cr{margin-top:7px;}
+</style>
+</head>
+<body>
+
+<!-- ===== PAGE 1 · COVER ===== -->
+<section class="page cover">
+  <div class="logo">
+    <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="20" r="13" stroke="#1B1E27" stroke-width="2.4"/>
+      <line x1="9" y1="20" x2="34" y2="20" stroke="#1B1E27" stroke-width="2.4"/>
+      <path d="M30 16 L36 20 L30 24" stroke="#2F4FE0" stroke-width="2.4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+    <span>θita <span class="ai">ai</span></span>
+  </div>
+
+  <div style="margin-top:30px;">
+    <div class="eyebrow">Οδηγός για μικρομεσαίες επιχειρήσεις · 2026</div>
+    <h1 class="title">EU AI Act:<br>τι αλλάζει<br>για την <span class="accent">επιχείρησά σου</span></h1>
+    <p class="cover-sub">Χρησιμοποιείς ήδη AI — chatbot, voice agent, εργαλείο κειμένου ή
+    εικόνας. Ο ευρωπαϊκός νόμος σε αφορά <b>τώρα</b>, όχι «κάποτε». Δες
+    τι ισχύει, τι σε αγγίζει πραγματικά, και τι μπορεί να σου κοστίσει.</p>
+  </div>
+
+  <div class="footer">
+    <div><span class="brand">Θ όπως θωράκιση</span><br>Συμμόρφωση EU AI Act &amp; Ασφάλεια AI για ΜΜΕ</div>
+    <div style="text-align:right;">thetaai.gr<br>Έκδοση Ιούνιος 2026</div>
+  </div>
+</section>
+
+<!-- ===== PAGE 2 · CONTENTS ===== -->
+<section class="page">
+  <div class="eyebrow">Περιεχόμενα</div>
+  <h2>Τι θα βρεις μέσα</h2>
+  <p class="lead">Ένας καθαρός χάρτης — από το «δεν ξέρω τι ισχύει» στο «ξέρω τι να ρωτήσω».
+  Διαβάζεται σε 15 λεπτά.</p>
+
+  <ul class="toc">
+    <li><span class="num">01</span><span><span class="tt">Γιατί διαβάζεις αυτό</span><br><span class="td">Ο νόμος ισχύει ήδη — με καθαρό μυαλό, χωρίς υπερβολές</span></span></li>
+    <li><span class="num">02</span><span><span class="tt">Η πυραμίδα του ρίσκου</span><br><span class="td">Πού πέφτει η δική σου χρήση AI</span></span></li>
+    <li><span class="num">03</span><span><span class="tt">Το χρονοδιάγραμμα</span><br><span class="td">Οι ημερομηνίες που μετράνε — με το update του 2026</span></span></li>
+    <li><span class="num">04</span><span><span class="tt">Οι 3 υποχρεώσεις που σε δεσμεύουν</span><br><span class="td">AI literacy, διαφάνεια, ρόλοι</span></span></li>
+    <li><span class="num">05</span><span><span class="tt">AI Act &amp; GDPR</span><br><span class="td">Δύο νόμοι, ένα σύστημα — μην τα μπερδεύεις</span></span></li>
+    <li><span class="num">06</span><span><span class="tt">Πρόστιμα &amp; ευθύνη</span><br><span class="td">Το ρίσκο που κανείς δεν σου λέει</span></span></li>
+    <li><span class="num">07</span><span><span class="tt">5 μύθοι που κοστίζουν</span><br><span class="td">Ό,τι ακούς και είναι λάθος</span></span></li>
+    <li><span class="num">08</span><span><span class="tt">Self-check: 7 ερωτήσεις</span><br><span class="td">Πού στέκεις σήμερα</span></span></li>
+    <li><span class="num">09</span><span><span class="tt">Τα όρια αυτού του οδηγού</span><br><span class="td">Τι δεν χωρά σε ένα ebook</span></span></li>
+  </ul>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>2</div></div>
+</section>
+
+<!-- ===== PAGE 3 ===== -->
+<section class="page">
+  <div class="eyebrow">01 · Γιατί διαβάζεις αυτό</div>
+  <h2>Με καθαρό μυαλό, όχι με υπερβολές.</h2>
+
+  <p>Αν η επιχείρησή σου έχει βάλει ένα chatbot στο site, χρησιμοποιεί έναν voice agent για κλήσεις,
+  ή απλώς αξιοποιεί ChatGPT/Claude για κείμενα και απαντήσεις πελατών — βρίσκεσαι ήδη μέσα
+  στο πεδίο εφαρμογής του Κανονισμού (ΕΕ) 2024/1689, του λεγόμενου EU AI Act.</p>
+
+  <p>Ο νόμος δεν είναι μελλοντικός. Τμήματά του εφαρμόζονται ήδη από τον Φεβρουάριο του 2025, και η πιο
+  κρίσιμη προθεσμία για τις περισσότερες ελληνικές ΜΜΕ — οι κανόνες διαφάνειας — ενεργοποιείται τον
+  Αύγουστο του 2026.</p>
+
+  <p>Η καλή είδηση: για τη συντριπτική πλειονότητα των ΜΜΕ, ο AI Act δεν σημαίνει βαριά γραφειοκρατία.
+  Οι περισσότερες χρήσεις AI θεωρούνται χαμηλού ή ελάχιστου κινδύνου. Το θέμα δεν είναι αν θα
+  «περάσεις έλεγχο» — είναι ότι λίγες, συγκεκριμένες υποχρεώσεις σε αφορούν, και η άγνοιά τους
+  δημιουργεί ρίσκο που μπορείς εύκολα να αποφύγεις.</p>
+
+  <h3>Τι θα πάρεις από αυτόν τον οδηγό</h3>
+  <p>Καθαρή εικόνα: σε ποια κατηγορία ρίσκου πέφτεις, ποιες προθεσμίες σε αφορούν, ποιες είναι οι 3
+  υποχρεώσεις που πιθανότατα ήδη σε δεσμεύουν, και ένα γρήγορο self-check για να δεις πού στέκεσαι.</p>
+
+  <p class="note-small">Αυτός ο οδηγός είναι ενημερωτικός και δεν αποτελεί νομική συμβουλή. Στόχος του είναι να σε φέρει από
+  το «δεν ξέρω καν τι ισχύει» στο «ξέρω τι να ρωτήσω».</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>3</div></div>
+</section>
+
+<!-- ===== PAGE 4 ===== -->
+<section class="page">
+  <div class="eyebrow">02 · Η πυραμίδα του ρίσκου</div>
+  <h2>Πού πέφτει η δική σου χρήση AI</h2>
+
+  <p>Ο AI Act δεν αντιμετωπίζει όλα τα συστήματα AI το ίδιο. Τα κατατάσσει σε τέσσερα επίπεδα κινδύνου —
+  και οι υποχρεώσεις σου εξαρτώνται αποκλειστικά από το πού βρίσκεσαι.</p>
+
+  <table>
+    <thead><tr><th style="width:21%;">Επίπεδο</th><th style="width:36%;">Τι σημαίνει</th><th>Παραδείγματα</th></tr></thead>
+    <tbody>
+      <tr><td><b>Μη αποδεκτό</b></td><td>Απαγορευμένες πρακτικές — εκτός νόμου</td><td>Social scoring, χειραγώγηση, συναισθηματική αναγνώριση στην εργασία</td></tr>
+      <tr><td><b>Υψηλό</b></td><td>Αυστηρές υποχρεώσεις πριν τη χρήση</td><td>AI για προσλήψεις, αξιολόγηση δανείων, βιομετρικά</td></tr>
+      <tr><td><b>Περιορισμένο</b></td><td>Υποχρεώσεις διαφάνειας</td><td>Chatbots, voice agents, deepfakes, AI κείμενα</td></tr>
+      <tr><td><b>Ελάχιστο</b></td><td>Καμία υποχρέωση</td><td>Φίλτρα spam, AI σε παιχνίδια, βασικά εργαλεία</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">Εδώ είσαι (πιθανότατα)</div>
+    Ένα ενημερωτικό chatbot ή voice agent που απαντά σε πελάτες πέφτει στο «περιορισμένο ρίσκο». Δεν
+    χρειάζεσαι πιστοποιήσεις ή conformity assessment — χρειάζεσαι <b>διαφάνεια</b>. Αυτό αλλάζει τα πάντα στο τι
+    πρέπει να κάνεις.
+  </div>
+
+  <h3>Πότε ανεβαίνεις κατηγορία χωρίς να το καταλάβεις</h3>
+  <p>Το ίδιο εργαλείο μπορεί να γίνει «υψηλού κινδύνου» ανάλογα με τη χρήση. Ένα AI που φιλτράρει
+  βιογραφικά για πρόσληψη, που βαθμολογεί φοιτητές, ή που κρίνει πιστοληπτική ικανότητα — μπαίνει
+  στο υψηλό ρίσκο, με εντελώς διαφορετικές υποχρεώσεις. Πολλές ΜΜΕ δεν συνειδητοποιούν ότι ένα
+  «αθώο» εργαλείο HR τις βάζει εκεί.</p>
+
+  <p>Το πιο συχνό λάθος: να υποθέσεις ότι «αφού δεν φτιάχνω εγώ το AI, δεν με αφορά». Σε αφορά — απλώς
+  με διαφορετικό ρόλο. Γιατί, το εξηγούμε στην ενότητα 04.</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>4</div></div>
+</section>
+
+<!-- ===== PAGE 5 ===== -->
+<section class="page">
+  <div class="eyebrow">03 · Το χρονοδιάγραμμα</div>
+  <h2>Οι ημερομηνίες που μετράνε για σένα</h2>
+
+  <p>Ο AI Act δεν ενεργοποιήθηκε μονομιάς. Εφαρμόζεται σταδιακά. Και τον Μάιο του 2026 το λεγόμενο «AI
+  omnibus» (πακέτο απλοποίησης) μετέθεσε αρκετές από τις βαριές υποχρεώσεις — κάτι που σου δίνει
+  χρόνο, αλλά δεν αναιρεί όσα ήδη ισχύουν.</p>
+
+  <table>
+    <thead><tr><th style="width:18%;">Ημερομηνία</th><th>Τι ισχύει</th><th style="width:24%;">Κατάσταση</th></tr></thead>
+    <tbody>
+      <tr><td>Αύγ 2024</td><td>Ο κανονισμός τίθεται σε ισχύ</td><td>Ενεργό</td></tr>
+      <tr><td>Φεβ 2025</td><td>Απαγορευμένες πρακτικές + υποχρέωση AI literacy</td><td>Ισχύει ήδη</td></tr>
+      <tr><td>Αύγ 2025</td><td>Κανόνες για μοντέλα γενικού σκοπού (GPAI), διακυβέρνηση, πρόστιμα</td><td>Ισχύει ήδη</td></tr>
+      <tr><td>Αύγ 2026</td><td>Κανόνες διαφάνειας — Άρθρο 50 (chatbots, deepfakes)</td><td><b class="accent">Σε ~2 μήνες</b></td></tr>
+      <tr><td>Δεκ 2027</td><td>Συστήματα υψηλού κινδύνου (προσλήψεις, βιομετρικά κ.ά.)</td><td>Μετατέθηκε</td></tr>
+      <tr><td>Αύγ 2028</td><td>Υψηλό ρίσκο ενσωματωμένο σε προϊόντα</td><td>Μετατέθηκε</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Η γραμμή που πρέπει να κρατήσεις</h3>
+  <p>Δύο πράγματα ήδη σε δεσμεύουν (AI literacy) ή σε δεσμεύουν πολύ σύντομα (διαφάνεια chatbot,
+  Αύγουστος 2026). Όλα τα υπόλοιπα είναι 2027-2028 — και αφορούν λιγότερες ΜΜΕ.</p>
+
+  <p class="note-small">Το AI omnibus εγκρίθηκε πολιτικά στις 7 Μαΐου 2026 και, εκτός από τη μετάθεση προθεσμιών, επέκτεινε
+  τις απλοποιήσεις για ΜΜΕ και σε «small mid-cap» εταιρείες, και πρόσθεσε νέες απαγορεύσεις (π.χ.
+  εφαρμογές «nudification»).</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>5</div></div>
+</section>
+
+<!-- ===== PAGE 6 ===== -->
+<section class="page">
+  <div class="eyebrow">04 · Τι σε αγγίζει πραγματικά</div>
+  <h2>Οι 3 υποχρεώσεις που πιθανότατα ήδη σε δεσμεύουν</h2>
+
+  <h3>1 · AI literacy — το προσωπικό σου πρέπει να ξέρει τι κρατά στα χέρια του</h3>
+  <p>Από τον Φεβρουάριο 2025, όποιος χρησιμοποιεί AI σε επαγγελματικό πλαίσιο οφείλει να διασφαλίζει
+  «επαρκή εγγραμματισμό AI» στο προσωπικό του (Άρθρο 4). Με απλά λόγια: οι άνθρωποί σου που
+  χειρίζονται το AI πρέπει να καταλαβαίνουν τι κάνει, πού κάνει λάθη, και πότε να μην το εμπιστεύονται.
+  Δεν απαιτείται πιστοποίηση — απαιτείται τεκμηριωμένη προσπάθεια.</p>
+
+  <h3>2 · Διαφάνεια — ο χρήστης πρέπει να ξέρει ότι μιλά σε μηχανή</h3>
+  <p>Από τον Αύγουστο 2026 (Άρθρο 50), ένα chatbot ή voice agent που επικοινωνεί με ανθρώπους πρέπει να
+  δηλώνει ότι είναι AI, εκτός αν είναι προφανές. Το AI-generated περιεχόμενο (εικόνες, ήχος, deepfakes)
+  πρέπει να επισημαίνεται. Είναι από τις πιο απλές υποχρεώσεις — και από τις πιο εύκολο να την ξεχάσεις.</p>
+
+  <h3>3 · Ρόλοι — «πάροχος» ή «deployer»;</h3>
+  <p>Εδώ μπερδεύονται σχεδόν όλες οι ΜΜΕ. Ο νόμος διαχωρίζει ποιος ευθύνεται για τι:</p>
+
+  <div class="two">
+    <div class="col"><div class="h">Πάροχος (Provider)</div>Φτιάχνει ή διαθέτει το σύστημα AI στην αγορά. Π.χ. η εταιρεία που σου κατασκεύασε το chatbot.</div>
+    <div class="col you"><div class="h">Deployer — εσύ</div>Χρησιμοποιείς το σύστημα στην επιχείρησή σου, υπό την ευθύνη σου. Οι περισσότερες ΜΜΕ είναι εδώ.</div>
+  </div>
+
+  <p>Ως deployer έχεις ελαφρύτερες υποχρεώσεις από τον πάροχο — αλλά όχι μηδενικές: ανθρώπινη εποπτεία,
+  χρήση σύμφωνα με τις οδηγίες, και διαφάνεια προς τους τελικούς χρήστες. Το ποιος είσαι αλλάζει
+  εντελώς το τι οφείλεις.</p>
+
+  <p class="note-small"><b>Προσοχή:</b> αν τροποποιήσεις ουσιωδώς ένα σύστημα AI ή το προωθήσεις με το δικό σου όνομα, μπορεί
+  να μετατραπείς από deployer σε πάροχο — με όλες τις βαρύτερες υποχρεώσεις. Η γραμμή είναι πιο
+  λεπτή απ' ό,τι φαίνεται.</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>6</div></div>
+</section>
+
+<!-- ===== PAGE 7 ===== -->
+<section class="page">
+  <div class="eyebrow">05 · Δύο νόμοι, ένα σύστημα</div>
+  <h2>AI Act &amp; GDPR: μην τα μπερδεύεις</h2>
+
+  <p>«Αφού είμαι εντάξει με τον GDPR, είμαι εντάξει και με τον AI Act, σωστά;» — Όχι. Είναι δύο
+  διαφορετικοί νόμοι που, στην πράξη, ισχύουν ταυτόχρονα για το ίδιο σύστημα.</p>
+
+  <div class="two">
+    <div class="col you"><div class="h">GDPR</div>Προστατεύει τα προσωπικά δεδομένα. Ρωτά: «Έχεις δικαίωμα να επεξεργάζεσαι αυτά τα δεδομένα και τα προστατεύεις σωστά;»</div>
+    <div class="col"><div class="h">AI Act</div>Ρυθμίζει το ίδιο το σύστημα AI. Ρωτά: «Είναι ασφαλές, διαφανές και κατάλληλο για τη χρήση που του δίνεις;»</div>
+  </div>
+
+  <p>Το chatbot σου που απαντά σε πελάτες αγγίζει και τους δύο: επεξεργάζεται προσωπικά δεδομένα (GDPR)
+  και είναι σύστημα AI με υποχρέωση διαφάνειας (AI Act). Η συμμόρφωση με τον έναν δεν καλύπτει τον
+  άλλον.</p>
+
+  <h3>Πού τέμνονται στην πράξη</h3>
+  <p><b>Πρακτικά:</b> αν συλλέγεις προσωπικά δεδομένα μέσω AI agent, πιθανότατα χρειάζεσαι και ενημερωμένη
+  πολιτική απορρήτου και δήλωση AI. Οι δύο συχνά πρέπει να συνεννοηθούν — και εκεί χάνονται οι
+  περισσότερες ΜΜΕ.</p>
+  <p><b>Νομική βάση επεξεργασίας:</b> αν τα δεδομένα πελατών τροφοδοτούν ή «εκπαιδεύουν» το AI σου,
+  χρειάζεσαι βάση κατά GDPR — η χρήση AI δεν τη δημιουργεί από μόνη της.</p>
+  <p><b>Διαφάνεια:</b> ο GDPR θέλει να ξέρει ο χρήστης πώς χρησιμοποιούνται τα δεδομένα του· ο AI Act θέλει
+  να ξέρει ότι μιλά σε μηχανή. Δύο ενημερώσεις, όχι μία.</p>
+  <p><b>Αυτοματοποιημένες αποφάσεις:</b> ο GDPR (Άρθρο 22) ήδη περιορίζει αποφάσεις «αποκλειστικά
+  αυτοματοποιημένες» με σημαντικές συνέπειες — κάτι που το AI σου μπορεί να ενεργοποιεί χωρίς να
+  το ξέρεις.</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>7</div></div>
+</section>
+
+<!-- ===== PAGE 8 ===== -->
+<section class="page">
+  <div class="eyebrow">06 · Το πραγματικό κόστος</div>
+  <h2>Πρόστιμα — και το ρίσκο που κανείς δεν σου λέει</h2>
+
+  <p>Τα πρόστιμα του AI Act ακούγονται τεράστια, και συχνά προβάλλονται υπερβολικά για εντυπωσιασμό. Ας
+  δούμε τι πραγματικά ισχύει για μια ΜΜΕ.</p>
+
+  <table>
+    <thead><tr><th>Παράβαση</th><th style="width:42%;">Ανώτατο όριο</th></tr></thead>
+    <tbody>
+      <tr><td>Απαγορευμένες πρακτικές</td><td>έως €35εκ. ή 7% παγκόσμιου τζίρου</td></tr>
+      <tr><td>Μη συμμόρφωση (π.χ. διαφάνεια, υψηλό ρίσκο)</td><td>έως €15εκ. ή 3%</td></tr>
+      <tr><td>Λανθασμένη πληροφόρηση αρχών</td><td>έως €7,5εκ. ή 1%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">Η σημαντική λεπτομέρεια για ΜΜΕ</div>
+    Για μεγάλες εταιρείες το όριο είναι «όποιο είναι <b>μεγαλύτερο</b>». Για ΜΜΕ και startups, ο κανονισμός ορίζει
+    ρητά «όποιο είναι <b>μικρότερο</b>». Δηλαδή το ρίσκο προστίμου είναι αναλογικό στο μέγεθός σου — όχι
+    καταστροφικό.
+  </div>
+
+  <h3>Το ρίσκο που δεν είναι πρόστιμο</h3>
+  <p>Το μεγαλύτερο πρακτικό ρίσκο για μια ΜΜΕ δεν είναι το πρόστιμο της εποπτικής αρχής. Είναι η <b>αστική
+  ευθύνη</b> απέναντι στον πελάτη σου — και ισχύει ήδη, ανεξάρτητα από τον AI Act.</p>
+
+  <div class="box-gray">
+    <div class="ct">Υπόθεση Air Canada (2024)</div>
+    Το chatbot της αεροπορικής «εφηύρε» μια πολιτική επιστροφής χρημάτων που δεν υπήρχε. Όταν ο
+    πελάτης τη διεκδίκησε, το δικαστήριο έκρινε ότι <b>η εταιρεία ευθύνεται για ό,τι λέει το chatbot της</b> —
+    ακόμη κι αν το AI το επινόησε. Δεν γλίτωσες επειδή «το είπε ο bot».
+  </div>
+
+  <p>Αυτό είναι το μάθημα που μετράει: ένα AI που δίνει λάθος τιμή, λάθος όρο, ή λάθος υπόσχεση, δεσμεύει
+  την επιχείρησή σου. Η συμμόρφωση με τον AI Act και η σωστή «θωράκιση» των agents σου δεν είναι
+  γραφειοκρατία — είναι <b>διαχείριση ρίσκου</b>.</p>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>8</div></div>
+</section>
+
+<!-- ===== PAGE 9 ===== -->
+<section class="page">
+  <div class="eyebrow">07 · Καθαρίζοντας τον θόρυβο</div>
+  <h2>5 μύθοι για τον AI Act που κοστίζουν</h2>
+
+  <p>Γύρω από τον AI Act κυκλοφορεί πολύς θόρυβος — άλλοι τον υποτιμούν, άλλοι σπέρνουν πανικό. Πέντε
+  από τους πιο συχνούς μύθους, και τι πραγματικά ισχύει.</p>
+
+  <div class="myth"><div class="m">Μύθος 1 · «Αφορά μόνο τις μεγάλες τεχνολογικές εταιρείες.»</div>
+  <div class="a"><b>Λάθος.</b> Αν χρησιμοποιείς AI σε επαγγελματικό πλαίσιο, είσαι «deployer» και έχεις υποχρεώσεις — ανεξάρτητα από το μέγεθός σου.</div></div>
+
+  <div class="myth"><div class="m">Μύθος 2 · «Δεν φτιάχνω εγώ το AI, άρα δεν ευθύνομαι.»</div>
+  <div class="a"><b>Λάθος.</b> Ευθύνεσαι για το πώς το χρησιμοποιείς και για ό,τι λέει στους πελάτες σου (βλ. Air Canada). Ο πάροχος έχει τη δική του ευθύνη — όχι όλη.</div></div>
+
+  <div class="myth"><div class="m">Μύθος 3 · «Έχω χρόνια μέχρι να ισχύσει.»</div>
+  <div class="a"><b>Λάθος.</b> Η AI literacy ισχύει από τον Φεβρουάριο 2025· η διαφάνεια από τον Αύγουστο 2026. Μόνο το υψηλό ρίσκο πήγε για το 2027-2028.</div></div>
+
+  <div class="myth"><div class="m">Μύθος 4 · «Θα φάω τεράστιο πρόστιμο με την πρώτη.»</div>
+  <div class="a"><b>Υπερβολή.</b> Για ΜΜΕ το ανώτατο όριο είναι το μικρότερο ποσό, και οι αρχές δίνουν βαρύτητα σε καλή πίστη και διόρθωση. Το ρεαλιστικό ρίσκο είναι η αστική ευθύνη, όχι το mega-πρόστιμο.</div></div>
+
+  <div class="myth"><div class="m">Μύθος 5 · «Είμαι GDPR-compliant, άρα είμαι καλυμμένος.»</div>
+  <div class="a"><b>Λάθος.</b> Διαφορετικός νόμος, διαφορετικές υποχρεώσεις. Ισχύουν παράλληλα (βλ. ενότητα 05).</div></div>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>9</div></div>
+</section>
+
+<!-- ===== PAGE 10 ===== -->
+<section class="page">
+  <div class="eyebrow">08 · Self-check</div>
+  <h2>7 ερωτήσεις: πού στέκεσαι σήμερα;</h2>
+
+  <p>Απάντησε ειλικρινά. Κάθε «όχι» ή «δεν ξέρω» είναι ένα κενό που αξίζει να κλείσει — πριν το βρει ένας
+  πελάτης, ένας ανταγωνιστής, ή μια αρχή.</p>
+
+  <ol class="checks">
+    <li>Ξέρεις σε ποιο επίπεδο ρίσκου του AI Act πέφτει κάθε εργαλείο AI που χρησιμοποιείς;</li>
+    <li>Δηλώνει ξεκάθαρα το chatbot/voice agent σου ότι είναι AI;</li>
+    <li>Έχει το προσωπικό σου βασική εκπαίδευση στο τι κάνει — και τι δεν κάνει αξιόπιστα — το AI που χειρίζεται;</li>
+    <li>Ξέρεις αν είσαι «deployer» ή «πάροχος» για κάθε σύστημα AI σου;</li>
+    <li>Υπάρχει άνθρωπος που εποπτεύει τι λέει το AI σου σε πελάτες;</li>
+    <li>Έχεις γραπτή συμφωνία με τον πάροχο του AI για το ποιος ευθύνεται αν δώσει λάθος απάντηση;</li>
+    <li>Αν το AI σου έδινε αύριο μια λάθος, δεσμευτική απάντηση σε πελάτη — ξέρεις ποιος πληρώνει;</li>
+  </ol>
+
+  <div class="callout">
+    <div class="ct">Αν δυσκολεύτηκες σε 2 ή περισσότερες</div>
+    Δεν είσαι η εξαίρεση — είσαι ο κανόνας. Οι περισσότερες ΜΜΕ που υιοθέτησαν AI γρήγορα, έμειναν
+    πίσω στη θωράκιση. Η καλή είδηση: το κλείσιμο αυτών των κενών είναι σαφώς πιο φθηνό και γρήγορο
+    απ' ό,τι νομίζεις.
+  </div>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>10</div></div>
+</section>
+
+<!-- ===== PAGE 11 ===== -->
+<section class="page">
+  <div class="eyebrow">09 · Τα όρια αυτού του οδηγού</div>
+  <h2>Τι δεν σου είπαμε εδώ — επίτηδες</h2>
+
+  <p>Αυτός ο οδηγός σου έδωσε τον χάρτη: πού είσαι, τι ισχύει, τι σε αφορά. Αυτό που δεν χωρά σε ένα ebook
+  — γιατί εξαρτάται από τη δική σου περίπτωση — είναι η διαδρομή:</p>
+
+  <ol class="checks">
+    <li>Πώς να ταξινομήσεις στην πράξη κάθε δικό σου εργαλείο AI και να τεκμηριώσεις την κατάταξη.</li>
+    <li>Τι ακριβώς πρέπει να γράφει η σύμβαση με τον πάροχό σου ώστε η ευθύνη να κατανέμεται σωστά.</li>
+    <li>Πώς να στήσεις τη διαφάνεια του chatbot ώστε να καλύπτει το Άρθρο 50 χωρίς να χαλάει την εμπειρία πελάτη.</li>
+    <li>Πώς να φτιάξεις ένα ελαφρύ, ρεαλιστικό πρόγραμμα AI literacy για ΜΜΕ — όχι enterprise φλυαρία.</li>
+    <li>Πώς να «θωρακίσεις» τους agents σου ώστε να μη δίνουν δεσμευτικές ή ανακριβείς απαντήσεις.</li>
+  </ol>
+
+  <p>Αυτά δεν είναι θεωρία. Είναι η δουλειά που μετατρέπει τον AI Act σε <b>ανταγωνιστικό
+  πλεονέκτημα</b> — γιατί ένας πελάτης εμπιστεύεται πιο εύκολα μια επιχείρηση που ξέρει τι κάνει με το AI
+  της.</p>
+
+  <div class="callout">
+    <div class="ct">Η φιλοσοφία πίσω από το thetaai.gr</div>
+    «Θ όπως θωράκιση». Δεν πουλάμε ανησυχία — χτίζουμε άμυνα. Στόχος είναι να χρησιμοποιείς AI με
+    <b>αυτοπεποίθηση</b>, ξέροντας ότι είσαι καλυμμένος.
+  </div>
+
+  <div class="footer"><span class="brand">θita ai · thetaai.gr</span><div>11</div></div>
+</section>
+
+<!-- ===== PAGE 12 · CLOSING (LIGHT) ===== -->
+<section class="page">
+  <div class="eyebrow">Το επόμενο βήμα</div>
+  <h2>Ας δούμε <span class="accent">τη δική σου</span> περίπτωση.</h2>
+
+  <p class="lead">Ο χάρτης τον έχεις. Τώρα χρειάζεσαι κάποιον που ξέρει τη διαδρομή για τη
+  δική σου επιχείρηση — όχι ένα γενικό template.</p>
+
+  <div class="close-steps">
+    <div class="step"><div class="n">1</div><div><div class="st">Δωρεάν AI Act check (30')</div><div class="sd">Κοιτάμε μαζί ποια εργαλεία AI χρησιμοποιείς και πού υπάρχει πραγματικό ρίσκο.</div></div></div>
+    <div class="step"><div class="n">2</div><div><div class="st">Χάρτης συμμόρφωσης &amp; θωράκισης</div><div class="sd">Παίρνεις συγκεκριμένη λίστα ενεργειών, ιεραρχημένη — τι πρώτα, τι μετά.</div></div></div>
+    <div class="step"><div class="n">3</div><div><div class="st">Υλοποίηση χωρίς δράμα</div><div class="sd">Διαφάνεια chatbot, σωστές συμβάσεις, AI literacy για την ομάδα σου.</div></div></div>
+  </div>
+
+  <div class="cta-band">
+    <div class="small">Κλείσε το δωρεάν check σου</div>
+    <div class="url">→ thetaai.gr</div>
+  </div>
+
+  <div class="legal">
+    <span class="lt">Νομική σημείωση:</span> Το παρόν είναι ενημερωτικό υλικό και δεν συνιστά νομική συμβουλή ούτε εγγυάται συμμόρφωση. Οι
+    πληροφορίες αφορούν τον Κανονισμό (ΕΕ) 2024/1689 όπως ισχύει τον Ιούνιο 2026 και ενδέχεται να μεταβληθούν. Για τη
+    δική σου περίπτωση, απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, έλεγχος από δικηγόρο.
+    <div class="cr">© 2026 thetaai.gr · θita ai — Συμμόρφωση EU AI Act &amp; Ασφάλεια AI για μικρομεσαίες επιχειρήσεις</div>
+  </div>
+</section>
+
+</body>
+</html>
