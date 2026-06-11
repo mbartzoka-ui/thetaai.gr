@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  TEMPLATE ΑΡΘΡΟΥ — ΟΔΗΓΙΕΣ (διάβασέ το μία φορά, μετά είναι 2 λεπτά δουλειά)
+  ============================================================================
+
+  ΓΙΑ ΝΑ ΦΤΙΑΞΕΙΣ ΝΕΟ ΑΡΘΡΟ:
+
+  1) Στο GitHub, μέσα στον φάκελο /blog/, φτιάξε νέο φάκελο με "slug" — δηλαδή
+     το URL του άρθρου με μικρά λατινικά και παύλες. Π.χ.:
+        blog/asfaleia-chatbot-2026/
+     Το slug γίνεται το link:  https://thetaai.gr/blog/asfaleia-chatbot-2026/
+
+  2) Μέσα σ' αυτόν τον φάκελο φτιάξε αρχείο με όνομα ΑΚΡΙΒΩΣ:  index.html
+     και κόλλησε όλο αυτό το αρχείο (από το <!DOCTYPE html> κάτω).
+
+  3) Άλλαξε ό,τι λέει ΑΛΛΑΞΕ ΕΔΩ παρακάτω (τίτλος, περιγραφή, ημερομηνία,
+     θεματική, κείμενο). Σβήσε αυτό το σχόλιο οδηγιών αν θες.
+
+  4) Πρόσθεσε το άρθρο στη σελίδα /blog/index.html: αντίγραψε ένα
+     <a class="post-card"> κάτω από τη σωστή θεματική και άλλαξε τίτλο/link/excerpt.
+
+  5) Commit. Σε ~30 δευτερόλεπτα είναι live. Τέλος.
+  ============================================================================
+-->
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ΑΛΛΑΞΕ ΕΔΩ: τίτλος (φαίνεται στο tab & στο Google) -->
+<title>ΤΙΤΛΟΣ ΑΡΘΡΟΥ | θita ai</title>
+<!-- ΑΛΛΑΞΕ ΕΔΩ: περιγραφή 1-2 προτάσεων (φαίνεται στο Google) -->
+<meta name="description" content="Σύντομη περιγραφή του άρθρου σε 1-2 προτάσεις.">
+
+<!-- ΑΛΛΑΞΕ ΕΔΩ: βάλε το πραγματικό slug/φάκελο και στα 3 links παρακάτω -->
+<link rel="canonical" href="https://thetaai.gr/blog/SLUG-EDW/">
+<meta property="og:title" content="ΤΙΤΛΟΣ ΑΡΘΡΟΥ">
+<meta property="og:description" content="Σύντομη περιγραφή του άρθρου.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/blog/SLUG-EDW/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="28" height="28" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <!-- ΑΛΛΑΞΕ ΕΔΩ: μετά το "Blog /" βάλε σύντομα τη θεματική -->
+    <nav class="crumb" aria-label="Πλοήγηση"><a href="/blog/">Blog</a> / Θεματική</nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <!-- ΑΛΛΑΞΕ ΕΔΩ: η θεματική με κεφαλαία -->
+    <div class="eyebrow">ΘΕΜΑΤΙΚΗ</div>
+    <!-- ΑΛΛΑΞΕ ΕΔΩ: ο τίτλος -->
+    <h1>Ο τίτλος του άρθρου εδώ.</h1>
+    <!-- ΑΛΛΑΞΕ ΕΔΩ: ημερομηνία & χρόνος ανάγνωσης -->
+    <div class="art-meta">ΗΗ Μήνας ΕΕΕΕ · X′ ανάγνωση</div>
+
+    <!-- =========================================================== -->
+    <!-- ΤΟ ΚΕΙΜΕΝΟ ΤΟΥ ΑΡΘΡΟΥ. Χρησιμοποίησε:                         -->
+    <!--   <p>...</p>            για παράγραφο                          -->
+    <!--   <h2>...</h2>          για μεγάλη ενότητα                     -->
+    <!--   <h3>...</h3>          για μικρή υπο-ενότητα                  -->
+    <!--   <strong>...</strong>  για έντονα γράμματα                    -->
+    <!--   <ul><li>...</li></ul> για λίστα με κουκκίδες                 -->
+    <!--   <blockquote>...</blockquote> για τονισμένη φράση             -->
+    <!-- =========================================================== -->
+    <div class="article">
+      <p>Η πρώτη παράγραφος — το hook. Πες αμέσως γιατί αφορά τον αναγνώστη.</p>
+
+      <h2>Πρώτη ενότητα</h2>
+      <p>Κείμενο της ενότητας.</p>
+
+      <ul>
+        <li>Σημείο ένα.</li>
+        <li>Σημείο δύο.</li>
+      </ul>
+
+      <blockquote>Μια φράση που θες να ξεχωρίσει.</blockquote>
+
+      <h2>Δεύτερη ενότητα</h2>
+      <p>Κι άλλο κείμενο.</p>
+    </div>
+
+    <!-- CTA — άσ' το ως έχει ή προσάρμοσε το κείμενο -->
+    <div class="cta">
+      <h3>Θέλετε να ξέρετε πού ακριβώς στέκεστε;</h3>
+      <p>Ο Έλεγχος Θωράκισης χαρτογραφεί ένα σύστημα AI σας, το κατατάσσει σε κατηγορία ρίσκου και σας δείχνει τα κενά με προτεραιότητα. Προηγείται δωρεάν συνεδρία 45 λεπτών.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Άρθρο blog — δωρεάν συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+    </div>
+
+    <a class="back" href="/blog/">← Όλα τα άρθρα</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/">θita ai</a> · Θ όπως θωράκιση</span>
+    <p class="disclaimer">Το παρόν άρθρο είναι γενική ενημέρωση και δεν αποτελεί νομική συμβουλή. Για τη συμμόρφωση της επιχείρησής σας απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, συνεργασία με νομικό σύμβουλο.</p>
+  </div>
+</footer>
+
+</body>
+</html>
