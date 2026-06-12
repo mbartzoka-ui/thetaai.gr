@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>θita ai — EU AI Act Compliance &amp; AI Security for SMBs</title>
+<meta name="description" content="We check what you signed with your AI vendor, what the EU AI Act requires of you, and how to harden your business. Mapping, gap analysis and monitoring for small and mid-sized businesses.">
+<link rel="canonical" href="https://thetaai.gr/en/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/">
+<meta property="og:title" content="θita ai — Θ as in θωράκιση (shielding)">
+<meta property="og:description" content="EU AI Act compliance and AI security for small and mid-sized businesses — with published fees.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/en/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="θita ai — Θ as in shielding">
+<meta name="twitter:description" content="EU AI Act compliance and AI security for SMBs.">
+<meta name="twitter:image" content="https://thetaai.gr/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "θita ai",
+  "url": "https://thetaai.gr/en/",
+  "email": "hello@thetaai.gr",
+  "slogan": "Θ as in shielding",
+  "description": "EU AI Act compliance and AI security consulting for small and mid-sized businesses",
+  "areaServed": "EU",
+  "knowsLanguage": ["en", "el"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "Shielding Check", "description": "AI Act applicability map for one AI system, risk classification and prioritised gaps", "price": "590", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Full Mapping", "description": "Complete gap analysis against OWASP LLM Top 10 and the EU AI Act, contract review and remediation plan", "price": "2900", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Continuous Monitoring", "description": "Monthly AI compliance monitoring service", "price": "290", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "AI Literacy Workshop", "description": "Staff training under Article 4 of the EU AI Act", "price": "450", "priceCurrency": "EUR"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "I just have a chatbot from an off-the-shelf platform. Does the AI Act apply to me?", "acceptedAnswer": {"@type": "Answer", "text": "Most likely yes. As a deployer you have your own obligations — the AI must disclose that it is AI, and there must be human oversight. Your liability to your customer for what the bot says remains yours."}},
+    {"@type": "Question", "name": "Do I need an AI consultant or a lawyer?", "acceptedAnswer": {"@type": "Answer", "text": "Both, for different things. We map the system technically, the gaps and the risks, and prepare the ground so your lawyer can work in a targeted way. We do not provide legal advice."}},
+    {"@type": "Question", "name": "Can you guarantee EU AI Act compliance?", "acceptedAnswer": {"@type": "Answer", "text": "No — and nobody serious can. We offer measurable risk reduction: you know what you have, where you are exposed, what to fix first and what documentation to keep."}},
+    {"@type": "Question", "name": "How fast does an AI Act check start?", "acceptedAnswer": {"@type": "Answer", "text": "The Shielding Check starts within the week and is delivered in 5-7 business days. It is preceded by a free 45-minute mapping session."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+  --risk-high-bg:#FAEEDA; --risk-high:#854F0B; --risk-high-t:#633806;
+  --risk-lim-bg:#E6F1FB; --risk-lim:#185FA5; --risk-lim-t:#0C447C;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:14px;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.lang a{color:var(--stone);}
+.lang a:hover{color:var(--ink);text-decoration:none;}
+.lang .on{color:var(--ink);font-weight:600;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.btn-ghost{background:transparent;color:var(--deep);border:0.5px solid var(--line-d);}
+.btn-ghost:hover{color:var(--deep);background:#F5F5F4;}
+.hero{display:flex;align-items:center;gap:48px;padding:84px 0 72px;}
+.hero-text{flex:1.4;}
+.kicker{font-size:12px;letter-spacing:0.2em;color:var(--stone);margin-bottom:16px;font-weight:500;}
+h1{font-size:clamp(28px,4.5vw,44px);font-weight:600;line-height:1.18;letter-spacing:-0.01em;}
+.hero p{margin-top:18px;color:var(--stone-d);max-width:480px;font-size:17px;}
+.hero-cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.hero-mark{flex:1;display:flex;justify-content:center;}
+.notice{border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line);}
+.notice .wrap{display:flex;align-items:center;gap:18px;}
+.n-label{font-size:11px;letter-spacing:0.18em;color:var(--blue);font-weight:600;flex-shrink:0;}
+.n-track{position:relative;flex:1;min-height:62px;display:flex;align-items:center;}
+.n-item{position:absolute;inset:0;display:flex;align-items:center;opacity:0;visibility:hidden;transition:opacity .45s ease;font-size:14.5px;color:var(--stone-d);line-height:1.5;}
+.n-item.on{opacity:1;visibility:visible;}
+.n-item strong{color:var(--ink);font-weight:600;}
+.n-dots{display:flex;gap:7px;flex-shrink:0;}
+.n-dots button{width:24px;height:24px;border-radius:50%;border:8px solid transparent;background:var(--line-d);background-clip:padding-box;cursor:pointer;padding:0;transition:background .2s;}
+.n-dots button.on{background:var(--ink);background-clip:padding-box;}
+section{padding:72px 0;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h2{font-size:clamp(24px,3vw,32px);font-weight:600;line-height:1.25;letter-spacing:-0.01em;}
+.sub{color:var(--stone-d);margin-top:12px;max-width:560px;}
+.story{background:#fff;border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line);}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:8px;}
+.story blockquote{font-size:21px;font-weight:500;line-height:1.45;border-left:3px solid var(--blue);padding-left:22px;}
+.story .case{color:var(--stone);font-size:13.5px;margin-top:14px;}
+.story-body p{color:var(--stone-d);margin-bottom:14px;font-size:15.5px;}
+.story-body p strong{color:var(--ink);}
+.case-item{display:none;}
+.case-item.on{display:block;animation:caseIn .45s ease;}
+@keyframes caseIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){.case-item.on{animation:none;}}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:40px;}
+.tier{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;}
+.tier.featured{border:2px solid var(--blue);position:relative;}
+.tier .badge{position:absolute;top:-11px;left:22px;background:var(--blue);color:#fff;font-size:11.5px;font-weight:500;padding:3px 12px;border-radius:6px;}
+.tier h3{font-size:17px;font-weight:600;}
+.tier .for{font-size:13px;color:var(--stone);margin-top:4px;min-height:38px;}
+.tier .price{font-size:28px;font-weight:600;margin:14px 0 2px;}
+.tier .per{font-size:12.5px;color:var(--stone);}
+.tier ul{list-style:none;margin:16px 0 22px;flex:1;}
+.tier li{font-size:14px;color:var(--stone-d);padding:5px 0 5px 24px;position:relative;}
+.tier li::before{content:"";position:absolute;left:2px;top:12px;width:12px;height:7px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg);}
+.tier .btn{text-align:center;}
+.fine{font-size:13px;color:var(--stone);margin-top:22px;max-width:660px;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:40px;}
+.step{border:0.5px solid var(--line-d);border-radius:14px;padding:24px;background:var(--paper);}
+.step .n{width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;margin-bottom:14px;}
+.step h3{font-size:16px;font-weight:600;margin-bottom:6px;}
+.step p{font-size:14px;color:var(--stone-d);}
+.about{background:#fff;border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line);}
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
+.about p{color:var(--stone-d);margin-top:14px;font-size:15.5px;}
+.about p strong{color:var(--ink);}
+.faq{max-width:720px;}
+.faq details{border-bottom:0.5px solid var(--line-d);padding:18px 0;}
+.faq summary{font-weight:500;font-size:16px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq summary::after{content:"+";font-size:20px;color:var(--stone);flex-shrink:0;}
+.faq details[open] summary::after{content:"–";}
+.faq details p{color:var(--stone-d);font-size:15px;margin-top:10px;max-width:640px;}
+.cta-final{text-align:center;}
+.cta-final h2{max-width:560px;margin:0 auto;}
+.cta-final .sub{margin:14px auto 0;}
+.cta-final .hero-cta{justify-content:center;}
+footer{border-top:0.5px solid var(--line);padding:36px 0;}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+.foot .disclaimer{font-size:12.5px;color:var(--stone);max-width:520px;line-height:1.55;}
+.foot .copy{font-size:12.5px;color:var(--stone);}
+@media (max-width:760px){
+  .nav{flex-wrap:wrap;gap:10px 0;padding:12px 0;}
+  .nav-links{width:100%;justify-content:space-between;gap:12px;font-size:13px;order:2;}
+  .nav-links .btn{padding:8px 14px;font-size:13px;}
+  .hero{flex-direction:column-reverse;gap:28px;padding:48px 0 56px;text-align:left;}
+  .hero-mark svg{width:130px;height:130px;}
+  .story-grid,.about-grid{grid-template-columns:1fr;gap:28px;}
+  section{padding:56px 0;}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .anim{display:none;}
+  .static-mark{display:block !important;}
+}
+.orbit-g{
+  transform-origin:55px 55px;
+  animation:orbit-pause 4s ease-in-out infinite;
+  animation-delay:2.2s;
+}
+@keyframes orbit-pause{
+  0%  {transform:rotate(0deg);}
+  33% {transform:rotate(180deg);}
+  50% {transform:rotate(180deg);}
+  83% {transform:rotate(360deg);}
+  100%{transform:rotate(360deg);}
+}
+@media (prefers-reduced-motion: reduce){.orbit-g{animation:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#method">Method</a>
+      <a href="#tools">Tools</a>
+      <a href="/blog/">Blog</a>
+      <a href="#faq">FAQ</a>
+      <span class="lang"><a href="/">EL</a> · <span class="on">EN</span></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap hero">
+  <div class="hero-text">
+    <div class="kicker">EU AI ACT COMPLIANCE &amp; AI SECURITY FOR SMALL &amp; MID-SIZED BUSINESSES</div>
+    <h1>You put AI in your business. Who is liable when it gets it wrong?</h1>
+    <p>We check what you signed with your AI vendor, what the EU AI Act requires of you, and how you stay protected — before you learn it the hard way.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">Book a 45&#8242; mapping session</a>
+      <a href="#method" class="btn btn-ghost">How we work →</a>
+    </div>
+  </div>
+  <div class="hero-mark">
+    <svg class="anim" width="190" height="190" viewBox="0 0 110 110" role="img" aria-label="The θita ai mark: the circle of the system, the line of the contract, and two points in orbit — the AI and the human">
+      <circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="2.5" stroke-dasharray="239" transform="rotate(-90 55 55)">
+        <animate attributeName="stroke-dashoffset" from="239" to="0" dur="1.4s" fill="freeze"/>
+      </circle>
+      <line x1="32" y1="55" x2="78" y2="55" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round" opacity="0">
+        <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.5s" fill="freeze"/>
+      </line>
+      <g opacity="0">
+        <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.5s" fill="freeze"/>
+        <g class="orbit-g">
+          <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+          <circle cx="9" cy="55" r="4" fill="#1C1917"/>
+        </g>
+      </g>
+    </svg>
+    <svg class="static-mark" style="display:none" width="190" height="190" viewBox="0 0 110 110" role="img" aria-label="The θita ai mark">
+      <circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="2.5"/>
+      <line x1="32" y1="55" x2="78" y2="55" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+      <circle cx="9" cy="55" r="4" fill="#1C1917"/>
+    </svg>
+  </div>
+  </div>
+</div>
+
+<div class="notice" id="news">
+  <div class="wrap">
+    <div class="n-label">UPDATE</div>
+    <div class="n-track" id="ntrack">
+      <div class="n-item on"><span><strong>2 August 2026:</strong> the EU AI Act applies in full — transparency and oversight obligations reach SMBs too. <a href="#services">See what applies to you →</a></span></div>
+      <div class="n-item"><span><strong>Article:</strong> Your chatbot promised something that wasn't true — who's liable? The Air Canada case in plain language. <a href="/blog/">Read →</a></span></div>
+      <div class="n-item"><span><strong>Article:</strong> Is your team using ChatGPT? What Article 4 requires for staff training. <a href="/blog/">Read →</a></span></div>
+      <div class="n-item"><span><strong>Workshop:</strong> AI Literacy for teams — the training the regulation requires, in 3 hours. <a href="#services">Details →</a></span></div>
+    </div>
+    <div class="n-dots" id="ndots" aria-label="Update navigation"></div>
+  </div>
+</div>
+
+<section class="story">
+  <div class="wrap">
+    <div class="eyebrow">REAL INCIDENTS</div>
+    <div class="case-track" id="case-track">
+
+      <div class="case-item on"><div class="story-grid">
+        <div>
+          <blockquote>"The chatbot promised the customer a discount that didn't exist. The tribunal ruled: the company is liable."</blockquote>
+          <div class="case">Moffatt v. Air Canada, 2024 — the case that set the rule.</div>
+        </div>
+        <div class="story-body">
+          <p>Air Canada argued the chatbot was a "separate legal entity responsible for its own actions." The argument was rejected. <strong>A business is liable for whatever its AI says</strong> — even when it makes things up.</p>
+          <p>If your AI gives prices, promises or instructions to customers, this affects you today — before we even get to the AI Act.</p>
+        </div>
+      </div></div>
+
+      <div class="case-item"><div class="story-grid">
+        <div>
+          <blockquote>"A customer talked a dealership chatbot into 'selling' him a brand-new car for $1 — and declaring the deal legally binding."</blockquote>
+          <div class="case">Chevrolet dealership, USA, 2023.</div>
+        </div>
+        <div class="story-body">
+          <p>The bot was set up with no limits on what it could promise. A few clever prompts later, the conversation was viral and the dealership was in the headlines.</p>
+          <p><strong>AI in a sales role with no boundaries = promises you don't control.</strong> Scope and a non-binding disclaimer aren't a luxury — they're the first line of defence.</p>
+        </div>
+      </div></div>
+
+      <div class="case-item"><div class="story-grid">
+        <div>
+          <blockquote>"A customer got a courier company's chatbot to swear during the conversation — and write a poem about how 'useless' the company itself is."</blockquote>
+          <div class="case">DPD, United Kingdom, 2024.</div>
+        </div>
+        <div class="story-body">
+          <p>After an update, the guardrails slipped. A frustrated customer needed only a few minutes to get the bot to mock its own employer — in public.</p>
+          <p><strong>The damage isn't always legal; often it's reputational.</strong> Behavioural testing before production and oversight after — not "we shipped it, we're done."</p>
+        </div>
+      </div></div>
+
+      <div class="case-item"><div class="story-grid">
+        <div>
+          <blockquote>"Employees pasted confidential code into ChatGPT 'to get some help.' The company found out — and banned all AI tools."</blockquote>
+          <div class="case">Samsung, 2023.</div>
+        </div>
+        <div class="story-body">
+          <p>Three leak incidents in a few weeks: source code and internal meeting notes ended up in an external system, beyond the company's control.</p>
+          <p><strong>Your staff already use AI — with or without permission.</strong> A usage policy and training (also required by Article 4) cost very little next to a leak.</p>
+        </div>
+      </div></div>
+
+      <div class="case-item"><div class="story-grid">
+        <div>
+          <blockquote>"An executive approved a $25M transfer after a video call with the 'CFO.' Everyone on the call was a deepfake."</blockquote>
+          <div class="case">Arup, Hong Kong, 2024.</div>
+        </div>
+        <div class="story-body">
+          <p>The fraud didn't exploit a gap in the systems — it exploited trust in what we see and hear.</p>
+          <p><strong>AI isn't only your own risk; it's also a weapon in others' hands.</strong> Payment approval and identity-verification processes need hardening against synthetic content.</p>
+        </div>
+      </div></div>
+
+    </div>
+    <div class="n-dots" id="case-dots" aria-label="Incident navigation" style="margin-top:18px;"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">SERVICES</div>
+    <h2>From mapping to continuous monitoring.</h2>
+    <p class="sub">EU AI Act readiness check, gap analysis, staff training and ongoing monitoring — every engagement with a defined scope, documented deliverables and a fixed fee.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Shielding Check</h3>
+        <div class="for">For those who "added a chatbot" and want to know where they stand.</div>
+        <div class="price">€590</div>
+        <div class="per">one-off · delivered in 1 week</div>
+        <ul>
+          <li>AI Act applicability map for 1 AI system</li>
+          <li>Your role: provider or deployer — and what it means</li>
+          <li>Risk classification &amp; transparency obligations</li>
+          <li>The 5 most important gaps, prioritised</li>
+          <li>60&#8242; results session</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Start here</a>
+      </div>
+      <div class="tier featured">
+        <div class="badge">The full picture</div>
+        <h3>Full Mapping</h3>
+        <div class="for">For businesses with customer-facing AI or critical workflows.</div>
+        <div class="price">from €2,900</div>
+        <div class="per">depending on systems in scope · 3–4 weeks</div>
+        <ul>
+          <li>Everything in the Shielding Check</li>
+          <li>Full gap analysis (OWASP LLM Top 10 + AI Act)</li>
+          <li>AI vendor contract review — liability clauses*</li>
+          <li>Remediation plan with cost estimates</li>
+          <li>Executive summary for management</li>
+        </ul>
+        <a href="#contact" class="btn">Request availability</a>
+      </div>
+      <div class="tier">
+        <h3>Continuous Monitoring</h3>
+        <div class="for">For those who want to stay protected as their AI evolves.</div>
+        <div class="price">€290</div>
+        <div class="per">/ month · cancel anytime</div>
+        <ul>
+          <li>Quarterly compliance re-check</li>
+          <li>Alerts on regulatory changes that affect you</li>
+          <li>Review of every new AI tool before it goes live</li>
+          <li>Priority on questions</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Let's talk</a>
+      </div>
+      <div class="tier">
+        <h3>AI Literacy Workshop</h3>
+        <div class="for">The staff training required by Article 4 of the AI Act.</div>
+        <div class="price">€450</div>
+        <div class="per">/ team of up to 12 · 3 hours</div>
+        <ul>
+          <li>What is and isn't allowed when using AI tools</li>
+          <li>Practical scenarios from your own sector</li>
+          <li>Training certificate for your compliance file</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Book a date</a>
+      </div>
+    </div>
+    <p class="fine">* Contract findings are delivered as a technical risk analysis and validated by a lawyer before any legal use. θita ai provides consulting — not legal — services. Fees exclude VAT.</p>
+  </div>
+</section>
+
+<section id="method" style="background:#fff;border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">METHOD</div>
+    <h2>Four steps. One clean orbit.</h2>
+    <p class="sub">Our mark says it all: the circle is your system, the line is the contract, and the two dots — the AI and the human — move together, in balance and under your control.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Mapping</h3><p>Which AI systems you have, your role under the AI Act, your level of risk.</p></div>
+      <div class="step"><div class="n">2</div><h3>Review</h3><p>Contracts, data, processes and AI behaviour — checked against OWASP and the AI Act.</p></div>
+      <div class="step"><div class="n">3</div><h3>Shielding</h3><p>Clauses, transparency labelling, oversight procedures — the moves that close the gaps.</p></div>
+      <div class="step"><div class="n">4</div><h3>Monitoring</h3><p>AI changes, the regulation changes. We keep your system in orbit, so you move forward without surprises.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="eyebrow">TOOLS</div>
+    <h2>Free online tools.</h2>
+    <p class="sub">Interactive, in your browser, no sign-up and no data stored. A first picture before any engagement.</p>
+    <div class="tiers" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="tier">
+        <h3>Does the EU AI Act apply to you?</h3>
+        <div class="for">A six-question test: your role, your risk level and your obligations — in two minutes.</div>
+        <a href="/en/ergaleia/ai-act-test/" class="btn" style="margin-top:16px;text-align:center;">Take the test →</a>
+      </div>
+      <div class="tier">
+        <h3>All tools</h3>
+        <div class="for">AI Usage Policy generator, AI vendor contract check, Article 50 transparency checklist — and whatever comes next.</div>
+        <a href="/en/ergaleia/" class="btn btn-ghost" style="margin-top:16px;text-align:center;">See the tools →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" style="background:var(--paper);border:0;">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">WHO WE ARE</div>
+      <h2>We speak both languages: technical and business.</h2>
+      <p>θita ai was founded by <strong>Maria Bartzoka</strong> — with years in AI R&amp;D and product development, an AI trainer, and working on the security and compliance of AI systems for real small and mid-sized businesses.</p>
+      <p>We don't sell fear and we don't promise "100% compliance" — anyone who does hasn't read the regulation. We sell something more useful: <strong>knowing exactly where you stand, and what's worth fixing first.</strong></p>
+    </div>
+    <div style="display:flex;justify-content:center;">
+      <svg width="150" height="150" viewBox="0 0 110 110" role="img" aria-label="The θita ai mark, static">
+        <circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="2.5"/>
+        <line x1="32" y1="55" x2="78" y2="55" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+        <circle cx="9" cy="55" r="4" fill="#1C1917"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:#fff;border-top:0.5px solid var(--line);">
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h2>Before you ask.</h2>
+    <div class="faq" style="margin-top:28px;">
+      <details>
+        <summary>I just have a chatbot from an off-the-shelf platform. Does the AI Act apply to me?</summary>
+        <p>Most likely yes. The tool being "off-the-shelf" doesn't exempt you: as a deployer you have your own obligations — e.g. the AI must disclose that it is AI, and there must be human oversight. On top of that, your liability to your customer for what the bot says remains yours, regardless of what the platform contract says. The Shielding Check answers exactly this.</p>
+      </details>
+      <details>
+        <summary>Do I need you or a lawyer?</summary>
+        <p>Both, for different things. We map the system technically, the gaps and the risks, and prepare the ground so your lawyer can work fast and targeted — instead of billing hours to understand what RAG is. We don't provide legal advice and every contract finding goes through legal review.</p>
+      </details>
+      <details>
+        <summary>Can you guarantee that I'll be compliant?</summary>
+        <p>No — and nobody serious can. AI systems have inherent uncertainty and the regulation keeps evolving. What we do is measurable risk reduction: you know what you have, where you're exposed, what to fix first and what documentation to keep. In practice, that's what auditors ask for too.</p>
+      </details>
+      <details>
+        <summary>How fast do we start?</summary>
+        <p>The Shielding Check starts within the week and is delivered in 5–7 business days. It's preceded by a free 45-minute session, in which we map your system and define the exact scope of the check.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">CONTACT</div>
+    <h2>Mapping session: 45 minutes, free.</h2>
+    <p class="sub">Tell us about the AI systems you use or plan to use. We'll sketch a first picture of your obligations and exposure — and tell you straight whether you need a deeper check.</p>
+    <div class="hero-cta">
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=45-minute mapping session">hello@thetaai.gr</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="logo" style="font-size:16px;">
+        <svg width="24" height="24" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+        <span>θita <span class="ai">ai</span></span>
+      </div>
+      <div class="copy" style="margin-top:10px;">© 2026 θita ai · Θ as in shielding · <a href="/">Ελληνικά</a></div>
+    </div>
+    <p class="disclaimer">θita ai provides EU AI Act compliance and AI security consulting services for small and mid-sized businesses. It does not provide legal services or legal advice; legal matters require a lawyer. No service constitutes a guarantee of compliance or of exemption from liability.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('#ntrack .n-item');
+  var dots = document.getElementById('ndots');
+  if(!items.length || !dots) return;
+  var i = 0, t = null;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  items.forEach(function(_, k){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', 'Update ' + (k + 1));
+    if(k === 0) b.className = 'on';
+    b.addEventListener('click', function(){ go(k); reset(); });
+    dots.appendChild(b);
+  });
+  function go(k){
+    items[i].classList.remove('on'); dots.children[i].classList.remove('on');
+    i = k;
+    items[i].classList.add('on'); dots.children[i].classList.add('on');
+  }
+  function next(){ go((i + 1) % items.length); }
+  function stop(){ if(t){ clearInterval(t); t = null; } }
+  function reset(){ stop(); if(!reduce) t = setInterval(next, 6000); }
+  reset();
+  var strip = document.getElementById('news');
+  strip.addEventListener('mouseenter', stop);
+  strip.addEventListener('mouseleave', reset);
+})();
+
+(function(){
+  var items = document.querySelectorAll('#case-track .case-item');
+  var dots = document.getElementById('case-dots');
+  if(!items.length || !dots) return;
+  var i = 0, t = null;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  items.forEach(function(_, k){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', 'Incident ' + (k + 1));
+    if(k === 0) b.className = 'on';
+    b.addEventListener('click', function(){ go(k); reset(); });
+    dots.appendChild(b);
+  });
+  function go(k){
+    items[i].classList.remove('on'); dots.children[i].classList.remove('on');
+    i = k;
+    items[i].classList.add('on'); dots.children[i].classList.add('on');
+  }
+  function next(){ go((i + 1) % items.length); }
+  function stop(){ if(t){ clearInterval(t); t = null; } }
+  function reset(){ stop(); if(!reduce) t = setInterval(next, 10000); }
+  reset();
+  var area = document.getElementById('case-track');
+  area.addEventListener('mouseenter', stop);
+  area.addEventListener('mouseleave', reset);
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
