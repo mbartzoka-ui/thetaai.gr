@@ -71,6 +71,11 @@ main{padding:8px 0 50px;}
 .it-title{font-size:18px;font-weight:600;line-height:1.32;letter-spacing:-0.01em;transition:color .12s;}
 .it-sum{color:var(--stone-d);font-size:14.5px;margin-top:6px;max-width:760px;}
 .it-link{font-size:12.5px;color:var(--deep);font-weight:500;margin-top:8px;display:inline-block;}
+.it-title-link{text-decoration:none;}
+.it-title-link:hover .it-title{color:var(--deep);}
+.it-refs{font-size:12px;color:var(--stone);margin-top:9px;}
+.it-refs a{color:var(--deep);text-decoration:none;}
+.it-refs a:hover{text-decoration:underline;}
 
 .cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:30px 28px;margin-top:44px;}
 .cta h3{font-size:20px;font-weight:600;margin-bottom:8px;color:var(--paper);}
@@ -169,14 +174,16 @@ function render(){
     g.className="group";
     g.innerHTML = `<div class="group-h">${GROUP_LABEL[t]} · ${items.length}</div>`;
     items.forEach(i=>{
-      const a = document.createElement("a");
-      a.className="item"; a.href=i.url; a.target="_blank"; a.rel="noopener noreferrer nofollow";
-      a.innerHTML = `<div class="it-top"><span class="badge ${BADGE[i.topic]}">${i.topic}</span>`+
-        `<span class="it-src">${i.source} · ${fmt(i.date)}</span></div>`+
-        `<div class="it-title">${i.title}</div>`+
+      const srcs = (Array.isArray(i.sources)&&i.sources.length) ? i.sources : [{name:i.source,url:i.url}];
+      const refs = srcs.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer nofollow">${s.name}</a>`).join(" · ");
+      const div = document.createElement("div");
+      div.className="item";
+      div.innerHTML = `<div class="it-top"><span class="badge ${BADGE[i.topic]}">${i.topic}</span>`+
+        `<span class="it-src">${fmt(i.date)}</span></div>`+
+        `<a class="it-title-link" href="${srcs[0].url}" target="_blank" rel="noopener noreferrer nofollow"><div class="it-title">${i.title}</div></a>`+
         `<div class="it-sum">${i.summary}</div>`+
-        `<span class="it-link">Διάβασε στην πηγή →</span>`;
-      g.appendChild(a);
+        `<div class="it-refs">Πηγές: ${refs}</div>`;
+      g.appendChild(div);
     });
     feed.appendChild(g);
   });
