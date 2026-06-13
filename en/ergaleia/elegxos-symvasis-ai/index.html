@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supplier AI contract check — free liability-clause checklist | θita ai</title>
+<meta name="description" content="Interactive checklist: which liability clauses should be in your contract with your AI provider — and which are usually missing. Free, in your browser, no sign-up.">
+<link rel="canonical" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/">
+<meta property="og:title" content="Supplier AI contract check — free liability checklist">
+<meta property="og:description" content="Which liability clauses should be in your contract with your AI provider — and which are usually missing.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Supplier AI contract check",
+  "url": "https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "provider": {"@type": "ProfessionalService", "name": "θita ai", "url": "https://thetaai.gr/"}
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+  --ok:#15803D; --ok-bg:#F0FDF4; --miss:#B91C1C; --miss-bg:#FEF2F2;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:inherit;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+main{padding:48px 0 72px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,36px);font-weight:600;line-height:1.2;letter-spacing:-0.01em;}
+.sub{color:var(--stone-d);margin-top:12px;max-width:600px;}
+.tool-card{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:24px 28px;margin-top:32px;}
+.cl-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+.cl-head .h{font-size:13px;letter-spacing:.04em;color:var(--stone);}
+.cl-head a{font-size:13px;cursor:pointer;color:var(--deep);}
+.cl{display:flex;gap:13px;padding:15px 0;border-bottom:0.5px solid var(--line);align-items:flex-start;cursor:pointer;}
+.cl:last-of-type{border-bottom:none;}
+.cl input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:var(--ink);cursor:pointer;}
+.cl .t{font-weight:600;font-size:15px;}
+.cl .w{font-size:13.5px;color:var(--stone-d);margin-top:3px;}
+.tool-actions{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.t-result{margin-top:26px;border-top:2px solid var(--ink);padding-top:20px;display:none;}
+.t-result.show{display:block;}
+.score{font-size:15px;font-weight:600;margin-bottom:6px;}
+.bar{height:8px;border-radius:6px;background:#EDEBE4;overflow:hidden;margin:10px 0 18px;}
+.bar > span{display:block;height:100%;background:var(--ink);}
+.miss-h{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--miss);font-weight:600;margin:14px 0 8px;}
+.miss-item{background:var(--miss-bg);border-left:3px solid var(--miss);border-radius:6px;padding:11px 14px;margin-bottom:8px;}
+.miss-item .t{font-weight:600;font-size:14.5px;}
+.miss-item .w{font-size:13px;color:var(--stone-d);margin-top:3px;}
+.all-ok{background:var(--ok-bg);border-left:3px solid var(--ok);border-radius:6px;padding:13px 15px;font-size:14.5px;color:var(--stone-d);}
+.warn-box{background:#FAEEDA;border-left:3px solid #854F0B;border-radius:6px;padding:12px 15px;font-size:13px;color:#633806;margin-top:16px;line-height:1.55;}
+.t-note{font-size:12.5px;color:var(--stone);margin-top:16px;}
+footer{border-top:0.5px solid var(--line);padding:28px 0;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/en/#services">Services</a>
+      <a href="/en/#method">Method</a>
+      <a href="/en/ergaleia/">Tools</a>
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/#guide">Guide</a>
+      <a href="/en/#faq">FAQ</a>
+      <span class="lang"><a href="/ergaleia/elegxos-symvasis-ai/">EL</a> · <span class="on">EN</span></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">FREE TOOL</div>
+    <h1>Supplier AI contract check</h1>
+    <p class="sub">Buying or using AI (a chatbot, voice agent or tool) from a provider? Tick which liability clauses your contract already has — and see which are missing and how they expose you. In your browser, no sign-up, nothing stored.</p>
+
+    <div class="tool-card" id="checker">
+      <div class="cl-head">
+        <span class="h">Tick the clauses that <strong>are present</strong> in your contract:</span>
+        <a id="cl-clear">Clear</a>
+      </div>
+      <div id="cl-list"></div>
+      <div class="tool-actions">
+        <button class="btn" id="t-calc">Show the gaps</button>
+        <span id="t-count" style="font-size:13px;color:var(--stone);"></span>
+      </div>
+      <div class="t-result" id="t-result" aria-live="polite"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/en/">θita ai</a> · Θ as in shielding · <a href="/ergaleia/elegxos-symvasis-ai/">Ελληνικά</a></span>
+    <p class="disclaimer">This tool gives an indicative completeness check based on your selections. It is not legal advice and does not replace contract review by a qualified lawyer. Nothing is stored or sent.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var CLAUSES = [
+    {t:"Role allocation (provider / deployer)", w:"States explicitly who is the provider and who is the deployer under the EU AI Act, and who is responsible for what. Without it, liability is blurry — and usually lands on you."},
+    {t:"Data-accuracy responsibility", w:"Who is responsible for the data/FAQ that feeds or trains the AI. If missing, you carry errors caused by uncertain or third-party data."},
+    {t:"Liability cap & exclusions", w:"A cap on damages and exclusion of indirect/consequential loss. Check whether the cap is reasonable and what exactly the provider excludes."},
+    {t:"Indemnity", w:"Who covers claims from your end-customers or third parties arising from the AI. If missing, you shoulder them alone."},
+    {t:"Transparency duty — Article 50", w:"Who ensures the chatbot/agent discloses it is AI. A legal obligation that takes effect on 2 August 2026."},
+    {t:"GDPR roles (controller/processor) + DPA", w:"Who is controller and who is processor, with a signed data processing agreement. Mandatory if the AI touches personal data."},
+    {t:"Scope & intended use", w:"What the AI may and may not do — e.g. no binding offers, prices or advice. This bounds your exposure."},
+    {t:"Relationship with the end-customer", w:"Who keeps the relationship and liability towards your own customer. Usually you — it should say so explicitly."},
+    {t:"Term, termination & maintenance", w:"What happens to the system after the term ends, who maintains it, who pays, and how you exit cleanly."},
+    {t:"Warranty disclaimer (best efforts)", w:"Providers usually don't guarantee uninterrupted or error-free operation. See exactly what they promise — and what they don't."},
+    {t:"Third-party (model) dependencies", w:"Outages or changes at the model provider (OpenAI, Anthropic, etc.) are out of control — the contract should require notice and a continuity plan."},
+    {t:"Acknowledgement of AI's inherent limits", w:"Explicit acceptance that AI systems may rarely produce inaccurate/unpredictable answers (an inherent trait, not a defect)."},
+    {t:"UAT — acceptance of behaviour", w:"You accept the agent's behaviour in writing after a trial period — not just the FAQ content."},
+    {t:"Duty to notify of changes", w:"Who tells you when something changes (model, function, policy) that affects compliance or correct operation."}
+  ];
+  var list = document.getElementById('cl-list');
+  var html = '';
+  CLAUSES.forEach(function(c,i){
+    html += '<label class="cl"><input type="checkbox" data-i="'+i+'"><span><span class="t">'+c.t+'</span><span class="w" style="display:block">'+c.w+'</span></span></label>';
+  });
+  list.innerHTML = html;
+  var boxes = function(){ return Array.prototype.slice.call(list.querySelectorAll('input[type=checkbox]')); };
+  var count = document.getElementById('t-count');
+  function upd(){ var n = boxes().filter(function(b){return b.checked;}).length; count.textContent = n + '/' + CLAUSES.length + ' selected'; }
+  list.addEventListener('change', upd); upd();
+  document.getElementById('cl-clear').addEventListener('click', function(){ boxes().forEach(function(b){b.checked=false;}); upd(); document.getElementById('t-result').classList.remove('show'); });
+
+  document.getElementById('t-calc').addEventListener('click', function(){
+    var present = [], missing = [];
+    boxes().forEach(function(b,i){ (b.checked ? present : missing).push(CLAUSES[i]); });
+    var out = document.getElementById('t-result');
+    var pct = Math.round(present.length / CLAUSES.length * 100);
+    var h = '<div class="score">Covered: ' + present.length + ' of ' + CLAUSES.length + ' core clauses (' + pct + '%).</div>';
+    h += '<div class="bar"><span style="width:' + pct + '%"></span></div>';
+    if(missing.length === 0){
+      h += '<div class="all-ok">Your contract appears to cover all 14 clauses — a strong base. Confirm their wording with a lawyer before you rely on them.</div>';
+    } else {
+      h += '<div class="miss-h">' + missing.length + ' missing — this is where you\'re exposed:</div>';
+      missing.forEach(function(c){ h += '<div class="miss-item"><div class="t">'+c.t+'</div><div class="w">'+c.w+'</div></div>'; });
+    }
+    h += '<div class="warn-box">⚠️ Every clause should be reviewed and drafted by a lawyer before signing. This checklist is a risk-reduction tool — not a guarantee of coverage.</div>';
+    h += '<div class="tool-actions"><a class="btn" href="mailto:hello@thetaai.gr?subject=Supplier AI contract check — results">Discuss the gaps — free 45-min session</a></div>';
+    h += '<div class="t-note">This check is indicative and based only on your selections. It is not legal advice.</div>';
+    out.innerHTML = h;
+    out.classList.add('show');
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
