@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Security Radar — Ενημέρωση AI Act, AI Security & ISO AI | θita ai</title>
+<meta name="description" content="Τρέχουσα ενημέρωση για EU AI Act, ασφάλεια AI και πρότυπα (ISO 42001 / NIST). Επιλεγμένες πηγές, αυτόματη συλλογή, ανανέωση κάθε μέρα — από τη θita ai.">
+<link rel="canonical" href="https://thetaai.gr/radar/">
+<meta property="og:title" content="AI Security Radar — θita ai">
+<meta property="og:description" content="Τρέχουσα ενημέρωση για EU AI Act, ασφάλεια AI και πρότυπα — επιλεγμένες πηγές, ανανέωση κάθε μέρα.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thetaai.gr/radar/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+
+header{border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--paper);}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:11px;font-weight:300;font-size:19px;letter-spacing:0.06em;color:var(--paper);}
+.brand:hover{text-decoration:none;}
+.brand .ai{color:#5B8DEF;}
+.hd .nav{font-size:13px;color:#a8a49b;display:flex;gap:16px;align-items:center;}
+.hd .nav a{color:#cfccc4;}
+
+.intro{padding:34px 0 6px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:10px;}
+h1{font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;}
+.sub{color:var(--stone-d);margin-top:12px;max-width:680px;font-size:15.5px;}
+.upd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:.12em;color:var(--stone);margin-top:14px;}
+.stat{display:flex;gap:26px;margin-top:20px;flex-wrap:wrap;}
+.stat div{font-size:13px;color:var(--stone);}
+.stat b{display:block;font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
+
+.disc{background:#fff;border:0.5px solid var(--line-d);border-left:3px solid var(--blue);border-radius:8px;padding:13px 16px;margin-top:22px;font-size:12.5px;color:var(--stone-d);line-height:1.55;}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 6px;position:sticky;top:0;background:var(--paper);padding:14px 0;z-index:5;border-bottom:0.5px solid var(--line);}
+.chip{font-size:13px;font-weight:500;padding:7px 15px;border-radius:999px;border:1px solid var(--line-d);background:#fff;color:var(--stone-d);cursor:pointer;transition:all .12s;user-select:none;}
+.chip:hover{border-color:var(--blue);color:var(--blue);}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+
+main{padding:8px 0 50px;}
+.group{margin-top:30px;}
+.group-h{font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);font-weight:600;padding-bottom:10px;border-bottom:0.5px solid var(--line);margin-bottom:4px;}
+.item{display:block;padding:18px 0;border-bottom:0.5px solid var(--line);color:var(--ink);}
+.item:hover{text-decoration:none;}
+.item:hover .it-title{color:var(--deep);}
+.it-top{display:flex;gap:10px;align-items:center;margin-bottom:6px;flex-wrap:wrap;}
+.badge{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:5px;}
+.b-act{background:#EFF6FF;color:#1E40AF;}
+.b-sec{background:#FEF2F2;color:#B91C1C;}
+.b-std{background:#F0FDF4;color:#15803D;}
+.b-inc{background:#FFF7ED;color:#C2410C;}
+.b-gen{background:#F5F5F4;color:#57534E;}
+.it-src{font-size:12.5px;color:var(--stone);font-family:ui-monospace,monospace;}
+.it-title{font-size:18px;font-weight:600;line-height:1.32;letter-spacing:-0.01em;transition:color .12s;}
+.it-sum{color:var(--stone-d);font-size:14.5px;margin-top:6px;max-width:760px;}
+.it-link{font-size:12.5px;color:var(--deep);font-weight:500;margin-top:8px;display:inline-block;}
+
+.cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:30px 28px;margin-top:44px;}
+.cta h3{font-size:20px;font-weight:600;margin-bottom:8px;color:var(--paper);}
+.cta p{color:#cfccc4;font-size:15px;margin-bottom:18px;max-width:620px;}
+.btn{display:inline-block;background:#5B8DEF;color:#0b1220;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;}
+.btn:hover{opacity:.9;text-decoration:none;color:#0b1220;}
+
+footer{border-top:0.5px solid var(--line);padding:26px 0 40px;}
+.foot{font-size:12.5px;color:var(--stone);line-height:1.6;}
+.foot b{color:var(--stone-d);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="/" aria-label="θita ai — αρχική">
+      <svg width="26" height="26" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#FAFAF9" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#FAFAF9" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#5B8DEF"/><circle cx="9" cy="55" r="8" fill="#FAFAF9"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav"><a href="/">Αρχική</a><a href="/ergaleia/">Εργαλεία</a><a href="/blog/">Blog</a></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="intro">
+    <div class="eyebrow">AI SECURITY RADAR</div>
+    <h1>Τι κινείται σε AI Act, AI Security &amp; ISO AI</h1>
+    <p class="sub">Παρακολουθούμε τις εξελίξεις σε κανονισμό, ασφάλεια συστημάτων AI και πρότυπα, ώστε να μένετε ενήμεροι χωρίς να ψάχνετε. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
+    <div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 13 ΙΟΥΝ 2026</div>
+    <div class="stat">
+      <div><b id="s-total">0</b>θέματα</div>
+      <div><b id="s-act">0</b>AI Act</div>
+      <div><b id="s-sec">0</b>AI Security</div>
+      <div><b id="s-inc">0</b>Περιστατικά</div>
+    </div>
+    <div class="disc">Αυτόματη συλλογή από εξωτερικές πηγές, για ενημερωτικούς σκοπούς. Οι τίτλοι/περιλήψεις παράγονται αυτόματα και ενδέχεται να περιέχουν ανακρίβειες — επιβεβαιώστε πάντα στην πρωτογενή πηγή. Δεν αποτελεί νομική συμβουλή.</div>
+  </section>
+
+  <div class="filters" id="filters"></div>
+  <main id="feed"></main>
+
+  <div class="cta">
+    <h3>Σας αφορά κάτι από αυτά;</h3>
+    <p>Αν χρησιμοποιείτε chatbot, AI agent ή εργαλεία AI στην επιχείρησή σας, ο Έλεγχος Θωράκισης σας δείχνει πού είστε εκτεθειμένοι ως προς τον EU AI Act και την ασφάλεια — με προτεραιότητες. Προηγείται δωρεάν συνεδρία 45 λεπτών.</p>
+    <a class="btn" href="mailto:hello@thetaai.gr?subject=AI Security Radar — δωρεάν συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+  </div>
+
+  <footer>
+    <p class="foot">© 2026 <b>θita ai</b> · Θ όπως θωράκιση · <a href="/">thetaai.gr</a><br>
+    Πηγές: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, Ars Technica, MIT Technology Review, The Verge, EURACTIV κ.ά.</p>
+  </footer>
+</div>
+
+<script>
+const GENERATED = "2026-06-13";
+const ITEMS = [
+{"title":"Anthropic to Open Mythos AI to EU's ENISA","source":"Dark Reading","date":"2026-06-01","url":"https://www.darkreading.com/cyber-risk/anthropic-mythos-ai-eu-enisa","topic":"AI Act","summary":"Following cooperation with the European Commission, Anthropic is granting EU cybersecurity agency ENISA access to its Mythos AI under Project Glasswing."},
+{"title":"Trump AI Order Seeks Voluntary Frontier Model Testing","source":"Dark Reading","date":"2026-06-05","url":"https://www.darkreading.com/cybersecurity-operations/trump-ai-order-seeks-voluntary-frontier-model-testing","topic":"AI Act","summary":"A White House executive order establishes a voluntary framework for early government access to frontier AI models alongside federal security investment."},
+{"title":"New Attacks Trick OpenClaw AI Agent Into Running Code and Leaking Secrets","source":"The Hacker News","date":"2026-06-11","url":"https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html","topic":"AI Security","summary":"Researchers showed a popular self-hosted AI agent can be driven via ordinary-looking inputs to run attacker code or leak data through indirect prompt injection."},
+{"title":"Agentjacking Attack Tricks AI Coding Agents Into Running Malicious Code","source":"The Hacker News","date":"2026-06-12","url":"https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html","topic":"AI Security","summary":"A new attack class uses a fake Sentry error report to trick AI coding agents into executing arbitrary code on developer machines."},
+{"title":"LangGraph Flaw Chain Exposes Self-Hosted AI Agents to Remote Code Execution","source":"The Hacker News","date":"2026-06-12","url":"https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html","topic":"AI Security","summary":"Three now-patched flaws in LangChain's LangGraph, including an SQL injection, could be chained into critical RCE against self-hosted AI agent apps."},
+{"title":"New ChatGPT Lockdown Mode Limits Tools That Could Enable Data Exfiltration","source":"The Hacker News","date":"2026-06-06","url":"https://thehackernews.com/2026/06/new-chatgpt-lockdown-mode-limits-tools.html","topic":"AI Security","summary":"OpenAI rolled out a Lockdown Mode that restricts tool use to reduce data-exfiltration risk from prompt injection for accounts handling sensitive data."},
+{"title":"Securing AI Agents Before They Go Rogue Is Next to Impossible","source":"Dark Reading","date":"2026-06-02","url":"https://www.darkreading.com/cyber-risk/securing-ai-agents-rogue","topic":"AI Security","summary":"High-autonomy AI agents with broad permissions pose serious enterprise risk; organizations need governance and controls before incidents occur."},
+{"title":"Langflow Vulnerability CVE-2026-5027 Exploited for Unauthenticated RCE","source":"The Hacker News","date":"2026-06-10","url":"https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html","topic":"AI Security","summary":"A high-severity path-traversal flaw in the AI app-building platform Langflow is under active exploitation, allowing arbitrary file writes on exposed servers."},
+{"title":"LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to RCE","source":"The Hacker News","date":"2026-06-09","url":"https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html","topic":"AI Security","summary":"CISA added a command-injection flaw in the LiteLLM AI gateway to its KEV catalog after evidence of active exploitation that can chain to unauthenticated RCE."},
+{"title":"Malicious Notifications Could Trick Google Gemini Users","source":"Dark Reading","date":"2026-06-03","url":"https://www.darkreading.com/application-security/malicious-notifications-could-trick-google-gemini-users","topic":"AI Security","summary":"A prompt-injection flaw in Gemini's voice assistant let attackers hide malicious commands inside notifications to enable social engineering."},
+{"title":"CISA Rewrites Federal Patching Requirements for AI Threat Era","source":"Dark Reading","date":"2026-06-10","url":"https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era","topic":"AI Security","summary":"A new CISA binding directive gives federal agencies three days to fix the most dangerous flaws, citing faster exploitation enabled by AI."},
+{"title":"AI Risk Worries Insurers & Businesses Alike","source":"Dark Reading","date":"2026-06-10","url":"https://www.darkreading.com/cyber-risk/ai-risk-worries-insurers-businesses-alike","topic":"AI Security","summary":"Many insurers are explicitly excluding AI risks while others race to build coverage frameworks, raising questions about what AI risk firms can manage."},
+{"title":"Researchers Build Self-Replicating AI Worm on Local Open-Weight Models","source":"The Hacker News","date":"2026-06-09","url":"https://thehackernews.com/2026/06/researchers-build-self-replicating-ai.html","topic":"AI Security","summary":"A proof-of-concept AI-driven worm uses a locally hosted open-weight LLM to reason through a network and self-replicate without any commercial AI service."},
+{"title":"Adaptive, Agentic AI Worms Loom as Next Enterprise Threat","source":"Dark Reading","date":"2026-06-05","url":"https://www.darkreading.com/cyber-risk/adaptive-agentic-ai-worms-enterprise-cyber-threat","topic":"AI Security","summary":"Researchers warn adaptive AI worms that seek vulnerabilities and tailor attacks per target are likely to strike enterprises within a year."},
+{"title":"Path Traversal Flaw in AI Dev Platform Langflow Exploited in Attacks","source":"BleepingComputer","date":"2026-06-10","url":"https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/","topic":"AI Security","summary":"Attackers are actively exploiting CVE-2026-5027 in Langflow to write arbitrary files on exposed servers."},
+{"title":"Agentic AI Isn't Risky; the Way Orgs Deploy It Is","source":"Dark Reading","date":"2026-05-28","url":"https://www.darkreading.com/application-security/agentic-ai-risky","topic":"AI Security","summary":"The real risk of AI agents lies in how organizations grant them overlapping permissions and access during deployment."},
+{"title":"AI Phishing Is Crushing SOCs with Alert Volume","source":"The Hacker News","date":"2026-06-08","url":"https://thehackernews.com/2026/06/ai-phishing-is-crushing-socs-with-alert.html","topic":"AI Security","summary":"AI has turned phishing into a volume machine, flooding security operations centers with convincing lures and overwhelming Tier 1 analysts."},
+{"title":"Beyond Assume-Breach: How AI-Native Security Will Reshape Enterprise Defense","source":"Dark Reading","date":"2026-06-02","url":"https://www.darkreading.com/cyber-risk/assume-breach-ai-native-security-reshape-enterprise-defense","topic":"AI Security","summary":"Enterprise security is moving toward hyper-segmented, AI-orchestrated defense models that go beyond the assume-breach paradigm."},
+{"title":"AI Broke Vulnerability Management — CISOs Move Budget to BAS","source":"The Hacker News","date":"2026-06-11","url":"https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html","topic":"AI Security","summary":"AI has collapsed the buffer between vulnerability discovery and weaponization, pushing CISOs toward breach-and-attack-simulation validation."},
+{"title":"AI Agent Uncovers 21 Zero-Days in FFmpeg","source":"The Hacker News","date":"2026-06-06","url":"https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html","topic":"AI Security","summary":"An autonomous AI agent discovered 21 previously unknown vulnerabilities in the widely embedded FFmpeg library, signaling AI's growing role in offensive research."},
+{"title":"Anthropic Releases Claude Fable 5 With Cyber Safeguards","source":"The Hacker News","date":"2026-06-10","url":"https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html","topic":"General","summary":"Anthropic shipped its most capable model as two products split by safety classifiers, restricting the unsafeguarded variant to vetted cyber defenders."},
+{"title":"Meta to Use Off-Site Business Data for Feed and AI Personalization","source":"The Hacker News","date":"2026-06-09","url":"https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html","topic":"Incidents","summary":"Meta will use data shared by other businesses about user activity to personalize feeds and AI chatbot responses, raising data-protection and consent concerns."},
+{"title":"Coupang Hit With Record $409 Million Data Breach Fine in Korea","source":"BleepingComputer","date":"2026-06-11","url":"https://www.bleepingcomputer.com/news/security/south-korea-hits-coupang-with-record-409-million-fine-over-data-breach/","topic":"Incidents","summary":"South Korea's regulator fined Coupang a record ~$409 million after a breach exposed personal data of more than 37 million customers."}
+];
+
+const TOPICS = ["AI Act","AI Security","Standards","Incidents","General"];
+const BADGE = {"AI Act":"b-act","AI Security":"b-sec","Standards":"b-std","Incidents":"b-inc","General":"b-gen"};
+const GROUP_LABEL = {"AI Act":"AI Act & Ρύθμιση","AI Security":"AI Security","Standards":"Πρότυπα (ISO / NIST)","Incidents":"Περιστατικά & Δεδομένα","General":"Γενικά"};
+
+let active = "Όλα";
+function render(){
+  const feed = document.getElementById("feed");
+  feed.innerHTML = "";
+  const list = active==="Όλα" ? ITEMS : ITEMS.filter(i=>i.topic===active);
+  TOPICS.forEach(t=>{
+    const items = list.filter(i=>i.topic===t).sort((a,b)=>b.date.localeCompare(a.date));
+    if(!items.length) return;
+    const g = document.createElement("div");
+    g.className="group";
+    g.innerHTML = `<div class="group-h">${GROUP_LABEL[t]} · ${items.length}</div>`;
+    items.forEach(i=>{
+      const a = document.createElement("a");
+      a.className="item"; a.href=i.url; a.target="_blank"; a.rel="noopener noreferrer nofollow";
+      a.innerHTML = `<div class="it-top"><span class="badge ${BADGE[i.topic]}">${i.topic}</span>`+
+        `<span class="it-src">${i.source} · ${fmt(i.date)}</span></div>`+
+        `<div class="it-title">${i.title}</div>`+
+        `<div class="it-sum">${i.summary}</div>`+
+        `<span class="it-link">Διάβασε στην πηγή →</span>`;
+      g.appendChild(a);
+    });
+    feed.appendChild(g);
+  });
+  if(!feed.children.length) feed.innerHTML = '<p style="color:var(--stone);padding:30px 0;">Καμία καταχώριση σε αυτή την κατηγορία.</p>';
+}
+function fmt(d){const m=["Ιαν","Φεβ","Μαρ","Απρ","Μαΐ","Ιουν","Ιουλ","Αυγ","Σεπ","Οκτ","Νοε","Δεκ"];const p=d.split("-");return p.length===3?`${parseInt(p[2])} ${m[parseInt(p[1])-1]}`:d;}
+function buildFilters(){
+  const f = document.getElementById("filters");
+  ["Όλα",...TOPICS].forEach(t=>{
+    const c=document.createElement("span");
+    c.className="chip"+(t===active?" on":"");
+    c.textContent=t;
+    c.onclick=()=>{active=t;document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));c.classList.add("on");render();};
+    f.appendChild(c);
+  });
+}
+document.getElementById("s-total").textContent = ITEMS.length;
+document.getElementById("s-act").textContent = ITEMS.filter(i=>i.topic==="AI Act").length;
+document.getElementById("s-sec").textContent = ITEMS.filter(i=>i.topic==="AI Security").length;
+document.getElementById("s-inc").textContent = ITEMS.filter(i=>i.topic==="Incidents").length;
+buildFilters();
+render();
+</script>
+</body>
+</html>
