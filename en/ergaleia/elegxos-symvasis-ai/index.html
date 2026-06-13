@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Supplier AI contract check — free liability-clause checklist | θita ai</title>
-<meta name="description" content="Interactive checklist: which liability clauses should be in your contract with your AI provider — and which are usually missing. Free, in your browser, no sign-up.">
+<meta name="description" content="Upload your contract (PDF/DOCX) or tick manually: which liability clauses are in your contract with your AI provider — and which are missing. In your browser, nothing uploaded.">
 <link rel="canonical" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/">
 <link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/">
 <link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/">
 <link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/">
 <meta property="og:title" content="Supplier AI contract check — free liability checklist">
-<meta property="og:description" content="Which liability clauses should be in your contract with your AI provider — and which are usually missing.">
+<meta property="og:description" content="Which liability clauses should be in your contract with your AI provider — and which are missing. Scanned in your browser, no upload.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="el_GR">
@@ -50,7 +50,20 @@ main{padding:48px 0 72px;}
 .eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
 h1{font-size:clamp(26px,4vw,36px);font-weight:600;line-height:1.2;letter-spacing:-0.01em;}
 .sub{color:var(--stone-d);margin-top:12px;max-width:600px;}
-.tool-card{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:24px 28px;margin-top:32px;}
+.explain{background:#fff;border:0.5px solid var(--line-d);border-left:3px solid var(--blue);border-radius:10px;padding:16px 18px;margin-top:24px;font-size:13.5px;color:var(--stone-d);line-height:1.6;}
+.explain b{color:var(--ink);}
+.explain .row{display:flex;gap:10px;margin-top:8px;}
+.explain .row span:first-child{flex-shrink:0;font-weight:600;}
+.tool-card{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:24px 28px;margin-top:22px;}
+.drop{display:block;border:1.5px dashed var(--line-d);border-radius:12px;padding:26px;text-align:center;cursor:pointer;transition:all .15s;}
+.drop:hover{border-color:var(--blue);background:#FAFBFF;}
+.drop.busy{border-style:solid;border-color:var(--blue);}
+.drop .big{font-size:15px;font-weight:600;color:var(--ink);}
+.drop .small{font-size:13px;color:var(--stone);margin-top:6px;}
+.drop input{display:none;}
+.scan-status{font-size:13px;color:var(--stone);margin-top:12px;text-align:center;}
+.sep{display:flex;align-items:center;gap:12px;margin:26px 0 4px;color:var(--stone);font-size:12.5px;letter-spacing:.06em;}
+.sep::before,.sep::after{content:"";flex:1;height:0.5px;background:var(--line);}
 .cl-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
 .cl-head .h{font-size:13px;letter-spacing:.04em;color:var(--stone);}
 .cl-head a{font-size:13px;cursor:pointer;color:var(--deep);}
@@ -65,11 +78,14 @@ h1{font-size:clamp(26px,4vw,36px);font-weight:600;line-height:1.2;letter-spacing
 .score{font-size:15px;font-weight:600;margin-bottom:6px;}
 .bar{height:8px;border-radius:6px;background:#EDEBE4;overflow:hidden;margin:10px 0 18px;}
 .bar > span{display:block;height:100%;background:var(--ink);}
-.miss-h{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--miss);font-weight:600;margin:14px 0 8px;}
-.miss-item{background:var(--miss-bg);border-left:3px solid var(--miss);border-radius:6px;padding:11px 14px;margin-bottom:8px;}
-.miss-item .t{font-weight:600;font-size:14.5px;}
-.miss-item .w{font-size:13px;color:var(--stone-d);margin-top:3px;}
-.all-ok{background:var(--ok-bg);border-left:3px solid var(--ok);border-radius:6px;padding:13px 15px;font-size:14.5px;color:var(--stone-d);}
+.grp-h{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin:16px 0 8px;}
+.grp-h.m{color:var(--miss);} .grp-h.o{color:var(--ok);}
+.r-item{border-radius:6px;padding:11px 14px;margin-bottom:8px;}
+.r-item.m{background:var(--miss-bg);border-left:3px solid var(--miss);}
+.r-item.o{background:var(--ok-bg);border-left:3px solid var(--ok);}
+.r-item .t{font-weight:600;font-size:14.5px;}
+.r-item .w{font-size:13px;color:var(--stone-d);margin-top:3px;}
+.r-item .ex{font-size:12px;color:var(--stone);margin-top:6px;font-style:italic;border-left:2px solid var(--line-d);padding-left:8px;}
 .warn-box{background:#FAEEDA;border-left:3px solid #854F0B;border-radius:6px;padding:12px 15px;font-size:13px;color:#633806;margin-top:16px;line-height:1.55;}
 .t-note{font-size:12.5px;color:var(--stone);margin-top:16px;}
 footer{border-top:0.5px solid var(--line);padding:28px 0;}
@@ -116,9 +132,23 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
   <div class="wrap">
     <div class="eyebrow">FREE TOOL</div>
     <h1>Supplier AI contract check</h1>
-    <p class="sub">Buying or using AI (a chatbot, voice agent or tool) from a provider? Tick which liability clauses your contract already has — and see which are missing and how they expose you. In your browser, no sign-up, nothing stored.</p>
+    <p class="sub">Upload your contract with your AI provider (PDF/DOCX) or tick manually. It shows which of the 14 core liability clauses appear to be present — and which are missing and how they expose you.</p>
+
+    <div class="explain">
+      <b>What it does — and what it does NOT.</b> The file is read <b>locally, in your browser only</b>: it is not uploaded to any server, not stored, not sent anywhere. The tool <b>looks for "signals"</b> (keywords/phrases) that indicate each clause and shows you the matched excerpt.
+      <div class="row"><span>→</span><span><b>It does not read or "understand" the contract like a lawyer.</b> It's automated mention-detection — it may miss a clause worded differently, or flag a word with no substance.</span></div>
+      <div class="row"><span>→</span><span>It's a <b>fast gap-spotting aid</b>, not legal advice and not a substitute for a lawyer. Use the result as a starting point for the conversation — not as a verdict.</span></div>
+    </div>
 
     <div class="tool-card" id="checker">
+      <label class="drop" id="drop">
+        <input type="file" id="file" accept=".pdf,.docx,.txt">
+        <div class="big">Upload your contract to scan</div>
+        <div class="small">PDF, DOCX or TXT · read locally, never leaves your device</div>
+      </label>
+      <div class="scan-status" id="scan-status"></div>
+
+      <div class="sep">OR CHECK MANUALLY</div>
       <div class="cl-head">
         <span class="h">Tick the clauses that <strong>are present</strong> in your contract:</span>
         <a id="cl-clear">Clear</a>
@@ -136,27 +166,30 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 <footer>
   <div class="wrap foot">
     <span>© 2026 <a href="/en/">θita ai</a> · Θ as in shielding · <a href="/ergaleia/elegxos-symvasis-ai/">Ελληνικά</a></span>
-    <p class="disclaimer">This tool gives an indicative completeness check based on your selections. It is not legal advice and does not replace contract review by a qualified lawyer. Nothing is stored or sent.</p>
+    <p class="disclaimer">This tool runs a local, automated keyword scan — it does not read or interpret the contract and is not legal advice. The file is not uploaded, stored or sent. A lawyer's review is required.</p>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 <script>
 (function(){
+  if(window.pdfjsLib){ pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"; }
   var CLAUSES = [
-    {t:"Role allocation (provider / deployer)", w:"States explicitly who is the provider and who is the deployer under the EU AI Act, and who is responsible for what. Without it, liability is blurry — and usually lands on you."},
-    {t:"Data-accuracy responsibility", w:"Who is responsible for the data/FAQ that feeds or trains the AI. If missing, you carry errors caused by uncertain or third-party data."},
-    {t:"Liability cap & exclusions", w:"A cap on damages and exclusion of indirect/consequential loss. Check whether the cap is reasonable and what exactly the provider excludes."},
-    {t:"Indemnity", w:"Who covers claims from your end-customers or third parties arising from the AI. If missing, you shoulder them alone."},
-    {t:"Transparency duty — Article 50", w:"Who ensures the chatbot/agent discloses it is AI. A legal obligation that takes effect on 2 August 2026."},
-    {t:"GDPR roles (controller/processor) + DPA", w:"Who is controller and who is processor, with a signed data processing agreement. Mandatory if the AI touches personal data."},
-    {t:"Scope & intended use", w:"What the AI may and may not do — e.g. no binding offers, prices or advice. This bounds your exposure."},
-    {t:"Relationship with the end-customer", w:"Who keeps the relationship and liability towards your own customer. Usually you — it should say so explicitly."},
-    {t:"Term, termination & maintenance", w:"What happens to the system after the term ends, who maintains it, who pays, and how you exit cleanly."},
-    {t:"Warranty disclaimer (best efforts)", w:"Providers usually don't guarantee uninterrupted or error-free operation. See exactly what they promise — and what they don't."},
-    {t:"Third-party (model) dependencies", w:"Outages or changes at the model provider (OpenAI, Anthropic, etc.) are out of control — the contract should require notice and a continuity plan."},
-    {t:"Acknowledgement of AI's inherent limits", w:"Explicit acceptance that AI systems may rarely produce inaccurate/unpredictable answers (an inherent trait, not a defect)."},
-    {t:"UAT — acceptance of behaviour", w:"You accept the agent's behaviour in writing after a trial period — not just the FAQ content."},
-    {t:"Duty to notify of changes", w:"Who tells you when something changes (model, function, policy) that affects compliance or correct operation."}
+    {t:"Role allocation (provider / deployer)", w:"States explicitly who is the provider and who is the deployer under the EU AI Act, and who is responsible for what. Without it, liability is blurry — and usually lands on you.", kw:["provider","deployer","παροχος","παροχο","φορεας αναπτυξης","κατανομη","ρολοι των μερων","ρολους","responsibilit"]},
+    {t:"Data-accuracy responsibility", w:"Who is responsible for the data/FAQ that feeds or trains the AI. If missing, you carry errors caused by uncertain or third-party data.", kw:["ακριβεια δεδομενων","ποιοτητα δεδομενων","ευθυνη για τα δεδομενα","data accuracy","accuracy of","input data","δεδομενα εισοδου"]},
+    {t:"Liability cap & exclusions", w:"A cap on damages and exclusion of indirect/consequential loss. Check whether the cap is reasonable and what exactly the provider excludes.", kw:["περιορισμος ευθυν","ανωτατο οριο","οριο ευθυν","limitation of liability","liability cap","aggregate liability","εμμεσες ζημιες","αποθετικες","consequential","indirect damages"]},
+    {t:"Indemnity", w:"Who covers claims from your end-customers or third parties arising from the AI. If missing, you shoulder them alone.", kw:["αποζημιωση","αποζημιωσει","indemnif","hold harmless","κρατησει αλωβητ"]},
+    {t:"Transparency duty — Article 50", w:"Who ensures the chatbot/agent discloses it is AI. A legal obligation that takes effect on 2 August 2026.", kw:["αρθρο 50","article 50","δηλωνει οτι ειναι","γνωστοποιηση","disclosure","διαφανει","discloses it is ai"]},
+    {t:"GDPR roles (controller/processor) + DPA", w:"Who is controller and who is processor, with a signed data processing agreement. Mandatory if the AI touches personal data.", kw:["gdpr","2016/679","προσωπικα δεδομενα","υπευθυνος επεξεργασιας","εκτελων","εκτελ","data processing agreement","dpa","processor","controller","personal data"]},
+    {t:"Scope & intended use", w:"What the AI may and may not do — e.g. no binding offers, prices or advice. This bounds your exposure.", kw:["σκοπος χρησης","προβλεπομενη χρηση","intended use","scope of","επιτρεπομενη χρηση","permitted use","binding offer"]},
+    {t:"Relationship with the end-customer", w:"Who keeps the relationship and liability towards your own customer. Usually you — it should say so explicitly.", kw:["τελικο πελατη","τελικους πελατες","end customer","end-user","end user","τελικο χρηστη"]},
+    {t:"Term, termination & maintenance", w:"What happens to the system after the term ends, who maintains it, who pays, and how you exit cleanly.", kw:["διαρκεια","καταγγελια","τερματισμος","termination","συντηρηση","maintenance","term of this agreement"]},
+    {t:"Warranty disclaimer (best efforts)", w:"Providers usually don't guarantee uninterrupted or error-free operation. See exactly what they promise — and what they don't.", kw:["εγγυηση","χωρις εγγυηση","best efforts","βελτιστες προσπαθειες","as is","ως εχει","no warranty","αδιαλειπτη","disclaim","warranties"]},
+    {t:"Third-party (model) dependencies", w:"Outages or changes at the model provider (OpenAI, Anthropic, etc.) are out of control — the contract should require notice and a continuity plan.", kw:["τριτων","τριτου μερους","υπεργολαβ","subcontractor","third party","third-party","openai","anthropic","model provider"]},
+    {t:"Acknowledgement of AI's inherent limits", w:"Explicit acceptance that AI systems may rarely produce inaccurate/unpredictable answers (an inherent trait, not a defect).", kw:["ανακριβ","απροβλεπτ","παραισθησ","hallucinat","may produce inaccur","inherent","limitations of"]},
+    {t:"UAT — acceptance of behaviour", w:"You accept the agent's behaviour in writing after a trial period — not just the FAQ content.", kw:["αποδοχη","uat","user acceptance","δοκιμαστικη","trial period","acceptance test","acceptance testing"]},
+    {t:"Duty to notify of changes", w:"Who tells you when something changes (model, function, policy) that affects compliance or correct operation.", kw:["ενημερωση για αλλαγες","ειδοποιηση","notify","notification of","change notice","duty to inform","material change"]}
   ];
   var list = document.getElementById('cl-list');
   var html = '';
@@ -170,25 +203,60 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
   list.addEventListener('change', upd); upd();
   document.getElementById('cl-clear').addEventListener('click', function(){ boxes().forEach(function(b){b.checked=false;}); upd(); document.getElementById('t-result').classList.remove('show'); });
 
-  document.getElementById('t-calc').addEventListener('click', function(){
-    var present = [], missing = [];
-    boxes().forEach(function(b,i){ (b.checked ? present : missing).push(CLAUSES[i]); });
+  function esc(s){ return s.replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function render(present, missing, scanned){
     var out = document.getElementById('t-result');
-    var pct = Math.round(present.length / CLAUSES.length * 100);
-    var h = '<div class="score">Covered: ' + present.length + ' of ' + CLAUSES.length + ' core clauses (' + pct + '%).</div>';
-    h += '<div class="bar"><span style="width:' + pct + '%"></span></div>';
-    if(missing.length === 0){
-      h += '<div class="all-ok">Your contract appears to cover all 14 clauses — a strong base. Confirm their wording with a lawyer before you rely on them.</div>';
-    } else {
-      h += '<div class="miss-h">' + missing.length + ' missing — this is where you\'re exposed:</div>';
-      missing.forEach(function(c){ h += '<div class="miss-item"><div class="t">'+c.t+'</div><div class="w">'+c.w+'</div></div>'; });
+    var total = CLAUSES.length, pct = Math.round(present.length/total*100);
+    var h = '<div class="score">' + (scanned ? 'Scan: detected ' : 'Covered: ') + present.length + ' of ' + total + ' clauses (' + pct + '%).</div>';
+    h += '<div class="bar"><span style="width:'+pct+'%"></span></div>';
+    if(missing.length){
+      h += '<div class="grp-h m">' + missing.length + ' missing — likely gaps</div>';
+      missing.forEach(function(c){ h += '<div class="r-item m"><div class="t">'+c.t+'</div><div class="w">'+c.w+'</div></div>'; });
     }
-    h += '<div class="warn-box">⚠️ Every clause should be reviewed and drafted by a lawyer before signing. This checklist is a risk-reduction tool — not a guarantee of coverage.</div>';
+    if(present.length){
+      h += '<div class="grp-h o">Signals found for ' + present.length + '</div>';
+      present.forEach(function(c){ h += '<div class="r-item o"><div class="t">'+c.t+'</div>' + (c._ex ? '<div class="ex">…'+esc(c._ex)+'…</div>' : '') + '</div>'; });
+    }
+    h += '<div class="warn-box">⚠️ ' + (scanned ? 'The scan detects mentions, not the substance or adequacy of a clause — it can miss or mis-flag. ' : '') + 'Every clause should be reviewed and drafted by a lawyer before signing. A risk-reduction tool — not a guarantee.</div>';
     h += '<div class="tool-actions"><a class="btn" href="mailto:hello@thetaai.gr?subject=Supplier AI contract check — results">Discuss the gaps — free 45-min session</a></div>';
-    h += '<div class="t-note">This check is indicative and based only on your selections. It is not legal advice.</div>';
-    out.innerHTML = h;
-    out.classList.add('show');
-    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    out.innerHTML = h; out.classList.add('show');
+    out.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+
+  document.getElementById('t-calc').addEventListener('click', function(){
+    var present=[], missing=[];
+    boxes().forEach(function(b,i){ (b.checked?present:missing).push(CLAUSES[i]); });
+    render(present, missing, false);
+  });
+
+  function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+  function scanText(raw){
+    var text = norm(raw), present=[], missing=[];
+    CLAUSES.forEach(function(c,i){
+      var hit=null;
+      for(var k=0;k<c.kw.length;k++){ var idx=text.indexOf(c.kw[k]); if(idx>-1){ hit=idx; break; } }
+      if(hit!==null){
+        var s=Math.max(0,hit-45), ex=raw.slice(s, Math.min(raw.length, hit+75)).replace(/\s+/g,' ').trim();
+        var cc=Object.assign({},c); cc._ex=ex; present.push(cc);
+        var b=boxes()[i]; if(b) b.checked=true;
+      } else { missing.push(c); var b2=boxes()[i]; if(b2) b2.checked=false; }
+    });
+    upd(); render(present, missing, true);
+  }
+  var status=document.getElementById('scan-status'), drop=document.getElementById('drop');
+  function setStatus(t){ status.textContent=t; }
+  document.getElementById('file').addEventListener('change', function(e){
+    var f=e.target.files[0]; if(!f) return;
+    drop.classList.add('busy'); setStatus('Analysing "'+f.name+'" locally…');
+    var name=f.name.toLowerCase();
+    var done=function(txt){ drop.classList.remove('busy'); if(!txt||txt.trim().length<20){ setStatus('No text could be read from the file. Try a PDF with selectable text, or DOCX.'); return; } setStatus('Scan of "'+f.name+'" complete. Nothing was uploaded.'); scanText(txt); };
+    var fail=function(){ drop.classList.remove('busy'); setStatus('Could not read the file. Try another format (PDF/DOCX/TXT).'); };
+    try{
+      if(name.endsWith('.txt')){ var r=new FileReader(); r.onload=function(){done(r.result);}; r.onerror=fail; r.readAsText(f); }
+      else if(name.endsWith('.docx')){ f.arrayBuffer().then(function(buf){ mammoth.extractRawText({arrayBuffer:buf}).then(function(res){done(res.value);}).catch(fail); }).catch(fail); }
+      else if(name.endsWith('.pdf')){ f.arrayBuffer().then(function(buf){ pdfjsLib.getDocument({data:buf}).promise.then(function(pdf){ var pages=[],n=pdf.numPages; var get=function(p){ return pdf.getPage(p).then(function(pg){ return pg.getTextContent().then(function(tc){ pages[p-1]=tc.items.map(function(it){return it.str;}).join(' '); }); }); }; var seq=Promise.resolve(); for(var p=1;p<=n;p++){ (function(pp){ seq=seq.then(function(){return get(pp);}); })(p); } seq.then(function(){ done(pages.join('\n')); }).catch(fail); }).catch(fail); }).catch(fail); }
+      else { drop.classList.remove('busy'); setStatus('Unsupported format. Use PDF, DOCX or TXT.'); }
+    }catch(err){ fail(); }
   });
 })();
 </script>
