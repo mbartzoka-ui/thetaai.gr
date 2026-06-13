@@ -141,4 +141,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-fable-5-export-control/"/>
     <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://thetaai.gr/ergaleia/elegxos-symvasis-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
 </urlset>
