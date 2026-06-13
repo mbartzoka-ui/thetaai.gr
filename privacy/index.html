@@ -7,6 +7,12 @@
 <meta name="description" content="Πώς η θita ai συλλέγει, χρησιμοποιεί και προστατεύει τα προσωπικά σας δεδομένα, σύμφωνα με τον GDPR.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://thetaai.gr/privacy/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/privacy/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/privacy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>
 :root{
@@ -22,7 +28,11 @@ header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:b
 .head-in{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
 .logo .ai{color:var(--blue);font-weight:500;}
-.back{font-size:14px;color:var(--stone-d);}
+.head-right{display:flex;gap:16px;align-items:center;font-size:14px;}
+.back{color:var(--stone-d);}
+.lang{color:var(--stone);font-size:13px;}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
 main{padding:56px 0 72px;}
 .eyebrow{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:12px;}
 h1{font-size:34px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:10px;}
@@ -32,7 +42,6 @@ p{margin-bottom:14px;color:var(--stone-d);}
 ul{margin:0 0 14px 20px;color:var(--stone-d);}
 li{margin-bottom:8px;}
 strong{color:var(--ink);font-weight:600;}
-.fill{background:#FEF3C7;padding:1px 6px;border-radius:4px;color:#92400E;font-weight:500;}
 .box{border:0.5px solid var(--line-d);border-radius:12px;padding:20px 22px;background:#fff;margin:18px 0;}
 footer{border-top:0.5px solid var(--line);padding:32px 0;margin-top:48px;}
 .copy{color:var(--stone);font-size:13px;}
@@ -47,7 +56,10 @@ footer{border-top:0.5px solid var(--line);padding:32px 0;margin-top:48px;}
       <svg width="26" height="26" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
       <span>θita <span class="ai">ai</span></span>
     </a>
-    <a href="/" class="back">← Αρχική</a>
+    <div class="head-right">
+      <span class="lang"><span class="on">EL</span> · <a href="/en/privacy/">EN</a></span>
+      <a href="/" class="back">← Αρχική</a>
+    </div>
   </div>
 </header>
 
@@ -106,7 +118,7 @@ footer{border-top:0.5px solid var(--line);padding:32px 0;margin-top:48px;}
 
 <footer>
   <div class="wrap">
-    <div class="copy">© 2026 θita ai · Θ όπως θωράκιση · <a href="/">Αρχική</a></div>
+    <div class="copy">© 2026 θita ai · Θ όπως θωράκιση · <a href="/">Αρχική</a> · <a href="/en/privacy/">English</a></div>
     <p class="disclaimer">Η θita ai παρέχει συμβουλευτικές υπηρεσίες συμμόρφωσης με τον EU AI Act και ασφάλειας συστημάτων AI. Δεν παρέχει νομικές υπηρεσίες· για νομικά ζητήματα απαιτείται συνεργασία με δικηγόρο.</p>
   </div>
 </footer>
