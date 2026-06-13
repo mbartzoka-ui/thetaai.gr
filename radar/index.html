@@ -86,17 +86,41 @@ main{padding:8px 0 50px;}
 footer{border-top:0.5px solid var(--line);padding:26px 0 40px;}
 .foot{font-size:12.5px;color:var(--stone);line-height:1.6;}
 .foot b{color:var(--stone-d);}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+.filters{top:57px;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap hd">
-    <a class="brand" href="/" aria-label="θita ai — αρχική">
-      <svg width="26" height="26" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#FAFAF9" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#FAFAF9" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#5B8DEF"/><circle cx="9" cy="55" r="8" fill="#FAFAF9"/></svg>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
       <span>θita <span class="ai">ai</span></span>
     </a>
-    <nav class="nav"><a href="/">Αρχική</a><a href="/ergaleia/">Εργαλεία</a><a href="/blog/">Blog</a><span style="color:#5b574e;">·</span><span style="color:#fafaf9;font-weight:600;">EL</span><a href="/en/radar/">EN</a></nav>
+    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
+      <a href="/#services">Υπηρεσίες</a>
+      <a href="/#method">Μεθοδολογία</a>
+      <a href="/ergaleia/">Εργαλεία</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#guide">Οδηγός</a>
+      <a href="/#faq">Συχνές ερωτήσεις</a>
+      <span class="lang"><span class="on">EL</span> · <a href="/en/radar/">EN</a></span>
+    </nav>
   </div>
 </header>
 
