@@ -195,6 +195,7 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
       <a href="#method">Method</a>
       <a href="#tools">Tools</a>
       <a href="/blog/">Blog</a>
+      <a href="#guide">Guide</a>
       <a href="#faq">FAQ</a>
       <span class="lang"><a href="/">EL</a> · <span class="on">EN</span></span>
     </nav>
@@ -211,6 +212,7 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
     <div class="hero-cta">
       <a href="#contact" class="btn">Book a 45&#8242; mapping session</a>
       <a href="#method" class="btn btn-ghost">How we work →</a>
+      <a href="#guide" class="btn btn-ghost">Free EU AI Act guide</a>
     </div>
   </div>
   <div class="hero-mark">
@@ -457,6 +459,71 @@ footer{border-top:0.5px solid var(--line);padding:36px 0;}
         <p>The Shielding Check starts within the week and is delivered in 5–7 business days. It's preceded by a free 45-minute session, in which we map your system and define the exact scope of the check.</p>
       </details>
     </div>
+  </div>
+</section>
+
+<section id="guide" class="ta-guide">
+  <style>
+    .ta-guide{--ink:#1B1E27;--blue:#2F4FE0;--cream:#F6F5F1;--muted:#6B6F7A;--line:#DCDAD2;
+      background:var(--cream);color:var(--ink);padding:72px 24px;font-family:inherit;}
+    .ta-guide .wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+    .ta-guide .eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+    .ta-guide h2{font-size:34px;line-height:1.1;font-weight:800;margin:0 0 16px;letter-spacing:-.5px;}
+    .ta-guide p.sub{font-size:17px;color:#3a3d47;margin:0 0 22px;}
+    .ta-guide ul{list-style:none;padding:0;margin:0;}
+    .ta-guide ul li{padding:8px 0 8px 28px;position:relative;color:#2c2f38;}
+    .ta-guide ul li::before{content:"";position:absolute;left:0;top:14px;width:10px;height:10px;
+      border:2px solid var(--blue);border-radius:50%;}
+    .ta-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(27,30,39,.06);}
+    .ta-card .ct{font-weight:800;font-size:19px;margin:0 0 6px;}
+    .ta-card .cd{color:var(--muted);font-size:14px;margin:0 0 18px;}
+    .ta-card label{display:block;font-size:13px;font-weight:700;margin:0 0 6px;}
+    .ta-card input[type=email]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:9px;
+      font-size:15px;font-family:inherit;box-sizing:border-box;}
+    .ta-card .consent{display:flex;gap:10px;align-items:flex-start;margin:14px 0 18px;font-size:12.5px;color:var(--muted);line-height:1.45;}
+    .ta-card .consent input{margin-top:3px;}
+    .ta-card .consent a{color:var(--blue);}
+    .ta-card button{width:100%;background:var(--blue);color:#fff;border:0;border-radius:9px;
+      padding:14px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;}
+    .ta-card button:hover{filter:brightness(.94);}
+    .ta-card .micro{text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0;}
+    @media(max-width:780px){.ta-guide .wrap{grid-template-columns:1fr;gap:32px;}.ta-guide h2{font-size:28px;}}
+  </style>
+
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Free guide</div>
+      <h2>EU AI Act: what changes for your business</h2>
+      <p class="sub">The practical guide for small and mid-sized businesses — where your AI falls on the risk pyramid, which deadlines affect you, and the 3 obligations that probably already bind you. Reads in 15 minutes.</p>
+      <ul>
+        <li>The risk pyramid — and where you sit</li>
+        <li>The timeline, with the 2026 update</li>
+        <li>AI Act &amp; GDPR: what applies in parallel</li>
+        <li>A 7-question self-check to see where you stand</li>
+      </ul>
+    </div>
+
+    <form class="ta-card" id="guideForm" method="POST" action="https://formspree.io/f/meewrqgz">
+      <input type="hidden" name="_next" value="https://thetaai.gr/en/odigos/efxaristo/">
+      <input type="hidden" name="_subject" value="New EU AI Act guide download — thetaai.gr (EN)">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="ct">Send me the guide</p>
+      <p class="cd">One email, the guide, done.</p>
+
+      <label for="ta-email">Email</label>
+      <input id="ta-email" type="email" name="email" required placeholder="you@company.com">
+
+      <div class="consent">
+        <input id="ta-consent" type="checkbox" name="consent" required>
+        <label for="ta-consent" style="font-weight:400;margin:0;">I agree to receive the guide and occasional updates from θita ai. I can unsubscribe at any time. <a href="/privacy">Privacy policy</a>.</label>
+      </div>
+
+      <button type="submit">Send me the guide →</button>
+      <p class="micro">No spam. Your data is never sold.</p>
+    </form>
+<script>
+(function(){var f=document.getElementById("guideForm");if(!f)return;f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button[type=submit]");if(b){b.disabled=true;b.textContent="Sending…";}fetch(f.action,{method:"POST",body:new FormData(f),headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){window.location.href="/en/odigos/efxaristo/";}else{r.json().then(function(d){alert((d.errors&&d.errors[0]&&d.errors[0].message)||"Something went wrong. Please try again.");if(b){b.disabled=false;b.textContent="Send me the guide →";}});}}).catch(function(){f.submit();});});})();
+</script>
   </div>
 </section>
 
