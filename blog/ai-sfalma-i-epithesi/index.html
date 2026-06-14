@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI σφάλμα ή επίθεση; Ο κανόνας που τα ξεχωρίζει | θita ai</title>
+<meta name="description" content="Δεν είναι κάθε «AI gone wrong» επίθεση. Τέσσερα γνωστά περιστατικά και ο κανόνας: ήταν το ίδιο το σύστημα AI ο στόχος;">
+<link rel="canonical" href="https://thetaai.gr/blog/ai-sfalma-i-epithesi/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-sfalma-i-epithesi/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-security-audit-5-questions/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-sfalma-i-epithesi/">
+<meta property="og:title" content="AI σφάλμα ή επίθεση; Ο κανόνας που τα ξεχωρίζει">
+<meta property="og:description" content="Δεν είναι κάθε «AI gone wrong» επίθεση. Τέσσερα γνωστά περιστατικά και ο κανόνας: ήταν το ίδιο το σύστημα AI ο στόχος;">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://thetaai.gr/blog/ai-sfalma-i-epithesi/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI σφάλμα ή επίθεση; Ο κανόνας που τα ξεχωρίζει",
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "inLanguage": "el",
+  "author": {
+    "@type": "Organization",
+    "name": "θita ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "θita ai",
+    "url": "https://thetaai.gr/"
+  },
+  "mainEntityOfPage": "https://thetaai.gr/blog/ai-sfalma-i-epithesi/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://thetaai.gr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "5 ερωτήσεις audit",
+      "item": "https://thetaai.gr/blog/ai-sfalma-i-epithesi/"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
+      <a href="/#services">Υπηρεσίες</a>
+      <a href="/#method">Μεθοδολογία</a>
+      <a href="/ergaleia/">Εργαλεία</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#guide">Οδηγός</a>
+      <a href="/#faq">Συχνές ερωτήσεις</a>
+      <span class="lang"><span class="on">EL</span> · <a href="https://thetaai.gr/en/blog/ai-security-audit-5-questions/">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">ΜΕΘΟΔΟΛΟΓΙΑ AUDIT</div>
+    <h1>AI σφάλμα ή επίθεση; Ο κανόνας που τα ξεχωρίζει</h1>
+    <div class="art-meta">14 Ιουνίου 2026 · 3′ ανάγνωση</div>
+
+    <div class="article">
+      <p>Δεν είναι κάθε ιστορία «AI gone wrong» μια επίθεση ασφάλειας, και το να ξεχωρίζεις ποια είναι ποια καθορίζει σε ποιο «βιβλίο κανόνων» θα αναζητήσεις τελικά τη λύση.</p>
+      <h2>Η πρώτη ερώτηση</h2>
+      <p>Το πρώτο που πρέπει να ρωτήσεις είναι αν υπάρχει κάποιος αντίπαλος που επιτίθεται σκόπιμα σε ένα σύστημα AI. Δες πώς απαντούν σε αυτό το ερώτημα τρία γνωστά περιστατικά:</p>
+      <ul>
+        <li>Στην περίπτωση της Air Canada, το chatbot εφηύρε μια πολιτική επιστροφών που δεν υπήρχε και το δικαστήριο έκρινε υπεύθυνη την εταιρεία. Κανείς δεν επιτέθηκε, οπότε πρόκειται για ζήτημα αξιοπιστίας και ευθύνης ( ανάλυση ).</li>
+        <li>Στη Samsung, μηχανικοί επικόλλησαν εμπιστευτικό κώδικα σε ένα δημόσιο chatbot. Και πάλι δεν υπήρχε επιτιθέμενος, άρα μιλάμε για θέμα διακυβέρνησης δεδομένων.</li>
+        <li>Στο Nomi, ένα companion bot έσπρωξε έναν ευάλωτο χρήστη προς τον αυτοτραυματισμό. Δεν υπήρχε αντίπαλος, οπότε πρόκειται για αποτυχία ασφάλειας (safety) και, υπό τον EU AI Act, πιθανότατα για απαγορευμένη πρακτική.</li>
+      </ul>
+      <p>Τρία περιστατικά, τρεις διαφορετικοί φακοί, και κανένα δεν είναι «επίθεση».</p>
+      <h2>Το περιστατικό που λυγίζει τον κανόνα</h2>
+      <p>Τα πράγματα δυσκολεύουν με τις deepfake απάτες, όπου ένα οργανωμένο δίκτυο χρησιμοποιεί βίντεο φτιαγμένα με AI και κλεμμένα πρόσωπα για να πουλήσει ψεύτικα προϊόντα. Εδώ υπάρχει σαφώς αντίπαλος, οπότε εύκολα βιάζεται κανείς να πει «επίθεση». Κι όμως, το adversarial threat modeling (MITRE ATLAS) δεν αφορά το ποιος βλάπτεται ούτε το αν χρησιμοποιήθηκε AI, αλλά το αν στόχος ήταν το ίδιο το σύστημα AI. Οι απατεώνες απλώς χρησιμοποίησαν το AI ως όπλο· δεν παραβίασαν το AI κανενός. Πρόκειται, επομένως, για ζήτημα διακυβέρνησης (σήμανση του synthetic media) σε συνδυασμό με κοινή ποινική απάτη.</p>
+      <h2>Ο κανόνας</h2>
+      <p>Ο κανόνας που αξίζει να κρατήσεις είναι απλός: δεν μετράει το ποιος βλάπτεται, ούτε το ποιος χρησιμοποίησε AI, ούτε το μέσο που χρησιμοποιήθηκε. Μετράει μόνο αν στόχος ήταν το ίδιο το σύστημα AI. Το να χρησιμοποιείς AI, με άλλα λόγια, δεν είναι καθόλου το ίδιο με το να επιτίθεσαι σε AI. Όλα αυτά συνδέονται άμεσα με το prompt injection και με τη μεθοδολογία threat modeling.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Ξέρεις σε ποιο βιβλίο κανόνων να ψάξεις;</h3>
+      <p>Ο Έλεγχος Θωράκισης ταξινομεί τα ρίσκα AI σου σε ζητήματα ασφάλειας, safety και διακυβέρνησης, ιεραρχημένα κατά προτεραιότητα. Προηγείται μια δωρεάν συνεδρία 45 λεπτών.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Άρθρο:%205%20ερωτήσεις%20audit%20—%20δωρεάν%20συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+    </div>
+
+    <a class="back" href="/blog/">← Όλα τα άρθρα</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/">θita ai</a> · Θ όπως θωράκιση · <a href="https://thetaai.gr/en/blog/ai-security-audit-5-questions/">English</a></span>
+    <p class="disclaimer">Το παρόν άρθρο είναι γενική ενημέρωση και δεν αποτελεί νομική συμβουλή. Για τη συμμόρφωση της επιχείρησής σας απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, συνεργασία με νομικό σύμβουλο.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
