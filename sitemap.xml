@@ -6,28 +6,28 @@
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/en/</loc>
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/ergaleia/</loc>
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/en/ergaleia/</loc>
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/ergaleia/ai-act-test/</loc>
@@ -70,6 +70,48 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elenchos-arxeiou/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elenchos-arxeiou/"/>
     <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/ergaleia/elegxos-symvasis-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
+    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/ergaleia/checklist-arthro-50/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/checklist-arthro-50/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/checklist-arthro-50/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/checklist-arthro-50/"/>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/ergaleia/checklist-arthro-50/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/checklist-arthro-50/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/checklist-arthro-50/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/checklist-arthro-50/"/>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/anonymopoiisi-eggrafou/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/"/>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/ergaleia/anonymopoiisi-eggrafou/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/anonymopoiisi-eggrafou/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/"/>
+    <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/privacy/</loc>
@@ -140,19 +182,5 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/anthropic-fable-5-export-control/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-fable-5-export-control/"/>
     <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://thetaai.gr/ergaleia/elegxos-symvasis-ai/</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/</loc>
-    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/elegxos-symvasis-ai/"/>
-    <lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
   </url>
 </urlset>
