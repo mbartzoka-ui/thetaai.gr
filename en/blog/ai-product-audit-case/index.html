@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four compliance gaps in an AI SaaS — found before launch | θita ai</title>
+<meta name="description" content="A pre-launch audit of an AI SaaS found 4 critical gaps: AI disclosure, DPA, GDPR for photos of people, third-party consent ToS. All paperwork.">
+<link rel="canonical" href="https://thetaai.gr/en/blog/ai-product-audit-case/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-security-audit-5-erotiseis/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-product-audit-case/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-security-audit-5-erotiseis/">
+<meta property="og:title" content="Four compliance gaps in an AI SaaS — found before launch">
+<meta property="og:description" content="A pre-launch audit of an AI SaaS found 4 critical gaps: AI disclosure, DPA, GDPR for photos of people, third-party consent ToS. All paperwork.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/en/blog/ai-product-audit-case/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Four compliance gaps in an AI SaaS — found before launch",
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "θita ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "θita ai",
+    "url": "https://thetaai.gr/"
+  },
+  "mainEntityOfPage": "https://thetaai.gr/en/blog/ai-product-audit-case/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://thetaai.gr/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI SaaS audit",
+      "item": "https://thetaai.gr/en/blog/ai-product-audit-case/"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/en/#services">Services</a>
+      <a href="/en/#method">Method</a>
+      <a href="/en/ergaleia/">Tools</a>
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/#guide">Guide</a>
+      <a href="/en/#faq">FAQ</a>
+      <span class="lang"><a href="https://thetaai.gr/blog/ai-security-audit-5-erotiseis/">EL</a> · <span class="on">EN</span></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">PRE-LAUNCH COMPLIANCE</div>
+    <h1>Four compliance gaps in an AI SaaS — found before launch</h1>
+    <div class="art-meta">14 June 2026 · 3 min read</div>
+
+    <div class="article">
+      <p>briofy is an AI SaaS built in-house — it generates social captions from photos/videos and schedules posts. Before launch, a Tier-1 AI governance audit was run on it, using the same framework applied to clients. It found four critical gaps.</p>
+      <h2>The four gaps</h2>
+      <ul>
+        <li>No AI disclosure. The EU AI Act (Article 50) requires users to know they're interacting with AI-generated content. There was nothing — no label, no disclaimer.</li>
+        <li>No DPA with the cloud provider. User photos/videos are stored in the cloud. Without a signed Data Processing Agreement, that isn't GDPR-compliant — however careful you are.</li>
+        <li>No GDPR assessment for photos containing people. Users upload images with identifiable people who aren't the user. Never formally assessed.</li>
+        <li>No ToS clause for third-party consent. If a user uploads someone else's face, there's no contractual protection. The terms must make clear the user is responsible for consent.</li>
+      </ul>
+      <h2>The lesson</h2>
+      <p>None of these are code problems — they're paperwork. Weeks, not months. And they were found before any customer was affected. The uncomfortable part: even when you know the product better than anyone, you don't think of these — until someone asks. That's why the right questions exist. Someone needs to ask; that's the job.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Before your next launch — ask.</h3>
+      <p>A Shielding Review surfaces the paperwork gaps (AI disclosure, DPA, GDPR, ToS) by priority. Free 45-min session.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Article:%20AI%20SaaS%20audit%20—%20free%20session">Book a free session</a>
+    </div>
+
+    <a class="back" href="/en/blog/">← All articles</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/en/">θita ai</a> · Θ as in shielding · <a href="https://thetaai.gr/blog/ai-security-audit-5-erotiseis/">Ελληνικά</a></span>
+    <p class="disclaimer">This article is general information and not legal advice. Your business's compliance requires an individual assessment and, where needed, working with a legal advisor.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
