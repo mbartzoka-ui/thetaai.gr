@@ -21,7 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110"><circle cx="55" cy="55" r="38" fill="none" stroke="%231C1917" stroke-width="7"/><line x1="30" y1="55" x2="80" y2="55" stroke="%231C1917" stroke-width="7" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="%232563EB"/><circle cx="9" cy="55" r="8" fill="%231C1917"/></svg>'>
 <style>
-:root{--ink:#1C1917;--paper:#FAFAF9;--blue:#2563EB;--deep:#1E40AF;--stone:#78716C;--stone-d:#57534E;--line:#E7E5E4;--line-d:#D6D3D1;
+:root{--ink:#1C1917;--paper:#FAFAF9;--blue:#A87F2E;--deep:#7C5E1F;--stone:#78716C;--stone-d:#57534E;--line:#E7E5E4;--line-d:#D6D3D1;
   --red:#B91C1C;--redbg:#FEF2F2;--red-line:#FECACA;--amber:#B45309;--amberbg:#FFFBEB;--amber-line:#FDE68A;--green:#15803D;--greenbg:#F0FDF4;--green-line:#BBF7D0;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
@@ -136,6 +136,19 @@ h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.t
 h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 .kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="font-demo">
+h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'Manrope',system-ui,sans-serif !important;}
+h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
+.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
+</style>
+<style id="gold-buttons">
+.btn:not(.btn-ghost){background:#9A7528 !important;border-color:#9A7528 !important;color:#fff !important;}
+.btn:not(.btn-ghost):hover{background:#856422 !important;opacity:1 !important;}
+.ta-card button{background:#9A7528 !important;}
+.ta-card button:hover{filter:brightness(.94) !important;}
+.ta-card input[type=checkbox]{accent-color:#9A7528;}
+</style>
 </head>
 <body>
 <div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
@@ -143,7 +156,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 <header>
   <div class="wrap nav">
     <a class="logo" href="/" aria-label="θita ai — αρχική">
-      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#A87F2E"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
       <span>θita <span class="ai">ai</span></span>
     </a>
     <nav class="nav-links" aria-label="Κύρια πλοήγηση">
@@ -426,7 +439,7 @@ document.getElementById("demo").addEventListener("click", ()=>{
 (function(){
   var NS='http://www.w3.org/2000/svg';
   var svg=document.getElementById('bp'); if(!svg) return;
-  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(168,127,46,0.50)', DARK='rgba(28,25,23,0.28)';
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes=[], lines=[], W=0, H=0;
   var mx=-9999, my=-9999, lastMove=-1e9, running=false;

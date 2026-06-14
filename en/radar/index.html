@@ -21,7 +21,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
 :root{
-  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#A87F2E; --deep:#7C5E1F;
   --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -33,7 +33,7 @@ header{border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--pa
 .hd{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;flex-wrap:wrap;}
 .brand{display:flex;align-items:center;gap:11px;font-weight:300;font-size:19px;letter-spacing:0.06em;color:var(--paper);}
 .brand:hover{text-decoration:none;}
-.brand .ai{color:#5B8DEF;}
+.brand .ai{color:#BE9A44;}
 .hd .nav{font-size:13px;color:#a8a49b;display:flex;gap:16px;align-items:center;}
 .hd .nav a{color:#cfccc4;}
 .intro{padding:34px 0 6px;}
@@ -57,7 +57,7 @@ main{padding:8px 0 50px;}
 .item:hover .it-title{color:var(--deep);}
 .it-top{display:flex;gap:10px;align-items:center;margin-bottom:6px;flex-wrap:wrap;}
 .badge{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:5px;}
-.b-act{background:#EFF6FF;color:#1E40AF;}
+.b-act{background:#EFF6FF;color:#7C5E1F;}
 .b-sec{background:#FEF2F2;color:#B91C1C;}
 .b-std{background:#F0FDF4;color:#15803D;}
 .b-inc{background:#FFF7ED;color:#C2410C;}
@@ -74,7 +74,7 @@ main{padding:8px 0 50px;}
 .cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:30px 28px;margin-top:44px;}
 .cta h3{font-size:20px;font-weight:600;margin-bottom:8px;color:var(--paper);}
 .cta p{color:#cfccc4;font-size:15px;margin-bottom:18px;max-width:620px;}
-.btn{display:inline-block;background:#5B8DEF;color:#0b1220;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;}
+.btn{display:inline-block;background:#BE9A44;color:#0b1220;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;}
 .btn:hover{opacity:.9;text-decoration:none;color:#0b1220;}
 footer{border-top:0.5px solid var(--line);padding:26px 0 40px;}
 .foot{font-size:12.5px;color:var(--stone);line-height:1.6;}
@@ -110,6 +110,19 @@ h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.t
 h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 .kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="font-demo">
+h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'Manrope',system-ui,sans-serif !important;}
+h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
+.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
+</style>
+<style id="gold-buttons">
+.btn:not(.btn-ghost){background:#9A7528 !important;border-color:#9A7528 !important;color:#fff !important;}
+.btn:not(.btn-ghost):hover{background:#856422 !important;opacity:1 !important;}
+.ta-card button{background:#9A7528 !important;}
+.ta-card button:hover{filter:brightness(.94) !important;}
+.ta-card input[type=checkbox]{accent-color:#9A7528;}
+</style>
 </head>
 <body>
 <div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
@@ -117,7 +130,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 <header>
   <div class="wrap nav">
     <a class="logo" href="/en/" aria-label="θita ai — home">
-      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#A87F2E"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
       <span>θita <span class="ai">ai</span></span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -240,7 +253,7 @@ render();
 (function(){
   var NS='http://www.w3.org/2000/svg';
   var svg=document.getElementById('bp'); if(!svg) return;
-  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(168,127,46,0.50)', DARK='rgba(28,25,23,0.28)';
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes=[], lines=[], W=0, H=0;
   var mx=-9999, my=-9999, lastMove=-1e9, running=false;

@@ -59,7 +59,7 @@
 </script>
 <style>
 :root{
-  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#A87F2E; --deep:#7C5E1F;
   --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
   --risk-high-bg:#FAEEDA; --risk-high:#854F0B; --risk-high-t:#633806;
   --risk-lim-bg:#E6F1FB; --risk-lim:#185FA5; --risk-lim-t:#0C447C;
@@ -195,6 +195,19 @@ h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.t
 h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 .kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="font-demo">
+h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'Manrope',system-ui,sans-serif !important;}
+h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
+.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'JetBrains Mono',monospace !important;letter-spacing:.04em;}
+</style>
+<style id="gold-buttons">
+.btn:not(.btn-ghost){background:#9A7528 !important;border-color:#9A7528 !important;color:#fff !important;}
+.btn:not(.btn-ghost):hover{background:#856422 !important;opacity:1 !important;}
+.ta-card button{background:#9A7528 !important;}
+.ta-card button:hover{filter:brightness(.94) !important;}
+.ta-card input[type=checkbox]{accent-color:#9A7528;}
+</style>
 </head>
 <body>
 <div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
@@ -202,7 +215,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 <header>
   <div class="wrap nav">
     <a class="logo" href="/en/" aria-label="θita ai — home">
-      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#A87F2E"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
       <span>θita <span class="ai">ai</span></span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -241,7 +254,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
       <g opacity="0">
         <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.5s" fill="freeze"/>
         <g class="orbit-g">
-          <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+          <circle cx="101" cy="55" r="4" fill="#A87F2E"/>
           <circle cx="9" cy="55" r="4" fill="#1C1917"/>
         </g>
       </g>
@@ -249,7 +262,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
     <svg class="static-mark" style="display:none" width="190" height="190" viewBox="0 0 110 110" role="img" aria-label="The θita ai mark">
       <circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="2.5"/>
       <line x1="32" y1="55" x2="78" y2="55" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+      <circle cx="101" cy="55" r="4" fill="#A87F2E"/>
       <circle cx="9" cy="55" r="4" fill="#1C1917"/>
     </svg>
   </div>
@@ -279,7 +292,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
       <div style="background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 18px;flex-wrap:wrap;">
         <span style="font-size:11px;letter-spacing:.18em;color:#807c72;font-family:ui-monospace,Menlo,Consolas,monospace;">EU AI ACT · APPLICATION</span>
         <div style="display:flex;align-items:baseline;gap:8px;">
-          <span id="tl-cd" style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:18px;font-weight:700;color:#5B8DEF;">—</span>
+          <span id="tl-cd" style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:18px;font-weight:700;color:#BE9A44;">—</span>
           <span style="font-size:10px;letter-spacing:.14em;color:#807c72;font-family:ui-monospace,Menlo,monospace;">UNTIL 2 AUG '26</span>
         </div>
       </div>
@@ -510,14 +523,14 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
     <div>
       <div class="eyebrow">WHO WE ARE</div>
       <h2>We speak both languages: technical and business.</h2>
-      <p>θita ai was founded by <strong>Maria Bartzoka</strong> — with years in AI R&amp;D and product development, an AI trainer, and working on the security and compliance of AI systems for real small and mid-sized businesses.</p>
+      <p>θita ai combines years of experience in AI R&amp;D and product development, AI training, and work on the security and compliance of AI systems for real small and mid-sized businesses.</p>
       <p>We don't sell fear and we don't promise "100% compliance" — anyone who does hasn't read the regulation. We sell something more useful: <strong>knowing exactly where you stand, and what's worth fixing first.</strong></p>
     </div>
     <div style="display:flex;justify-content:center;">
       <svg width="150" height="150" viewBox="0 0 110 110" role="img" aria-label="The θita ai mark, static">
         <circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="2.5"/>
         <line x1="32" y1="55" x2="78" y2="55" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="101" cy="55" r="4" fill="#2563EB"/>
+        <circle cx="101" cy="55" r="4" fill="#A87F2E"/>
         <circle cx="9" cy="55" r="4" fill="#1C1917"/>
       </svg>
     </div>
@@ -551,7 +564,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 
 <section id="guide" class="ta-guide">
   <style>
-    .ta-guide{--ink:#1B1E27;--blue:#2F4FE0;--cream:#F6F5F1;--muted:#6B6F7A;--line:#DCDAD2;
+    .ta-guide{--ink:#1B1E27;--blue:#A87F2E;--cream:#F6F5F1;--muted:#6B6F7A;--line:#DCDAD2;
       background:var(--cream);color:var(--ink);padding:72px 24px;font-family:inherit;}
     .ta-guide .wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
     .ta-guide .eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
@@ -632,7 +645,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
   <div class="wrap foot">
     <div>
       <div class="logo" style="font-size:16px;">
-        <svg width="24" height="24" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+        <svg width="24" height="24" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#A87F2E"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
         <span>θita <span class="ai">ai</span></span>
       </div>
       <div class="copy" style="margin-top:10px;">© 2026 θita ai · Θ as in shielding · <a href="/">Ελληνικά</a></div>
@@ -701,7 +714,7 @@ h1,h2,.ta-guide h2{font-weight:800 !important;letter-spacing:-.02em;}
 (function(){
   var NS='http://www.w3.org/2000/svg';
   var svg=document.getElementById('bp'); if(!svg) return;
-  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(168,127,46,0.50)', DARK='rgba(28,25,23,0.28)';
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes=[], lines=[], W=0, H=0;
   var mx=-9999, my=-9999, lastMove=-1e9, running=false;
