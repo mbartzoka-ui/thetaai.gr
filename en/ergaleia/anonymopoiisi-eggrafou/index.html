@@ -137,7 +137,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     <div class="explain">
       <b>What it does — and doesn't.</b> Everything runs <b>locally in your browser</b>: the file is not uploaded to any server, not stored, not sent anywhere. The tool detects items by <b>patterns</b> and replaces them with labels like <b>[EMAIL]</b>, <b>[VAT]</b>, <b>[NAME]</b>.
       <div class="row"><span>→</span><span><b>It doesn't “understand” the text.</b> It may <b>miss</b> items phrased differently (especially names/addresses) or <b>redact the wrong thing</b>. Always check the preview before downloading.</span></div>
-      <div class="row"><span>→</span><span>The output is <b>plain text (.txt)</b> — from a PDF/DOCX we keep the text, <b>not the formatting</b>. A risk-reduction aid, not a guarantee of full GDPR anonymisation.</span></div>
+      <div class="row"><span>→</span><span>Download the result as <b>.txt, PDF or DOCX</b>. If you uploaded a <b>DOCX</b>, you can also get a version that <b>keeps the original formatting</b> — it replaces the personal data inside the original (the “text” PDF/DOCX is re-typeset, without the original layout). A risk-reduction aid, not a guarantee of full GDPR anonymisation.</span></div>
     </div>
 
     <div class="tool-card" id="tool">
@@ -177,6 +177,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
 (function(){
   if(window.pdfjsLib){ pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"; }
@@ -240,7 +241,62 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     return escHtml(text).replace(/\[(EMAIL|IBAN|SSN|VAT|PHONE|ID|ADDRESS|POSTCODE|DATE|NAME)\]/g, '<mark>[$1]</mark>');
   }
 
-  var lastRaw=null, lastName='text', lastClean='';
+  var lastRaw=null, lastName='text', lastClean='', lastSrcDocxBuf=null;
+
+  function downloadBlob(name, blob){
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 100);
+  }
+  function xmlEsc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function xmlUnesc(s){ return s.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&apos;/g,"'").replace(/&amp;/g,'&'); }
+
+  // clean DOCX (text, without original layout)
+  function buildCleanDocx(text){
+    var paras = text.split(/\r?\n/).map(function(l){ return '<w:p><w:r><w:t xml:space="preserve">'+xmlEsc(l)+'</w:t></w:r></w:p>'; }).join('');
+    var doc = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'+paras+'<w:sectPr/></w:body></w:document>';
+    var ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>';
+    var rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+    var zip = new JSZip();
+    zip.file('[Content_Types].xml', ct);
+    zip.folder('_rels').file('.rels', rels);
+    zip.folder('word').file('document.xml', doc);
+    return zip.generateAsync({type:'blob', mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+  }
+
+  // in-place DOCX redaction (keeps formatting)
+  function buildInplaceDocx(buf){
+    return JSZip.loadAsync(buf).then(function(zip){
+      var f = zip.file('word/document.xml');
+      if(!f) throw new Error('no document.xml');
+      return f.async('string').then(function(xml){
+        var red = xml.replace(/(<w:t[^>]*>)([\s\S]*?)(<\/w:t>)/g, function(m, open, inner, close){
+          return open + xmlEsc(anonymize(xmlUnesc(inner)).text) + close;
+        });
+        zip.file('word/document.xml', red);
+        return zip.generateAsync({type:'blob', mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+      });
+    });
+  }
+
+  // PDF (clean text) via pdfmake (Roboto supports Greek), lazy-load
+  var pdfReady=null;
+  function loadPdfMake(){
+    if(pdfReady) return pdfReady;
+    pdfReady = new Promise(function(res, rej){
+      function add(src, cb){ var s=document.createElement('script'); s.src=src; s.onload=cb; s.onerror=function(){ rej(new Error('load '+src)); }; document.head.appendChild(s); }
+      add('https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js', function(){
+        add('https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js', function(){ res(); });
+      });
+    });
+    return pdfReady;
+  }
+  function makePdf(text, base){
+    return loadPdfMake().then(function(){
+      var content = text.split(/\r?\n/).map(function(l){ return { text: l.length?l:' ', margin:[0,0,0,4] }; });
+      pdfMake.createPdf({ content:content, defaultStyle:{fontSize:10, lineHeight:1.2}, pageMargins:[50,50,50,50] }).download(base+'-anonymized.pdf');
+    });
+  }
+
   function run(raw, baseName){
     lastRaw=raw; lastName=baseName;
     var res = anonymize(raw);
@@ -259,12 +315,21 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     h += '<div class="preview-h">Preview (cleaned)</div>';
     var prev = lastClean.length>4000 ? lastClean.slice(0,4000)+'\n\n…[preview — download for the full text]' : lastClean;
     h += '<div class="preview">'+(highlight(prev)||'<span style="color:var(--stone)">— empty —</span>')+'</div>';
-    h += '<div class="tool-actions"><button class="btn" id="dl">Download cleaned .txt</button><button class="btn ghost" id="copy">Copy text</button></div>';
-    h += '<div class="warn-box">⚠️ Review the result before using it. Detection is pattern-based — names/addresses or unusual formats may slip through. Strict GDPR compliance needs a human review. A risk-reduction aid, not a guarantee.</div>';
+    var btns = '<button class="btn" id="dl-txt">Download .txt</button>';
+    btns += '<button class="btn" id="dl-pdf">Download PDF</button>';
+    btns += '<button class="btn" id="dl-docx">Download DOCX</button>';
+    if(lastSrcDocxBuf){ btns += '<button class="btn ghost" id="dl-docx2">DOCX with original formatting</button>'; }
+    btns += '<button class="btn ghost" id="copy">Copy</button>';
+    h += '<div class="tool-actions">'+btns+'</div>';
+    h += '<div class="warn-box">⚠️ Review the result before using it. Detection is pattern-based — names/addresses or unusual formats may slip through. <b>In “DOCX with original formatting”</b>, items that Word has split into pieces may not be caught — so compare against the preview. Strict GDPR compliance needs a human review. A risk-reduction aid, not a guarantee.</div>';
     out.innerHTML = h; out.classList.add('show');
-    document.getElementById('dl').addEventListener('click', function(){ download(baseName+'-anonymized.txt', lastClean); });
+    document.getElementById('dl-txt').addEventListener('click', function(){ download(baseName+'-anonymized.txt', lastClean); });
+    document.getElementById('dl-pdf').addEventListener('click', function(e){ var b=e.target, t=b.textContent; b.textContent='PDF…'; makePdf(lastClean, baseName).then(function(){ b.textContent=t; }).catch(function(){ b.textContent='PDF error'; }); });
+    document.getElementById('dl-docx').addEventListener('click', function(e){ var b=e.target, t=b.textContent; b.textContent='DOCX…'; buildCleanDocx(lastClean).then(function(blob){ downloadBlob(baseName+'-anonymized.docx', blob); b.textContent=t; }).catch(function(){ b.textContent='Error'; }); });
+    var d2=document.getElementById('dl-docx2');
+    if(d2){ d2.addEventListener('click', function(e){ var b=e.target, t=b.textContent; b.textContent='Editing…'; buildInplaceDocx(lastSrcDocxBuf).then(function(blob){ downloadBlob(baseName+'-redacted.docx', blob); b.textContent=t; }).catch(function(){ b.textContent='Error'; }); }); }
     document.getElementById('copy').addEventListener('click', function(e){
-      navigator.clipboard.writeText(lastClean).then(function(){ e.target.textContent='Copied ✓'; setTimeout(function(){e.target.textContent='Copy text';},1500); });
+      navigator.clipboard.writeText(lastClean).then(function(){ e.target.textContent='Copied ✓'; setTimeout(function(){e.target.textContent='Copy';},1500); });
     });
     out.scrollIntoView({behavior:'smooth', block:'nearest'});
   }
@@ -278,6 +343,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
   document.getElementById('run-paste').addEventListener('click', function(){
     var t=document.getElementById('paste').value;
     if(!t || t.trim().length<2){ return; }
+    lastSrcDocxBuf=null;
     run(t, 'text');
   });
 
@@ -288,11 +354,12 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     drop.classList.add('busy'); setStatus('Reading “'+f.name+'” locally…');
     var name=f.name.toLowerCase();
     var base=f.name.replace(/\.[^.]+$/,'') || 'document';
+    lastSrcDocxBuf=null;
     var done=function(txt){ drop.classList.remove('busy'); if(!txt||txt.trim().length<2){ setStatus('No text could be read. Try a PDF with selectable text, a DOCX or TXT.'); return; } setStatus('Read “'+f.name+'” locally. Nothing was uploaded.'); run(txt, base); };
     var fail=function(){ drop.classList.remove('busy'); setStatus('Could not read the file. Try another format (PDF/DOCX/TXT).'); };
     try{
       if(name.endsWith('.txt')){ var r=new FileReader(); r.onload=function(){done(r.result);}; r.onerror=fail; r.readAsText(f); }
-      else if(name.endsWith('.docx')){ f.arrayBuffer().then(function(buf){ mammoth.extractRawText({arrayBuffer:buf}).then(function(res){done(res.value);}).catch(fail); }).catch(fail); }
+      else if(name.endsWith('.docx')){ f.arrayBuffer().then(function(buf){ lastSrcDocxBuf=buf; mammoth.extractRawText({arrayBuffer:buf}).then(function(res){done(res.value);}).catch(fail); }).catch(fail); }
       else if(name.endsWith('.pdf')){ f.arrayBuffer().then(function(buf){ pdfjsLib.getDocument({data:buf}).promise.then(function(pdf){ var pages=[],n=pdf.numPages; var get=function(p){ return pdf.getPage(p).then(function(pg){ return pg.getTextContent().then(function(tc){ pages[p-1]=tc.items.map(function(it){return it.str;}).join(' '); }); }); }; var seq=Promise.resolve(); for(var p=1;p<=n;p++){ (function(pp){ seq=seq.then(function(){return get(pp);}); })(p); } seq.then(function(){ done(pages.join('\n')); }).catch(fail); }).catch(fail); }).catch(fail); }
       else { drop.classList.remove('busy'); setStatus('Unsupported format. Use PDF, DOCX or TXT.'); }
     }catch(err){ fail(); }
