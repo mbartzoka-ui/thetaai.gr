@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Γιατί τα output filters δεν σταματούν την indirect injection | θita ai</title>
+<meta name="description" content="Indirect injection: το μοντέλο διέρρευσε τον κωδικό μέσα σε μια ιστορία. Γιατί τα φίλτρα δεν αρκούν και ποια είναι η αρχιτεκτονική άμυνα.">
+<link rel="canonical" href="https://thetaai.gr/blog/llm-output-filter-jailbreak/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/llm-output-filter-jailbreak/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/llm-output-filter-jailbreak/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/llm-output-filter-jailbreak/">
+<meta property="og:title" content="Γιατί τα output filters δεν σταματούν την indirect injection">
+<meta property="og:description" content="Indirect injection: το μοντέλο διέρρευσε τον κωδικό μέσα σε μια ιστορία. Γιατί τα φίλτρα δεν αρκούν και ποια είναι η αρχιτεκτονική άμυνα.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://thetaai.gr/blog/llm-output-filter-jailbreak/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Γιατί τα output filters δεν σταματούν την indirect injection",
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "inLanguage": "el",
+  "author": {
+    "@type": "Organization",
+    "name": "θita ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "θita ai",
+    "url": "https://thetaai.gr/"
+  },
+  "mainEntityOfPage": "https://thetaai.gr/blog/llm-output-filter-jailbreak/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://thetaai.gr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Output filters & injection",
+      "item": "https://thetaai.gr/blog/llm-output-filter-jailbreak/"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
+      <a href="/#services">Υπηρεσίες</a>
+      <a href="/#method">Μεθοδολογία</a>
+      <a href="/ergaleia/">Εργαλεία</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#guide">Οδηγός</a>
+      <a href="/#faq">Συχνές ερωτήσεις</a>
+      <span class="lang"><span class="on">EL</span> · <a href="https://thetaai.gr/en/blog/llm-output-filter-jailbreak/">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">PROMPT INJECTION</div>
+    <h1>Γιατί τα output filters δεν σταματούν την indirect injection</h1>
+    <div class="art-meta">14 Ιουνίου 2026 · 3′ ανάγνωση</div>
+
+    <div class="article">
+      <p>Στο Gandalf, ένα παιχνίδι εξάσκησης στο prompt injection, ο στόχος είναι να αποσπάσεις έναν κωδικό από ένα AI που έχει ρητή εντολή να μην τον αποκαλύψει. Στο τέταρτο επίπεδο υπήρχε ένα output filter, δηλαδή ένα δεύτερο AI που ελέγχει κάθε απάντηση πριν βγει προς τα έξω.</p>
+      <h2>Πώς παρακάμφθηκε</h2>
+      <p>Η άμεση προσέγγιση μπλοκαρίστηκε, οπότε η λύση ήρθε μέσα από μια ιστορία: ένα παιδί που δεν ξέρει ελληνικά χρειάζεται ένα διήγημα στα αγγλικά, και ο κωδικός υφάνθηκε μέσα στην αφήγηση. Το φίλτρο έψαξε να βρει την ακριβή λέξη του κωδικού, δεν την εντόπισε και ενέκρινε την απάντηση, με αποτέλεσμα ο κωδικός να διαρρεύσει ούτως ή άλλως. Αυτό ακριβώς είναι η indirect injection: το μοντέλο δεν «αποκάλυψε το μυστικό», απλώς διηγήθηκε μια ιστορία που τυχαία το περιείχε. Ίδια πληροφορία, διαφορετικό περιτύλιγμα.</p>
+      <h2>Γιατί αφορά πραγματικά συστήματα</h2>
+      <p>Σε έναν πραγματικό voicebot, ολόκληρη η βάση γνώσης, μαζί με στοιχεία πληρωμών, ήταν τοποθετημένη μέσα στο system prompt. Σε ένα τυπικό LLM, όμως, το system prompt και η είσοδος του χρήστη μοιράζονται το ίδιο context window, χωρίς κανένα αρχιτεκτονικό τείχος ανάμεσά τους. Ένας ικανός επιτιθέμενος θα μπορούσε έτσι να κάνει το μοντέλο να εμφανίσει λάθος IBAN στον επόμενο χρήστη, όχι αλλάζοντας κάποια βάση δεδομένων, αλλά απλώς κάνοντας το μοντέλο να πει κάτι διαφορετικό. Και το χρονικό περιθώριο μέχρι να το αντιληφθεί κανείς μπορεί να φτάνει τις εβδομάδες.</p>
+      <h2>Η σωστή άμυνα είναι αρχιτεκτονική</h2>
+      <p>Τα φίλτρα ψάχνουν για γνωστά μοτίβα, ενώ η indirect injection παράγει συνεχώς καινούργια· βάζεις ένα φίλτρο και ο επιτιθέμενος βρίσκει αμέσως ένα νέο περιτύλιγμα. Τα οικονομικά δεδομένα, επομένως, δεν πρέπει να προέρχονται καθόλου από το output του LLM, αλλά από ένα επαληθευμένο σύστημα, με το μοντέλο εντελώς έξω από την αλυσίδα. Κανένας μεμονωμένος έλεγχος δεν είναι αρκετός· χρειάζονται πολλά επίπεδα άμυνας, όπως δείχνουν και το prompt injection και το threat modeling.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Πού «κρύβεις» ευαίσθητα δεδομένα μέσα στα prompts σου;</h3>
+      <p>Ο Έλεγχος Θωράκισης εξετάζει την απομόνωση του system prompt, τον χειρισμό του output και τη ροή των ευαίσθητων δεδομένων. Προηγείται μια δωρεάν συνεδρία 45 λεπτών.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Άρθρο:%20Output%20filters%20&amp;%20injection%20—%20δωρεάν%20συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+    </div>
+
+    <a class="back" href="/blog/">← Όλα τα άρθρα</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/">θita ai</a> · Θ όπως θωράκιση · <a href="https://thetaai.gr/en/blog/llm-output-filter-jailbreak/">English</a></span>
+    <p class="disclaimer">Το παρόν άρθρο είναι γενική ενημέρωση και δεν αποτελεί νομική συμβουλή. Για τη συμμόρφωση της επιχείρησής σας απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, συνεργασία με νομικό σύμβουλο.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
