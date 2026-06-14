@@ -61,8 +61,17 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 .nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
 .nav-links .lang .on{color:var(--ink);font-weight:600;}
 </style>
+<style>
+.blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
+  mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
+.blueprint svg{display:block;width:100%;height:100%;}
+#guide.ta-guide{background:transparent !important;}
+@media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
+</style>
 </head>
 <body>
+<div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
 
 <header>
   <div class="wrap nav">
@@ -139,5 +148,76 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 </footer>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('bp'); if(!svg) return;
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nodes=[], lines=[], W=0, H=0;
+  var mx=-9999, my=-9999, lastMove=-1e9, running=false;
+  var R=140, PUSH=24, EASE=0.14;
+
+  function addBlock(x0,y0,x1,y1,step){
+    var xs=[], ys=[], i, j;
+    for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
+    for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
+    var grid=[];
+    for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
+    for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
+      if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
+      if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
+    }
+  }
+  function build(){
+    W=window.innerWidth||1200; H=window.innerHeight||800;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML=''; nodes=[]; lines=[];
+    addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));         // small sparse cluster up top
+    addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));     // top band: below the nav, reaches toward Εργαλεία/Blog, fades to center
+    addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));    // LEFT: lower + into lower-left corner
+    addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));         // bottom-right, airy
+    var frag=document.createDocumentFragment();
+    lines.forEach(function(ln){
+      var e=document.createElementNS(NS,'line');
+      e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
+      ln.el=e; frag.appendChild(e);
+    });
+    // scattered discreet dots
+    var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+    var picks={}; var want=Math.min(7, nodes.length);
+    while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
+    var di=0;
+    Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
+      var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
+      c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
+    svg.appendChild(frag);
+    render();
+  }
+  function render(){
+    for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
+      e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
+      e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
+    for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
+  }
+  function step(){
+    var now=performance.now(), act=(now-lastMove)<1600, moving=false;
+    for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
+      var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
+      if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
+        if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
+      if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
+    }
+    render();
+    if(act||moving){ requestAnimationFrame(step); } else { running=false; }
+  }
+  build();
+  if(!reduce){
+    window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
+      if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
+  }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
+})();
+</script>
 </body>
 </html>
