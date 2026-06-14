@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Παραισθήσεις σε AI chatbot: γιατί ένα «βοηθητικό» bot μπορεί να σε εκθέσει | θita ai</title>
+<meta name="description" content="Ένα chatbot τεχνικής υποστήριξης πήρε 2/10 στην αξιοπιστία εξαιτίας των παραισθήσεων. Τι τις προκαλεί, γιατί σε εκθέτουν νομικά και πώς μειώνονται.">
+<link rel="canonical" href="https://thetaai.gr/blog/ai-chatbot-hallucinations/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-chatbot-hallucinations/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-chatbot-hallucinations/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-chatbot-hallucinations/">
+<meta property="og:title" content="Παραισθήσεις σε AI chatbot: γιατί ένα «βοηθητικό» bot μπορεί να σε εκθέσει">
+<meta property="og:description" content="Ένα chatbot τεχνικής υποστήριξης πήρε 2/10 στην αξιοπιστία εξαιτίας των παραισθήσεων. Τι τις προκαλεί, γιατί σε εκθέτουν νομικά και πώς μειώνονται.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://thetaai.gr/blog/ai-chatbot-hallucinations/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Παραισθήσεις σε AI chatbot: γιατί ένα «βοηθητικό» bot μπορεί να σε εκθέσει",
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "inLanguage": "el",
+  "author": {
+    "@type": "Organization",
+    "name": "θita ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "θita ai",
+    "url": "https://thetaai.gr/"
+  },
+  "mainEntityOfPage": "https://thetaai.gr/blog/ai-chatbot-hallucinations/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://thetaai.gr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Παραισθήσεις AI",
+      "item": "https://thetaai.gr/blog/ai-chatbot-hallucinations/"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
+      <a href="/#services">Υπηρεσίες</a>
+      <a href="/#method">Μεθοδολογία</a>
+      <a href="/ergaleia/">Εργαλεία</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#guide">Οδηγός</a>
+      <a href="/#faq">Συχνές ερωτήσεις</a>
+      <span class="lang"><span class="on">EL</span> · <a href="https://thetaai.gr/en/blog/ai-chatbot-hallucinations/">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">ΑΞΙΟΠΙΣΤΙΑ &amp; ΕΥΘΥΝΗ</div>
+    <h1>Παραισθήσεις σε AI chatbot: γιατί ένα «βοηθητικό» bot μπορεί να σε εκθέσει</h1>
+    <div class="art-meta">14 Ιουνίου 2026 · 3′ ανάγνωση</div>
+
+    <div class="article">
+      <p>Πρόσφατα εξετάσαμε το chatbot τεχνικής υποστήριξης μιας επιχείρησης και η εικόνα ήταν αντιφατική: στο ύφος και στην αναγνώριση της πρόθεσης του χρήστη τα πήγαινε εξαιρετικά, αλλά στην αξιοπιστία πήρε μόλις 2 στα 10. Όλη η διαφορά κρυβόταν σε ένα μόνο πρόβλημα, τις παραισθήσεις (hallucinations).</p>
+      <p>Δεν επρόκειτο για αόριστα, δυσδιάκριτα λάθη, αλλά για επινοήσεις απόλυτα συγκεκριμένες και ειπωμένες με σιγουριά: drivers που δεν υπάρχουν, βίντεο στο YouTube που δεν γυρίστηκαν ποτέ, σύνδεσμοι σε PDF που δεν οδηγούσαν πουθενά, ακόμη και επιβεβαίωση για emails που ποτέ δεν στάλθηκαν. Το bot δεν είπε ούτε μία φορά «δεν ξέρω»· προτίμησε να εφεύρει μια απάντηση και να την παραδώσει σαν να ήταν βέβαιη.</p>
+      <h2>Τι είναι οι παραισθήσεις και γιατί συμβαίνουν</h2>
+      <p>Για να καταλάβουμε γιατί συμβαίνει αυτό, αξίζει να θυμηθούμε πώς δουλεύει ένα γλωσσικό μοντέλο: δεν «ανατρέχει» σε γεγονότα όπως μια βάση δεδομένων, αλλά προβλέπει την πιο πιθανή επόμενη λέξη. Όταν λοιπόν δεν υπάρχει σαφές και επιβεβαιωμένο υλικό στη βάση γνώσης, το μοντέλο καλύπτει το κενό με κάτι που απλώς ακούγεται σωστό. Πρόκειται για εγγενές χαρακτηριστικό της τεχνολογίας και όχι για βλάβη, και ακριβώς γι' αυτό η σιγουριά με την οποία μιλά ένα bot δεν μας λέει απολύτως τίποτα για το αν έχει δίκιο.</p>
+      <h2>Γιατί σε αφορά — και γιατί είναι ζήτημα ευθύνης, όχι μόνο ποιότητας</h2>
+      <p>Ένα bot που κάνει λάθος στο 20% των απλών ερωτήσεων είναι απλώς ενοχλητικό. Ένα bot, όμως, που κάνει λάθος στην τεχνική υποστήριξη χωρίς καν να αναγνωρίζει ότι δεν είναι σίγουρο, διαβρώνει πολύ γρήγορα την εμπιστοσύνη του πελάτη. Και το πρόβλημα δεν σταματά εκεί: όπως έδειξε η υπόθεση της Air Canada, η επιχείρηση ευθύνεται για ό,τι λέει το chatbot της, ακόμη κι όταν αυτό το εφευρίσκει. Μια παραίσθηση που υπόσχεται μια ανύπαρκτη πολιτική επιστροφών ή δίνει λάθος τεχνική οδηγία δεν είναι, επομένως, μια απλή κακή εμπειρία· είναι πραγματική έκθεση της επιχείρησης.</p>
+      <p>Στην ίδια κατεύθυνση κινείται και ο EU AI Act για τις μικρές επιχειρήσεις, που απαιτεί ανθρώπινη εποπτεία, διαφάνεια και διαχείριση του ρίσκου σε κάθε σύστημα που αλληλεπιδρά με ανθρώπους.</p>
+      <h2>Τι μειώνει πραγματικά τις παραισθήσεις</h2>
+      <p>Το ενθαρρυντικό είναι ότι οι περισσότερες λύσεις δεν απαιτούν να ξαναχτίσεις το bot, παρά μόνο να το ρυθμίσεις με ειλικρίνεια:</p>
+      <ul>
+        <li>Αυστηρά όρια στη βάση γνώσης, ώστε το bot να απαντά μόνο από επιβεβαιωμένο περιεχόμενο και τίποτε άλλο.</li>
+        <li>Κανόνες κατά των παραισθήσεων μέσα στο system prompt, με ρητή εντολή να λέει «δεν ξέρω» αντί να μαντεύει.</li>
+        <li>Έλεγχο των συνδέσμων και των πόρων πριν την παράδοση, ώστε κανένα URL ή αρχείο να μη δίνεται χωρίς να επιβεβαιωθεί ότι υπάρχει.</li>
+        <li>Παράδοση σε άνθρωπο όταν η βεβαιότητα είναι χαμηλή, δηλαδή κλιμάκωση αντί για μάντεμα.</li>
+      </ul>
+      <h2>Η σωστή ερώτηση</h2>
+      <p>Αν αναπτύσσεις AI για την υποστήριξη πελατών, το ερώτημα δεν είναι αν «ακούγεται βοηθητικό». Το πραγματικό ερώτημα είναι τι συμβαίνει όταν κάνει λάθος και, κυρίως, αν το ίδιο το σύστημα ξέρει πότε κάνει λάθος.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Το chatbot σου ξέρει πότε δεν ξέρει;</h3>
+      <p>Ο Έλεγχος Θωράκισης εξετάζει τα όρια της βάσης γνώσης, τους κανόνες κατά των παραισθήσεων και τα σημεία όπου το σύστημα παραδίδει σε άνθρωπο, και σου τα δίνει ιεραρχημένα κατά προτεραιότητα. Προηγείται μια δωρεάν συνεδρία 45 λεπτών.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Άρθρο:%20Παραισθήσεις%20AI%20—%20δωρεάν%20συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+    </div>
+
+    <a class="back" href="/blog/">← Όλα τα άρθρα</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/">θita ai</a> · Θ όπως θωράκιση · <a href="https://thetaai.gr/en/blog/ai-chatbot-hallucinations/">English</a></span>
+    <p class="disclaimer">Το παρόν άρθρο είναι γενική ενημέρωση και δεν αποτελεί νομική συμβουλή. Για τη συμμόρφωση της επιχείρησής σας απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, συνεργασία με νομικό σύμβουλο.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
