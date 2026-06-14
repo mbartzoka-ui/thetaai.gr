@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ανωνυμοποίηση εγγράφων — αφαίρεση προσωπικών στοιχείων online | θita ai</title>
+<meta name="description" content="Ανεβάστε έγγραφο (PDF/DOCX/TXT) και αφαιρέστε προσωπικά στοιχεία — email, τηλέφωνα, ΑΦΜ, ΑΜΚΑ, IBAN, ταυτότητες, ονόματα — πριν το μοιραστείτε ή το δώσετε σε AI. Στον browser, τίποτα δεν ανεβαίνει.">
+<link rel="canonical" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/ergaleia/anonymopoiisi-eggrafou/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/">
+<meta property="og:title" content="Ανωνυμοποίηση εγγράφων — αφαίρεση προσωπικών στοιχείων">
+<meta property="og:description" content="Αφαιρέστε προσωπικά δεδομένα από έγγραφο πριν το μοιραστείτε ή το δώσετε σε AI. Στον browser, χωρίς upload.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ανωνυμοποίηση εγγράφων",
+  "url": "https://thetaai.gr/ergaleia/anonymopoiisi-eggrafou/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+  "provider": {"@type": "ProfessionalService", "name": "θita ai", "url": "https://thetaai.gr/"}
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+  --ok:#15803D; --ok-bg:#F0FDF4; --miss:#B91C1C; --miss-bg:#FEF2F2;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:inherit;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.btn[disabled]{opacity:.4;cursor:not-allowed;}
+.btn.ghost{background:transparent;color:var(--deep);border:0.5px solid var(--line-d);}
+.btn.ghost:hover{background:#fff;color:var(--deep);}
+main{padding:48px 0 72px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,36px);font-weight:600;line-height:1.2;letter-spacing:-0.01em;}
+.sub{color:var(--stone-d);margin-top:12px;max-width:600px;}
+.explain{background:#fff;border:0.5px solid var(--line-d);border-left:3px solid var(--blue);border-radius:10px;padding:16px 18px;margin-top:24px;font-size:13.5px;color:var(--stone-d);line-height:1.6;}
+.explain b{color:var(--ink);}
+.explain .row{display:flex;gap:10px;margin-top:8px;}
+.explain .row span:first-child{flex-shrink:0;font-weight:600;}
+.tool-card{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:24px 28px;margin-top:22px;}
+.lbl{font-size:13px;letter-spacing:.04em;color:var(--stone);margin-bottom:10px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+.chip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-d);border-radius:20px;padding:6px 13px;font-size:13px;cursor:pointer;user-select:none;color:var(--stone-d);transition:all .12s;}
+.chip input{width:15px;height:15px;accent-color:var(--ink);cursor:pointer;}
+.chip.on{border-color:var(--ink);color:var(--ink);background:#fff;}
+.custom{margin-top:18px;}
+textarea{width:100%;border:0.5px solid var(--line-d);border-radius:8px;padding:11px 13px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--paper);resize:vertical;}
+textarea:focus{outline:none;border-color:var(--blue);}
+.hint{font-size:12px;color:var(--stone);margin-top:5px;}
+.drop{display:block;border:1.5px dashed var(--line-d);border-radius:12px;padding:26px;text-align:center;cursor:pointer;transition:all .15s;margin-top:18px;}
+.drop:hover{border-color:var(--blue);background:#FAFBFF;}
+.drop.busy{border-style:solid;border-color:var(--blue);}
+.drop .big{font-size:15px;font-weight:600;color:var(--ink);}
+.drop .small{font-size:13px;color:var(--stone);margin-top:6px;}
+.drop input{display:none;}
+.scan-status{font-size:13px;color:var(--stone);margin-top:12px;text-align:center;}
+.sep{display:flex;align-items:center;gap:12px;margin:22px 0 4px;color:var(--stone);font-size:12.5px;letter-spacing:.06em;}
+.sep::before,.sep::after{content:"";flex:1;height:0.5px;background:var(--line);}
+.t-result{margin-top:26px;border-top:2px solid var(--ink);padding-top:20px;display:none;}
+.t-result.show{display:block;}
+.score{font-size:15px;font-weight:600;margin-bottom:12px;}
+.counts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.cnt{font-size:13px;border-radius:6px;padding:5px 11px;background:var(--ok-bg);border:0.5px solid #BBF7D0;color:#166534;}
+.cnt b{font-weight:600;}
+.cnt.zero{background:#F5F5F4;border-color:var(--line);color:var(--stone);}
+.preview-h{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin:6px 0 8px;color:var(--stone-d);}
+.preview{background:var(--paper);border:0.5px solid var(--line-d);border-radius:8px;padding:14px 16px;font-size:13.5px;line-height:1.7;max-height:300px;overflow:auto;white-space:pre-wrap;word-break:break-word;}
+.preview mark{background:#FEF08A;color:#713F12;border-radius:3px;padding:0 2px;font-weight:600;}
+.tool-actions{margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.warn-box{background:#FAEEDA;border-left:3px solid #854F0B;border-radius:6px;padding:12px 15px;font-size:13px;color:#633806;margin-top:18px;line-height:1.55;}
+footer{border-top:0.5px solid var(--line);padding:28px 0;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="θita ai — αρχική">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
+      <a href="/#services">Υπηρεσίες</a>
+      <a href="/#method">Μεθοδολογία</a>
+      <a href="/ergaleia/">Εργαλεία</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#guide">Οδηγός</a>
+      <a href="/#faq">Συχνές ερωτήσεις</a>
+      <span class="lang"><span class="on">EL</span> · <a href="/en/ergaleia/anonymopoiisi-eggrafou/">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="eyebrow">ΔΩΡΕΑΝ ΕΡΓΑΛΕΙΟ</div>
+    <h1>Ανωνυμοποίηση εγγράφων</h1>
+    <p class="sub">Αφαιρέστε προσωπικά στοιχεία από ένα έγγραφο — πριν το στείλετε, το μοιραστείτε ή το δώσετε σε ένα AI. Ανεβάζετε PDF/DOCX/TXT (ή επικολλάτε κείμενο), το εργαλείο εντοπίζει email, τηλέφωνα, ΑΦΜ, ΑΜΚΑ, IBAN, ταυτότητες και όσα ονόματα ορίσετε — και κατεβάζετε καθαρή εκδοχή.</p>
+
+    <div class="explain">
+      <b>Τι κάνει — και τι ΔΕΝ κάνει.</b> Όλα γίνονται <b>τοπικά στον browser σας</b>: το αρχείο δεν ανεβαίνει σε κανέναν server, δεν αποθηκεύεται, δεν αποστέλλεται πουθενά. Το εργαλείο εντοπίζει στοιχεία με <b>μοτίβα (patterns)</b> και τα αντικαθιστά με ετικέτες όπως <b>[EMAIL]</b>, <b>[ΑΦΜ]</b>, <b>[ΟΝΟΜΑ]</b>.
+      <div class="row"><span>→</span><span><b>Δεν «καταλαβαίνει» το κείμενο.</b> Μπορεί να <b>χάσει</b> στοιχεία διατυπωμένα αλλιώς (ειδικά ονόματα/διευθύνσεις) ή να <b>κρύψει κάτι λάθος</b>. Πάντα ελέγξτε την προεπισκόπηση πριν κατεβάσετε.</span></div>
+      <div class="row"><span>→</span><span>Η έξοδος είναι <b>καθαρό κείμενο (.txt)</b> — από PDF/DOCX κρατάμε το κείμενο, <b>όχι τη μορφοποίηση</b>. Βοήθημα μείωσης ρίσκου, όχι εγγύηση πλήρους ανωνυμοποίησης κατά GDPR.</span></div>
+    </div>
+
+    <div class="tool-card" id="tool">
+      <div class="lbl">Τι να αφαιρεθεί:</div>
+      <div class="chips" id="chips"></div>
+
+      <div class="custom">
+        <div class="lbl">Ονόματα / λέξεις προς απόκρυψη (προαιρετικά — το πιο αξιόπιστο για ονόματα):</div>
+        <textarea id="terms" rows="2" placeholder="π.χ. Μαρία Παπαδοπούλου, Endion, Γεώργιος Ν., ACME ΑΕ — χωρισμένα με κόμμα ή νέα γραμμή"></textarea>
+        <div class="hint">Κάθε όρος αντικαθίσταται με [ΟΝΟΜΑ]. Μη ευαίσθητο σε τόνους/πεζά-κεφαλαία.</div>
+      </div>
+
+      <label class="drop" id="drop">
+        <input type="file" id="file" accept=".pdf,.docx,.txt">
+        <div class="big">Ανεβάστε έγγραφο για ανωνυμοποίηση</div>
+        <div class="small">PDF, DOCX ή TXT · διαβάζεται τοπικά, δεν φεύγει από τη συσκευή σας</div>
+      </label>
+      <div class="scan-status" id="scan-status"></div>
+
+      <div class="sep">Ή ΕΠΙΚΟΛΛΗΣΤΕ ΚΕΙΜΕΝΟ</div>
+      <textarea id="paste" rows="4" placeholder="Επικολλήστε εδώ το κείμενο που θέλετε να ανωνυμοποιήσετε…"></textarea>
+      <div class="tool-actions">
+        <button class="btn" id="run-paste">Ανωνυμοποίηση κειμένου</button>
+      </div>
+
+      <div class="t-result" id="t-result" aria-live="polite"></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/">θita ai</a> · Θ όπως θωράκιση · <a href="/en/ergaleia/anonymopoiisi-eggrafou/">English</a></span>
+    <p class="disclaimer">Το εργαλείο κάνει τοπική, αυτοματοποιημένη ανίχνευση μοτίβων — δεν εγγυάται πλήρη ανωνυμοποίηση και δεν αποτελεί συμμόρφωση κατά GDPR. Το αρχείο δεν ανεβαίνει, δεν αποθηκεύεται, δεν αποστέλλεται. Ελέγξτε πάντα το αποτέλεσμα.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script>
+(function(){
+  if(window.pdfjsLib){ pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"; }
+
+  // Κάθε κατηγορία: id, label, default on, regex (global), replacement (string με $1 refs ή σκέτη ετικέτα)
+  var CATS = [
+    {id:'email', label:'Email', def:true, re:/[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}/g, rep:'[EMAIL]'},
+    {id:'iban', label:'IBAN', def:true, re:/\b[A-Z]{2}\d{2}(?:[ ]?[A-Z0-9]){11,30}\b/g, rep:'[IBAN]'},
+    {id:'amka', label:'ΑΜΚΑ', def:true, re:/(ΑΜΚΑ|Α\.Μ\.Κ\.Α\.?)(\s*:?\s*)\d{11}/gi, rep:'$1$2[ΑΜΚΑ]'},
+    {id:'afm', label:'ΑΦΜ', def:true, re:/(ΑΦΜ|Α\.Φ\.Μ\.?|VAT)(\s*:?\s*)\d{9}/gi, rep:'$1$2[ΑΦΜ]'},
+    {id:'phone', label:'Τηλέφωνα', def:true, re:/(?:\+?30[\s.\-]?)?\b[2-7]\d{2}[\s.\-]?\d{3}[\s.\-]?\d{4}\b/g, rep:'[ΤΗΛΕΦΩΝΟ]'},
+    {id:'id', label:'Ταυτότητα / διαβατήριο', def:true, re:/(^|[^A-Za-z0-9Α-Ωα-ωΆ-ώ])([Α-ΩΆΈΉΊΌΎΏA-Z]{1,2}[\s\-]?\d{6,7})(?![\dA-Za-zΑ-Ωα-ωΆ-ώ])/g, rep:'$1[ΤΑΥΤΟΤΗΤΑ]'},
+    {id:'address', label:'Διευθύνσεις', def:true, re:/(?:Οδός|Οδ\.|Λεωφ\.|Λεωφόρος|Πλατεία|Πλ\.)\s+[Α-ΩΆΈΉΊΌΎΏ][^\s,.\n]+(?:\s+\d+[Α-Ωα-ω]?)?/gi, rep:'[ΔΙΕΥΘΥΝΣΗ]'},
+    {id:'postal', label:'Ταχ. κώδικας (ΤΚ)', def:true, re:/(Τ\.?\s?Κ\.?\s*:?\s*)\d{3}\s?\d{2}\b/gi, rep:'$1[ΤΚ]'},
+    {id:'date', label:'Ημερομηνίες', def:false, re:/\b\d{1,2}[\/.\-]\d{1,2}[\/.\-]\d{2,4}\b/g, rep:'[ΗΜΕΡΟΜΗΝΙΑ]'}
+  ];
+  var ALL_LABELS = {}; CATS.forEach(function(c){ ALL_LABELS[c.id]=c.label; });
+  ALL_LABELS['terms']='Ονόματα/λέξεις';
+
+  // ---- chips ----
+  var chips = document.getElementById('chips');
+  CATS.forEach(function(c){
+    var l = document.createElement('label');
+    l.className = 'chip' + (c.def?' on':'');
+    l.innerHTML = '<input type="checkbox" data-id="'+c.id+'"'+(c.def?' checked':'')+'>'+c.label;
+    chips.appendChild(l);
+  });
+  chips.addEventListener('change', function(e){
+    var box=e.target; if(box.type!=='checkbox') return;
+    box.closest('.chip').classList.toggle('on', box.checked);
+    if(lastRaw!=null) run(lastRaw, lastName); // re-run live on toggle
+  });
+  function enabled(){ return Array.prototype.slice.call(chips.querySelectorAll('input:checked')).map(function(b){return b.getAttribute('data-id');}); }
+
+  function escRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+  function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function repStr(rep, args){ return rep.replace(/\$(\d)/g, function(_,d){ return args[+d]!=null?args[+d]:''; }); }
+
+  function anonymize(raw){
+    var text = raw, counts = {};
+    // 1) custom terms (ονόματα) — accent/case insensitive
+    var termsRaw = document.getElementById('terms').value.split(/[\n,]+/).map(function(s){return s.trim();}).filter(function(s){return s.length>1;});
+    if(termsRaw.length){
+      counts['terms']=0;
+      // ταξινόμηση: μεγαλύτεροι όροι πρώτα
+      termsRaw.sort(function(a,b){return b.length-a.length;}).forEach(function(t){
+        var re = new RegExp(escRe(t), 'gi');
+        text = text.replace(re, function(){ counts['terms']++; return '[ΟΝΟΜΑ]'; });
+      });
+    }
+    // 2) κατηγορίες
+    var en = enabled();
+    CATS.forEach(function(c){
+      if(en.indexOf(c.id)<0) return;
+      counts[c.id]=0;
+      text = text.replace(c.re, function(){
+        counts[c.id]++;
+        return repStr(c.rep, arguments);
+      });
+    });
+    return {text:text, counts:counts};
+  }
+
+  function highlight(text){
+    // υπογράμμισε τις ετικέτες αντικατάστασης στην προεπισκόπηση
+    return escHtml(text).replace(/\[(EMAIL|IBAN|ΑΜΚΑ|ΑΦΜ|ΤΗΛΕΦΩΝΟ|ΤΑΥΤΟΤΗΤΑ|ΔΙΕΥΘΥΝΣΗ|ΤΚ|ΗΜΕΡΟΜΗΝΙΑ|ΟΝΟΜΑ)\]/g, '<mark>[$1]</mark>');
+  }
+
+  var lastRaw=null, lastName='κειμενο', lastClean='';
+  function run(raw, baseName){
+    lastRaw=raw; lastName=baseName;
+    var res = anonymize(raw);
+    lastClean = res.text;
+    var total = Object.keys(res.counts).reduce(function(a,k){return a+res.counts[k];},0);
+    var out = document.getElementById('t-result');
+    var h = '<div class="score">Αντικαταστάθηκαν '+total+' στοιχεία.</div>';
+    h += '<div class="counts">';
+    // δείξε counts ανά κατηγορία (custom πρώτα)
+    var order = ['terms'].concat(CATS.map(function(c){return c.id;}));
+    order.forEach(function(k){
+      if(!(k in res.counts)) return;
+      var n=res.counts[k];
+      h += '<span class="cnt'+(n===0?' zero':'')+'"><b>'+n+'</b> '+ALL_LABELS[k]+'</span>';
+    });
+    h += '</div>';
+    h += '<div class="preview-h">Προεπισκόπηση (καθαρισμένο)</div>';
+    var prev = lastClean.length>4000 ? lastClean.slice(0,4000)+'\n\n…[προεπισκόπηση — κατεβάστε για όλο το κείμενο]' : lastClean;
+    h += '<div class="preview">'+(highlight(prev)||'<span style="color:var(--stone)">— κενό —</span>')+'</div>';
+    h += '<div class="tool-actions"><button class="btn" id="dl">Κατεβάστε καθαρό .txt</button><button class="btn ghost" id="copy">Αντιγραφή κειμένου</button></div>';
+    h += '<div class="warn-box">⚠️ Ελέγξτε το αποτέλεσμα πριν το χρησιμοποιήσετε. Η ανίχνευση βασίζεται σε μοτίβα — μπορεί να ξεφύγουν ονόματα/διευθύνσεις ή ειδικές μορφές. Για αυστηρή συμμόρφωση GDPR χρειάζεται ανθρώπινος έλεγχος. Εργαλείο μείωσης ρίσκου, όχι εγγύηση.</div>';
+    out.innerHTML = h; out.classList.add('show');
+    document.getElementById('dl').addEventListener('click', function(){ download(baseName+'-anonymized.txt', lastClean); });
+    document.getElementById('copy').addEventListener('click', function(e){
+      navigator.clipboard.writeText(lastClean).then(function(){ e.target.textContent='Αντιγράφηκε ✓'; setTimeout(function(){e.target.textContent='Αντιγραφή κειμένου';},1500); });
+    });
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+
+  function download(name, text){
+    var blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 100);
+  }
+
+  // ---- paste ----
+  document.getElementById('run-paste').addEventListener('click', function(){
+    var t=document.getElementById('paste').value;
+    if(!t || t.trim().length<2){ return; }
+    run(t, 'κειμενο');
+  });
+
+  // ---- file ----
+  var status=document.getElementById('scan-status'), drop=document.getElementById('drop');
+  function setStatus(t){ status.textContent=t; }
+  document.getElementById('file').addEventListener('change', function(e){
+    var f=e.target.files[0]; if(!f) return;
+    drop.classList.add('busy'); setStatus('Ανάγνωση «'+f.name+'» τοπικά…');
+    var name=f.name.toLowerCase();
+    var base=f.name.replace(/\.[^.]+$/,'') || 'εγγραφο';
+    var done=function(txt){ drop.classList.remove('busy'); if(!txt||txt.trim().length<2){ setStatus('Δεν διαβάστηκε κείμενο. Δοκιμάστε PDF με επιλέξιμο κείμενο, DOCX ή TXT.'); return; } setStatus('Διαβάστηκε «'+f.name+'» τοπικά. Τίποτα δεν ανέβηκε.'); run(txt, base); };
+    var fail=function(){ drop.classList.remove('busy'); setStatus('Δεν μπόρεσε να διαβαστεί το αρχείο. Δοκιμάστε άλλη μορφή (PDF/DOCX/TXT).'); };
+    try{
+      if(name.endsWith('.txt')){ var r=new FileReader(); r.onload=function(){done(r.result);}; r.onerror=fail; r.readAsText(f); }
+      else if(name.endsWith('.docx')){ f.arrayBuffer().then(function(buf){ mammoth.extractRawText({arrayBuffer:buf}).then(function(res){done(res.value);}).catch(fail); }).catch(fail); }
+      else if(name.endsWith('.pdf')){ f.arrayBuffer().then(function(buf){ pdfjsLib.getDocument({data:buf}).promise.then(function(pdf){ var pages=[],n=pdf.numPages; var get=function(p){ return pdf.getPage(p).then(function(pg){ return pg.getTextContent().then(function(tc){ pages[p-1]=tc.items.map(function(it){return it.str;}).join(' '); }); }); }; var seq=Promise.resolve(); for(var p=1;p<=n;p++){ (function(pp){ seq=seq.then(function(){return get(pp);}); })(p); } seq.then(function(){ done(pages.join('\n')); }).catch(fail); }).catch(fail); }).catch(fail); }
+      else { drop.classList.remove('busy'); setStatus('Μη υποστηριζόμενη μορφή. Χρησιμοποιήστε PDF, DOCX ή TXT.'); }
+    }catch(err){ fail(); }
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
