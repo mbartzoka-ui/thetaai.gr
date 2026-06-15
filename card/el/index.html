@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Μαρία Μπαρτζώκα — θeta ai</title>
+<meta name="description" content="Μαρία Μπαρτζώκα · Σύμβουλος Ασφάλειας AI · θeta ai — Συμμόρφωση EU AI Act & ασφάλεια AI.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2846;--paper:#FAFAF9;--blue:#1d2846;--deep:#16203a;--stone:#78716C;--stone-d:#57534E;--line:#E7E5E4;--line-d:#D6D3D1;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:linear-gradient(160deg,#F5F5F4,#EAEAE8);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;color:var(--ink);-webkit-font-smoothing:antialiased;}
+.card{background:var(--paper);width:100%;max-width:380px;border-radius:22px;border:0.5px solid var(--line-d);box-shadow:0 18px 50px rgba(28,25,23,0.12);overflow:hidden;}
+.top{padding:34px 30px 26px;border-bottom:0.5px solid var(--line);text-align:center;}
+.logo{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:300;font-size:20px;letter-spacing:0.06em;margin-bottom:20px;}
+.logo .ai{color:var(--blue);}
+.name{font-size:25px;font-weight:600;letter-spacing:-0.01em;}
+.title{font-size:14px;font-weight:600;color:var(--blue);margin-top:5px;letter-spacing:0.01em;}
+.tag{font-size:13px;color:var(--stone-d);margin-top:12px;line-height:1.5;}
+.actions{padding:22px 24px 6px;display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;border-radius:11px;font-size:14px;font-weight:500;text-decoration:none;border:0.5px solid var(--line-d);color:var(--ink);background:#fff;transition:all .15s;}
+.btn:hover{border-color:var(--stone);}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink);}
+.btn.primary:hover{opacity:.88;}
+.btn svg{width:17px;height:17px;flex-shrink:0;}
+.qr-wrap{padding:18px 24px 30px;text-align:center;}
+.qr-box{display:inline-block;background:#fff;padding:14px;border-radius:16px;border:0.5px solid var(--line-d);}
+.qr-box img{display:block;width:150px;height:150px;}
+.qr-cap{font-size:12px;color:var(--stone);margin-top:12px;letter-spacing:0.02em;}
+.qr-cap b{color:var(--ink);font-weight:600;}
+.foot{padding:14px;text-align:center;font-size:11px;color:var(--stone);border-top:0.5px solid var(--line);}
+</style>
+<style>
+.blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
+  mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
+.blueprint svg{display:block;width:100%;height:100%;}
+#guide.ta-guide{background:transparent !important;}
+@media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="card-identity">
+.logo{font-family:'IBM Plex Sans',sans-serif !important;font-weight:600 !important;letter-spacing:.02em !important;}
+.name{font-family:'IBM Plex Sans',sans-serif !important;font-weight:700 !important;letter-spacing:-.02em !important;font-size:27px !important;}
+.title{font-family:'IBM Plex Mono',monospace !important;text-transform:uppercase !important;letter-spacing:.12em !important;font-size:12px !important;font-weight:500 !important;}
+.btn.primary{background:#1d2846 !important;border-color:#1d2846 !important;color:#fff !important;}
+.btn.primary:hover{background:#16203a !important;opacity:1 !important;}
+.btn:not(.primary):hover{border-color:#1d2846 !important;color:#16203a !important;}
+</style>
+<style>
+.neural-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.6;
+  -webkit-mask-image:radial-gradient(ellipse at center, transparent 16%, rgba(0,0,0,0.5) 50%, #000 85%);
+  mask-image:radial-gradient(ellipse at center, transparent 16%, rgba(0,0,0,0.5) 50%, #000 85%);}
+.neural-bg canvas{display:block;width:100%;height:100%;}
+@media (prefers-reduced-motion: reduce){.neural-bg{opacity:.5;}}
+</style>
+</head>
+<body>
+<div class="neural-bg" aria-hidden="true"><canvas id="neural"></canvas></div>
+<div class="card">
+  <div class="top">
+    <div class="logo">
+      <svg width="32" height="32" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1d2846" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1d2846" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#BE9A44"/><circle cx="9" cy="55" r="8" fill="#1d2846"/></svg>
+      <span>&#952;eta <span class="ai">ai</span></span>
+    </div>
+    <div class="name">Μαρία Μπαρτζώκα</div>
+    <div class="title">Σύμβουλος Ασφάλειας AI</div>
+    <div class="tag">Συμμόρφωση EU AI Act &amp; ασφάλεια AI για ΜμΕ</div>
+  </div>
+
+  <div class="actions">
+    <a class="btn primary" href="tel:+306936144826">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Κλήση
+    </a>
+    <a class="btn primary" href="mailto:maria@thetaai.gr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+      Email
+    </a>
+    <a class="btn" href="https://thetaai.gr" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Ιστότοπος
+    </a>
+    <a class="btn" href="https://www.linkedin.com/in/mariabartzoka/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8h4.6v13H.2V8zm7.4 0h4.4v1.78h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v6.6h-4.6v-5.85c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-4.6V8z"/></svg>
+      LinkedIn
+    </a>
+  </div>
+
+  <div class="qr-wrap">
+    <div class="qr-box"><img src="data:image/png;base64,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" alt="QR κωδικός για thetaai.gr"></div>
+    <div class="qr-cap">Σκανάρετε για <b>thetaai.gr</b></div>
+  </div>
+
+  <div class="foot"><a href="/card/" style="color:var(--blue);font-weight:600;text-decoration:none;">English</a> &middot; &#952;eta ai &middot; &#920; όπως θωράκιση</div>
+</div>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+(function(){
+  var c=document.getElementById('neural'); if(!c) return;
+  var ctx=c.getContext('2d');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var w=0,h=0,nodes=[],m={x:-9999,y:-9999},RGB='29,40,70',LINK=150,MOUSE=200;
+  function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; init(); }
+  function init(){ var n=Math.min(62,Math.floor(w*h/26000)); nodes=[];
+    for(var i=0;i<n;i++) nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,r:Math.random()*1.5+0.6}); }
+  function links(){
+    var i,j;
+    for(i=0;i<nodes.length;i++){
+      for(j=i+1;j<nodes.length;j++){ var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<LINK){ ctx.strokeStyle='rgba('+RGB+','+((1-d/LINK)*0.4)+')'; ctx.lineWidth=0.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
+      var p=nodes[i],ex=p.x-m.x,ey=p.y-m.y,dm=Math.sqrt(ex*ex+ey*ey);
+      if(dm<MOUSE){ ctx.strokeStyle='rgba('+RGB+','+((1-dm/MOUSE)*0.55)+')'; ctx.lineWidth=0.8; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(m.x,m.y); ctx.stroke(); }
+    }
+    for(i=0;i<nodes.length;i++){ ctx.fillStyle='rgba('+RGB+',0.65)'; ctx.beginPath(); ctx.arc(nodes[i].x,nodes[i].y,nodes[i].r,0,7); ctx.fill(); }
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(var i=0;i<nodes.length;i++){ var nd=nodes[i]; nd.x+=nd.vx; nd.y+=nd.vy;
+      if(nd.x<0||nd.x>w) nd.vx*=-1; if(nd.y<0||nd.y>h) nd.vy*=-1; }
+    links();
+    requestAnimationFrame(draw);
+  }
+  resize();
+  if(reduce){ ctx.clearRect(0,0,w,h); links(); }
+  else { draw(); window.addEventListener('mousemove', function(e){ m.x=e.clientX; m.y=e.clientY; }, {passive:true}); }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=set
