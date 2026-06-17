@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — AI compliance &amp; security for SMBs | θeta ai</title>
+<title>Blog — AI compliance &amp; security for SMBs | θita ai</title>
 <meta name="description" content="Articles and guides on the EU AI Act, AI system security and practical compliance steps for small and mid-sized businesses.">
 <link rel="canonical" href="https://thetaai.gr/en/blog/">
 <link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/">
 <link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/">
 <link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/">
-<meta property="og:title" content="θeta ai — Blog">
+<meta property="og:title" content="θita ai — Blog">
 <meta property="og:description" content="Articles and guides on the EU AI Act and AI security for SMBs.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="el_GR">
 <meta property="og:url" content="https://thetaai.gr/en/blog/">
 <meta property="og:image" content="https://thetaai.gr/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,11 +22,11 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
 :root{
-  --ink:#1d2846; --paper:#FAFAF9; --blue:#1d2846; --deep:#16203a;
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
   --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
 a{color:var(--deep);text-decoration:none;}
 a:hover{text-decoration:underline;}
 .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
@@ -63,6 +62,9 @@ footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
 header .wrap{max-width:1060px;}
 header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
 header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
 .nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
 .nav-links a{color:var(--stone-d);}
 .nav-links a:hover{color:var(--ink);text-decoration:none;}
@@ -79,41 +81,15 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 #guide.ta-guide{background:transparent !important;}
 @media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style id="font-demo">
-h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'IBM Plex Sans',system-ui,sans-serif !important;}
-h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
-.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'IBM Plex Mono',monospace !important;letter-spacing:.04em;}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style id="font-demo">
-h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'IBM Plex Sans',system-ui,sans-serif !important;}
-h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
-.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'IBM Plex Mono',monospace !important;letter-spacing:.04em;}
-</style>
-<style id="gold-buttons">
-.btn:not(.btn-ghost){background:#1d2846 !important;border-color:#1d2846 !important;color:#fff !important;}
-.btn:not(.btn-ghost):hover{background:#16203a !important;opacity:1 !important;}
-.ta-card button{background:#1d2846 !important;}
-.ta-card button:hover{filter:brightness(.94) !important;}
-.ta-card input[type=checkbox]{accent-color:#1d2846;}
-</style>
-<style>
-.neural-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.89;
-  -webkit-mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);
-  mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);}
-.neural-bg canvas{display:block;width:100%;height:100%;}
-@media (prefers-reduced-motion: reduce){.neural-bg{opacity:.8;}}
-</style>
 </head>
 <body>
-<div class="neural-bg" aria-hidden="true"><canvas id="neural"></canvas></div>
+<div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="/en/" aria-label="θeta ai — home">
-      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1d2846" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1d2846" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#BE9A44"/><circle cx="9" cy="55" r="8" fill="#1d2846"/></svg>
-      <span>θeta <span class="ai">ai</span></span>
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="/en/#services">Services</a>
@@ -136,28 +112,76 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     <section class="topic">
       <div class="topic-h">EU AI Act &amp; Compliance</div>
       <div class="posts">
-        <a class="post-card" href="/en/blog/ai-product-audit-case/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">4 compliance gaps in an AI SaaS before launch</div>
-          <div class="post-excerpt">A pre-launch audit of an AI SaaS found 4 critical gaps: AI disclosure, DPA, GDPR for photos of people, third-party consent ToS. All paperwork.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/eu-ai-act-article-19-logs/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">EU AI Act Article 19: how long to keep AI logs</div>
-          <div class="post-excerpt">Article 19 doesn&#x27;t say &#x27;six months&#x27; — it says &#x27;at least six&#x27;. What sets the real duration, GDPR&#x27;s role, and why it belongs in the contract.</div>
+        <a class="post-card" href="/en/blog/ai-chatbot-hallucinations/">
+          <div class="post-meta">15 June 2026 · 5 min read</div>
+          <div class="post-title">Enterprise AI chatbot hallucinations: the risk most deployments underestimate</div>
+          <div class="post-excerpt">A company's technical-support chatbot was reviewed recently. On tone and intent recognition it scored well. On reliability, it scored 2 out of 10. The…</div>
           <span class="read">Read →</span>
         </a>
         <a class="post-card" href="/en/blog/eu-ai-act-article-50-ai-disclosure/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">EU AI Act Article 50: when to disclose AI</div>
-          <div class="post-excerpt">EU AI Act Article 50(1) requires people to know when they&#x27;re interacting with AI. When it applies, when it doesn&#x27;t, and the one-line fix.</div>
+          <div class="post-meta">22 June 2026 · 4 min read</div>
+          <div class="post-title">EU AI Act Article 50: when you must disclose that someone is talking to AI</div>
+          <div class="post-excerpt">A common assumption about AI tools for social media and inboxes: "It's just an auto-reply — the recipient doesn't need to know it's AI." Under the EU …</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/what-is-prompt-injection/">
+          <div class="post-meta">17 June 2026 · 5 min read</div>
+          <div class="post-title">What is prompt injection — and why "be more careful" doesn't fix it</div>
+          <div class="post-excerpt">Prompt injection is one of the most misunderstood threats to AI systems. A real incident explains it better than any definition. What happened An auto…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/eu-ai-act-article-19-logs/">
+          <div class="post-meta">29 June 2026 · 4 min read</div>
+          <div class="post-title">EU AI Act Article 19: how long you actually have to keep AI logs</div>
+          <div class="post-excerpt">"Keep your high-risk AI logs for six months." That's the usual summary of Article 19 — and it's incomplete in a way that matters. Six months is the fl…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-failure-or-attack/">
+          <div class="post-meta">19 June 2026 · 5 min read</div>
+          <div class="post-title">AI failure or attack? The rule that tells them apart</div>
+          <div class="post-excerpt">Not every "AI gone wrong" story is a security attack. Telling which is which decides what rulebook you reach for. The first question Is there an adver…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-threat-modeling-stride/">
+          <div class="post-meta">24 June 2026 · 5 min read</div>
+          <div class="post-title">AI threat modeling with STRIDE: the 5-step method for any LLM</div>
+          <div class="post-excerpt">"Threats" is a useless word until you answer one thing first: a threat to what? Start with assets A threat never free-floats. It's always a threat to …</div>
           <span class="read">Read →</span>
         </a>
         <a class="post-card" href="/en/blog/nist-ai-rmf-guide/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">NIST AI RMF: what makes an AI report audit-ready</div>
-          <div class="post-excerpt">An AI risk assessment without document control is a worksheet. How NIST AI RMF (GOVERN 1.1) and a crosswalk make it audit-ready.</div>
+          <div class="post-meta">1 July 2026 · 4 min read</div>
+          <div class="post-title">NIST AI RMF: what makes an AI risk report "audit-ready"</div>
+          <div class="post-excerpt">A threat model without a Document Control section is a worksheet, not a deliverable. The technical analysis can be excellent — and still earn no audit…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-security-audit-5-questions/">
+          <div class="post-meta">6 July 2026 · 4 min read</div>
+          <div class="post-title">The 5 questions before any AI security audit</div>
+          <div class="post-excerpt">Before a laptop opens or a document is read, a good AI audit starts with five simple questions. Not technical — basic: What does this system actually …</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-evasion-attack/">
+          <div class="post-meta">26 June 2026 · 4 min read</div>
+          <div class="post-title">Evasion attack: when someone games your AI without breaking it</div>
+          <div class="post-excerpt">An insurance broker found a pattern: shift the applicant's age by 2 years and income by 5%, and the AI always approves — even when the real numbers ge…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/llm-output-filter-jailbreak/">
+          <div class="post-meta">3 July 2026 · 5 min read</div>
+          <div class="post-title">Why output filters don't stop indirect prompt injection</div>
+          <div class="post-excerpt">In a prompt-injection training game (Gandalf), the goal is to extract a password from an AI told not to share it. Level 4 had an output filter: a seco…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-product-audit-case/">
+          <div class="post-meta">8 July 2026 · 4 min read</div>
+          <div class="post-title">Four compliance gaps in an AI SaaS — found before launch</div>
+          <div class="post-excerpt">briofy is an AI SaaS built in-house — it generates social captions from photos/videos and schedules posts. Before launch, a Tier-1 AI governance audit…</div>
+          <span class="read">Read →</span>
+        </a>
+        <a class="post-card" href="/en/blog/ai-governance-audit-service/">
+          <div class="post-meta">10 July 2026 · 4 min read</div>
+          <div class="post-title">AI governance audit: what it includes — and why your clients ask for it</div>
+          <div class="post-excerpt">The gap between "I understand AI security" and "I can deliver it as a service" is mostly about clarity. Here's how it's packaged. Wrong angle, right a…</div>
           <span class="read">Read →</span>
         </a>
         <a class="post-card" href="/en/blog/anthropic-fable-5-export-control/">
@@ -168,74 +192,35 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
         </a>
         <a class="post-card" href="/en/blog/air-canada-chatbot-liability/">
           <div class="post-meta">13 June 2026 · 7 min read</div>
-          <div class="post-title">The Air Canada chatbot case: who&#x27;s liable when your AI gets it wrong</div>
-          <div class="post-excerpt">Air Canada&#x27;s chatbot invented a policy that didn&#x27;t exist and the tribunal held the company liable. What it means for any business running a chatbot or AI agent.</div>
+          <div class="post-title">The Air Canada chatbot case: who's liable when your AI gets it wrong</div>
+          <div class="post-excerpt">Air Canada's chatbot invented a policy that didn't exist and the tribunal held the company liable. What it means for any business running a chatbot or AI agent.</div>
           <span class="read">Read →</span>
         </a>
         <a class="post-card" href="/en/blog/eu-ai-act-small-businesses/">
           <div class="post-meta">11 June 2026 · 6 min read</div>
           <div class="post-title">EU AI Act: what every small business should know in 2026</div>
-          <div class="post-excerpt">You don&#x27;t need to build AI for the regulation to apply to you. If you use a chatbot, text tools or AI in office software, you already have obligations. What it means in practice.</div>
+          <div class="post-excerpt">You don't need to build AI for the regulation to apply to you. If you use a chatbot, text tools or AI in office software, you already have obligations. What it means in practice.</div>
           <span class="read">Read →</span>
         </a>
       </div>
     </section>
+
     <section class="topic">
       <div class="topic-h">AI Security</div>
       <div class="posts">
-        <a class="post-card" href="/en/blog/ai-chatbot-hallucinations/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">Enterprise AI chatbot hallucinations: the real risk</div>
-          <div class="post-excerpt">A support chatbot scored 2/10 on reliability because of hallucinations. What causes them, why they&#x27;re a liability, and how to reduce them.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/ai-evasion-attack/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">Evasion attack: when someone games your AI</div>
-          <div class="post-excerpt">A broker found which numbers always pass the AI. What an evasion attack is, and four mitigations — technical and contractual.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/ai-failure-or-attack/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">AI failure or attack? The rule that tells them apart</div>
-          <div class="post-excerpt">Not every &#x27;AI gone wrong&#x27; is an attack. Four well-known incidents and the one rule: was the AI system itself the target?</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/ai-threat-modeling-stride/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">AI threat modeling with STRIDE: 5 steps</div>
-          <div class="post-excerpt">Threat modeling starts with assets, not attacks. How STRIDE and a simple 5-step method cover any system with an LLM in it.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/llm-output-filter-jailbreak/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">Why output filters don&#x27;t stop prompt injection</div>
-          <div class="post-excerpt">Indirect injection: the model leaked the password inside a story. Why filters aren&#x27;t enough and what the architectural defense actually is.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/what-is-prompt-injection/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">What is prompt injection — a real example</div>
-          <div class="post-excerpt">Prompt injection: a hidden instruction inside a file an AI trusts. How it hit a real system, and why the fix is architectural, not &#x27;be careful&#x27;.</div>
+        <a class="post-card" href="/en/blog/anthropic-glasswing-cyber-models/">
+          <div class="post-meta">17 June 2026 · 6 min read</div>
+          <div class="post-title">The AI that found 10,000 vulnerabilities is coming for the attackers too — within 6 months</div>
+          <div class="post-excerpt">Anthropic is expanding Project Glasswing and warning that within 6–12 months code-scanning models will be in other hands too, possibly without safeguards. What it means for any business that runs on software.</div>
           <span class="read">Read →</span>
         </a>
       </div>
     </section>
+
     <section class="topic">
       <div class="topic-h">Practical for SMBs</div>
       <div class="posts">
-        <a class="post-card" href="/en/blog/ai-governance-audit-service/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">AI governance audit: what the service includes</div>
-          <div class="post-excerpt">What an AI governance audit for the EU AI Act delivers: interview, gap analysis, written report, checklist. And why enterprise clients ask for it.</div>
-          <span class="read">Read →</span>
-        </a>
-        <a class="post-card" href="/en/blog/ai-security-audit-5-questions/">
-          <div class="post-meta">14 June 2026 · 3 min read</div>
-          <div class="post-title">5 questions before any AI security audit</div>
-          <div class="post-excerpt">Before opening a laptop, I ask 5 simple questions. &#x27;I don&#x27;t know&#x27; is a finding, not a failure. The categories that surface AI compliance gaps.</div>
-          <span class="read">Read →</span>
-        </a>
+        <p class="empty">More articles soon.</p>
       </div>
     </section>
 
@@ -244,40 +229,81 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
 
 <footer>
   <div class="wrap foot">
-    <span>© 2026 <a href="/en/">θeta ai</a> · Θ as in shielding · <a href="/blog/">Ελληνικά</a></span>
-    <p class="disclaimer">θeta ai provides EU AI Act compliance and AI security consulting services for small and mid-sized businesses. It does not provide legal services or legal advice.</p>
+    <span>© 2026 <a href="/en/">θita ai</a> · Θ as in shielding · <a href="/blog/">Ελληνικά</a></span>
+    <p class="disclaimer">θita ai provides EU AI Act compliance and AI security consulting services for small and mid-sized businesses. It does not provide legal services or legal advice.</p>
   </div>
 </footer>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
 <script>
 (function(){
-  var c=document.getElementById('neural'); if(!c) return;
-  var ctx=c.getContext('2d');
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('bp'); if(!svg) return;
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var w=0,h=0,nodes=[],m={x:-9999,y:-9999},NAVY='29,40,70',GOLD='190,154,68',LINK=150,MOUSE=200;
-  function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; init(); }
-  function init(){ var n=Math.min(64,Math.floor(w*h/24000)); nodes=[];
-    for(var i=0;i<n;i++) nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,r:Math.random()*1.5+0.6,gold:Math.random()<0.24}); }
-  function links(){
-    var i,j;
-    for(i=0;i<nodes.length;i++){
-      for(j=i+1;j<nodes.length;j++){ var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<LINK){ var g=(a.gold&&b.gold); var col=g?GOLD:NAVY; var op=(1-d/LINK)*(g?0.6:0.5);
-          ctx.strokeStyle='rgba('+col+','+op+')'; ctx.lineWidth=g?0.8:0.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
-      var p=nodes[i],ex=p.x-m.x,ey=p.y-m.y,dm=Math.sqrt(ex*ex+ey*ey);
-      if(dm<MOUSE){ ctx.strokeStyle='rgba('+NAVY+','+((1-dm/MOUSE)*0.55)+')'; ctx.lineWidth=0.8; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(m.x,m.y); ctx.stroke(); }
+  var nodes=[], lines=[], W=0, H=0;
+  var mx=-9999, my=-9999, lastMove=-1e9, running=false;
+  var R=140, PUSH=24, EASE=0.14;
+
+  function addBlock(x0,y0,x1,y1,step){
+    var xs=[], ys=[], i, j;
+    for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
+    for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
+    var grid=[];
+    for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
+    for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
+      if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
+      if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
     }
-    for(i=0;i<nodes.length;i++){ var nd=nodes[i]; ctx.fillStyle='rgba('+(nd.gold?GOLD:NAVY)+','+(nd.gold?0.85:0.75)+')'; ctx.beginPath(); ctx.arc(nd.x,nd.y,nd.gold?nd.r+0.4:nd.r,0,7); ctx.fill(); }
   }
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    for(var i=0;i<nodes.length;i++){ var nd=nodes[i]; nd.x+=nd.vx; nd.y+=nd.vy; if(nd.x<0||nd.x>w) nd.vx*=-1; if(nd.y<0||nd.y>h) nd.vy*=-1; }
-    links(); requestAnimationFrame(draw);
+  function build(){
+    W=window.innerWidth||1200; H=window.innerHeight||800;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML=''; nodes=[]; lines=[];
+    addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));         // small sparse cluster up top
+    addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));     // top band: below the nav, reaches toward Εργαλεία/Blog, fades to center
+    addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));    // LEFT: lower + into lower-left corner
+    addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));         // bottom-right, airy
+    var frag=document.createDocumentFragment();
+    lines.forEach(function(ln){
+      var e=document.createElementNS(NS,'line');
+      e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
+      ln.el=e; frag.appendChild(e);
+    });
+    // scattered discreet dots
+    var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+    var picks={}; var want=Math.min(7, nodes.length);
+    while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
+    var di=0;
+    Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
+      var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
+      c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
+    svg.appendChild(frag);
+    render();
   }
-  resize();
-  if(reduce){ ctx.clearRect(0,0,w,h); links(); } else { draw(); window.addEventListener('mousemove', function(e){ m.x=e.clientX; m.y=e.clientY; }, {passive:true}); }
-  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(resize,200); });
+  function render(){
+    for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
+      e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
+      e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
+    for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
+  }
+  function step(){
+    var now=performance.now(), act=(now-lastMove)<1600, moving=false;
+    for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
+      var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
+      if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
+        if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
+      if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
+    }
+    render();
+    if(act||moving){ requestAnimationFrame(step); } else { running=false; }
+  }
+  build();
+  if(!reduce){
+    window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
+      if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
+  }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
 })();
 </script>
 </body>
