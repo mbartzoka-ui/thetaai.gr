@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI that found 10,000 vulnerabilities is coming for the attackers too — within 6 months | θita ai</title>
+<meta name="description" content="Anthropic is expanding Project Glasswing and warning that within 6–12 months code-scanning models will be in other hands too, possibly without safeguards. What it means for any business that runs on software.">
+<link rel="canonical" href="https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/">
+<meta property="og:title" content="The AI that found 10,000 vulnerabilities is coming for the attackers too — within 6 months">
+<meta property="og:description" content="The speed of attack is changing. What Project Glasswing's expansion means for small businesses.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The AI that found 10,000 vulnerabilities is coming for the attackers too — within 6 months",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "inLanguage": "en",
+  "author": {"@type": "Organization", "name": "θita ai"},
+  "publisher": {"@type": "Organization", "name": "θita ai", "url": "https://thetaai.gr/"},
+  "mainEntityOfPage": "https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Blog", "item": "https://thetaai.gr/en/blog/"},
+    {"@type": "ListItem", "position": 2, "name": "Project Glasswing — AI & vulnerabilities", "item": "https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/"}
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+<style>
+.blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
+  mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
+.blueprint svg{display:block;width:100%;height:100%;}
+#guide.ta-guide{background:transparent !important;}
+@media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
+</style>
+</head>
+<body>
+<div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/en/#services">Services</a>
+      <a href="/en/#method">Method</a>
+      <a href="/en/ergaleia/">Tools</a>
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/#guide">Guide</a>
+      <a href="/en/#faq">FAQ</a>
+      <span class="lang"><a href="/blog/anthropic-glasswing-cyber-models/">EL</a> · <span class="on">EN</span></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">AI SECURITY</div>
+    <h1>The AI that found 10,000 vulnerabilities is coming for the attackers too — within 6 months</h1>
+    <div class="art-meta">17 June 2026 · 6 min read</div>
+
+    <div class="article">
+      <p>This isn't another piece about how impressive AI is. It's a warning Anthropic put in writing itself: within the next 6 to 12 months, models that can scan code and surface serious vulnerabilities will be in other companies' hands too — some <strong>without any safety guardrails</strong>. That changes the rules for every business that runs on software. Which means yours.</p>
+
+      <h2>What happened</h2>
+      <p>Anthropic is expanding Project Glasswing, a program where selected organizations get access to its powerful Claude Mythos model to scan their own codebases and find security holes before attackers do.</p>
+
+      <p>The numbers are the story:</p>
+      <ul>
+        <li>In early April, roughly 50 initial partners got access. Since then they've found <strong>more than 10,000 high- or critical-severity vulnerabilities</strong> by scanning their code.</li>
+        <li>The program is now opening to about <strong>150 more organizations across 15+ countries</strong> — power, water, healthcare, communications, hardware. Many are vendors: they build software that thousands of other companies depend on.</li>
+        <li>Anthropic estimates that for most of these partners, a major attack could affect more than 100 million people.</li>
+      </ul>
+
+      <blockquote>Within 6–12 months, Anthropic expects other companies will have Mythos-class models — and may release them without the safeguards that prevent misuse.</blockquote>
+
+      <p>In that world, cyberattacks will happen more often and in more unpredictable forms. That's the sentence worth reading twice.</p>
+
+      <h2>Why it matters</h2>
+      <p>For a long time, smaller businesses leaned partly on obscurity for security. "Who's going to bother targeting me?" AI dismantles that argument. When a machine can automatically scan thousands of codebases and surface 10,000 holes, the cost of also scanning <em>you</em> drops close to zero. <strong>You don't have to be a target — you just have to be exposed.</strong></p>
+
+      <p>Two things follow directly. First, defenders (like those 150 organizations) will rush to close gaps. Second, attackers will gain the same speed shortly after. The window between the two sides is your risk.</p>
+
+      <p>There's also the liability and compliance dimension. If you run AI tools, a chatbot, or agents in your business, you're not only exposed to vulnerabilities in your own software — you also carry responsibility for how that AI behaves toward your customers. The <a href="/en/blog/aircanada/">Air Canada case</a> made it plain: the business is liable for what its chatbot says, even when the bot invents the answer. A compromised or manipulated AI system isn't just a technical problem — it's a legal one.</p>
+
+      <h2>What to do now</h2>
+      <p>You don't need to become a cybersecurity company. You need to know three things.</p>
+      <ul>
+        <li><strong>Where your software is exposed.</strong> Which apps, plugins, integrations, and AI tools run in your business — and which of them are open to the internet. You can't protect what you don't know you have.</li>
+        <li><strong>Who owns the patches.</strong> If you rely on vendors (your e-commerce platform, plugins, AI providers), ask explicitly: how fast do they ship fixes, and how do you find out? The gap between "vulnerability found" and "patch applied" is shrinking fast.</li>
+        <li><strong>How you harden your own AI systems.</strong> If you have a chatbot or an agent, you need boundaries: what it can and can't say or do, who supervises it, and what happens when it receives a suspicious input (<a href="/en/blog/what-is-prompt-injection/">prompt injection</a>). These aren't enterprise luxuries — they're the minimum so you don't pay for the AI's mistake.</li>
+      </ul>
+
+      <p>The speed of attack is changing. The speed of your defense has to change with it.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Do you know where your business is exposed?</h3>
+      <p>The Shielding Audit shows where you're exposed — on both EU AI Act compliance and security — in priority order. It starts with a free 45-minute session.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=Shielding Audit — free session">Book a free session</a>
+    </div>
+
+    <a class="back" href="/en/blog/">← All articles</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/en/">θita ai</a> · Θ as in shielding · <a href="/blog/anthropic-glasswing-cyber-models/">Ελληνικά</a></span>
+    <p class="disclaimer">Source: Anthropic, "Expanding Project Glasswing" (anthropic.com). This is general information, not legal advice; assessing your own exposure requires an individual review.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('bp'); if(!svg) return;
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nodes=[], lines=[], W=0, H=0;
+  var mx=-9999, my=-9999, lastMove=-1e9, running=false;
+  var R=140, PUSH=24, EASE=0.14;
+
+  function addBlock(x0,y0,x1,y1,step){
+    var xs=[], ys=[], i, j;
+    for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
+    for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
+    var grid=[];
+    for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
+    for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
+      if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
+      if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
+    }
+  }
+  function build(){
+    W=window.innerWidth||1200; H=window.innerHeight||800;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML=''; nodes=[]; lines=[];
+    addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));
+    addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));
+    addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));
+    addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));
+    var frag=document.createDocumentFragment();
+    lines.forEach(function(ln){
+      var e=document.createElementNS(NS,'line');
+      e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
+      ln.el=e; frag.appendChild(e);
+    });
+    var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+    var picks={}; var want=Math.min(7, nodes.length);
+    while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
+    var di=0;
+    Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
+      var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
+      c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
+    svg.appendChild(frag);
+    render();
+  }
+  function render(){
+    for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
+      e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
+      e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
+    for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
+  }
+  function step(){
+    var now=performance.now(), act=(now-lastMove)<1600, moving=false;
+    for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
+      var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
+      if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
+        if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
+      if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
+    }
+    render();
+    if(act||moving){ requestAnimationFrame(step); } else { running=false; }
+  }
+  build();
+  if(!reduce){
+    window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
+      if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
+  }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
+})();
+</script>
+</body>
+</html>
