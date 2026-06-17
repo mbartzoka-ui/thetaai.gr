@@ -132,14 +132,14 @@
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/"/>
-    <lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/"/>
-    <lastmod>2026-06-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-06-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/blog/eu-ai-act-mikres-epixeiriseis/</loc>
@@ -350,5 +350,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/what-is-prompt-injection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/prompt-injection-ti-einai/"/>
     <lastmod>2026-06-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/anthropic-glasswing-cyber-models/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/"/>
+    <lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/anthropic-glasswing-cyber-models/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/"/>
+    <lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
 </urlset>
