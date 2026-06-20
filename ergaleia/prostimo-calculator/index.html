@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Τι πρόστιμο ρισκάρω; — Υπολογισμός EU AI Act | θeta ai</title>
+<meta name="description" content="Υπολογίστε το μέγιστο πρόστιμο που ρισκάρετε βάσει του EU AI Act (Άρθρο 99). Τρία λεπτά, χωρίς εγγραφή, αποτέλεσμα αμέσως.">
+<link rel="canonical" href="https://thetaai.gr/ergaleia/prostimo-calculator/">
+<meta property="og:title" content="Τι πρόστιμο ρισκάρω; — Υπολογισμός EU AI Act">
+<meta property="og:description" content="Υπολογίστε τη μέγιστη έκθεσή σας βάσει Άρθρου 99 EU AI Act. Χωρίς εγγραφή.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/ergaleia/prostimo-calculator/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --ink:#1d2846; --paper:#f5f6f8; --blue:#1d2846; --deep:#16203a;
+  --stone:#8b90a0; --stone-d:#545a6e; --line:#e4e6ec; --line-d:#d3d6df;
+  --risk-high-bg:#FAEEDA; --risk-high:#854F0B; --risk-high-t:#633806;
+  --risk-lim-bg:#E6F1FB; --risk-lim:#185FA5; --risk-lim-t:#0C447C;
+  --red-bg:#FEF2F2; --red:#991B1B; --amber-bg:#FFFBEB; --amber:#92400E;
+  --green-bg:#F0FDF4; --green:#166534;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;background:rgba(245,246,248,0.94);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:14px;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;cursor:pointer;border:none;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.btn-ghost{background:transparent;color:var(--deep);border:0.5px solid var(--line-d);}
+.btn-ghost:hover{color:var(--deep);background:#F5F5F4;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,40px);font-weight:600;line-height:1.2;letter-spacing:-0.01em;}
+h2{font-size:clamp(22px,3vw,30px);font-weight:600;line-height:1.25;letter-spacing:-0.01em;}
+
+/* Breadcrumb */
+.breadcrumb{padding:20px 0 0;font-size:13.5px;color:var(--stone);}
+.breadcrumb a{color:var(--stone-d);}
+.breadcrumb a:hover{color:var(--ink);}
+.breadcrumb span{margin:0 6px;}
+
+/* Tool intro */
+.tool-intro{padding:36px 0 48px;}
+.tool-intro p{color:var(--stone-d);font-size:16.5px;margin-top:14px;max-width:580px;}
+
+/* Questions */
+.questions{display:flex;flex-direction:column;gap:28px;max-width:700px;}
+
+.q-block{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px;}
+.q-block.answered{border-color:var(--blue);background:#fff;}
+
+.q-num{font-size:11px;letter-spacing:0.18em;font-weight:600;color:var(--stone);margin-bottom:8px;}
+.q-text{font-size:17px;font-weight:500;margin-bottom:20px;line-height:1.4;}
+
+.options{display:flex;flex-direction:column;gap:10px;}
+.option-btn{
+  width:100%;text-align:left;padding:13px 18px;border-radius:8px;
+  border:0.5px solid var(--line-d);background:var(--paper);
+  font-size:14.5px;color:var(--ink);cursor:pointer;
+  transition:all .15s;font-family:inherit;line-height:1.4;
+}
+.option-btn:hover{border-color:var(--ink);background:#fff;}
+.option-btn.selected{border-color:var(--blue);background:var(--blue);color:#fff;font-weight:500;}
+.option-btn .sub-label{display:block;font-size:12.5px;opacity:0.7;margin-top:3px;}
+
+/* Result */
+.result-section{
+  max-width:700px;
+  background:#fff;border:2px solid var(--ink);border-radius:14px;
+  padding:36px;margin:36px 0;
+  display:none;
+}
+.result-section.visible{display:block;animation:fadeUp .35s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+
+.result-eyebrow{font-size:11px;letter-spacing:0.2em;font-weight:600;color:var(--stone);margin-bottom:20px;}
+.fine-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+@media(max-width:520px){.fine-grid{grid-template-columns:1fr;}}
+
+.fine-box{border-radius:10px;padding:20px;}
+.fine-box .fb-label{font-size:12px;font-weight:600;letter-spacing:0.12em;margin-bottom:8px;}
+.fine-box .fb-amount{font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;}
+.fine-box .fb-alt{font-size:12.5px;margin-top:6px;opacity:0.75;}
+.fine-box .fb-article{font-size:12px;margin-top:10px;font-weight:500;}
+
+.fine-box.high{background:var(--red-bg);color:var(--red);}
+.fine-box.medium{background:var(--risk-high-bg);color:var(--risk-high);}
+.fine-box.gdpr{background:var(--risk-lim-bg);color:var(--risk-lim);}
+.fine-box.total{background:var(--ink);color:#fff;}
+.fine-box.total .fb-alt{opacity:0.65;}
+
+.obligations{margin:0 0 24px;}
+.obligations h3{font-size:15px;font-weight:600;margin-bottom:12px;}
+.obligations ul{list-style:none;}
+.obligations li{font-size:14px;color:var(--stone-d);padding:5px 0 5px 22px;position:relative;border-bottom:0.5px solid var(--line);}
+.obligations li:last-child{border-bottom:none;}
+.obligations li::before{content:"";position:absolute;left:0;top:12px;width:10px;height:6px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg);}
+
+.result-disclaimer{font-size:12.5px;color:var(--stone);margin-top:20px;line-height:1.55;padding-top:16px;border-top:0.5px solid var(--line);}
+
+/* CTA block */
+.cta-block{max-width:700px;background:var(--paper);border:0.5px solid var(--line-d);border-radius:14px;padding:28px;margin:0 0 64px;display:none;}
+.cta-block.visible{display:block;}
+.cta-block h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta-block p{font-size:14.5px;color:var(--stone-d);margin-bottom:20px;}
+.cta-block .btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* === PUSH effect === */
+.btn{
+  box-shadow: 0 4px 0 0 rgba(29,40,70,0.35);
+  transform: translateY(0);
+  transition: opacity .15s, transform .1s, box-shadow .1s;
+}
+.btn:hover{box-shadow:0 5px 0 0 rgba(29,40,70,0.35);transform:translateY(-1px);}
+.btn:active{box-shadow:0 0px 0 0 rgba(29,40,70,0.35);transform:translateY(4px);}
+.btn-ghost{box-shadow:0 4px 0 0 rgba(29,40,70,0.12);}
+.btn-ghost:hover{box-shadow:0 5px 0 0 rgba(29,40,70,0.12);transform:translateY(-1px);}
+.btn-ghost:active{box-shadow:0 0px 0 0 rgba(29,40,70,0.12);transform:translateY(4px);}
+
+.option-btn{
+  box-shadow: 0 4px 0 0 rgba(29,40,70,0.10);
+  transition: all .12s;
+}
+.option-btn:hover{box-shadow:0 5px 0 0 rgba(29,40,70,0.12);transform:translateY(-1px);}
+.option-btn:active{box-shadow:0 0px 0 0 rgba(29,40,70,0.10);transform:translateY(4px);}
+.option-btn.selected{
+  box-shadow: 0 2px 0 0 rgba(29,40,70,0.35) inset;
+  transform: translateY(2px);
+}
+
+/* === COMET border on result section === */
+@property --comet-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes comet-spin {
+  to { --comet-angle: 360deg; }
+}
+.result-section {
+  border: none;
+  position: relative;
+  z-index: 0;
+}
+.result-section::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 15px;
+  background: conic-gradient(
+    from var(--comet-angle),
+    transparent 0deg,
+    transparent 210deg,
+    rgba(139,144,160,0.35) 255deg,
+    #1d2846 288deg,
+    rgba(255,255,255,0.85) 310deg,
+    transparent 340deg,
+    transparent 360deg
+  );
+  animation: comet-spin 4s linear infinite;
+  z-index: -1;
+  display: none;
+}
+.result-section.visible::before { display: block; }
+
+/* Reset */
+.reset-btn{background:none;border:none;color:var(--stone);font-size:13px;cursor:pointer;font-family:inherit;padding:0;text-decoration:underline;}
+.reset-btn:hover{color:var(--ink);}
+.reset-wrap{max-width:700px;text-align:right;margin-bottom:8px;display:none;}
+.reset-wrap.visible{display:block;}
+
+/* Progress */
+.progress-bar{height:2px;background:var(--line);margin:20px 0 0;border-radius:2px;max-width:700px;}
+.progress-fill{height:100%;background:var(--ink);border-radius:2px;transition:width .3s ease;}
+
+footer{border-top:0.5px solid var(--line);padding:36px 0;}
+.foot{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+.foot .disclaimer{font-size:12.5px;color:var(--stone);max-width:520px;line-height:1.55;}
+.foot .copy{font-size:12.5px;color:var(--stone);}
+
+@media(max-width:640px){
+  .nav-links{gap:14px;font-size:13px;}
+  .q-block{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="/">
+        <svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="#1d2846" stroke-width="2"/>
+          <line x1="18" y1="4" x2="18" y2="32" stroke="#1d2846" stroke-width="2"/>
+          <circle cx="18" cy="18" r="4" fill="#1d2846"/>
+          <circle cx="18" cy="7" r="2.5" fill="#1d2846"/>
+        </svg>
+        θeta <span class="ai">ai</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://thetaai.gr/#services">Υπηρεσίες</a>
+        <a href="/ergaleia/">Εργαλεία</a>
+        <a href="https://thetaai.gr/blog/">Blog</a>
+        <a href="https://thetaai.gr/#contact" class="btn">Επικοινωνία</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="/ergaleia/">Εργαλεία</a><span>/</span> Υπολογισμός προστίμου
+    </div>
+
+    <div class="tool-intro">
+      <div class="eyebrow">ΕΡΓΑΛΕΙΟ · 3 ΛΕΠΤΑ</div>
+      <h1>Τι πρόστιμο ρισκάρω;</h1>
+      <p>Τρεις ερωτήσεις. Δείτε τη μέγιστη θεωρητική σας έκθεση βάσει Άρθρου 99 του EU AI Act — και αν εμπλέκεται και ο GDPR. Καμία απάντηση δεν αποθηκεύεται ή αποστέλλεται.</p>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+
+    <div style="height:28px;"></div>
+
+    <!-- Questions -->
+    <div class="questions" id="questions">
+
+      <!-- Q1 -->
+      <div class="q-block" id="q1">
+        <div class="q-num">ΕΡΩΤΗΣΗ 1 / 3</div>
+        <div class="q-text">Τι τύπου AI σύστημα έχετε ή σχεδιάζετε;</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(1,'chatbot','Άρθρο 50 — Διαφάνεια chatbot / voice agent','medium')">
+            Chatbot ή voice agent που επικοινωνεί με πελάτες
+            <span class="sub-label">Π.χ. AI customer service, AI assistant σε website</span>
+          </button>
+          <button class="option-btn" onclick="answer(1,'highrisk','Άρθρο 6 + Παράρτημα ΙΙΙ — Υψηλού ρίσκου AI','high')">
+            Σύστημα που αξιολογεί ή παίρνει αποφάσεις για ανθρώπους
+            <span class="sub-label">Π.χ. HR / προσλήψεις, πίστωση, υγεία, εκπαίδευση, ασφαλιστικό scoring</span>
+          </button>
+          <button class="option-btn" onclick="answer(1,'internal','Άρθρο 4 — Υποχρεώσεις AI literacy','medium')">
+            Εσωτερικό εργαλείο για το προσωπικό
+            <span class="sub-label">Π.χ. ChatGPT, Copilot, εργαλεία παραγωγικότητας</span>
+          </button>
+          <button class="option-btn" onclick="answer(1,'deepfake','Άρθρο 50 — Διαφάνεια συνθετικού περιεχομένου','medium')">
+            Παράγει συνθετικό περιεχόμενο (εικόνα, βίντεο, φωνή)
+            <span class="sub-label">Π.χ. AI-generated marketing content, voice cloning</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="q-block" id="q2" style="opacity:0.45;pointer-events:none;">
+        <div class="q-num">ΕΡΩΤΗΣΗ 2 / 3</div>
+        <div class="q-text">Ποιος είναι ο ρόλος σας;</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(2,'deployer','Deployer (χρήστης)')">
+            Χρήστης έτοιμου AI — deployer
+            <span class="sub-label">Χρησιμοποιείτε AI που φτιάξαν άλλοι (π.χ. OpenAI, Google, έτοιμο SaaS)</span>
+          </button>
+          <button class="option-btn" onclick="answer(2,'provider','Provider (κατασκευαστής)')">
+            Κατασκευαστής AI — provider
+            <span class="sub-label">Αναπτύσσετε ή προσαρμόζετε AI για πελάτες ή για πώληση</span>
+          </button>
+          <button class="option-btn" onclick="answer(2,'both','Provider + Deployer')">
+            Και τα δύο
+            <span class="sub-label">Αναπτύσσετε AI και το χρησιμοποιείτε εσωτερικά ή για πελάτες</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="q-block" id="q3" style="opacity:0.45;pointer-events:none;">
+        <div class="q-num">ΕΡΩΤΗΣΗ 3 / 3</div>
+        <div class="q-text">Ετήσιος τζίρος επιχείρησης (προσεγγιστικά);</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(3,'t1',250000)">Κάτω από €500.000</button>
+          <button class="option-btn" onclick="answer(3,'t2',1250000)">€500.000 – €2.000.000</button>
+          <button class="option-btn" onclick="answer(3,'t3',6000000)">€2.000.000 – €10.000.000</button>
+          <button class="option-btn" onclick="answer(3,'t4',30000000)">€10.000.000 – €50.000.000</button>
+          <button class="option-btn" onclick="answer(3,'t5',100000000)">Πάνω από €50.000.000</button>
+        </div>
+      </div>
+
+    </div><!-- /questions -->
+
+    <!-- Reset -->
+    <div class="reset-wrap" id="resetWrap">
+      <button class="reset-btn" onclick="resetAll()">← Αρχή από την αρχή</button>
+    </div>
+
+    <!-- Result -->
+    <div class="result-section" id="resultSection">
+      <div class="result-eyebrow">ΕΚΤΙΜΗΣΗ ΜΕΓΙΣΤΟΥ ΠΡΟΣΤΙΜΟΥ — EU AI ACT ΑΡΘ. 99</div>
+
+      <div class="fine-grid" id="fineGrid"></div>
+
+      <div class="obligations" id="obligationsBlock"></div>
+
+      <div class="result-disclaimer">
+        Η εκτίμηση βασίζεται στα Άρθρα 99 και 101 του Καν. (ΕΕ) 2024/1689 (EU AI Act) και στο Άρθρο 83 του GDPR (αν εφαρμόζεται). Οι αναγραφόμενες τιμές αντιστοιχούν στα θεωρητικά ανώτατα όρια. Το πραγματικό πρόστιμο εξαρτάται από τη βαρύτητα της παράβασης, τον αριθμό θιγόμενων, τη συνεργασία με αρχές και την ύπαρξη ή μη τεκμηρίωσης. Για ΜμΕ ισχύει αρχή αναλογικότητας. Το παρόν δεν αποτελεί νομική συμβουλή.
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block" id="ctaBlock">
+      <h3>Ξέρετε τώρα τι ρισκάρετε.</h3>
+      <p>Η επόμενη κίνηση είναι να δείτε ακριβώς πού είστε εκτεθειμένοι — και τι αξίζει να κλείσετε πρώτα. Δωρεάν συνεδρία 45 λεπτών.</p>
+      <div class="btns">
+        <a href="https://thetaai.gr/#contact" class="btn">Κλείστε τη συνεδρία →</a>
+        <a href="/ergaleia/elegxos-symvasis-ai/" class="btn btn-ghost">Ελέγξτε και τη σύμβαση →</a>
+      </div>
+    </div>
+
+  </div><!-- /wrap -->
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <p class="disclaimer">Το εργαλείο παρέχει ενδεικτική εκτίμηση βάσει των απαντήσεών σας. Δεν αποτελεί νομική συμβουλή ούτε υποκαθιστά πλήρη αξιολόγηση. Καμία απάντηση δεν αποθηκεύεται ή αποστέλλεται.</p>
+      <p class="copy">© 2026 <a href="https://thetaai.gr/">θeta ai</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const state = { q1: null, q2: null, q3: null, risk: null, riskLabel: null, riskLevel: null };
+
+function answer(q, val, label, level) {
+  // Store answer
+  if (q === 1) { state.q1 = val; state.riskLabel = label; state.riskLevel = level; }
+  else if (q === 2) { state.q2 = val; }
+  else if (q === 3) { state.q3 = val; }
+
+  // Highlight selected button
+  const block = document.getElementById('q' + q);
+  block.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  event.currentTarget.classList.add('selected');
+  block.classList.add('answered');
+
+  // Activate next question
+  const next = document.getElementById('q' + (q + 1));
+  if (next) {
+    next.style.opacity = '1';
+    next.style.pointerEvents = 'auto';
+    next.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Update progress
+  const answered = [state.q1, state.q2, state.q3].filter(Boolean).length;
+  document.getElementById('progressFill').style.width = (answered / 3 * 100) + '%';
+
+  // Show reset
+  document.getElementById('resetWrap').classList.add('visible');
+
+  // If all answered, show result
+  if (state.q1 && state.q2 && state.q3) {
+    showResult();
+  }
+}
+
+function showResult() {
+  const turnover = state.q3;
+  const aiType = state.q1;
+  const role = state.q2;
+
+  // Determine AI Act penalty tier
+  let fixedCap, pct, articleRef, tierClass;
+  if (aiType === 'highrisk') {
+    fixedCap = 15000000; pct = 0.03;
+    articleRef = 'Άρθρο 99 §4 — Μη συμμόρφωση υποχρεώσεων υψηλού ρίσκου';
+    tierClass = 'high';
+  } else {
+    fixedCap = 15000000; pct = 0.03;
+    articleRef = 'Άρθρο 99 §4 — Μη συμμόρφωση υποχρεώσεων διαφάνειας / AI literacy';
+    tierClass = 'medium';
+  }
+  // Provider has higher exposure (obligations Art.9-15 stack on top)
+  if (role === 'provider' || role === 'both') {
+    if (aiType === 'highrisk') { fixedCap = 15000000; pct = 0.03; }
+    // Same caps but MORE obligations = higher probability of infringement
+  }
+
+  const aiActFine = Math.max(fixedCap, pct * turnover);
+
+  // GDPR: applies if chatbot/highrisk (processes personal data likely)
+  const gdprApplies = ['chatbot', 'highrisk'].includes(aiType);
+  const gdprFixed = 20000000;
+  const gdprPct = 0.04;
+  const gdprFine = gdprApplies ? Math.max(gdprFixed, gdprPct * turnover) : 0;
+
+  const totalFine = aiActFine + gdprFine;
+
+  function fmt(n) {
+    if (n >= 1000000) return '€' + (n / 1000000).toFixed(1).replace('.0','') + 'M';
+    if (n >= 1000) return '€' + Math.round(n / 1000) + 'K';
+    return '€' + n.toLocaleString('el-GR');
+  }
+
+  // Obligation list
+  const obligationsMap = {
+    chatbot: [
+      'Υποχρεωτική γνωστοποίηση ότι ο χρήστης επικοινωνεί με AI (Άρθρο 50 §1)',
+      'Σήμανση AI-generated περιεχομένου (Άρθρο 50 §4)',
+      'Εκπαίδευση προσωπικού στη χρήση AI — AI literacy (Άρθρο 4)',
+      gdprApplies ? 'Νόμιμη βάση επεξεργασίας δεδομένων & DPIA αν απαιτείται (GDPR Άρθρο 35)' : null,
+    ],
+    highrisk: [
+      'Ανθρώπινη εποπτεία (human-in-the-loop) για κάθε απόφαση (Άρθρο 14)',
+      'Τεχνική τεκμηρίωση & risk assessment πριν χρήση (Άρθρο 13)',
+      'Εγγραφή στην EU database αν είστε provider (Άρθρο 71)',
+      'Εκπαίδευση & AI literacy για εμπλεκόμενο προσωπικό (Άρθρο 4)',
+      gdprApplies ? 'DPIA υποχρεωτικό & νόμιμη βάση επεξεργασίας (GDPR Άρθρο 35)' : null,
+    ],
+    internal: [
+      'Πολιτική χρήσης AI για το προσωπικό — AI literacy (Άρθρο 4)',
+      'Έλεγχος εάν το εργαλείο εμπίπτει σε κατηγορία υψηλού ρίσκου',
+      'Έλεγχος σύμβασης με AI provider για ρήτρες ευθύνης',
+      'Τεκμηρίωση ότι η χρήση δεν αφορά απαγορευμένες πράξεις (Άρθρο 5)',
+    ],
+    deepfake: [
+      'Υποχρεωτική σήμανση ότι το περιεχόμενο είναι AI-generated (Άρθρο 50 §2)',
+      'Αποθήκευση metadata αναγνωρισιμότητας (Άρθρο 50 §3)',
+      'Εκπαίδευση προσωπικού στη χρήση AI (Άρθρο 4)',
+      role === 'provider' ? 'Τεχνική τεκμηρίωση ως provider (Άρθρα 9-15)' : null,
+    ],
+  };
+
+  const obligations = (obligationsMap[aiType] || []).filter(Boolean);
+
+  // Build HTML
+  let gridHTML = `
+    <div class="fine-box ${tierClass}">
+      <div class="fb-label">EU AI ACT — ΜΕΓΙΣΤΟ</div>
+      <div class="fb-amount">${fmt(aiActFine)}</div>
+      <div class="fb-alt">ή ${(pct * 100)}% παγκόσμιου τζίρου, όποιο είναι μεγαλύτερο</div>
+      <div class="fb-article">${articleRef}</div>
+    </div>`;
+
+  if (gdprApplies) {
+    gridHTML += `
+      <div class="fine-box gdpr">
+        <div class="fb-label">GDPR — ΜΕΓΙΣΤΟ (παράλληλο)</div>
+        <div class="fb-amount">${fmt(gdprFine)}</div>
+        <div class="fb-alt">ή 4% παγκόσμιου τζίρου, όποιο είναι μεγαλύτερο</div>
+        <div class="fb-article">GDPR Άρθρο 83 §5</div>
+      </div>`;
+  }
+
+  if (gdprApplies) {
+    gridHTML += `
+      <div class="fine-box total" style="grid-column:1/-1;">
+        <div class="fb-label">ΣΥΝΟΛΙΚΗ ΜΕΓΙΣΤΗ ΕΚΘΕΣΗ</div>
+        <div class="fb-amount">${fmt(totalFine)}</div>
+        <div class="fb-alt">EU AI Act + GDPR αν εφαρμόζονται παράλληλα</div>
+      </div>`;
+  }
+
+  document.getElementById('fineGrid').innerHTML = gridHTML;
+
+  // Obligations
+  const oblHTML = `
+    <h3>Υποχρεώσεις που ενεργοποιούνται για εσάς</h3>
+    <ul>${obligations.map(o => `<li>${o}</li>`).join('')}</ul>`;
+  document.getElementById('obligationsBlock').innerHTML = oblHTML;
+
+  // Show result & CTA
+  const resultSection = document.getElementById('resultSection');
+  resultSection.classList.add('visible');
+  resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  document.getElementById('ctaBlock').classList.add('visible');
+}
+
+function resetAll() {
+  state.q1 = null; state.q2 = null; state.q3 = null;
+  state.riskLabel = null; state.riskLevel = null;
+
+  document.querySelectorAll('.q-block').forEach((b, i) => {
+    b.classList.remove('answered');
+    b.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
+    if (i > 0) { b.style.opacity = '0.45'; b.style.pointerEvents = 'none'; }
+  });
+
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('resultSection').classList.remove('visible');
+  document.getElementById('ctaBlock').classList.remove('visible');
+  document.getElementById('resetWrap').classList.remove('visible');
+  document.getElementById('fineGrid').innerHTML = '';
+  document.getElementById('obligationsBlock').innerHTML = '';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
