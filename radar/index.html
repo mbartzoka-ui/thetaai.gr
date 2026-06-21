@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Security Radar — Ενημέρωση AI Act, AI Security & ISO AI | θita ai</title>
-<meta name="description" content="Τρέχουσα ενημέρωση για EU AI Act, ασφάλεια AI και πρότυπα (ISO 42001 / NIST). Επιλεγμένες πηγές, αυτόματη συλλογή, ανανέωση κάθε μέρα — από τη θita ai.">
+<title>AI Security Radar — EU AI Act, AI Security & ISO AI | θita ai</title>
+<meta name="description" content="Τρέχουσες εξελίξεις στον EU AI Act, την ασφάλεια AI και τα πρότυπα (ISO 42001 / NIST). Επιλεγμένες πηγές, αυτόματη συλλογή, ανανέωση κάθε μέρα — από θita ai.">
 <link rel="canonical" href="https://thetaai.gr/radar/">
 <link rel="alternate" hreflang="el" href="https://thetaai.gr/radar/">
 <link rel="alternate" hreflang="en" href="https://thetaai.gr/en/radar/">
 <link rel="alternate" hreflang="x-default" href="https://thetaai.gr/radar/">
 <meta property="og:title" content="AI Security Radar — θita ai">
-<meta property="og:description" content="Τρέχουσα ενημέρωση για EU AI Act, ασφάλεια AI και πρότυπα — επιλεγμένες πηγές, ανανέωση κάθε μέρα.">
+<meta property="og:description" content="Τρέχουσες εξελίξεις στον EU AI Act, την ασφάλεια AI και τα πρότυπα (ISO 42001 / NIST). Επιλεγμένες πηγές, αυτόματη συλλογή, ανανέωση κάθε μέρα — από θita ai.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thetaai.gr/radar/">
 <meta property="og:image" content="https://thetaai.gr/og-image.png">
@@ -20,16 +20,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
+
 :root{
-  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
-  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+--ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+--stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
 a{color:var(--deep);text-decoration:none;}
 a:hover{text-decoration:underline;}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
-
 header{border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--paper);}
 .hd{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;flex-wrap:wrap;}
 .brand{display:flex;align-items:center;gap:11px;font-weight:300;font-size:19px;letter-spacing:0.06em;color:var(--paper);}
@@ -37,7 +37,6 @@ header{border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--pa
 .brand .ai{color:#5B8DEF;}
 .hd .nav{font-size:13px;color:#a8a49b;display:flex;gap:16px;align-items:center;}
 .hd .nav a{color:#cfccc4;}
-
 .intro{padding:34px 0 6px;}
 .eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:10px;}
 h1{font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;}
@@ -46,14 +45,11 @@ h1{font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-0.02em;line-he
 .stat{display:flex;gap:26px;margin-top:20px;flex-wrap:wrap;}
 .stat div{font-size:13px;color:var(--stone);}
 .stat b{display:block;font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
-
 .disc{background:#fff;border:0.5px solid var(--line-d);border-left:3px solid var(--blue);border-radius:8px;padding:13px 16px;margin-top:22px;font-size:12.5px;color:var(--stone-d);line-height:1.55;}
-
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 6px;position:sticky;top:0;background:var(--paper);padding:14px 0;z-index:5;border-bottom:0.5px solid var(--line);}
 .chip{font-size:13px;font-weight:500;padding:7px 15px;border-radius:999px;border:1px solid var(--line-d);background:#fff;color:var(--stone-d);cursor:pointer;transition:all .12s;user-select:none;}
 .chip:hover{border-color:var(--blue);color:var(--blue);}
 .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink);}
-
 main{padding:8px 0 50px;}
 .group{margin-top:30px;}
 .group-h{font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);font-weight:600;padding-bottom:10px;border-bottom:0.5px solid var(--line);margin-bottom:4px;}
@@ -76,18 +72,14 @@ main{padding:8px 0 50px;}
 .it-refs{font-size:12px;color:var(--stone);margin-top:9px;}
 .it-refs a{color:var(--deep);text-decoration:none;}
 .it-refs a:hover{text-decoration:underline;}
-
 .cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:30px 28px;margin-top:44px;}
 .cta h3{font-size:20px;font-weight:600;margin-bottom:8px;color:var(--paper);}
 .cta p{color:#cfccc4;font-size:15px;margin-bottom:18px;max-width:620px;}
 .btn{display:inline-block;background:#5B8DEF;color:#0b1220;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;}
 .btn:hover{opacity:.9;text-decoration:none;color:#0b1220;}
-
 footer{border-top:0.5px solid var(--line);padding:26px 0 40px;}
 .foot{font-size:12.5px;color:var(--stone);line-height:1.6;}
 .foot b{color:var(--stone-d);}
-
-/* unified-header */
 header .wrap{max-width:1060px;}
 header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
 header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
@@ -102,529 +94,624 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 .nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
 .nav-links .lang .on{color:var(--ink);font-weight:600;}
 .filters{top:57px;}
+
 </style>
 <style>
+
 .blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
-  -webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
-  mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
+-webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
+mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
 .blueprint svg{display:block;width:100%;height:100%;}
 #guide.ta-guide{background:transparent !important;}
 @media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
+
 </style>
 </head>
 <body>
 <div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
 
 <header>
-  <div class="wrap nav">
-    <a class="logo" href="/" aria-label="θita ai — αρχική">
-      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
-      <span>θita <span class="ai">ai</span></span>
-    </a>
-    <nav class="nav-links" aria-label="Κύρια πλοήγηση">
-      <a href="/#services">Υπηρεσίες</a>
-      <a href="/#method">Μεθοδολογία</a>
-      <a href="/ergaleia/">Εργαλεία</a>
-      <a href="/blog/">Blog</a>
-      <a href="/#guide">Οδηγός</a>
-      <a href="/#faq">Συχνές ερωτήσεις</a>
-      <span class="lang"><span class="on">EL</span> · <a href="/en/radar/">EN</a></span>
-    </nav>
-  </div>
+<div class="wrap nav">
+<a class="logo" href="/" aria-label="θita ai — home">
+<svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+<span>θita <span class="ai">ai</span></span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/#services">Υπηρεσίες</a>
+<a href="/#method">Μέθοδος</a>
+<a href="/ergaleia/">Εργαλεία</a>
+<a href="/blog/">Blog</a>
+<a href="/#guide">Οδηγός</a>
+<a href="/#faq">FAQ</a>
+<span class="lang"><span class="on">EL</span> · <a href="/en/radar/">EN</a></span>
+</nav>
+</div>
 </header>
 
 <div class="wrap">
-  <section class="intro">
-    <div class="eyebrow">AI SECURITY RADAR</div>
-    <h1>Τι κινείται σε AI Act, AI Security &amp; ISO AI</h1>
-    <p class="sub">Παρακολουθούμε τις εξελίξεις σε κανονισμό, ασφάλεια συστημάτων AI και πρότυπα, ώστε να μένετε ενήμεροι χωρίς να ψάχνετε. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-    <div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 17 ΙΟΥΝ 2026</div>
-    <div class="stat">
-      <div><b id="s-total">0</b>θέματα</div>
-      <div><b id="s-act">0</b>AI Act</div>
-      <div><b id="s-sec">0</b>AI Security</div>
-      <div><b id="s-inc">0</b>Περιστατικά</div>
-    </div>
-    <div class="disc">Αυτόματη συλλογή από εξωτερικές πηγές, για ενημερωτικούς σκοπούς. Οι τίτλοι/περιλήψεις παράγονται αυτόματα και ενδέχεται να περιέχουν ανακρίβειες — επιβεβαιώστε πάντα στην πρωτογενή πηγή. Δεν αποτελεί νομική συμβουλή.</div>
-  </section>
+<section class="intro">
+<div class="eyebrow">AI SECURITY RADAR</div>
+<h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
+<p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 21 ΙΟΥΝ 2026</div>
+<div class="stat">
+<div><b id="s-total">0</b>στοιχεία</div>
+<div><b id="s-act">0</b>AI Act</div>
+<div><b id="s-sec">0</b>AI Security</div>
+<div><b id="s-inc">0</b>Περιστατικά</div>
+</div>
+<div class="disc">Αυτόματη συλλογή από εξωτερικές πηγές, για ενημέρωση μόνο. Τίτλοι και περιλήψεις παράγονται αυτόματα και ενδέχεται να περιέχουν ανακρίβειες — πάντα επαληθεύετε στην πρωτότυπη πηγή. Δεν αποτελεί νομική συμβουλή.</div>
+</section>
 
-  <div class="filters" id="filters"></div>
-  <main id="feed"></main>
+<div class="filters" id="filters"></div>
+<main id="feed"></main>
 
-  <div class="cta">
-    <h3>Σας αφορά κάτι από αυτά;</h3>
-    <p>Αν χρησιμοποιείτε chatbot, AI agent ή εργαλεία AI στην επιχείρησή σας, ο Έλεγχος Θωράκισης σας δείχνει πού είστε εκτεθειμένοι ως προς τον EU AI Act και την ασφάλεια — με προτεραιότητες. Προηγείται δωρεάν συνεδρία 45 λεπτών.</p>
-    <a class="btn" href="mailto:hello@thetaai.gr?subject=AI Security Radar — δωρεάν συνεδρία">Κλείστε δωρεάν συνεδρία</a>
-  </div>
+<div class="cta">
+<h3>Σας αφορά κάτι από αυτά;</h3>
+<p>Αν τρέχετε chatbot, AI agent ή AI εργαλεία στην επιχείρησή σας, το Shielding Audit δείχνει πού είστε εκτεθειμένοι στον EU AI Act και στην ασφάλεια — με προτεραιοποίηση. Ξεκινά με δωρεάν session 45 λεπτών.</p>
+<a class="btn" href="mailto:hello@thetaai.gr?subject=AI Security Radar — free session">Κλείστε δωρεάν session</a>
+</div>
 
-  <footer>
-    <p class="foot">© 2026 <b>θita ai</b> · Θ όπως θωράκιση · <a href="/">thetaai.gr</a><br>
-    Πηγές: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, Ars Technica, MIT Technology Review, The Verge, EURACTIV κ.ά.</p>
-  </footer>
+<footer>
+<p class="foot">© 2026 <b>θita ai</b> · Θ ως ασπίδα · <a href="/">thetaai.gr</a><br>
+Πηγές: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, Ars Technica, MIT Technology Review, The Verge, EURACTIV και άλλες.</p>
+</footer>
 </div>
 
 <script>
-const GENERATED = "2026-06-17";
+const GENERATED = "2026-06-21";
 const ITEMS = [
-  {
-    "title": "Κενό ασφαλείας στο Google Vertex AI SDK επέτρεπε υποκλοπή uploads μοντέλων",
-    "date": "2026-06-16",
-    "topic": "AI Security",
-    "summary": "Ένα σφάλμα στο Vertex AI SDK της Google για Python (το ονόμασαν «Pickle in the Middle» οι ερευνητές της Palo Alto Unit 42) επέτρεπε σε επιτιθέμενο χωρίς πρόσβαση στο project να υποκλέψει το upload ενός ML μοντέλου και να εκτελέσει κώδικα μέσα στην υποδομή της Google. Δεν παρατηρήθηκε εκμετάλλευση σε πραγματικές συνθήκες.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html"
-      }
-    ]
-  },
-  {
-    "title": "Πρόβλεψη συμπεριφοράς μοντέλου πριν την κυκλοφορία μέσω προσομοίωσης deployment",
-    "date": "2026-06-16",
-    "topic": "AI Security",
-    "summary": "Η OpenAI περιγράφει μια μέθοδο ασφαλείας που προσομοιώνει πραγματικές συνθήκες deployment ώστε να προβλέψει και να εντοπίσει προβληματική συμπεριφορά ενός μοντέλου πριν αυτό κυκλοφορήσει.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/deployment-simulation"
-      }
-    ]
-  },
-  {
-    "title": "Αλυσίδα ευπαθειών στο LiteLLM επιτρέπει σε χρήστες χαμηλών δικαιωμάτων να καταλάβουν AI gateway servers",
-    "date": "2026-06-15",
-    "topic": "AI Security",
-    "summary": "Ένας προεπιλεγμένος λογαριασμός χαμηλών δικαιωμάτων σε proxy του LiteLLM μπορεί, αλυσιδώνοντας τρεις ευπάθειες, να ανέλθει σε πλήρη admin και να εκτελέσει κώδικα στον server — εκθέτοντας όλα τα κλειδιά παρόχων μοντέλων. Το LiteLLM είναι ευρέως διαδεδομένο open-source AI gateway.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html"
-      }
-    ]
-  },
-  {
-    "title": "Ευπάθεια ενός κλικ στο Microsoft 365 Copilot μπορούσε να διαρρεύσει emails, αρχεία και κωδικούς MFA",
-    "date": "2026-06-15",
-    "topic": "AI Security",
-    "summary": "Ερευνητές της Varonis συνδύασαν τρία σφάλματα σε μια επίθεση ενός κλικ («SearchLeak») που αντλούσε emails, στοιχεία ημερολογίου και ευρετηριασμένα αρχεία από το Microsoft 365 Copilot Enterprise Search· επειδή ο σύνδεσμος έδειχνε σε γνήσιο domain microsoft.com, παρέκαμπτε τα φίλτρα anti-phishing.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/application-security/copilot-searchleak-attack-1-click-data-theft"
-      }
-    ]
-  },
-  {
-    "title": "Επίθεση «Agentjacking»: ξεγελά AI coding agents ώστε να τρέξουν κακόβουλο κώδικα",
-    "date": "2026-06-12",
-    "topic": "AI Security",
-    "summary": "Νέα κατηγορία επίθεσης με την ονομασία Agentjacking χρησιμοποιεί πλαστή αναφορά σφάλματος Sentry για να εξαπατήσει AI coding agents ώστε να εκτελέσουν αυθαίρετο κώδικα σε μηχανήματα προγραμματιστών.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"
-      }
-    ]
-  },
-  {
-    "title": "Αλυσίδα ευπαθειών στο LangGraph εκθέτει self-hosted AI agents σε απομακρυσμένη εκτέλεση κώδικα",
-    "date": "2026-06-12",
-    "topic": "AI Security",
-    "summary": "Τρεις ευπάθειες (ήδη διορθωμένες) στο LangGraph της LangChain, μεταξύ τους ένα SQL injection, μπορούσαν να συνδυαστούν σε κρίσιμο RCE εναντίον self-hosted εφαρμογών AI agent.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html"
-      }
-    ]
-  },
-  {
-    "title": "Η Google μηνύει κινεζικό δίκτυο smishing που φέρεται να χρησιμοποίησε το Gemini σε phishing",
-    "date": "2026-06-12",
-    "topic": "Incidents",
-    "summary": "Η Google κατέθεσε αγωγή κατά κινεζικού δικτύου κυβερνοεγκλήματος που φέρεται να χρησιμοποίησε τον agent Gemini για αποστολή phishing SMS σε Αμερικανούς, στο πλαίσιο ενός phishing-as-a-service kit.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html"
-      }
-    ]
-  },
-  {
-    "title": "Οι ΗΠΑ διατάζουν την Anthropic να αναστείλει την πρόσβαση σε Fable 5 και Mythos 5 για αλλοδαπούς",
-    "date": "2026-06-12",
-    "topic": "Incidents",
-    "summary": "Μετά από εντολή εξαγωγικού ελέγχου των ΗΠΑ για λόγους εθνικής ασφάλειας, η Anthropic απενεργοποίησε την πρόσβαση στα Claude Fable 5 και Mythos 5 για αλλοδαπούς παγκοσμίως, αμφισβητώντας ωστόσο τη βάση της εντολής.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/"
-      },
-      {
-        "name": "Anthropic",
-        "url": "https://www.anthropic.com/news/fable-mythos-access"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/us-cracks-down-anthropic-ai-models-abuse-concerns"
-      }
-    ]
-  },
-  {
-    "title": "Το Claude Fable 5 δεν αλλάζει την εικόνα ασφαλείας του Mythos",
-    "date": "2026-06-12",
-    "topic": "AI Security",
-    "summary": "Ανάλυση του Dark Reading για την απόφαση της Anthropic να κυκλοφορήσει το ίδιο υποκείμενο μοντέλο ως δύο προϊόντα (δημόσιο Fable 5 με δικλείδες ασφαλείας, περιορισμένο Mythos 5 με αρμένες δικλείδες για πιστοποιημένους χρήστες κυβερνοασφάλειας) και τι σημαίνει αυτό για τον κίνδυνο κακόβουλης χρήσης AI.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/vulnerabilities-threats/claude-fable-5-doesnt-change-mythos-security-story"
-      }
-    ]
-  },
-  {
-    "title": "Νέες επιθέσεις ξεγελούν τον AI agent OpenClaw ώστε να εκτελεί κώδικα και να διαρρέει μυστικά",
-    "date": "2026-06-11",
-    "topic": "AI Security",
-    "summary": "Δύο ερευνητικές ομάδες έδειξαν ότι ο self-hosted agent OpenClaw μπορεί να οδηγηθεί, μέσω φαινομενικά αθώων εισόδων, να εκτελέσει κώδικα επιτιθέμενου ή να διαρρεύσει δεδομένα μέσω indirect prompt injection.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html"
-      }
-    ]
-  },
-  {
-    "title": "Το AI «έσπασε» το vulnerability management — οι CISO στρέφουν budget στο BAS",
-    "date": "2026-06-11",
-    "topic": "AI Security",
-    "summary": "Το AI εκμηδένισε τον χρόνο από την ανακάλυψη μιας ευπάθειας ως την εκμετάλλευσή της, σπρώχνοντας τους CISO προς επικύρωση με breach-and-attack-simulation.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI: στήριξη στο «αξιόπιστο οικοσύστημα AI» της ΕΕ",
-    "date": "2026-06-11",
-    "topic": "AI Act",
-    "summary": "Η OpenAI περιέγραψε πώς στηρίζει τις προσπάθειες της Ευρώπης για ένα αξιόπιστο οικοσύστημα AI, μεταξύ άλλων σε ευθυγράμμιση με τη διακυβέρνηση AI της ΕΕ και το πλαίσιο του AI Act.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"
-      }
-    ]
-  },
-  {
-    "title": "Ευπάθεια στο Langflow (CVE-2026-5027) υπό ενεργή εκμετάλλευση για μη εξουσιοδοτημένο RCE",
-    "date": "2026-06-10",
-    "topic": "AI Security",
-    "summary": "Σοβαρή ευπάθεια path-traversal (CVE-2026-5027) στην πλατφόρμα ανάπτυξης AI Langflow βρίσκεται υπό ενεργή εκμετάλλευση, επιτρέποντας εγγραφή αυθαίρετων αρχείων σε εκτεθειμένους servers.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html"
-      }
-    ]
-  },
-  {
-    "title": "Η CISA ξαναγράφει τις απαιτήσεις patching για την εποχή των απειλών AI",
-    "date": "2026-06-10",
-    "topic": "Standards",
-    "summary": "Νέα οδηγία (BOD 26-04) της CISA δίνει στις ομοσπονδιακές υπηρεσίες μόλις τρεις ημέρες για να διορθώσουν τις πιο επικίνδυνες ευπάθειες, επικαλούμενη την ταχύτερη εκμετάλλευση στην εποχή του AI.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/"
-      }
-    ]
-  },
-  {
-    "title": "Ο κίνδυνος AI ανησυχεί εξίσου ασφαλιστές και επιχειρήσεις",
-    "date": "2026-06-10",
-    "topic": "General",
-    "summary": "Κάποιοι ασφαλιστές εξαιρούν ρητά τους κινδύνους AI, ενώ άλλοι τρέχουν να φτιάξουν πλαίσια κάλυψης — δείχνοντας την αβεβαιότητα για το ποιο AI ρίσκο μπορεί να διαχειριστεί μια επιχείρηση.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/ai-risk-worries-insurers-businesses-alike"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic: προτάσεις πολιτικής για το «AI Exponential»",
-    "date": "2026-06-10",
-    "topic": "AI Act",
-    "summary": "Η Anthropic δημοσίευσε προτάσεις πολιτικής, υποστηρίζοντας ότι η AI εξελίσσεται με εκθετική ταχύτητα ενώ ο τρόπος χάραξης πολιτικής σχεδιάστηκε για έναν πιο αργό κόσμο, και καλεί τους θεσμούς να προετοιμαστούν για τη ραγδαία πρόοδο της AI.",
-    "sources": [
-      {
-        "name": "Anthropic",
-        "url": "https://www.anthropic.com/policy-on-the-ai-exponential"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI: επιχειρήσεις επιρροής συνδεόμενες με την Κίνα στοχεύουν τον διάλογο για την AI στις ΗΠΑ",
-    "date": "2026-06-10",
-    "topic": "AI Security",
-    "summary": "Η OpenAI ανέφερε ότι επιχειρήσεις επιρροής που συνδέει με φορείς της Κίνας προσπαθούν να επηρεάσουν τον δημόσιο διάλογο στις ΗΠΑ γύρω από την πολιτική για την AI, και περιέγραψε πώς διέκοψε τη δραστηριότητα.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-      }
-    ]
-  },
-  {
-    "title": "Patch Tuesday-ρεκόρ: η Microsoft διορθώνει 206 ευπάθειες, με «φταίχτη» το AI",
-    "date": "2026-06-09",
-    "topic": "General",
-    "summary": "Η Microsoft διόρθωσε ρεκόρ 206 ευπαθειών, μεταξύ τους τρεις zero-days, με αναλυτές να αποδίδουν εν μέρει την έκρηξη στην επιτάχυνση που φέρνει το AI στην ανακάλυψη σφαλμάτων.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/vulnerabilities-threats/blame-ai-patch-tuesday-record-206-cves"
-      }
-    ]
-  },
-  {
-    "title": "Η Meta θα χρησιμοποιεί δεδομένα τρίτων επιχειρήσεων για εξατομίκευση feed και AI",
-    "date": "2026-06-09",
-    "topic": "General",
-    "summary": "Η Meta θα αξιοποιεί δεδομένα δραστηριότητας που μοιράζονται άλλες επιχειρήσεις για να εξατομικεύει feeds και απαντήσεις AI chatbot, εγείροντας ζητήματα προστασίας δεδομένων και συγκατάθεσης.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html"
-      }
-    ]
-  },
-  {
-    "title": "Η Anthropic κυκλοφορεί το Claude Fable 5 με δικλείδες κυβερνοασφάλειας",
-    "date": "2026-06-09",
-    "topic": "AI Security",
-    "summary": "Η Anthropic διέθεσε το πιο ικανό μοντέλο της ως δύο προϊόντα χωρισμένα με safety classifiers, κρατώντας την έκδοση Mythos χωρίς περιορισμούς μόνο για επιλεγμένους αμυντικούς κυβερνοασφάλειας.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html"
-      },
-      {
-        "name": "Anthropic",
-        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
-      }
-    ]
-  },
-  {
-    "title": "Διάταγμα Trump: εθελοντικός έλεγχος των frontier μοντέλων AI",
-    "date": "2026-06-05",
-    "topic": "AI Act",
-    "summary": "Εκτελεστικό διάταγμα του Λευκού Οίκου θεσπίζει εθελοντικό πλαίσιο για πρόωρη κυβερνητική πρόσβαση σε frontier μοντέλα AI, μαζί με ομοσπονδιακές επενδύσεις σε ασφάλεια.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/trump-ai-order-seeks-voluntary-frontier-model-testing"
-      }
-    ]
-  },
-  {
-    "title": "Προσαρμοστικά, agentic AI worms: η επόμενη απειλή για τις επιχειρήσεις",
-    "date": "2026-06-05",
-    "topic": "AI Security",
-    "summary": "Ερευνητές προειδοποιούν ότι προσαρμοστικά agentic AI worms, που αναζητούν ευπάθειες και προσαρμόζουν την επίθεση ανά στόχο, είναι πιθανό να χτυπήσουν επιχειρήσεις μέσα στον επόμενο χρόνο.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/adaptive-agentic-ai-worms-enterprise-cyber-threat"
-      }
-    ]
-  },
-  {
-    "title": "Τέσσερις κρίσιμες απειλές όπου οι επιτιθέμενοι έχουν το πλεονέκτημα",
-    "date": "2026-06-04",
-    "topic": "AI Security",
-    "summary": "Αναλυτές της Gartner προτρέπουν για ισχυρότερη άμυνα απέναντι σε αναδυόμενες απειλές, όπως deepfakes και επιθέσεις prompt injection.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/vulnerabilities-threats/4-critical-threats-attackers-advantage"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic: τι μάθαμε χαρτογραφώντας έναν χρόνο AI-enabled κυβερνοαπειλών",
-    "date": "2026-06-03",
-    "topic": "AI Security",
-    "summary": "Η Anthropic δημοσίευσε ανάλυση ενός έτους κακόβουλης χρήσης των μοντέλων της, αντιστοιχίζοντας τις τακτικές των επιτιθέμενων στο πλαίσιο MITRE ATT&CK.",
-    "sources": [
-      {
-        "name": "Anthropic",
-        "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack"
-      }
-    ]
-  },
-  {
-    "title": "Κακόβουλες ειδοποιήσεις μπορούν να ξεγελάσουν χρήστες του Google Gemini",
-    "date": "2026-06-03",
-    "topic": "AI Security",
-    "summary": "Ευπάθεια prompt injection στον φωνητικό βοηθό του Gemini επέτρεπε σε επιτιθέμενους να κρύβουν κακόβουλες εντολές μέσα σε ειδοποιήσεις για social engineering.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/application-security/malicious-notifications-could-trick-google-gemini-users"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI: σχέδιο για δημοκρατική διακυβέρνηση της frontier AI",
-    "date": "2026-06-03",
-    "topic": "AI Act",
-    "summary": "Η OpenAI δημοσίευσε ένα σχέδιο (blueprint) με προτάσεις για το πώς πρέπει να διακυβερνάται δημοκρατικά η frontier AI, καλύπτοντας εποπτεία, πρότυπα ασφάλειας και θεσμικές δικλείδες.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/frontier-safety-blueprint"
-      }
-    ]
-  },
-  {
-    "title": "Επιτιθέμενοι χρησιμοποιούν AI για να αυτοματοποιήσουν την παράκαμψη EDR",
-    "date": "2026-06-03",
-    "topic": "AI Security",
-    "summary": "Ερευνητές αναφέρουν ότι επιτιθέμενοι χρησιμοποιούν AI για να αυτοματοποιήσουν τις δοκιμές παράκαμψης συστημάτων EDR, επιταχύνοντας την ανάπτυξη malware που παρακάμπτει τις άμυνες.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/endpoint-security/attackers-automate-edr-evasion-testing"
-      }
-    ]
-  },
-  {
-    "title": "Πέρα από το «assume-breach»: πώς η AI-native ασφάλεια αλλάζει την εταιρική άμυνα",
-    "date": "2026-06-02",
-    "topic": "General",
-    "summary": "Η εταιρική ασφάλεια κινείται προς υπερ-κατατμημένα, AI-orchestrated μοντέλα άμυνας που ξεπερνούν τη λογική του assume-breach.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/assume-breach-ai-native-security-reshape-enterprise-defense"
-      }
-    ]
-  },
-  {
-    "title": "Το να ασφαλίσεις AI agents πριν «ξεφύγουν» είναι σχεδόν αδύνατο",
-    "date": "2026-06-02",
-    "topic": "AI Security",
-    "summary": "AI agents υψηλής αυτονομίας με ευρεία δικαιώματα συνιστούν σοβαρό εταιρικό ρίσκο και απαιτούν διακυβέρνηση και ελέγχους πριν συμβούν περιστατικά.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/securing-ai-agents-rogue"
-      }
-    ]
-  },
-  {
-    "title": "Η Anthropic ανοίγει το Mythos AI στην ENISA της ΕΕ",
-    "date": "2026-06-01",
-    "topic": "AI Act",
-    "summary": "Μετά από συνεργασία με την Ευρωπαϊκή Επιτροπή, η Anthropic παραχωρεί στον οργανισμό κυβερνοασφάλειας της ΕΕ (ENISA) πρόσβαση στο Mythos AI, στο πλαίσιο του Project Glasswing — το οποίο επεκτείνεται πλέον σε ~150 οργανισμούς σε πάνω από 15 χώρες.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/anthropic-mythos-ai-eu-enisa"
-      },
-      {
-        "name": "Anthropic",
-        "url": "https://www.anthropic.com/news/expanding-project-glasswing"
-      }
-    ]
-  },
-  {
-    "title": "Ένα κοινό πλαίσιο για αξιόπιστες αξιολογήσεις από τρίτους",
-    "date": "2026-05-29",
-    "topic": "Standards",
-    "summary": "Η OpenAI θέτει τις βάσεις για αξιόπιστες αξιολογήσεις μοντέλων AI από ανεξάρτητους τρίτους, με έμφαση στη μεθοδολογία ελέγχου και τη διασφάλιση της αξιοπιστίας τους.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations"
-      }
-    ]
-  },
-  {
-    "title": "Το Frontier Governance Framework της OpenAI",
-    "date": "2026-05-28",
-    "topic": "AI Act",
-    "summary": "Η OpenAI δημοσιεύει ανανεωμένο πλαίσιο διακυβέρνησης για την ανάπτυξη και διάθεση frontier μοντέλων, που περιλαμβάνει όρια κινδύνου και δικλείδες ασφαλείας.",
-    "sources": [
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/openai-frontier-governance-framework"
-      }
-    ]
-  }
+{
+"title": "«AutoJack»: Μία ιστοσελίδα οδηγεί σε RCE μέσω AI browsing agent",
+"date": "2026-06-19",
+"topic": "AI Security",
+"summary": "Ερευνητές της Microsoft ανακάλυψαν αλυσίδα επίθεσης «AutoJack»: ο AI browsing agent επισκέπτεται σελίδα επιτιθέμενου → JavaScript επικοινωνεί με τοπική υπηρεσία → απομακρυσμένη εκτέλεση κώδικα χωρίς credentials.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html"
+}
+]
+},
+{
+"title": "Shadow AI: το πραγματικό πρόβλημα δεν είναι η διαρροή δεδομένων — είναι ο έλεγχος πρόσβασης",
+"date": "2026-06-19",
+"topic": "AI Security",
+"summary": "Το Shadow AI έχει μετατοπιστεί: από ζήτημα διαρροής δεδομένων σε πρόβλημα ελέγχου πρόσβασης — AI agents με μόνιμα δικαιώματα λειτουργούν με ελάχιστη εποπτεία, δημιουργώντας κρυφές επιφάνειες επίθεσης.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html"
+}
+]
+},
+{
+"title": "Κάθε AI agent είναι μια ταυτότητα — και οι περισσότεροι οργανισμοί δεν το αντιμετωπίζουν έτσι",
+"date": "2026-06-19",
+"topic": "AI Security",
+"summary": "AI agents αποκτούν πρόσβαση σε δεδομένα και workflows με ελάχιστη εποπτεία. Οι οργανισμοί χρειάζεται να εφαρμόζουν στους AI agents τις ίδιες αρχές IAM που εφαρμόζουν στους ανθρώπινους χρήστες.",
+"sources": [
+{
+"name": "BleepingComputer",
+"url": "https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/"
+}
+]
+},
+{
+"title": "Πίεση και AI αναγκάζουν τις ομάδες κυβερνοασφάλειας να αναδομηθούν",
+"date": "2026-06-19",
+"topic": "General",
+"summary": "CISOs αναφέρουν ότι η δουλειά γίνεται ολοένα πιο απαιτητική καθώς η AI επιπλέκει τόσο την επίθεση όσο και την άμυνα, αναγκάζοντας τους οργανισμούς να επαναπροσδιορίσουν ρόλους και δομές.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cybersecurity-operations/stressors-ai-changes-cybersecurity-teams"
+}
+]
+},
+{
+"title": "ThreatsDay: Σύνδεσμοι Claude chat ως φορείς κακόβουλου λογισμικού — ορφανοί AI agents στο στόχαστρο",
+"date": "2026-06-18",
+"topic": "AI Security",
+"summary": "Επιτιθέμενοι χρησιμοποιούν συνδέσμους Claude chat για παράδοση κακόβουλου λογισμικού, αναδεικνύοντας τα AI chat interfaces ως νέα επιφάνεια επίθεσης. Το bulletin καλύπτει επίσης ορφανούς AI agents με ενεργά δικαιώματα πρόσβασης.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html"
+}
+]
+},
+{
+"title": "Ορφανοί AI agents: Πώς να εντοπίσετε και να εξαλείψετε κρυφούς κινδύνους πρόσβασης",
+"date": "2026-06-18",
+"topic": "AI Security",
+"summary": "AI εργαλεία που δημιουργήθηκαν για συγκεκριμένο σκοπό και εγκαταλείφθηκαν παραμένουν ενεργά με μόνιμα δικαιώματα, δημιουργώντας αθέατο κίνδυνο. Το άρθρο περιγράφει μεθόδους εντοπισμού και εξυγίανσης.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html"
+}
+]
+},
+{
+"title": "15 κακόβουλα plugins JetBrains κλέβουν AI API keys και καταγράφουν συνομιλίες chatbot",
+"date": "2026-06-17",
+"topic": "AI Security",
+"summary": "Δεκαπέντε κακόβουλα plugins στο JetBrains Marketplace — μαζί με Chrome extensions — κλέβουν κλειδιά AI API (OpenAI, Anthropic κ.ά.) και καταγράφουν κρυφά το ιστορικό συνομιλιών με chatbots.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/malicious-jetbrains-plugins-steal-ai.html"
+}
+]
+},
+{
+"title": "Supply chain επίθεση παραβιάζει 145 npm πακέτα του Mastra AI framework",
+"date": "2026-06-17",
+"topic": "AI Security",
+"summary": "Επίθεση supply chain μέσω παραβίασης λογαριασμού συνεργάτη (easy-day-js) παραβίασε 145 πακέτα του Mastra AI framework στο npm registry, επηρεάζοντας δυνητικά κάθε project που τα χρησιμοποιεί.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html"
+}
+]
+},
+{
+"title": "Anthropic ανοίγει γραφείο στη Σεούλ με νέες συνεργασίες στο κορεατικό AI οικοσύστημα",
+"date": "2026-06-17",
+"topic": "General",
+"summary": "Η Anthropic ανακοίνωσε το άνοιγμα γραφείου στη Σεούλ και νέες στρατηγικές συνεργασίες στο κορεατικό AI οικοσύστημα, επεκτείνοντας την παρουσία της στην Ασία-Ειρηνικό.",
+"sources": [
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
+}
+]
+},
+{
+"title": "Κοινότητα κυβερνοασφάλειας κατά της αμερικανικής απαγόρευσης εξαγωγών Mythos/Fable",
+"date": "2026-06-16",
+"topic": "Incidents",
+"summary": "Ερευνητές ασφαλείας δημοσίευσαν ανοιχτή επιστολή ζητώντας ανάκληση των αμερικανικών περιορισμών εξαγωγής για τα μοντέλα Mythos και Fable της Anthropic, υποστηρίζοντας ότι η απαγόρευση εμποδίζει τη νόμιμη έρευνα κυβερνοασφάλειας.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/vulnerabilities-threats/security-community-slams-us-ban-on-exporting-mythos-fable"
+}
+]
+},
+{
+"title": "Κενό ασφαλείας Google Vertex AI SDK: παραβίαση φορτώσεων μοντέλων μέσω Bucket Squatting",
+"date": "2026-06-16",
+"topic": "AI Security",
+"summary": "Κενό ασφαλείας στο Vertex AI SDK της Google για Python (βαφτισμένο «Pickle in the Middle» από την Palo Alto Unit 42) επέτρεπε σε επιτιθέμενο χωρίς πρόσβαση στο project να παραβιάσει φορτώσεις μοντέλων ML και να εκτελέσει κώδικα στην υποδομή serving της Google.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html"
+}
+]
+},
+{
+"title": "OpenAI: Πρόβλεψη συμπεριφοράς μοντέλων πριν την κυκλοφορία μέσω προσομοίωσης ανάπτυξης",
+"date": "2026-06-16",
+"topic": "AI Security",
+"summary": "Η OpenAI περιγράφει μέθοδο ασφαλείας που προσομοιώνει πραγματικές συνθήκες χρήσης για τον εντοπισμό προβληματικών συμπεριφορών μοντέλων πριν την κυκλοφορία τους.",
+"sources": [
+{
+"name": "OpenAI",
+"url": "https://openai.com/index/deployment-simulation"
+}
+]
+},
+{
+"title": "Αλυσίδα ευπαθειών LiteLLM επιτρέπει κατάληψη AI gateway server από χαμηλά δικαιώματα",
+"date": "2026-06-15",
+"topic": "AI Security",
+"summary": "Ένας προεπιλεγμένος λογαριασμός χαμηλών δικαιωμάτων σε proxy LiteLLM μπορεί να συνδυάσει τρεις ευπάθειες για πλήρη admin πρόσβαση και εκτέλεση κώδικα, εκθέτοντας όλα τα κλειδιά παρόχων μοντέλων που κατέχει.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html"
+}
+]
+},
+{
+"title": "Κενό ασφαλείας Microsoft 365 Copilot: ένα κλικ αρκούσε για διαρροή email, αρχείων και MFA codes",
+"date": "2026-06-15",
+"topic": "AI Security",
+"summary": "Ερευνητές της Varonis συνδύασαν τρία σφάλματα σε μια διαδρομή εξαγωγής δεδομένων «SearchLeak» ενός κλικ, αντλώντας email, στοιχεία ημερολογίου και αρχεία από το Microsoft 365 Copilot Enterprise Search — ο σύνδεσμος χρησιμοποιούσε πραγματικό domain microsoft.com παρακάμπτοντας φίλτρα anti-phishing.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html"
+},
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/application-security/copilot-searchleak-attack-1-click-data-theft"
+}
+]
+},
+{
+"title": "Anthropic: δημοσίευση πρώτων αποτελεσμάτων Public Record",
+"date": "2026-06-12",
+"topic": "General",
+"summary": "Η Anthropic δημοσίευσε τα πρώτα αποτελέσματα της πρωτοβουλίας Public Record, η οποία τεκμηριώνει σημαντικές αποφάσεις, συμπεριφορές μοντέλων και κοινωνικές επιπτώσεις για μεγαλύτερη διαφάνεια.",
+"sources": [
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/news/anthropic-public-record"
+}
+]
+},
+{
+"title": "«Agentjacking»: επίθεση παραπλανά AI coding agents να εκτελέσουν κακόβουλο κώδικα",
+"date": "2026-06-12",
+"topic": "AI Security",
+"summary": "Νέα κατηγορία επίθεσης «Agentjacking» χρησιμοποιεί ψεύτικη αναφορά σφάλματος Sentry για να παραπλανά AI coding agents να εκτελούν αυθαίρετο κώδικα στα μηχανήματα developers.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"
+}
+]
+},
+{
+"title": "Αλυσίδα ευπαθειών LangGraph εκθέτει self-hosted AI agents σε απομακρυσμένη εκτέλεση κώδικα",
+"date": "2026-06-12",
+"topic": "AI Security",
+"summary": "Τρεις (πλέον διορθωμένες) ευπάθειες στο LangGraph του LangChain, συμπεριλαμβανομένης SQL injection, μπορούσαν να συνδυαστούν για κρίσιμη RCE εναντίον self-hosted AI agent εφαρμογών.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html"
+}
+]
+},
+{
+"title": "Google μηνύει κινεζικό δίκτυο smishing που χρησιμοποιούσε Gemini AI για phishing",
+"date": "2026-06-12",
+"topic": "Incidents",
+"summary": "Η Google κατέθεσε αγωγή κατά κινεζικού δικτύου κυβερνοεγκλήματος που κατηγορείται για χρήση του AI agent Gemini στην αποστολή μηνυμάτων phishing σε Αμερικανούς μέσω phishing-as-a-service.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html"
+}
+]
+},
+{
+"title": "ΗΠΑ: Εντολή αναστολής πρόσβασης ξένων υπηκόων στο Claude Fable 5 και Mythos 5",
+"date": "2026-06-12",
+"topic": "Incidents",
+"summary": "Μετά από οδηγία ελέγχου εξαγωγών που επικαλείται εθνική ασφάλεια, η Anthropic απενεργοποίησε την πρόσβαση στα Claude Fable 5 και Mythos 5 για ξένους υπηκόους παγκοσμίως, αμφισβητώντας παράλληλα τη βάση της εντολής.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html"
+},
+{
+"name": "BleepingComputer",
+"url": "https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/"
+},
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/news/fable-mythos-access"
+},
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/us-cracks-down-anthropic-ai-models-abuse-concerns"
+}
+]
+},
+{
+"title": "Claude Fable 5: γιατί η δημόσια έκδοση δεν αλλάζει την ιστορία ασφαλείας του Mythos",
+"date": "2026-06-12",
+"topic": "AI Security",
+"summary": "Ανάλυση Dark Reading για την απόφαση της Anthropic να κυκλοφορήσει ένα μοντέλο ως δύο προϊόντα: δημόσιο Fable 5 με προστασίες και περιορισμένο Mythos 5 για ελεγμένους χρήστες — τι σημαίνει αυτό για τον κίνδυνο κατάχρησης AI.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/vulnerabilities-threats/claude-fable-5-doesnt-change-mythos-security-story"
+}
+]
+},
+{
+"title": "Νέες επιθέσεις παραπλανούν τον AI agent OpenClaw να εκτελέσει κώδικα και να διαρρεύσει δεδομένα",
+"date": "2026-06-11",
+"topic": "AI Security",
+"summary": "Δύο ερευνητικές ομάδες απέδειξαν ότι ο self-hosted agent OpenClaw μπορεί να οδηγηθεί, μέσω κανονικοφανών εισόδων, να εκτελέσει κώδικα επιτιθέμενου ή να διαρρεύσει δεδομένα μέσω έμμεσης prompt injection.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html"
+}
+]
+},
+{
+"title": "Η AI «έσπασε» τη διαχείριση ευπαθειών — γι' αυτό οι CISOs στρέφονται στο BAS",
+"date": "2026-06-11",
+"topic": "AI Security",
+"summary": "Η AI κατάργησε το χρονικό περιθώριο μεταξύ ανακάλυψης ευπάθειας και εκμετάλλευσής της, ωθώντας τους CISOs προς επικύρωση μέσω breach-and-attack-simulation.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html"
+}
+]
+},
+{
+"title": "OpenAI: Υποστήριξη στη δημιουργία αξιόπιστου AI οικοσυστήματος στην ΕΕ",
+"date": "2026-06-11",
+"topic": "AI Act",
+"summary": "Η OpenAI περιέγραψε πώς υποστηρίζει τις ευρωπαϊκές προσπάθειες για αξιόπιστο AI οικοσύστημα, συμπεριλαμβανομένης της ευθυγράμμισης με το πλαίσιο διακυβέρνησης AI Act.",
+"sources": [
+{
+"name": "OpenAI",
+"url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"
+}
+]
+},
+{
+"title": "Κενό ασφαλείας Langflow (CVE-2026-5027) εκμεταλλεύεται για RCE χωρίς πιστοποίηση",
+"date": "2026-06-10",
+"topic": "AI Security",
+"summary": "Ευπάθεια υψηλής επικινδυνότητας path-traversal (CVE-2026-5027) στην πλατφόρμα Langflow εκμεταλλεύεται ενεργά, επιτρέποντας αυθαίρετες εγγραφές αρχείων σε εκτεθειμένους servers.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html"
+}
+]
+},
+{
+"title": "CISA αναθεωρεί τις ομοσπονδιακές απαιτήσεις patching για την εποχή της AI",
+"date": "2026-06-10",
+"topic": "Standards",
+"summary": "Νέα οδηγία CISA (BOD 26-04) δίνει στις ομοσπονδιακές υπηρεσίες μόλις τρεις ημέρες για να επιδιορθώσουν τις πιο επικίνδυνες ευπάθειες, επικαλούμενη την ταχύτερη εκμετάλλευση στην εποχή της AI.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era"
+},
+{
+"name": "BleepingComputer",
+"url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/"
+}
+]
+},
+{
+"title": "Οι κίνδυνοι AI ανησυχούν ασφαλιστικές εταιρείες και επιχειρήσεις",
+"date": "2026-06-10",
+"topic": "General",
+"summary": "Μερικές ασφαλιστικές αποκλείουν ρητά τους AI κινδύνους ενώ άλλες βιάζονται να αναπτύξουν πλαίσια κάλυψης, αντανακλώντας αβεβαιότητα για το ποιοι AI κίνδυνοι είναι διαχειρίσιμοι.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/ai-risk-worries-insurers-businesses-alike"
+}
+]
+},
+{
+"title": "Anthropic: Πολιτικές προτάσεις για την εκθετική ανάπτυξη της AI",
+"date": "2026-06-10",
+"topic": "AI Act",
+"summary": "Η Anthropic δημοσίευσε πολιτικές προτάσεις υποστηρίζοντας ότι η AI εξελίσσεται με εκθετικό ρυθμό ενώ ο θεσμικός κόσμος σχεδιάστηκε για έναν πιο αργό κόσμο, και καλώντας σε προετοιμασία για ταχεία πρόοδο AI.",
+"sources": [
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/policy-on-the-ai-exponential"
+}
+]
+},
+{
+"title": "OpenAI: Επιχειρήσεις επιρροής συνδεδεμένες με ΛΔΚ στοχεύουν αμερικανικές συζητήσεις για AI",
+"date": "2026-06-10",
+"topic": "AI Security",
+"summary": "Η OpenAI ανέφερε ότι επιχειρήσεις επιρροής που συνδέει με παράγοντες της Λαϊκής Δημοκρατίας της Κίνας επιχειρούν να διαμορφώσουν τη δημόσια συζήτηση στις ΗΠΑ για πολιτική AI, και περιέγραψε πώς ανέκοψε τη δράση τους.",
+"sources": [
+{
+"name": "OpenAI",
+"url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
+}
+]
+},
+{
+"title": "Ρεκόρ Patch Tuesday: Microsoft διορθώνει 206 ευπάθειες — η AI φταίει",
+"date": "2026-06-09",
+"topic": "General",
+"summary": "Η Microsoft διόρθωσε ρεκόρ 206 ευπαθειών, συμπεριλαμβανομένων τριών zero-days, με αναλυτές να αποδίδουν εν μέρει την αύξηση στην AI που επιταχύνει την ανακάλυψη σφαλμάτων.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html"
+},
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/vulnerabilities-threats/blame-ai-patch-tuesday-record-206-cves"
+}
+]
+},
+{
+"title": "Meta θα χρησιμοποιεί δεδομένα από άλλες επιχειρήσεις για εξατομίκευση feed και AI",
+"date": "2026-06-09",
+"topic": "General",
+"summary": "Η Meta θα χρησιμοποιεί δεδομένα δραστηριότητας που μοιράζονται άλλες επιχειρήσεις για εξατομίκευση feeds και απαντήσεων AI chatbot, εγείροντας ανησυχίες προστασίας δεδομένων και συναίνεσης.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html"
+}
+]
+},
+{
+"title": "Anthropic κυκλοφορεί Claude Fable 5 με προστασίες κυβερνοασφάλειας",
+"date": "2026-06-09",
+"topic": "AI Security",
+"summary": "Η Anthropic κυκλοφόρησε το ικανότερο μοντέλο της ως δύο προϊόντα χωρισμένα βάσει safety classifiers, κρατώντας την απεριόριστη παραλλαγή Mythos κλειδωμένη σε ελεγμένη ομάδα cyber defenders.",
+"sources": [
+{
+"name": "The Hacker News",
+"url": "https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html"
+},
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+}
+]
+},
+{
+"title": "Εκτελεστικό διάταγμα Trump για εθελοντικές δοκιμές frontier AI μοντέλων",
+"date": "2026-06-05",
+"topic": "AI Act",
+"summary": "Εκτελεστικό διάταγμα του Λευκού Οίκου θεσπίζει εθελοντικό πλαίσιο για πρώιμη κυβερνητική πρόσβαση σε frontier AI μοντέλα, μαζί με ομοσπονδιακές επενδύσεις σε ασφάλεια.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cybersecurity-operations/trump-ai-order-seeks-voluntary-frontier-model-testing"
+}
+]
+},
+{
+"title": "Προσαρμοστικά agentic AI worms: η επόμενη μεγάλη απειλή για τις επιχειρήσεις",
+"date": "2026-06-05",
+"topic": "AI Security",
+"summary": "Ερευνητές προειδοποιούν ότι προσαρμοστικά agentic AI worms — που αναζητούν ευπάθειες και προσαρμόζουν επιθέσεις ανά στόχο — πιθανόν να πλήξουν επιχειρήσεις εντός του επόμενου χρόνου.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/adaptive-agentic-ai-worms-enterprise-cyber-threat"
+}
+]
+},
+{
+"title": "Gartner: Τέσσερις κρίσιμες απειλές όπου οι επιτιθέμενοι έχουν το πλεονέκτημα",
+"date": "2026-06-04",
+"topic": "AI Security",
+"summary": "Αναλυτές της Gartner εξέδωσαν έκκληση για ενίσχυση αμυνών έναντι αναδυόμενων απειλών όπως τα deepfakes και οι επιθέσεις prompt injection.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/vulnerabilities-threats/4-critical-threats-attackers-advantage"
+}
+]
+},
+{
+"title": "Anthropic: Τι μάθαμε χαρτογραφώντας ένα χρόνο AI-ενισχυμένων κυβερνοεπιθέσεων",
+"date": "2026-06-03",
+"topic": "AI Security",
+"summary": "Η Anthropic δημοσίευσε ετήσια ανάλυση κακόβουλης χρήσης των μοντέλων της, χαρτογραφώντας τακτικές επιτιθέμενων στο πλαίσιο MITRE ATT&CK.",
+"sources": [
+{
+"name": "Anthropic",
+"url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack"
+}
+]
+},
+{
+"title": "Κακόβουλες ειδοποιήσεις μπορούν να παραπλανήσουν χρήστες Google Gemini",
+"date": "2026-06-03",
+"topic": "AI Security",
+"summary": "Ευπάθεια prompt injection στον voice assistant Google Gemini επέτρεπε σε επιτιθέμενους να κρύβουν κακόβουλες εντολές μέσα σε ειδοποιήσεις για κοινωνική μηχανική.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/application-security/malicious-notifications-could-trick-google-gemini-users"
+}
+]
+},
+{
+"title": "OpenAI: Σχέδιο δημοκρατικής διακυβέρνησης των frontier AI μοντέλων",
+"date": "2026-06-03",
+"topic": "AI Act",
+"summary": "Η OpenAI δημοσίευσε σχέδιο που προτείνει δημοκρατική διακυβέρνηση frontier AI, καλύπτοντας εποπτεία, πρότυπα ασφαλείας και θεσμικές διασφαλίσεις.",
+"sources": [
+{
+"name": "OpenAI",
+"url": "https://openai.com/index/frontier-safety-blueprint"
+}
+]
+},
+{
+"title": "Επιτιθέμενοι χρησιμοποιούν AI για αυτοματοποίηση δοκιμών παράκαμψης EDR",
+"date": "2026-06-03",
+"topic": "AI Security",
+"summary": "Ερευνητές αναφέρουν ότι επιτιθέμενοι χρησιμοποιούν AI για αυτοματοποίηση δοκιμών παράκαμψης endpoint detection and response (EDR), επιταχύνοντας ανάπτυξη κακόβουλου λογισμικού που παρακάμπτει αμυντικά μέτρα.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/endpoint-security/attackers-automate-edr-evasion-testing"
+}
+]
+},
+{
+"title": "Πέρα από το «assume-breach»: πώς η AI-native ασφάλεια θα αναδιαμορφώσει την εταιρική άμυνα",
+"date": "2026-06-02",
+"topic": "General",
+"summary": "Η εταιρική ασφάλεια μετασχηματίζεται σε υπερ-κατακερματισμένα, AI-ενορχηστρωμένα μοντέλα άμυνας που ξεπερνούν την παλιά νοοτροπία «assume-breach».",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/assume-breach-ai-native-security-reshape-enterprise-defense"
+}
+]
+},
+{
+"title": "Ασφάλιση AI agents πριν «ξεφύγουν»: γιατί είναι σχεδόν αδύνατη",
+"date": "2026-06-02",
+"topic": "AI Security",
+"summary": "Εξαιρετικά αυτόνομα AI agents με ευρεία δικαιώματα θέτουν σοβαρό εταιρικό κίνδυνο και χρειάζονται πλαίσιο διακυβέρνησης και ελέγχους πριν συμβούν συμβάντα.",
+"sources": [
+{
+"name": "Dark Reading",
+"url": "https://www.darkreading.com/cyber-risk/securing-ai-agents-rogue"
+}
+]
+}
 ];
 
 const TOPICS = ["AI Act","AI Security","Standards","Incidents","General"];
 const BADGE = {"AI Act":"b-act","AI Security":"b-sec","Standards":"b-std","Incidents":"b-inc","General":"b-gen"};
-const GROUP_LABEL = {"AI Act":"AI Act & Ρύθμιση","AI Security":"AI Security","Standards":"Πρότυπα (ISO / NIST)","Incidents":"Περιστατικά & Δεδομένα","General":"Γενικά"};
+const GROUP_LABEL = {"AI Act":"AI Act & Regulation","AI Security":"AI Security","Standards":"Standards (ISO / NIST)","Incidents":"Incidents & Data","General":"General"};
 
-let active = "Όλα";
+let active = "All";
 function render(){
-  const feed = document.getElementById("feed");
-  feed.innerHTML = "";
-  const list = active==="Όλα" ? ITEMS : ITEMS.filter(i=>i.topic===active);
-  TOPICS.forEach(t=>{
-    const items = list.filter(i=>i.topic===t).sort((a,b)=>b.date.localeCompare(a.date));
-    if(!items.length) return;
-    const g = document.createElement("div");
-    g.className="group";
-    g.innerHTML = `<div class="group-h">${GROUP_LABEL[t]} · ${items.length}</div>`;
-    items.forEach(i=>{
-      const srcs = (Array.isArray(i.sources)&&i.sources.length) ? i.sources : [{name:i.source,url:i.url}];
-      const refs = srcs.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer nofollow">${s.name}</a>`).join(" · ");
-      const div = document.createElement("div");
-      div.className="item";
-      div.innerHTML = `<div class="it-top"><span class="badge ${BADGE[i.topic]}">${i.topic}</span>`+
-        `<span class="it-src">${fmt(i.date)}</span></div>`+
-        `<a class="it-title-link" href="${srcs[0].url}" target="_blank" rel="noopener noreferrer nofollow"><div class="it-title">${i.title}</div></a>`+
-        `<div class="it-sum">${i.summary}</div>`+
-        `<div class="it-refs">Πηγές: ${refs}</div>`;
-      g.appendChild(div);
-    });
-    feed.appendChild(g);
-  });
-  if(!feed.children.length) feed.innerHTML = '<p style="color:var(--stone);padding:30px 0;">Καμία καταχώριση σε αυτή την κατηγορία.</p>';
+const feed = document.getElementById("feed");
+feed.innerHTML = "";
+const list = active==="All" ? ITEMS : ITEMS.filter(i=>i.topic===active);
+TOPICS.forEach(t=>{
+const items = list.filter(i=>i.topic===t).sort((a,b)=>b.date.localeCompare(a.date));
+if(!items.length) return;
+const g = document.createElement("div");
+g.className="group";
+g.innerHTML = `<div class="group-h">${GROUP_LABEL[t]} · ${items.length}</div>`;
+items.forEach(i=>{
+const srcs = (Array.isArray(i.sources)&&i.sources.length) ? i.sources : [{name:i.source,url:i.url}];
+const refs = srcs.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer nofollow">${s.name}</a>`).join(" · ");
+const div = document.createElement("div");
+div.className="item";
+div.innerHTML = `<div class="it-top"><span class="badge ${BADGE[i.topic]}">${i.topic}</span>`+
+`<span class="it-src">${fmt(i.date)}</span></div>`+
+`<a class="it-title-link" href="${srcs[0].url}" target="_blank" rel="noopener noreferrer nofollow"><div class="it-title">${i.title}</div></a>`+
+`<div class="it-sum">${i.summary}</div>`+
+`<div class="it-refs">Sources: ${refs}</div>`;
+g.appendChild(div);
+});
+feed.appendChild(g);
+});
+if(!feed.children.length) feed.innerHTML = '<p style="color:var(--stone);padding:30px 0;">No entries in this category.</p>';
 }
-function fmt(d){const m=["Ιαν","Φεβ","Μαρ","Απρ","Μαΐ","Ιουν","Ιουλ","Αυγ","Σεπ","Οκτ","Νοε","Δεκ"];const p=d.split("-");return p.length===3?`${parseInt(p[2])} ${m[parseInt(p[1])-1]}`:d;}
+function fmt(d){const m=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];const p=d.split("-");return p.length===3?`${parseInt(p[2])} ${m[parseInt(p[1])-1]}`:d;}
 function buildFilters(){
-  const f = document.getElementById("filters");
-  ["Όλα",...TOPICS].forEach(t=>{
-    const c=document.createElement("span");
-    c.className="chip"+(t===active?" on":"");
-    c.textContent=t;
-    c.onclick=()=>{active=t;document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));c.classList.add("on");render();};
-    f.appendChild(c);
-  });
+const f = document.getElementById("filters");
+["All",...TOPICS].forEach(t=>{
+const c=document.createElement("span");
+c.className="chip"+(t===active?" on":"");
+c.textContent=t;
+c.onclick=()=>{active=t;document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));c.classList.add("on");render();};
+f.appendChild(c);
+});
 }
 document.getElementById("s-total").textContent = ITEMS.length;
 document.getElementById("s-act").textContent = ITEMS.filter(i=>i.topic==="AI Act").length;
@@ -632,77 +719,78 @@ document.getElementById("s-sec").textContent = ITEMS.filter(i=>i.topic==="AI Sec
 document.getElementById("s-inc").textContent = ITEMS.filter(i=>i.topic==="Incidents").length;
 buildFilters();
 render();
+
 </script>
 <script>
-(function(){
-  var NS='http://www.w3.org/2000/svg';
-  var svg=document.getElementById('bp'); if(!svg) return;
-  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var nodes=[], lines=[], W=0, H=0;
-  var mx=-9999, my=-9999, lastMove=-1e9, running=false;
-  var R=140, PUSH=24, EASE=0.14;
 
-  function addBlock(x0,y0,x1,y1,step){
-    var xs=[], ys=[], i, j;
-    for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
-    for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
-    var grid=[];
-    for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
-    for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
-      if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
-      if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
-    }
-  }
-  function build(){
-    W=window.innerWidth||1200; H=window.innerHeight||800;
-    svg.setAttribute('viewBox','0 0 '+W+' '+H);
-    svg.innerHTML=''; nodes=[]; lines=[];
-    addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));         // small sparse cluster up top
-    addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));     // top band: below the nav, reaches toward Εργαλεία/Blog, fades to center
-    addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));    // LEFT: lower + into lower-left corner
-    addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));         // bottom-right, airy
-    var frag=document.createDocumentFragment();
-    lines.forEach(function(ln){
-      var e=document.createElementNS(NS,'line');
-      e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
-      ln.el=e; frag.appendChild(e);
-    });
-    // scattered discreet dots
-    var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
-    var picks={}; var want=Math.min(7, nodes.length);
-    while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
-    var di=0;
-    Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
-      var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
-      c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
-    svg.appendChild(frag);
-    render();
-  }
-  function render(){
-    for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
-      e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
-      e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
-    for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
-  }
-  function step(){
-    var now=performance.now(), act=(now-lastMove)<1600, moving=false;
-    for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
-      var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
-      if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
-        if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
-      if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
-    }
-    render();
-    if(act||moving){ requestAnimationFrame(step); } else { running=false; }
-  }
-  build();
-  if(!reduce){
-    window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
-      if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
-  }
-  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
+(function(){
+var NS='http://www.w3.org/2000/svg';
+var svg=document.getElementById('bp'); if(!svg) return;
+var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var nodes=[], lines=[], W=0, H=0;
+var mx=-9999, my=-9999, lastMove=-1e9, running=false;
+var R=140, PUSH=24, EASE=0.14;
+function addBlock(x0,y0,x1,y1,step){
+var xs=[], ys=[], i, j;
+for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
+for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
+var grid=[];
+for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
+for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
+if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
+if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
+}
+}
+function build(){
+W=window.innerWidth||1200; H=window.innerHeight||800;
+svg.setAttribute('viewBox','0 0 '+W+' '+H);
+svg.innerHTML=''; nodes=[]; lines=[];
+addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));
+addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));
+addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));
+addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));
+var frag=document.createDocumentFragment();
+lines.forEach(function(ln){
+var e=document.createElementNS(NS,'line');
+e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
+ln.el=e; frag.appendChild(e);
+});
+var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+var picks={}; var want=Math.min(7, nodes.length);
+while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
+var di=0;
+Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
+var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
+c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
+svg.appendChild(frag);
+render_bp();
+}
+function render_bp(){
+for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
+e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
+e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
+for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
+}
+function step(){
+var now=performance.now(), act=(now-lastMove)<1600, moving=false;
+for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
+var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
+if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
+if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
+if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
+}
+render_bp();
+if(act||moving){ requestAnimationFrame(step); } else { running=false; }
+}
+build();
+if(!reduce){
+window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
+if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
+}
+var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
 })();
+
 </script>
 </body>
 </html>
