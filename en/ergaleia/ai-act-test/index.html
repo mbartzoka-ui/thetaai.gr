@@ -245,7 +245,21 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
   });
 })();
 </script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script>
+(function(){
+  try{
+    var p=new URLSearchParams(location.search);
+    if(p.has('dnt')) localStorage.setItem('cf-dnt','1');
+    if(p.has('track')) localStorage.removeItem('cf-dnt');
+    if(localStorage.getItem('cf-dnt')==='1') return;
+  }catch(e){}
+  var s=document.createElement('script');
+  s.defer=true;
+  s.src='https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon','{"token": "952678d5abda47ccbdd7bf71813d1fa6"}');
+  document.head.appendChild(s);
+})();
+</script><!-- End Cloudflare Web Analytics -->
 <script>
 (function(){
   var c=document.getElementById('neural'); if(!c) return;
