@@ -365,4 +365,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/anthropic-glasswing-cyber-models/"/>
     <lastmod>2026-06-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://thetaai.gr/blog/ai-scanner-vs-elenchos/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-scanner-vs-audit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/"/>
+    <lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/blog/ai-scanner-vs-audit/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-scanner-vs-audit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/"/>
+    <lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
 </urlset>

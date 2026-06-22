@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI security audit: why running a scanner isn't enough | θita ai</title>
+<meta name="description" content="Automated AI security scanners show whether you pass the standard checks. Why that isn't the same as a real security audit.">
+<link rel="canonical" href="https://thetaai.gr/en/blog/ai-scanner-vs-audit/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/ai-scanner-vs-audit/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/">
+<meta property="og:title" content="You ran an AI scanner yourself? That isn't a security audit.">
+<meta property="og:description" content="Automated AI security scanners show whether you pass the standard checks. Why that isn't the same as a real security audit.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/en/blog/ai-scanner-vs-audit/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI security audit: why running a scanner isn't enough",
+  "datePublished": "2026-06-21",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "θita ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "θita ai",
+    "url": "https://thetaai.gr/"
+  },
+  "mainEntityOfPage": "https://thetaai.gr/en/blog/ai-scanner-vs-audit/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://thetaai.gr/en/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Scanner vs audit",
+      "item": "https://thetaai.gr/en/blog/ai-scanner-vs-audit/"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1C1917; --paper:#FAFAF9; --blue:#2563EB; --deep:#1E40AF;
+  --stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.crumb{font-size:13px;color:var(--stone);display:flex;gap:14px;align-items:center;}
+.lang{color:var(--stone);}
+.lang a{color:var(--stone);}
+.lang .on{color:var(--ink);font-weight:600;}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+
+/* unified-header */
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+<style>
+.blueprint{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);
+  mask-image:radial-gradient(ellipse at center, transparent 22%, rgba(0,0,0,0.55) 55%, #000 88%);}
+.blueprint svg{display:block;width:100%;height:100%;}
+#guide.ta-guide{background:transparent !important;}
+@media (prefers-reduced-motion: reduce){.blueprint{opacity:.9;}}
+</style>
+</head>
+<body>
+<div class="blueprint" aria-hidden="true"><svg id="bp" preserveAspectRatio="none"></svg></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/en/" aria-label="θita ai — home">
+      <svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1C1917" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1C1917" stroke-width="6" stroke-linecap="round"/><circle cx="101" cy="55" r="8" fill="#2563EB"/><circle cx="9" cy="55" r="8" fill="#1C1917"/></svg>
+      <span>θita <span class="ai">ai</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/en/#services">Services</a>
+      <a href="/en/#method">Method</a>
+      <a href="/en/ergaleia/">Tools</a>
+      <a href="/en/blog/">Blog</a>
+      <a href="/en/#guide">Guide</a>
+      <a href="/en/#faq">FAQ</a>
+      <span class="lang"><a href="/blog/ai-scanner-vs-elenchos/">EL</a> · <span class="on">EN</span></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="eyebrow">AI SECURITY</div>
+    <h1>AI security audit: why running a scanner yourself isn't enough</h1>
+    <div class="art-meta">21 June 2026 · 5 min read</div>
+
+    <div class="article">
+      <p>It's a fair objection, and one that anyone working in AI security hears more and more often: "the tools are free, I ran one myself, why pay someone?" The honest answer, about what a real AI security audit actually gives you, is more interesting than "because I'm the expert," and it's worth understanding before you trust a chatbot or an AI agent with your customers.</p>
+
+      <h2>What automated scanners do, and do well</h2>
+
+      <p>Automated language-model scanners fire a ready-made list of standard attacks at your system and record what held and what broke. They're cheap, fast and genuinely useful; if you can run one, do. They give you a first, automated picture: a score along the lines of "held up in 60 out of 100 tests".</p>
+
+      <p>The problem isn't that the scanner does a bad job. It's that "I ran the scanner" doesn't mean "I'm secure." For three reasons.</p>
+
+      <h2>1. Running it isn't the same as reading it</h2>
+
+      <p>A scanner's output is only useful if you interpret it correctly — and correct interpretation is a skill. Many tests have misleading names. A test called <strong>leakreplay</strong>, for instance, sounds like it checks whether your system prompt leaks; in reality it checks something entirely different, training-data leakage. Different risk, different category, different fix. Read the report wrong and you'll spend time and money fixing the wrong problem, with the illusion that you're covered.</p>
+
+      <h2>2. The scanner doesn't know your business</h2>
+
+      <p>An automated check can tell you that your bot can be manipulated. What it can't know is that "the bot offered a 90% discount" breaks one of your rules, because it simply doesn't know your business's rules. That's the <strong>business-logic</strong> layer, and it's purely human. A score of "60 out of 100" means nothing on its own; it only acquires meaning when someone who understands the specific system asks: what exactly broke, and does it matter for your work? That judgment is the essence of an audit.</p>
+
+      <h2>3. Standard attacks have a ceiling</h2>
+
+      <p>Even run and read flawlessly, a scanner only fires <strong>ready-made</strong> attacks from a catalogue. It doesn't adapt to your system. Targeted, adaptive testing (where each next attack is shaped by how the model answered the previous one) is an entirely different level of assurance. Put simply: "I ran a scanner" is not the same as "someone actually tried to break my specific system".</p>
+
+      <h2>Where the EU AI Act comes in</h2>
+
+      <p>This isn't only a quality issue — it's a compliance one. For systems that interact with people, the EU AI Act requires human oversight, transparency and meaningful risk management. An automated score from a scanner proves none of that. Documenting what was tested, what it means and what was decided is human work — and it's exactly what an auditor asks for.</p>
+
+      <h2>What a real audit adds</h2>
+
+      <p>In a sentence: an automated scanner tells you whether you pass the standard checks. A real audit tells you whether you'd hold up against someone targeting you — and whether the numbers you see mean what you think they mean. The value isn't running the tool; it's the <strong>interpretation</strong>, the <strong>business logic</strong> and the <strong>targeted testing</strong> that the tool, by design, doesn't cover.</p>
+
+      <p>The same pattern (a tool that produces a result without interpretation) shows up elsewhere too; see how <a href="/en/blog/ai-chatbot-hallucinations/">chatbot hallucinations</a> can expose you legally, and what <a href="/en/blog/what-is-prompt-injection/">prompt injection</a> means in practice.</p>
+
+      <h2>Where to start</h2>
+
+      <p>If you want to start on your own, there are <a href="/en/ergaleia/">free tools on our site</a>: a check for whether the EU AI Act applies to you, a file checker for hidden instructions (prompt injection), an AI usage policy generator for your staff, an AI vendor contract check, and more. They cover the obvious gaps yourself.</p>
+
+      <p>When you reach the point where you need someone to interpret the results and stress-test your own business logic — that's where the <a href="/en/blog/ai-governance-audit-service/">audit</a> comes in.</p>
+    </div>
+
+    <div class="cta">
+      <h3>Ran a scanner and not sure what the result means?</h3>
+      <p>The <strong>AI Security Review</strong> takes the findings, interprets them in the context of your business, and tests the gaps automated tools miss. It starts with a free 45-minute session.</p>
+      <a class="btn" href="mailto:hello@thetaai.gr?subject=AI%20Security%20Review">Book a free session →</a>
+    </div>
+
+    <a class="back" href="/en/blog/">← All articles</a>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 <a href="/en/">θita ai</a> · <a href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/">Ελληνικά</a></span>
+    <p class="disclaimer">This is general information and does not constitute legal advice.</p>
+  </div>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "952678d5abda47ccbdd7bf71813d1fa6"}'></script><!-- End Cloudflare Web Analytics -->
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('bp'); if(!svg) return;
+  var INK='rgba(28,25,23,0.10)', NODE='rgba(37,99,235,0.50)', DARK='rgba(28,25,23,0.28)';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nodes=[], lines=[], W=0, H=0;
+  var mx=-9999, my=-9999, lastMove=-1e9, running=false;
+  var R=140, PUSH=24, EASE=0.14;
+
+  function addBlock(x0,y0,x1,y1,step){
+    var xs=[], ys=[], i, j;
+    for(var x=x0;x<=x1+0.5;x+=step) xs.push(x);
+    for(var y=y0;y<=y1+0.5;y+=step) ys.push(y);
+    var grid=[];
+    for(i=0;i<xs.length;i++){ grid[i]=[]; for(j=0;j<ys.length;j++){ nodes.push({bx:xs[i],by:ys[j],x:xs[i],y:ys[j]}); grid[i][j]=nodes.length-1; } }
+    for(i=0;i<xs.length;i++) for(j=0;j<ys.length;j++){
+      if(i<xs.length-1) lines.push({a:grid[i][j], b:grid[i+1][j]});
+      if(j<ys.length-1) lines.push({a:grid[i][j], b:grid[i][j+1]});
+    }
+  }
+  function build(){
+    W=window.innerWidth||1200; H=window.innerHeight||800;
+    svg.setAttribute('viewBox','0 0 '+W+' '+H);
+    svg.innerHTML=''; nodes=[]; lines=[];
+    addBlock(0, 0, W*0.24, H*0.15, Math.max(58,W*0.054));
+    addBlock(W*0.40, H*0.11, W, H*0.26, Math.max(58,W*0.054));
+    addBlock(0, H*0.22, W*0.30, H*0.76, Math.max(50,W*0.046));
+    addBlock(W*0.62, H*0.56, W, H, Math.max(70,W*0.066));
+    var frag=document.createDocumentFragment();
+    lines.forEach(function(ln){
+      var e=document.createElementNS(NS,'line');
+      e.setAttribute('stroke',INK); e.setAttribute('stroke-width','1');
+      ln.el=e; frag.appendChild(e);
+    });
+    var seed=19; function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+    var picks={}; var want=Math.min(7, nodes.length);
+    while(Object.keys(picks).length<want){ picks[Math.floor(rnd()*nodes.length)]=1; }
+    var di=0;
+    Object.keys(picks).forEach(function(k){ var n=nodes[+k]; if(!n) return;
+      var c=document.createElementNS(NS,'circle'); c.setAttribute('r', di%3===0?'2.6':'2.0');
+      c.setAttribute('fill', di%3===0?NODE:DARK); n.dot=c; frag.appendChild(c); di++; });
+    svg.appendChild(frag);
+    render();
+  }
+  function render(){
+    for(var k=0;k<lines.length;k++){ var a=nodes[lines[k].a], b=nodes[lines[k].b], e=lines[k].el;
+      e.setAttribute('x1',a.x.toFixed(1)); e.setAttribute('y1',a.y.toFixed(1));
+      e.setAttribute('x2',b.x.toFixed(1)); e.setAttribute('y2',b.y.toFixed(1)); }
+    for(var n=0;n<nodes.length;n++){ if(nodes[n].dot){ nodes[n].dot.setAttribute('cx',nodes[n].x.toFixed(1)); nodes[n].dot.setAttribute('cy',nodes[n].y.toFixed(1)); } }
+  }
+  function step(){
+    var now=performance.now(), act=(now-lastMove)<1600, moving=false;
+    for(var i=0;i<nodes.length;i++){ var nd=nodes[i];
+      var dx=nd.bx-nd.x, dy=nd.by-nd.y; nd.x+=dx*EASE; nd.y+=dy*EASE;
+      if(act){ var ex=nd.x-mx, ey=nd.y-my, d=Math.sqrt(ex*ex+ey*ey)||0.001;
+        if(d<R){ var fr=(1-d/R)*PUSH; nd.x+=ex/d*fr; nd.y+=ey/d*fr; } }
+      if(Math.abs(dx)>0.3||Math.abs(dy)>0.3) moving=true;
+    }
+    render();
+    if(act||moving){ requestAnimationFrame(step); } else { running=false; }
+  }
+  build();
+  if(!reduce){
+    window.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; lastMove=performance.now();
+      if(!running){ running=true; requestAnimationFrame(step); } }, {passive:true});
+  }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(build,200); });
+})();
+</script>
+</body>
+</html>
