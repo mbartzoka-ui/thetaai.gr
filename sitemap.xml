@@ -379,4 +379,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-scanner-vs-elenchos/"/>
     <lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/five-eyes-ai-cyber-crisis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/blog/five-eyes-ai-cyber-crisis/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/five-eyes-ai-cyber-crisis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/"/>
+    <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
 </urlset>
