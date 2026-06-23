@@ -96,6 +96,8 @@ h1{font-size:clamp(28px,4.5vw,44px);font-weight:600;line-height:1.18;letter-spac
 .notice{border-top:0.5px solid var(--line);border-bottom:0.5px solid var(--line);}
 .notice .wrap{display:flex;align-items:center;gap:18px;}
 .n-label{font-size:11px;letter-spacing:0.18em;color:var(--blue);font-weight:600;flex-shrink:0;}
+.n-label a.news-link{display:inline-block;background:#BE9A44;color:#1d2846;font-weight:700;font-size:11px;letter-spacing:0.06em;padding:3px 11px;border-radius:999px;text-decoration:none;margin-left:4px;vertical-align:middle;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;}
+.n-label a.news-link:hover{background:#a9863a;transform:translateY(-1px);box-shadow:0 3px 10px rgba(190,154,68,.35);text-decoration:none;}
 .n-track{position:relative;flex:1;min-height:62px;display:flex;align-items:center;}
 .n-item{position:absolute;inset:0;display:flex;align-items:center;opacity:0;visibility:hidden;transition:opacity .45s ease;font-size:14.5px;color:var(--stone-d);line-height:1.5;}
 .n-item.on{opacity:1;visibility:visible;}
@@ -270,7 +272,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
 
 <div class="notice" id="news">
   <div class="wrap">
-    <div class="n-label">ΕΝΗΜΕΡΩΣΗ AI · <a href="/radar/" style="color:var(--blue);font-weight:600;">όλα τα νέα →</a></div>
+    <div class="n-label">ΕΝΗΜΕΡΩΣΗ AI · <a href="/radar/" class="news-link">όλα τα νέα →</a></div>
     <div class="n-track" id="ntrack">
       <div class="n-item on"><span><strong>2 Αυγούστου 2026:</strong> ο EU AI Act εφαρμόζεται πλήρως — οι υποχρεώσεις διαφάνειας και εποπτείας αφορούν και τις ΜμΕ. <a href="#services">Δείτε τι σας αφορά →</a></span></div>
       <div class="n-item"><span><strong>Άρθρο:</strong> Το chatbot σας υποσχέθηκε κάτι που δεν ισχύει — ποιος ευθύνεται; Η υπόθεση Air Canada με απλά λόγια. <a href="/blog/air-canada-chatbot-efthyni/">Διαβάστε →</a></span></div>
