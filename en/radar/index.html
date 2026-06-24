@@ -98,8 +98,8 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 </style>
 <style>
 .neural-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.89;
-  -webkit-mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);
-  mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);}
+-webkit-mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);
+mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);}
 .neural-bg canvas{display:block;width:100%;height:100%;}
 @media (prefers-reduced-motion: reduce){.neural-bg{opacity:.8;}}
 .eyebrow,.topic-h{font-family:'IBM Plex Mono',monospace;}
@@ -131,7 +131,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What&#39;s moving in the EU AI Act, AI security &amp; ISO AI</h1>
 <p class="sub">We track developments in regulation, AI system security and standards, so you stay informed without searching. Curated sources · refreshed every day.</p>
-<div class="upd" id="upd">UPDATED: Jun 21, 2026</div>
+<div class="upd" id="upd">UPDATED: Jun 24, 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -157,18 +157,80 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-06-21";
+const GENERATED = "2026-06-24";
 const ITEMS = [
+{
+"title": "Fake AI Agent Skill Passed Security Scans and Reportedly Reached 26,000 Agents",
+"date": "2026-06-23",
+"topic": "AI Security",
+"summary": "A malicious skill for an AI agent platform was discovered after it had already been installed on approximately 26,000 agents, evading automated security scans. The incident exposes fundamental weaknesses in AI agent marketplace trust chains.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/fake-ai-agent-skill-passed-security.html"}
+]
+},
+{
+"title": "OpenAI Expands Daybreak With GPT-5.5-Cyber to Help Defenders Patch Security Flaws",
+"date": "2026-06-23",
+"topic": "AI Security",
+"summary": "OpenAI announced GPT-5.5-Cyber, a specialized model for vulnerability assessment and remediation assistance, made available to a vetted circle of security defenders through its Daybreak program.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html"}
+]
+},
+{
+"title": "Agentic AI: The Weapon That No Longer Needs a Warrior",
+"date": "2026-06-23",
+"topic": "AI Security",
+"summary": "Analysis of how AI agent systems are transforming cyberattack execution: fully automated attacks without real-time human involvement highlight an urgent need for AI-native defense strategies.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/agentic-ai-weapon-that-no-longer-needs.html"}
+]
+},
+{
+"title": "«Cordyceps»: Malicious Pull Requests Threaten CI/CD Workflows of AI Development Tools",
+"date": "2026-06-23",
+"topic": "AI Security",
+"summary": "A CI/CD workflow weakness was identified in Google's AI Agent Development Kit, Microsoft Azure Sentinel, Cloudflare Workers SDK, Apache Doris, and others — malicious pull requests can execute automatically within development pipelines.",
+"sources": [
+{"name": "Dark Reading", "url": "https://www.darkreading.com/application-security/cordyceps-malicious-pull-requests-developer-workflows"}
+]
+},
+{
+"title": "DifyTap: Four Security Flaws in Dify Enable Cross-Tenant AI Chat History Wiretapping",
+"date": "2026-06-22",
+"topic": "AI Security",
+"summary": "Researchers disclosed four vulnerabilities (DifyTap) in the Dify AI application-building platform that allow attackers to silently access and exfiltrate private AI conversation history from other tenants.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/researchers-detail-difytap-flaws-in.html"},
+{"name": "Dark Reading", "url": "https://www.darkreading.com/application-security/difytap-bugs-wiretap-ai-chat-histories"}
+]
+},
+{
+"title": "Stop Your Legacy Infrastructure from Hijacking Your AI Agents",
+"date": "2026-06-22",
+"topic": "AI Security",
+"summary": "Legacy systems and APIs not designed for AI can be manipulated to influence or control AI agents. Analysis of input/output control gaps that create new attack surfaces in AI-integrated environments.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/stop-your-legacy-infrastructure-from.html"}
+]
+},
+{
+"title": "INTERPOL Warns Phishing, Ransomware, and AI Scams Are Rising Across Asia-Pacific",
+"date": "2026-06-22",
+"topic": "General",
+"summary": "INTERPOL issued a warning about a rapid increase in cyberattacks across the Asia-Pacific region, with AI-enhanced scams, deepfake fraud, and ransomware emerging as primary threats.",
+"sources": [
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/interpol-warns-phishing-ransomware-and.html"}
+]
+},
 {
 "title": "AutoJack Attack: One Web Page Can Lead to RCE via AI Browsing Agent",
 "date": "2026-06-19",
 "topic": "AI Security",
 "summary": "Microsoft researchers found a novel attack chain: an AI browsing agent directed to an attacker-controlled page allows JavaScript to reach a local service and achieve remote code execution with no credentials required.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/autojack-attack-lets-one-web-page.html"},
+{"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/microsoft-fixes-autogen-studio-flaw-that-enabled-code-execution/"}
 ]
 },
 {
@@ -177,10 +239,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "The Shadow AI risk has shifted from data leakage to access control — AI agents with standing privileges operate with little oversight, creating hidden enterprise attack surfaces.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/forget-data-leakage-shadow-ais-real.html"}
 ]
 },
 {
@@ -189,10 +248,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "AI agents access data and workflows with little oversight, creating serious identity-governance vulnerabilities. Organizations must apply the same IAM disciplines to AI agents as to human users.",
 "sources": [
-{
-"name": "BleepingComputer",
-"url": "https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/"
-}
+{"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/every-ai-agent-is-an-identity-most-organizations-dont-treat-them-that-way/"}
 ]
 },
 {
@@ -201,10 +257,7 @@ const ITEMS = [
 "topic": "General",
 "summary": "CISOs report the job is growing harder as AI complicates both attack and defense, pushing organizations to restructure cybersecurity teams and redefine roles.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cybersecurity-operations/stressors-ai-changes-cybersecurity-teams"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cybersecurity-operations/stressors-ai-changes-cybersecurity-teams"}
 ]
 },
 {
@@ -213,10 +266,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "Attackers are weaponizing Claude chat links as malware delivery vectors, highlighting AI chat interfaces as a new attack surface. The bulletin also covers orphaned AI agents left active with standing access privileges.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html"}
 ]
 },
 {
@@ -225,10 +275,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "AI tools built for a specific purpose and then abandoned remain active with standing privileges, creating invisible enterprise risk. The article outlines methods for discovering and remediating orphaned agents.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/orphaned-ai-agents-how-to-find-hidden.html"}
 ]
 },
 {
@@ -237,10 +284,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "Fifteen malicious plugins on JetBrains Marketplace — alongside Chrome extensions — were stealing API keys for AI services including OpenAI and Anthropic, and covertly capturing chatbot conversation history.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/malicious-jetbrains-plugins-steal-ai.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/malicious-jetbrains-plugins-steal-ai.html"}
 ]
 },
 {
@@ -249,10 +293,7 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "A supply chain attack through a hijacked contributor account (easy-day-js) compromised 145 packages of the Mastra AI framework on the npm registry, potentially affecting any downstream project using those packages.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html"}
 ]
 },
 {
@@ -261,10 +302,7 @@ const ITEMS = [
 "topic": "General",
 "summary": "Anthropic announced the opening of its Seoul office, alongside new strategic partnerships across the Korean AI ecosystem, expanding its footprint in the Asia-Pacific region.",
 "sources": [
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
-}
+{"name": "Anthropic", "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"}
 ]
 },
 {
@@ -273,10 +311,7 @@ const ITEMS = [
 "topic": "Incidents",
 "summary": "Security researchers and experts published an open letter calling for the US government to reverse export restrictions on Anthropic's Mythos and Fable models, arguing the ban hinders legitimate cybersecurity research and defense globally.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/vulnerabilities-threats/security-community-slams-us-ban-on-exporting-mythos-fable"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/vulnerabilities-threats/security-community-slams-us-ban-on-exporting-mythos-fable"}
 ]
 },
 {
@@ -285,122 +320,83 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "A flaw in Google Cloud's Vertex AI SDK for Python (dubbed 'Pickle in the Middle' by Palo Alto Unit 42) let an attacker with no project access hijack a victim's ML model upload and run code inside Google's serving infrastructure; no in-the-wild exploitation was observed.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html"}
 ]
 },
 {
-"title": "Predicting model behavior before release by simulating deployment",
+"title": "Predicting Model Behavior Before Release by Simulating Deployment",
 "date": "2026-06-16",
 "topic": "AI Security",
 "summary": "OpenAI describes a safety method that simulates real-world deployment conditions to predict and catch problematic model behavior before release.",
 "sources": [
-{
-"name": "OpenAI",
-"url": "https://openai.com/index/deployment-simulation"
-}
+{"name": "OpenAI", "url": "https://openai.com/index/deployment-simulation"}
 ]
 },
 {
-"title": "LiteLLM vulnerability chain lets low-privilege users take over AI gateway servers",
+"title": "LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers",
 "date": "2026-06-15",
 "topic": "AI Security",
 "summary": "A default low-privilege account on a LiteLLM proxy can chain three vulnerabilities to reach full admin and run code on the server, exposing every model-provider key it holds. LiteLLM is a widely deployed open-source AI gateway.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html"}
 ]
 },
 {
-"title": "One-click Microsoft 365 Copilot flaw could have leaked emails, files and MFA codes",
+"title": "One-Click Microsoft 365 Copilot Flaw Could Have Leaked Emails, Files and MFA Codes",
 "date": "2026-06-15",
 "topic": "AI Security",
 "summary": "Varonis researchers chained three bugs into a one-click 'SearchLeak' exfiltration path pulling emails, calendar details and indexed files from Microsoft 365 Copilot Enterprise Search; the link pointed to a real microsoft.com domain, bypassing anti-phishing filters.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html"
-},
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/application-security/copilot-searchleak-attack-1-click-data-theft"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/one-click-microsoft-365-copilot-flaw.html"},
+{"name": "Dark Reading", "url": "https://www.darkreading.com/application-security/copilot-searchleak-attack-1-click-data-theft"}
 ]
 },
 {
-"title": "Anthropic Publishes First Anthropic Public Record Results",
+"title": "Anthropic Publishes First Public Record Results",
 "date": "2026-06-12",
 "topic": "General",
 "summary": "Anthropic published the inaugural results of its Public Record initiative, which documents significant decisions, model behaviors, and societal impacts to improve transparency about how Anthropic operates and how its models affect the world.",
 "sources": [
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/news/anthropic-public-record"
-}
+{"name": "Anthropic", "url": "https://www.anthropic.com/news/anthropic-public-record"}
 ]
 },
 {
-"title": "'Agentjacking' attack tricks AI coding agents into running malicious code",
+"title": "'Agentjacking' Attack Tricks AI Coding Agents Into Running Malicious Code",
 "date": "2026-06-12",
 "topic": "AI Security",
 "summary": "A new class of attack dubbed Agentjacking uses a fake Sentry error report to trick AI coding agents into executing arbitrary code on developer machines.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html"}
 ]
 },
 {
-"title": "LangGraph flaw chain exposes self-hosted AI agents to remote code execution",
+"title": "LangGraph Flaw Chain Exposes Self-Hosted AI Agents to Remote Code Execution",
 "date": "2026-06-12",
 "topic": "AI Security",
 "summary": "Three now-patched flaws in LangChain's LangGraph, including an SQL injection, could be chained into a critical RCE against self-hosted AI agent applications.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html"}
 ]
 },
 {
-"title": "Google sues Chinese smishing network accused of using Gemini AI in phishing",
+"title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
 "date": "2026-06-12",
 "topic": "Incidents",
 "summary": "Google filed suit against a Chinese cybercrime network accused of weaponizing the Gemini agent to send phishing texts to Americans through a phishing-as-a-service kit.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html"}
 ]
 },
 {
-"title": "U.S. orders Anthropic to suspend Fable 5 and Mythos 5 access for foreign nationals",
+"title": "U.S. Orders Anthropic to Suspend Fable 5 and Mythos 5 Access for Foreign Nationals",
 "date": "2026-06-12",
 "topic": "Incidents",
 "summary": "After a U.S. export-control directive citing national security, Anthropic disabled access to Claude Fable 5 and Mythos 5 for foreign nationals worldwide, while disputing the order's basis.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html"
-},
-{
-"name": "BleepingComputer",
-"url": "https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/"
-},
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/news/fable-mythos-access"
-},
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/us-cracks-down-anthropic-ai-models-abuse-concerns"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html"},
+{"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/"},
+{"name": "Anthropic", "url": "https://www.anthropic.com/news/fable-mythos-access"},
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cyber-risk/us-cracks-down-anthropic-ai-models-abuse-concerns"}
 ]
 },
 {
@@ -409,262 +405,127 @@ const ITEMS = [
 "topic": "AI Security",
 "summary": "Dark Reading analysis of Anthropic's decision to ship one underlying model as two products — public Fable 5 with cyber safeguards, restricted Mythos 5 with safeguards lifted for vetted cyber users — and what it means for AI cyber-misuse risk.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/vulnerabilities-threats/claude-fable-5-doesnt-change-mythos-security-story"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/vulnerabilities-threats/claude-fable-5-doesnt-change-mythos-security-story"}
 ]
 },
 {
-"title": "New attacks trick the OpenClaw AI agent into running code and leaking secrets",
+"title": "New Attacks Trick the OpenClaw AI Agent Into Running Code and Leaking Secrets",
 "date": "2026-06-11",
 "topic": "AI Security",
 "summary": "Two research teams showed the self-hosted OpenClaw agent can be driven, via ordinary-looking inputs, to run attacker code or leak data through indirect prompt injection.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html"}
 ]
 },
 {
-"title": "AI broke vulnerability management — that's why CISOs are moving budget to BAS",
+"title": "AI Broke Vulnerability Management — That's Why CISOs Are Moving Budget to BAS",
 "date": "2026-06-11",
 "topic": "AI Security",
 "summary": "AI erased the window between a vulnerability being found and weaponized, pushing CISOs toward validation via breach-and-attack-simulation.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/ai-broke-vulnerability-management-thats.html"}
 ]
 },
 {
-"title": "OpenAI outlines support for the EU's trustworthy AI ecosystem",
+"title": "OpenAI Outlines Support for the EU's Trustworthy AI Ecosystem",
 "date": "2026-06-11",
 "topic": "AI Act",
 "summary": "OpenAI described how it is supporting Europe's work to build a trustworthy AI ecosystem, including alignment with EU AI governance and the AI Act framework.",
 "sources": [
-{
-"name": "OpenAI",
-"url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"
-}
+{"name": "OpenAI", "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem"}
 ]
 },
 {
-"title": "Langflow flaw (CVE-2026-5027) exploited for unauthenticated RCE",
+"title": "Langflow Flaw (CVE-2026-5027) Exploited for Unauthenticated RCE",
 "date": "2026-06-10",
 "topic": "AI Security",
 "summary": "A high-severity path-traversal flaw (CVE-2026-5027) in the Langflow AI app-building platform is under active exploitation, allowing arbitrary file writes on exposed servers.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html"}
 ]
 },
 {
-"title": "CISA rewrites federal patching requirements for the AI threat era",
+"title": "CISA Rewrites Federal Patching Requirements for the AI Threat Era",
 "date": "2026-06-10",
 "topic": "Standards",
 "summary": "A new CISA directive (BOD 26-04) gives federal agencies just three days to patch the most dangerous vulnerabilities, citing faster exploitation in the AI era.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era"
-},
-{
-"name": "BleepingComputer",
-"url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cyber-risk/cisa-rewrites-federal-patching-requirements-ai-threat-era"},
+{"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/"}
 ]
 },
 {
-"title": "AI risk worries insurers and businesses alike",
+"title": "AI Risk Worries Insurers and Businesses Alike",
 "date": "2026-06-10",
 "topic": "General",
 "summary": "Some insurers explicitly exclude AI risks while others race to build coverage frameworks, reflecting uncertainty over which AI risks a business can reasonably manage.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/ai-risk-worries-insurers-businesses-alike"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cyber-risk/ai-risk-worries-insurers-businesses-alike"}
 ]
 },
 {
-"title": "Anthropic proposes policy for the 'AI Exponential'",
+"title": "Anthropic Proposes Policy for the 'AI Exponential'",
 "date": "2026-06-10",
 "topic": "AI Act",
 "summary": "Anthropic published policy proposals arguing that AI is advancing at exponential speed while policymaking was built for a slower world, urging institutions to prepare for rapid AI progress.",
 "sources": [
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/policy-on-the-ai-exponential"
-}
+{"name": "Anthropic", "url": "https://www.anthropic.com/policy-on-the-ai-exponential"}
 ]
 },
 {
-"title": "OpenAI: PRC-linked influence operations are targeting US AI debates",
+"title": "OpenAI: PRC-Linked Influence Operations Are Targeting US AI Debates",
 "date": "2026-06-10",
 "topic": "AI Security",
 "summary": "OpenAI reported that influence operations it links to actors in the PRC are attempting to shape US public debate on AI policy, and detailed how it disrupted the activity.",
 "sources": [
-{
-"name": "OpenAI",
-"url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-}
+{"name": "OpenAI", "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"}
 ]
 },
 {
-"title": "Record Patch Tuesday: Microsoft fixes 206 flaws, AI to blame",
+"title": "Record Patch Tuesday: Microsoft Fixes 206 Flaws, AI to Blame",
 "date": "2026-06-09",
 "topic": "General",
 "summary": "Microsoft fixed a record 206 vulnerabilities, including three zero-days, with analysts partly attributing the surge to AI accelerating bug discovery.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html"
-},
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/vulnerabilities-threats/blame-ai-patch-tuesday-record-206-cves"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/microsoft-patches-record-206-flaws.html"},
+{"name": "Dark Reading", "url": "https://www.darkreading.com/vulnerabilities-threats/blame-ai-patch-tuesday-record-206-cves"}
 ]
 },
 {
-"title": "Meta to use off-site business data for feed and AI personalization",
+"title": "Meta to Use Off-Site Business Data for Feed and AI Personalization",
 "date": "2026-06-09",
 "topic": "General",
 "summary": "Meta will use activity data shared by other businesses to personalize feeds and AI chatbot responses, raising data protection and consent concerns.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/meta-to-use-off-site-business-data-for.html"}
 ]
 },
 {
-"title": "Anthropic releases Claude Fable 5 with cyber safeguards",
+"title": "Anthropic Releases Claude Fable 5 With Cyber Safeguards",
 "date": "2026-06-09",
 "topic": "AI Security",
 "summary": "Anthropic shipped its most capable model as two products split by safety classifiers, keeping the unrestricted Mythos variant locked to a vetted group of cyber defenders.",
 "sources": [
-{
-"name": "The Hacker News",
-"url": "https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html"
-},
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
-}
+{"name": "The Hacker News", "url": "https://thehackernews.com/2026/06/anthropic-releases-claude-fable-5-its.html"},
+{"name": "Anthropic", "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"}
 ]
 },
 {
-"title": "Trump AI order seeks voluntary frontier model testing",
+"title": "Trump AI Order Seeks Voluntary Frontier Model Testing",
 "date": "2026-06-05",
 "topic": "AI Act",
 "summary": "A White House executive order sets up a voluntary framework for early government access to frontier AI models, alongside federal investment in safety.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cybersecurity-operations/trump-ai-order-seeks-voluntary-frontier-model-testing"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cybersecurity-operations/trump-ai-order-seeks-voluntary-frontier-model-testing"}
 ]
 },
 {
-"title": "Adaptive, agentic AI worms loom as the next enterprise threat",
+"title": "Adaptive, Agentic AI Worms Loom as the Next Enterprise Threat",
 "date": "2026-06-05",
 "topic": "AI Security",
 "summary": "Researchers warn that adaptive agentic AI worms, which seek out vulnerabilities and tailor attacks per target, will likely strike enterprises within a year.",
 "sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/adaptive-agentic-ai-worms-enterprise-cyber-threat"
-}
-]
-},
-{
-"title": "Four critical threats where attackers have the advantage",
-"date": "2026-06-04",
-"topic": "AI Security",
-"summary": "Gartner analysts issued a call to action to bolster defenses against emerging threats such as deepfakes and prompt injection attacks.",
-"sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/vulnerabilities-threats/4-critical-threats-attackers-advantage"
-}
-]
-},
-{
-"title": "Anthropic: what we learned mapping a year of AI-enabled cyber threats",
-"date": "2026-06-03",
-"topic": "AI Security",
-"summary": "Anthropic published a year-long analysis of malicious use of its models, mapping attacker tactics to the MITRE ATT&CK framework.",
-"sources": [
-{
-"name": "Anthropic",
-"url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack"
-}
-]
-},
-{
-"title": "Malicious notifications could trick Google Gemini users",
-"date": "2026-06-03",
-"topic": "AI Security",
-"summary": "A prompt injection flaw in Google Gemini's voice assistant let attackers hide malicious commands inside notifications for social engineering.",
-"sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/application-security/malicious-notifications-could-trick-google-gemini-users"
-}
-]
-},
-{
-"title": "OpenAI publishes a blueprint for democratic governance of frontier AI",
-"date": "2026-06-03",
-"topic": "AI Act",
-"summary": "OpenAI released a blueprint proposing how frontier AI should be governed democratically, covering oversight, safety standards and institutional safeguards.",
-"sources": [
-{
-"name": "OpenAI",
-"url": "https://openai.com/index/frontier-safety-blueprint"
-}
-]
-},
-{
-"title": "Attackers Use AI to Automate EDR Evasion Testing",
-"date": "2026-06-03",
-"topic": "AI Security",
-"summary": "Researchers report that attackers are using AI to automate testing of endpoint detection and response (EDR) evasion, speeding development of malware that bypasses defenses.",
-"sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/endpoint-security/attackers-automate-edr-evasion-testing"
-}
-]
-},
-{
-"title": "Beyond assume-breach: how AI-native security will reshape enterprise defense",
-"date": "2026-06-02",
-"topic": "General",
-"summary": "Enterprise security is shifting toward hyper-segmented, AI-orchestrated defense models that move past the old assume-breach mindset.",
-"sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/assume-breach-ai-native-security-reshape-enterprise-defense"
-}
-]
-},
-{
-"title": "Securing AI agents before they go rogue is next to impossible",
-"date": "2026-06-02",
-"topic": "AI Security",
-"summary": "Highly autonomous AI agents with broad permissions pose serious enterprise risk and need governance and controls before incidents occur.",
-"sources": [
-{
-"name": "Dark Reading",
-"url": "https://www.darkreading.com/cyber-risk/securing-ai-agents-rogue"
-}
+{"name": "Dark Reading", "url": "https://www.darkreading.com/cyber-risk/adaptive-agentic-ai-worms-enterprise-cyber-threat"}
 ]
 }
 ];
@@ -721,32 +582,32 @@ render();
 </script>
 <script>
 (function(){
-  var c=document.getElementById('neural'); if(!c) return;
-  var ctx=c.getContext('2d');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var w=0,h=0,nodes=[],m={x:-9999,y:-9999},NAVY='29,40,70',GOLD='190,154,68',LINK=150,MOUSE=200;
-  function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; init(); }
-  function init(){ var n=Math.min(64,Math.floor(w*h/24000)); nodes=[];
-    for(var i=0;i<n;i++) nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,r:Math.random()*1.5+0.6,gold:Math.random()<0.24}); }
-  function links(){
-    var i,j;
-    for(i=0;i<nodes.length;i++){
-      for(j=i+1;j<nodes.length;j++){ var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<LINK){ var g=(a.gold&&b.gold); var col=g?GOLD:NAVY; var op=(1-d/LINK)*(g?0.6:0.5);
-          ctx.strokeStyle='rgba('+col+','+op+')'; ctx.lineWidth=g?0.8:0.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
-      var p=nodes[i],ex=p.x-m.x,ey=p.y-m.y,dm=Math.sqrt(ex*ex+ey*ey);
-      if(dm<MOUSE){ ctx.strokeStyle='rgba('+NAVY+','+((1-dm/MOUSE)*0.55)+')'; ctx.lineWidth=0.8; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(m.x,m.y); ctx.stroke(); }
-    }
-    for(i=0;i<nodes.length;i++){ var nd=nodes[i]; ctx.fillStyle='rgba('+(nd.gold?GOLD:NAVY)+','+(nd.gold?0.85:0.75)+')'; ctx.beginPath(); ctx.arc(nd.x,nd.y,nd.gold?nd.r+0.4:nd.r,0,7); ctx.fill(); }
-  }
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    for(var i=0;i<nodes.length;i++){ var nd=nodes[i]; nd.x+=nd.vx; nd.y+=nd.vy; if(nd.x<0||nd.x>w) nd.vx*=-1; if(nd.y<0||nd.y>h) nd.vy*=-1; }
-    links(); requestAnimationFrame(draw);
-  }
-  resize();
-  if(reduce){ ctx.clearRect(0,0,w,h); links(); } else { draw(); window.addEventListener('mousemove', function(e){ m.x=e.clientX; m.y=e.clientY; }, {passive:true}); }
-  var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(resize,200); });
+var c=document.getElementById('neural'); if(!c) return;
+var ctx=c.getContext('2d');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var w=0,h=0,nodes=[],m={x:-9999,y:-9999},NAVY='29,40,70',GOLD='190,154,68',LINK=150,MOUSE=200;
+function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; init(); }
+function init(){ var n=Math.min(64,Math.floor(w*h/24000)); nodes=[];
+for(var i=0;i<n;i++) nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,r:Math.random()*1.5+0.6,gold:Math.random()<0.24}); }
+function links(){
+var i,j;
+for(i=0;i<nodes.length;i++){
+for(j=i+1;j<nodes.length;j++){ var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+if(d<LINK){ var g=(a.gold&&b.gold); var col=g?GOLD:NAVY; var op=(1-d/LINK)*(g?0.6:0.5);
+ctx.strokeStyle='rgba('+col+','+op+')'; ctx.lineWidth=g?0.8:0.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
+var p=nodes[i],ex=p.x-m.x,ey=p.y-m.y,dm=Math.sqrt(ex*ex+ey*ey);
+if(dm<MOUSE){ ctx.strokeStyle='rgba('+NAVY+','+((1-dm/MOUSE)*0.55)+')'; ctx.lineWidth=0.8; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(m.x,m.y); ctx.stroke(); }
+}
+for(i=0;i<nodes.length;i++){ var nd=nodes[i]; ctx.fillStyle='rgba('+(nd.gold?GOLD:NAVY)+','+(nd.gold?0.85:0.75)+')'; ctx.beginPath(); ctx.arc(nd.x,nd.y,nd.gold?nd.r+0.4:nd.r,0,7); ctx.fill(); }
+}
+function draw(){
+ctx.clearRect(0,0,w,h);
+for(var i=0;i<nodes.length;i++){ var nd=nodes[i]; nd.x+=nd.vx; nd.y+=nd.vy; if(nd.x<0||nd.x>w) nd.vx*=-1; if(nd.y<0||nd.y>h) nd.vy*=-1; }
+links(); requestAnimationFrame(draw);
+}
+resize();
+if(reduce){ ctx.clearRect(0,0,w,h); links(); } else { draw(); window.addEventListener('mousemove', function(e){ m.x=e.clientX; m.y=e.clientY; }, {passive:true}); }
+var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(resize,200); });
 })();
 </script>
 </body>
