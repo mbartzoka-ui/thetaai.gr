@@ -1,0 +1,59 @@
+name: Radar daily refresh
+
+on:
+  schedule:
+    - cron: "40 4 * * *"   # ~07:40 Ελλάδας (θερινή ώρα)· το GitHub μπορεί να καθυστερήσει λίγα λεπτά
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check API credentials
+        id: guard
+        env:
+          HAS_KEY: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' || secrets.ANTHROPIC_API_KEY != '' }}
+        run: |
+          if [ "$HAS_KEY" != "true" ]; then
+            echo "::warning::No CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY secret is set - skipping this run. Add one in Settings > Secrets and variables > Actions."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
+
+      - name: Install Claude Code
+        if: steps.guard.outputs.skip != 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run radar refresh
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: claude -p "$(cat .github/radar-prompt.md)" --model claude-sonnet-5 --dangerously-skip-permissions
+
+      - name: Sanity check radar pages
+        if: steps.guard.outputs.skip != 'true'
+        run: python3 .github/radar_check.py
+
+      - name: Commit and push
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add radar/index.html en/radar/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to publish (feeds empty or nothing new)."
+          else
+            git commit -m "Radar: daily refresh $(date -u +%F)"
+            git push
+          fi
