@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI agent με πρόσβαση σε δεδομένα πελατών: τρία πράγματα πριν πας live | θeta ai</title>
+<meta name="description" content="Αν ο AI agent σου έχει πρόσβαση σε CRM, email ή αρχεία, τρία πράγματα πρέπει να είναι σε τάξη πριν πας live. Όχι θεωρία — αυτά ελέγχω σε κάθε deployment.">
+<link rel="canonical" href="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/">
+<meta property="og:title" content="AI agent με πρόσβαση σε δεδομένα πελατών: τρία πράγματα πριν πας live">
+<meta property="og:description" content="Αν ο AI agent σου έχει πρόσβαση σε CRM, email ή αρχεία, τρία πράγματα πρέπει να είναι σε τάξη πριν πας live.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:url" content="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/">
+<meta property="og:image" content="https://thetaai.gr/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"headline": "AI agent με πρόσβαση σε δεδομένα πελατών: τρία πράγματα πριν πας live",
+"datePublished": "2026-07-10",
+"dateModified": "2026-07-10",
+"inLanguage": "el",
+"author": {"@type": "Organization", "name": "θeta ai"},
+"publisher": {"@type": "Organization", "name": "θeta ai", "url": "https://thetaai.gr/"},
+"mainEntityOfPage": "https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/"
+}
+</script>
+<style>
+:root{
+--ink:#1d2846; --paper:#FAFAF9; --blue:#1d2846; --deep:#16203a;
+--stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+header{border-bottom:0.5px solid var(--line);}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+main{padding:48px 0 64px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:12px;}
+h1{font-size:clamp(26px,4vw,38px);font-weight:600;line-height:1.22;letter-spacing:-0.01em;}
+.art-meta{font-size:13px;color:var(--stone);margin-top:14px;}
+.article{margin-top:34px;}
+.article p{color:var(--stone-d);margin-bottom:18px;font-size:16.5px;}
+.article p strong{color:var(--ink);font-weight:600;}
+.article h2{font-size:22px;font-weight:600;letter-spacing:-0.01em;margin:38px 0 12px;}
+.article h3{font-size:17px;font-weight:600;margin:26px 0 8px;}
+.article ul{margin:0 0 18px 22px;}
+.article li{color:var(--stone-d);margin-bottom:8px;font-size:16px;}
+.article blockquote{border-left:3px solid var(--blue);padding-left:20px;margin:24px 0;font-size:18px;font-weight:500;color:var(--ink);line-height:1.5;}
+.article a{color:var(--deep);text-decoration:underline;}
+.cta{background:#fff;border:0.5px solid var(--line-d);border-radius:14px;padding:28px 26px;margin-top:48px;}
+.cta h3{font-size:18px;font-weight:600;margin-bottom:8px;}
+.cta p{color:var(--stone-d);font-size:15px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:opacity .15s;}
+.btn:hover{opacity:0.85;text-decoration:none;color:var(--paper);}
+.back{display:inline-block;margin-top:40px;font-size:14px;color:var(--deep);}
+footer{border-top:0.5px solid var(--line);padding:28px 0;margin-top:56px;}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--stone);}
+.foot .disclaimer{max-width:520px;line-height:1.55;}
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+</style>
+<style>
+.neural-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.89;
+-webkit-mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);
+mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);}
+.neural-bg canvas{display:block;width:100%;height:100%;}
+@media (prefers-reduced-motion: reduce){.neural-bg{opacity:.8;}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="font-demo">
+h1,h2,h3,.logo,.tier h3,.step h3,.cta-final h2,.ta-guide h2,.story blockquote,.tier .price{font-family:'IBM Plex Sans',system-ui,sans-serif !important;}
+h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
+.kicker,.eyebrow,.n-label,.nav-links a,.lang,.tier .per{font-family:'IBM Plex Mono',monospace !important;letter-spacing:.04em;}
+</style>
+<style id="gold-buttons">
+.btn:not(.btn-ghost){background:#1d2846 !important;border-color:#1d2846 !important;color:#fff !important;}
+.btn:not(.btn-ghost):hover{background:#16203a !important;opacity:1 !important;}
+</style>
+</head>
+<body>
+<div class="neural-bg" aria-hidden="true"><canvas id="neural"></canvas></div>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="/" aria-label="θeta ai — αρχική">
+<svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1d2846" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1d2846" stroke-width="6" stroke-linecap="round"/><circle cx="106" cy="55" r="8" fill="#BE9A44"/><circle cx="4" cy="55" r="8" fill="#1d2846"/></svg>
+<span>θeta <span class="ai">ai</span></span>
+</a>
+<nav class="nav-links" aria-label="Κύρια πλοήγηση">
+<a href="/#services">Υπηρεσίες</a>
+<a href="/#method">Μεθοδολογία</a>
+<a href="/ergaleia/">Εργαλεία</a>
+<a href="/blog/">Blog</a>
+<a href="/#guide">Οδηγός</a>
+<a href="/#faq">Συχνές ερωτήσεις</a>
+<span class="lang"><span class="on">EL</span></span>
+</nav>
+</div>
+</header>
+
+<main>
+<article class="wrap">
+<div class="eyebrow">AI SECURITY</div>
+<h1>AI agent με πρόσβαση σε δεδομένα πελατών: τρία πράγματα πριν πας live</h1>
+<div class="art-meta">10 Ιουλίου 2026 · 4′ ανάγνωση</div>
+
+<div class="article">
+<p>Ένας AI agent δεν είναι chatbot. Ένας chatbot απαντά σε ερωτήσεις. Ένας agent εκτελεί ενέργειες: στέλνει email, διαβάζει αρχεία, αλλάζει εγγραφές σε CRM, κάνει κρατήσεις. Αυτή η διαφορά αλλάζει τελείως το risk profile.</p>
+
+<p>Όταν βλέπω επιχείρηση που θέλει να βάλει AI agent σε production — με πρόσβαση σε πραγματικά δεδομένα πελατών — υπάρχουν τρία πράγματα που ελέγχω πρώτα, πριν κοιτάξω οτιδήποτε άλλο.</p>
+
+<h2>1. Isolation: ο agent έχει πρόσβαση μόνο σε αυτά που χρειάζεται</h2>
+<p>Στην κλασική IT security υπάρχει η αρχή του least privilege: κάθε σύστημα έχει πρόσβαση ακριβώς σε αυτά που χρειάζεται για να κάνει τη δουλειά του — τίποτα παραπάνω. Στους AI agents η αρχή αυτή πρέπει να εφαρμόζεται ακόμα πιο αυστηρά, γιατί ένας agent που παραβιαστεί μέσω <a href="/blog/prompt-injection-ti-einai/">prompt injection</a> δεν θα εκμεταλλευτεί μόνο αυτά που «ξέρει» — θα εκμεταλλευτεί αυτά στα οποία έχει <strong>πρόσβαση</strong>.</p>
+
+<p>Στην πράξη: αν ο agent χρειάζεται να διαβάζει παραγγελίες, δεν χρειάζεται πρόσβαση στα email. Αν χρειάζεται να στέλνει επιβεβαιώσεις, δεν χρειάζεται πρόσβαση σε οικονομικά στοιχεία. Κάθε σύνδεση που δεν είναι απολύτως αναγκαία είναι περιττή επιφάνεια επίθεσης.</p>
+
+<blockquote>Αν αυτός ο agent παραβιαστεί απόψε, τι μπορεί να κάνει ο επιτιθέμενος; Αν η απάντηση σε κάνει άβολο, το isolation δεν έχει γίνει σωστά.</blockquote>
+
+<h2>2. Input validation: δεν εμπιστεύεσαι ό,τι μπαίνει</h2>
+<p>Ένας agent που διαβάζει αρχεία, emails ή φόρμες από το web δέχεται δεδομένα που δεν ελέγχεις. Κάποιος μπορεί να έχει βάλει μέσα σε ένα αρχείο PDF μια κρυφή εντολή που ο agent θα διαβάσει σαν οδηγία — και θα εκτελέσει. Αυτό είναι indirect prompt injection, και δεν χρειάζεται τεχνική εξειδίκευση για να το κάνει κάποιος.</p>
+
+<p>Input validation δεν σημαίνει ότι «φιλτράρεις κακές λέξεις». Σημαίνει ότι το σύστημα διαχωρίζει ξεκάθαρα τι είναι δεδομένα και τι είναι οδηγίες — και ότι κανένα εξωτερικό input δεν μπορεί να αλλάξει τη συμπεριφορά του agent χωρίς ρητή έγκριση.</p>
+
+<p>Στην πράξη: κάθε περιεχόμενο που έρχεται από εξωτερική πηγή (αρχείο, email, φόρμα, web) αντιμετωπίζεται ως untrusted — ακόμα και αν έρχεται από γνωστό αποστολέα. Ο agent δεν αποφασίζει μόνος του να εκτελέσει οτιδήποτε βρει εκεί μέσα.</p>
+
+<h2>3. Logging: κάθε ενέργεια καταγράφεται</h2>
+<p>Αν κάτι πάει στραβά — και κάποια στιγμή θα πάει — πρέπει να ξέρεις τι έκανε ο agent, πότε, και γιατί. Χωρίς logging, ένα περιστατικό είναι ουσιαστικά αδύνατο να ερευνηθεί.</p>
+
+<p>Το logging ενός AI agent δεν είναι ίδιο με το logging ενός κλασικού συστήματος. Δεν αρκεί να ξέρεις ότι «έτρεξε η διαδικασία». Πρέπει να ξέρεις: ποιο input έλαβε, τι αποφάσισε να κάνει, ποιες ενέργειες εκτέλεσε, και αν υπήρξε ανθρώπινη έγκριση. Αυτή η λεπτομέρεια είναι που σου επιτρέπει να πεις «δεν έγινε κατάχρηση δεδομένων» — και να το αποδείξεις.</p>
+
+<p>Επιπλέον, αν χρησιμοποιείς AI agent σε context που εμπίπτει στον EU AI Act, το logging δεν είναι απλώς καλή πρακτική — είναι <a href="/blog/eu-ai-act-arthro-19-logs/">νομική υποχρέωση</a>.</p>
+
+<h2>Γιατί αυτά τα τρία και όχι κάτι άλλο</h2>
+<p>Δεν είναι ότι τα υπόλοιπα δεν μετράνε. Είναι ότι αυτά τα τρία — isolation, input validation, logging — είναι τα θεμέλια. Χωρίς αυτά, οποιαδήποτε άλλη ασφάλεια χτίζεται πάνω σε ασταθές έδαφος.</p>
+
+<p>Ένας agent που έχει και τα τρία σε τάξη μπορεί να παραβιαστεί — τίποτα δεν είναι αδιαπέραστο. Αλλά ο αντίκτυπος θα είναι περιορισμένος, θα γίνει αντιληπτός, και θα μπορέσεις να αντιδράσεις.</p>
+
+<p>Ένας agent χωρίς αυτά τα τρία είναι ανοιχτή πόρτα που δεν ξέρεις ότι υπάρχει.</p>
+</div>
+
+<div class="cta">
+<h3>Έχεις ήδη AI agent σε production ή σχεδιάζεις να βάλεις;</h3>
+<p>Ο Έλεγχος Θωράκισης εξετάζει την αρχιτεκτονική ασφάλειας του agent, τα σημεία πρόσβασης και τα κενά, με συγκεκριμένες προτάσεις ιεραρχημένες κατά κρισιμότητα. Προηγείται δωρεάν συνεδρία 45 λεπτών.</p>
+<a class="btn" href="mailto:hello@thetaai.gr?subject=AI%20agent%20security%20—%20δωρεάν%20συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+</div>
+
+<a class="back" href="/blog/">← Όλα τα άρθρα</a>
+</article>
+</main>
+
+<footer>
+<div class="wrap foot">
+<span>© 2026 <a href="/">θeta ai</a> · Θ όπως θωράκιση</span>
+<p class="disclaimer">Το παρόν άρθρο είναι γενική ενημέρωση και δεν αποτελεί νομική συμβουλή. Για τη συμμόρφωση της επιχείρησής σας απαιτείται εξατομικευμένη αξιολόγηση και, όπου χρειάζεται, συνεργασία με νομικό σύμβουλο.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+var c=document.getElementById('neural'); if(!c) return;
+var ctx=c.getContext('2d');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var w=0,h=0,nodes=[],m={x:-9999,y:-9999},NAVY='29,40,70',GOLD='190,154,68',LINK=150,MOUSE=200;
+function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; init(); }
+function init(){ var n=Math.min(64,Math.floor(w*h/24000)); nodes=[];
+for(var i=0;i<n;i++) nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,r:Math.random()*1.5+0.6,gold:Math.random()<0.24}); }
+function links(){
+var i,j;
+for(i=0;i<nodes.length;i++){
+for(j=i+1;j<nodes.length;j++){ var a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+if(d<LINK){ var g=(a.gold&&b.gold); var col=g?GOLD:NAVY; var op=(1-d/LINK)*(g?0.6:0.5);
+ctx.strokeStyle='rgba('+col+','+op+')'; ctx.lineWidth=g?0.8:0.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
+var p=nodes[i],ex=p.x-m.x,ey=p.y-m.y,dm=Math.sqrt(ex*ex+ey*ey);
+if(dm<MOUSE){ ctx.strokeStyle='rgba('+NAVY+','+((1-dm/MOUSE)*0.55)+')'; ctx.lineWidth=0.8; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(m.x,m.y); ctx.stroke(); }
+}
+for(i=0;i<nodes.length;i++){ var nd=nodes[i]; ctx.fillStyle='rgba('+(nd.gold?GOLD:NAVY)+','+(nd.gold?0.85:0.75)+')'; ctx.beginPath(); ctx.arc(nd.x,nd.y,nd.gold?nd.r+0.4:nd.r,0,7); ctx.fill(); }
+}
+function draw(){
+ctx.clearRect(0,0,w,h);
+for(var i=0;i<nodes.length;i++){ var nd=nodes[i]; nd.x+=nd.vx; nd.y+=nd.vy; if(nd.x<0||nd.x>w) nd.vx*=-1; if(nd.y<0||nd.y>h) nd.vy*=-1; }
+links(); requestAnimationFrame(draw);
+}
+resize();
+if(reduce){ ctx.clearRect(0,0,w,h); links(); } else { draw(); window.addEventListener('mousemove', function(e){ m.x=e.clientX; m.y=e.clientY; }, {passive:true}); }
+var t; window.addEventListener('resize', function(){ clearTimeout(t); t=setTimeout(resize,200); });
+})();
+</script>
+</body>
+</html>
