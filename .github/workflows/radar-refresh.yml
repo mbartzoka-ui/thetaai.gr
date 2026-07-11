@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: radar-refresh
@@ -56,4 +57,17 @@ jobs:
           else
             git commit -m "Radar: daily refresh $(date -u +%F)"
             git push
+          fi
+
+      - name: Send digest as GitHub issue
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f /tmp/radar-digest.md ]; then
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "AI Radar Digest — $(date +%d/%m/%Y)" \
+              --body-file /tmp/radar-digest.md
+          else
+            echo "No new stories today - no digest."
           fi

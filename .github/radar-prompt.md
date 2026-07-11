@@ -45,4 +45,10 @@ STEP 6 — WRITE FILES. For EACH file, replace ONLY: (a) the `const ITEMS = [...
 - ENGLISH: id="upd" line → `UPDATED: DD MON YYYY` (English month abbrev).
 Sanity-check each: valid JSON array, every item has all 5 keys with a non-empty sources array, GR and EN have the same item count, <script> still has render(). SAFETY: if STEP 1 gathering failed entirely (all feeds empty) OR you could not parse the existing archive, do NOT overwrite — leave BOTH files completely untouched and just report. Never write an empty or shrunken-by-accident list.
 
-STEP 7 — REPORT one short line to stdout: how many stories new vs carried-over, total in the archive, today's date. Informational only (not legal advice). Do NOT commit, do NOT push, do NOT touch any other file in the repository.
+STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one genuinely NEW story to the archive, write a Greek digest to `/tmp/radar-digest.md` (OUTSIDE the repo — this file must never be committed). Audience: Maria (θeta ai) — an AI security & compliance consultant in Greece who wants to genuinely understand the market, not just headlines. Content, all in natural Greek (keep tech terms/product names as-is):
+- Start with `@mbartzoka-ui` on its own line (guarantees the email notification), then a 2-3 sentence overview of the day's picture.
+- Then one section per NEW story: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
+- Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
+Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
+
+STEP 8 — REPORT one short line to stdout: how many stories new vs carried-over, total in the archive, today's date, and whether a digest was written. Informational only (not legal advice). Do NOT commit, do NOT push, do NOT touch any other file in the repository.
