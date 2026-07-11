@@ -51,4 +51,15 @@ STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one gen
 - Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
 Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
 
-STEP 8 — REPORT one short line to stdout: how many stories new vs carried-over, total in the archive, today's date, and whether a digest was written. Informational only (not legal advice). Do NOT commit, do NOT push, do NOT touch any other file in the repository.
+STEP 8 — PERMANENT KNOWLEDGE LOG. For EVERY genuinely NEW story added today, APPEND an entry to `knowledge/ai-security-log.md` (it exists; if somehow missing, recreate it with its header). This file is Maria's permanent knowledge archive — unlike the radar pages it is never pruned. Rules: append at the END of the file, NEVER modify or delete existing entries, use the GREEK title/summary, exact format:
+
+```
+## YYYY-MM-DD — <Greek title>
+- **Θέμα:** <topic>
+- **Τι έγινε:** <Greek summary>
+- **Πηγές:** [Name](url) · [Name](url)
+```
+
+Stories that merely MERGED into existing archive entries (already known) are NOT re-appended.
+
+STEP 9 — REPORT one short line to stdout: how many stories new vs carried-over, total in the archive, today's date, and whether a digest was written. Informational only (not legal advice). Do NOT commit, do NOT push, do NOT touch any other file in the repository.

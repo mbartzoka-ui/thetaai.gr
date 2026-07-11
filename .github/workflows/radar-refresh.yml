@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add radar/index.html en/radar/index.html
+          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md
           if git diff --cached --quiet; then
             echo "No changes to publish (feeds empty or nothing new)."
           else
