@@ -51,6 +51,8 @@ STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one gen
 - Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
 Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
 
+After the «Συνολική εικόνα» paragraph, add a horizontal rule and a section titled `## 📣 LinkedIn draft — copy & paste` containing ONE ready-to-post LinkedIn text in GREEK, authored for Maria's personal profile (AI security & compliance consultant, brand «θeta ai»). Format: 800-1400 characters, plain text (no markdown — LinkedIn doesn't render it), structured as: a strong opening hook (1-2 lines), the day's 2-4 news items each in 1-2 plain sentences with the «γιατί μας αφορά» angle, one practical closing thought for businesses, then `Καθημερινή ενημέρωση: thetaai.gr/radar` and 3-5 hashtags (#AISecurity #AIAct plus topical ones). CRITICAL style rules: natural, native Greek — NOT translated-sounding, NOT templated; vary the skeleton and the hook style from day to day (μία μέρα ερώτηση, άλλη ένα περιστατικό, άλλη ένα νούμερο); no clichés like «Σε έναν κόσμο που…»; no em-dash overuse; at most one emoji. This is a DRAFT for Maria to review and post manually — never post anywhere yourself.
+
 STEP 8 — PERMANENT KNOWLEDGE LOG. For EVERY genuinely NEW story added today, APPEND an entry to `knowledge/ai-security-log.md` (it exists; if somehow missing, recreate it with its header). This file is Maria's permanent knowledge archive — unlike the radar pages it is never pruned. Rules: append at the END of the file, NEVER modify or delete existing entries, use the GREEK title/summary, exact format:
 
 ```
