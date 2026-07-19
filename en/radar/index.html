@@ -131,7 +131,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 18 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 19 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -157,7 +157,7 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-18";
+const GENERATED = "2026-07-19";
 const ITEMS = [
   {
     "title": "Google bets 'agentic defense' strategy can outpace AI attackers",
@@ -180,6 +180,30 @@ const ITEMS = [
       {
         "name": "Ars Technica",
         "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+      }
+    ]
+  },
+  {
+    "title": "New NadMesh Botnet Hunts Exposed AI Services for Cloud Keys and Kubernetes Tokens",
+    "date": "2026-07-17",
+    "topic": "AI Security",
+    "summary": "A Go-based botnet dubbed NadMesh has been scanning the internet since early July for exposed self-hosted AI tools, including ComfyUI, Ollama, n8n, Open WebUI, Langflow and Gradio, harvesting cloud credentials and Kubernetes tokens from instances teams deployed quickly but firewalled late. The operator's own dashboard reportedly already lists over 3,800 unique AWS keys, underlining how fast AI tool adoption is outpacing basic exposure hygiene.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html"
+      }
+    ]
+  },
+  {
+    "title": "The Real AI Risk Is Blind Trust in Autonomous Agents",
+    "date": "2026-07-17",
+    "topic": "AI Security",
+    "summary": "A Dark Reading analysis warns that the biggest AI security problem isn't a specific exploit but the practice of letting AI models both interpret instructions and execute actions unchecked, which removes the human oversight step that traditionally catches mistakes or malicious commands. As organizations hand more operational control to AI agents, the piece argues that removing this checkpoint is itself what creates exposure.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/application-security/real-ai-threat-blind-trust"
       }
     ]
   },
@@ -584,6 +608,18 @@ const ITEMS = [
     ]
   },
   {
+    "title": "What Anthropic's 'J-Space' Discovery Does and Doesn't Show About Claude",
+    "date": "2026-07-13",
+    "topic": "General",
+    "summary": "Anthropic researchers identified a hidden internal space inside Claude, nicknamed the 'J-space,' filled with words that shape the model's reasoning but never appear in its visible output, seemingly tracking task progress and offering internal commentary on its own decisions. MIT Technology Review cautions that while the finding is a genuine step toward understanding how large language models work internally, proposed uses such as detecting deceptive or biased behavior remain theoretical, not proven capabilities.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/"
+      }
+    ]
+  },
+  {
     "title": "'Ghostcommit': Hidden Prompt Injection in Images Bypasses AI Code Reviewers and Steals Secrets",
     "date": "2026-07-11",
     "topic": "AI Security",
@@ -644,6 +680,14 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/"
       }
     ]
   },
@@ -668,42 +712,6 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/"
-      }
-    ]
-  },
-  {
-    "title": "New 'Friendly Fire' Attack: AI Agents Built to Catch Malicious Code Can Be Tricked into Running It",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "The AI Now Institute published a proof-of-concept where AI coding agents (Anthropic Claude Code, OpenAI Codex) in autonomous mode are tricked into executing attacker code while supposedly auditing it for vulnerabilities.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html"
-      }
-    ]
-  },
-  {
-    "title": "GhostApproval: Symlink Flaws in Six AI Coding Agents Allow Code Execution from Malicious Repositories",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "Wiz identified a flaw in six popular AI coding assistants (Amazon Q Developer, Claude Code, Augment, Cursor, Google Antigravity, Windsurf) where a seemingly innocent file-edit approval request ends up modifying a sensitive file via symlink.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html"
-      }
-    ]
-  },
-  {
-    "title": "AI Agents Are a New Kind of Identity — and Most Organizations Are Not Ready",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "A Dark Reading analysis argues that treating AI agents as simple service accounts or API tokens is an outdated approach, as they require a fundamentally different model for identity and access management.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/identity-access-management-security/ai-agents-new-kind-identity-most-organizations-not-ready"
       }
     ]
   }

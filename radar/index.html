@@ -131,7 +131,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 18 ΙΟΥΛ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 19 ΙΟΥΛ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -157,7 +157,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-07-18";
+const GENERATED = "2026-07-19";
 const ITEMS = [
   {
     "title": "Η Google ποντάρει στην «Agentic Defense» στρατηγική ασφαλείας απέναντι σε επιθέσεις AI",
@@ -180,6 +180,30 @@ const ITEMS = [
       {
         "name": "Ars Technica",
         "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+      }
+    ]
+  },
+  {
+    "title": "Το botnet NadMesh στοχεύει εκτεθειμένες υπηρεσίες AI για κλοπή cloud keys και Kubernetes tokens",
+    "date": "2026-07-17",
+    "topic": "AI Security",
+    "summary": "Ένα botnet σε Go με την ονομασία NadMesh σαρώνει το διαδίκτυο από τις αρχές Ιουλίου αναζητώντας εκτεθειμένα, self-hosted εργαλεία AI όπως ComfyUI, Ollama, n8n, Open WebUI, Langflow και Gradio, συλλέγοντας cloud credentials και Kubernetes tokens από instances που στήθηκαν γρήγορα αλλά προστατεύτηκαν με καθυστέρηση. Το dashboard του ίδιου του επιτιθέμενου φέρεται να καταγράφει ήδη πάνω από 3.800 μοναδικά AWS keys, αναδεικνύοντας πόσο γρήγορα η υιοθέτηση εργαλείων AI ξεπερνά τη βασική υγιεινή έκθεσης στο διαδίκτυο.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html"
+      }
+    ]
+  },
+  {
+    "title": "Ο πραγματικός κίνδυνος του AI είναι η τυφλή εμπιστοσύνη σε αυτόνομα agents",
+    "date": "2026-07-17",
+    "topic": "AI Security",
+    "summary": "Ανάλυση του Dark Reading προειδοποιεί ότι το μεγαλύτερο πρόβλημα ασφαλείας στο AI δεν είναι ένα συγκεκριμένο exploit, αλλά η πρακτική να αφήνονται τα μοντέλα AI να ερμηνεύουν εντολές και να τις εκτελούν χωρίς έλεγχο, κάτι που καταργεί το στάδιο ανθρώπινης εποπτείας που παραδοσιακά εντοπίζει λάθη ή κακόβουλες εντολές. Καθώς οι οργανισμοί δίνουν όλο και περισσότερο επιχειρησιακό έλεγχο σε AI agents, το άρθρο υποστηρίζει ότι η κατάργηση αυτού του σημείου ελέγχου είναι η ίδια η πηγή έκθεσης σε κίνδυνο.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/application-security/real-ai-threat-blind-trust"
       }
     ]
   },
@@ -584,6 +608,18 @@ const ITEMS = [
     ]
   },
   {
+    "title": "Τι δείχνει, και τι όχι, η ανακάλυψη του «J-space» της Anthropic στο Claude",
+    "date": "2026-07-13",
+    "topic": "General",
+    "summary": "Ερευνητές της Anthropic εντόπισαν έναν κρυφό εσωτερικό χώρο μέσα στο Claude, τον λεγόμενο «J-space», γεμάτο με λέξεις που διαμορφώνουν τη συλλογιστική του μοντέλου αλλά δεν εμφανίζονται ποτέ στην ορατή έξοδό του, φαινομενικά παρακολουθώντας την πρόοδο μιας εργασίας και προσφέροντας εσωτερικό σχολιασμό των αποφάσεών του. Το MIT Technology Review προειδοποιεί ότι, παρότι η ανακάλυψη αποτελεί ένα πραγματικό βήμα προς την κατανόηση της εσωτερικής λειτουργίας των LLM, προτεινόμενες χρήσεις όπως ο εντοπισμός παραπλανητικής ή προκατειλημμένης συμπεριφοράς παραμένουν θεωρητικές, όχι αποδεδειγμένες δυνατότητες.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/"
+      }
+    ]
+  },
+  {
     "title": "«Ghostcommit»: Κρυφό prompt injection σε εικόνες παρακάμπτει AI code reviewers και κλέβει secrets",
     "date": "2026-07-11",
     "topic": "AI Security",
@@ -644,6 +680,14 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/"
       }
     ]
   },
@@ -668,42 +712,6 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/"
-      }
-    ]
-  },
-  {
-    "title": "Νέα επίθεση «Friendly Fire»: AI agents που εντοπίζουν κακόβουλο κώδικα μπορούν να εξαπατηθούν και να τον εκτελέσουν",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "Το AI Now Institute δημοσίευσε proof-of-concept όπου AI coding agents (Anthropic Claude Code, OpenAI Codex) σε αυτόνομη λειτουργία εξαπατώνται να εκτελέσουν τον ίδιο τον κώδικα του επιτιθέμενου ενώ υποτίθεται ότι τον ελέγχουν για ευπάθειες.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html"
-      }
-    ]
-  },
-  {
-    "title": "GhostApproval: Ελαττώματα symlink σε έξι AI coding agents επιτρέπουν εκτέλεση κώδικα από κακόβουλα repositories",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "Η Wiz εντόπισε ελάττωμα σε έξι δημοφιλή AI coding assistants (Amazon Q Developer, Claude Code, Augment, Cursor, Google Antigravity, Windsurf) όπου ένα φαινομενικά αθώο αίτημα έγκρισης επεξεργασίας αρχείου καταλήγει να τροποποιεί ευαίσθητο αρχείο μέσω symlink.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html"
-      }
-    ]
-  },
-  {
-    "title": "Τα AI agents είναι ένα νέο είδος ταυτότητας — και οι περισσότεροι οργανισμοί δεν είναι έτοιμοι",
-    "date": "2026-07-09",
-    "topic": "AI Security",
-    "summary": "Ανάλυση της Dark Reading υποστηρίζει ότι η μεταχείριση των AI agents ως απλών service accounts ή API tokens είναι ξεπερασμένη προσέγγιση, καθώς απαιτούν θεμελιωδώς διαφορετικό μοντέλο διαχείρισης ταυτότητας και πρόσβασης.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/identity-access-management-security/ai-agents-new-kind-identity-most-organizations-not-ready"
       }
     ]
   }
