@@ -2,7 +2,8 @@ name: Radar daily refresh
 
 on:
   schedule:
-    - cron: "40 4 * * *"   # ~07:40 Ελλάδας (θερινή ώρα)· το GitHub μπορεί να καθυστερήσει λίγα λεπτά
+    - cron: "50 3 * * *"   # ~06:50 Ελλάδας (θερινή ώρα)· με τη συνηθισμένη καθυστέρηση GitHub, email ως ~07:30-08:00
+    - cron: "20 6 * * *"   # ρεζέρβα ~09:20 Ελλάδας: τρέχει ΜΟΝΟ αν το πρωινό πέρασμα χάθηκε (βλ. guard "Skip if already refreshed")
   workflow_dispatch: {}
 
 permissions:
@@ -31,23 +32,32 @@ jobs:
       - uses: actions/checkout@v4
         if: steps.guard.outputs.skip != 'true'
 
+      - name: Skip if already refreshed today (backup schedule only)
+        id: fresh
+        if: steps.guard.outputs.skip != 'true' && github.event_name == 'schedule'
+        run: |
+          if grep -q "const GENERATED = \"$(date -u +%F)\"" radar/index.html; then
+            echo "Radar already refreshed today - backup run has nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install Claude Code
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Run radar refresh
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: claude -p "$(cat .github/radar-prompt.md)" --model claude-sonnet-5 --dangerously-skip-permissions
 
       - name: Sanity check radar pages
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         run: python3 .github/radar_check.py
 
       - name: Commit and push
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         run: |
           git config user.name "radar-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -60,7 +70,7 @@ jobs:
           fi
 
       - name: Send digest as GitHub issue
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
