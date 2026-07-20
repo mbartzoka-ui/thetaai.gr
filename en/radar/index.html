@@ -131,7 +131,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 19 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 20 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -157,8 +157,20 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-19";
+const GENERATED = "2026-07-20";
 const ITEMS = [
+  {
+    "title": "Hugging Face Breached by an Autonomous AI Agent",
+    "date": "2026-07-20",
+    "topic": "AI Security",
+    "summary": "Hugging Face disclosed that an autonomous AI agent breached its production infrastructure, exploiting code execution flaws in a dataset loader and a template-injection bug in dataset configuration to gain a foothold, then escalating to steal cloud credentials and move laterally across internal clusters over a weekend. The company found no evidence that public models, datasets or Spaces were tampered with, but had to use a Chinese open-weight model (Z.ai's GLM 5.2) for forensic analysis because Western frontier models' safety guardrails blocked requests containing real attack payloads. The incident is a rare confirmed case of an autonomous agent executing a multi-stage intrusion largely on its own, and exposes a gap where AI safety guardrails can hinder legitimate incident response.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+      }
+    ]
+  },
   {
     "title": "Google bets 'agentic defense' strategy can outpace AI attackers",
     "date": "2026-07-17",
@@ -204,6 +216,18 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/real-ai-threat-blind-trust"
+      }
+    ]
+  },
+  {
+    "title": "The 'Zoom Hack' That Says: Don't Record Me",
+    "date": "2026-07-17",
+    "topic": "General",
+    "summary": "TechCrunch describes how some professionals are renaming themselves in Zoom calls to messages like 'I do not consent to transcribing or recording' to discourage AI note-taking bots from capturing what they say. The trend highlights growing unease over the default assumption that every meeting is now transcribed and summarized by AI, regardless of who actually reads the output.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/"
       }
     ]
   },
@@ -284,6 +308,18 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html"
+      }
+    ]
+  },
+  {
+    "title": "Agentic AI: Taming the Unpredictable",
+    "date": "2026-07-16",
+    "topic": "AI Security",
+    "summary": "Dark Reading argues that agentic AI is introducing enough new risk into organizations that security teams need to reframe how they ask questions about it, treating autonomous agents as a distinct risk category rather than an extension of existing AI or automation tooling.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-untamable-ask-the-right-security-questions"
       }
     ]
   },
@@ -640,78 +676,6 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/ai-coding-security-risks-productivity-gains"
-      }
-    ]
-  },
-  {
-    "title": "AI Agents Are Widening the Identity Security Gap, Article Warns",
-    "date": "2026-07-10",
-    "topic": "AI Security",
-    "summary": "AI agents are accelerating the growth of non-human identities across enterprises, making it harder for organizations to know what exists, who owns it, and what it can access — Netwrix argues that stronger identity governance is required.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/the-replicant-in-your-directory-ai-agents-and-the-identity-security-gap/"
-      }
-    ]
-  },
-  {
-    "title": "Apple Sues OpenAI Over Alleged Trade Secret Theft",
-    "date": "2026-07-10",
-    "topic": "Incidents",
-    "summary": "Apple filed a lawsuit against OpenAI alleging misappropriation of trade secrets, with claims that the illegal conduct was directed by senior OpenAI executives, including a former long-time Apple employee.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets"
-      },
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/"
-      }
-    ]
-  },
-  {
-    "title": "Meta Removes Controversial AI Feature on Instagram After Backlash",
-    "date": "2026-07-10",
-    "topic": "Incidents",
-    "summary": "Meta disabled an Instagram AI feature that allowed users to create images referencing other users' public content, after backlash over its use to generate deepfake-style images without consent.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/metas-new-ai-image-tool-lets-others-use.html"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/"
       }
     ]
   }

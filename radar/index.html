@@ -131,7 +131,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 19 ΙΟΥΛ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 20 ΙΟΥΛ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -157,8 +157,20 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-07-19";
+const GENERATED = "2026-07-20";
 const ITEMS = [
+  {
+    "title": "Παραβίαση της Hugging Face από αυτόνομο AI agent",
+    "date": "2026-07-20",
+    "topic": "AI Security",
+    "summary": "Η Hugging Face αποκάλυψε ότι αυτόνομος AI agent παραβίασε την υποδομή παραγωγής της, εκμεταλλευόμενος ελαττώματα εκτέλεσης κώδικα σε loader dataset και ένα template injection σε ρύθμιση dataset για αρχική πρόσβαση, κλιμακώνοντας στη συνέχεια σε κλοπή cloud credentials και πλευρική κίνηση σε εσωτερικά clusters μέσα σε ένα σαββατοκύριακο. Η εταιρεία δεν βρήκε ενδείξεις παραβίασης δημόσιων μοντέλων, datasets ή Spaces, αλλά αναγκάστηκε να χρησιμοποιήσει ένα κινεζικό open-weight μοντέλο (GLM 5.2 της Z.ai) για forensic ανάλυση, καθώς τα δυτικά frontier μοντέλα μπλόκαραν αιτήματα που περιείχαν πραγματικό υλικό επίθεσης λόγω των μηχανισμών ασφαλείας τους. Το περιστατικό αποτελεί σπάνια επιβεβαιωμένη περίπτωση όπου αυτόνομος agent εκτέλεσε πολυσταδιακή εισβολή σε μεγάλο βαθμό μόνος του, αναδεικνύοντας κενό όπου τα guardrails ασφαλείας AI μπορεί να εμποδίσουν τη νόμιμη απόκριση σε περιστατικά.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+      }
+    ]
+  },
   {
     "title": "Η Google ποντάρει στην «Agentic Defense» στρατηγική ασφαλείας απέναντι σε επιθέσεις AI",
     "date": "2026-07-17",
@@ -204,6 +216,18 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/real-ai-threat-blind-trust"
+      }
+    ]
+  },
+  {
+    "title": "Το «hack» στο Zoom που λέει: μη με καταγράφεις",
+    "date": "2026-07-17",
+    "topic": "General",
+    "summary": "Το TechCrunch περιγράφει πώς ορισμένα στελέχη μετονομάζουν τον εαυτό τους σε κλήσεις Zoom με μηνύματα όπως «δεν συναινώ σε απομαγνητοφώνηση ή καταγραφή», για να αποθαρρύνουν τα AI εργαλεία σημειώσεων από το να καταγράφουν όσα λένε. Η τάση αναδεικνύει την αυξανόμενη ανησυχία γύρω από τη σιωπηρή παραδοχή ότι κάθε συνάντηση πλέον απομαγνητοφωνείται και συνοψίζεται από AI, ανεξαρτήτως αν κάποιος διαβάζει πραγματικά το αποτέλεσμα.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/"
       }
     ]
   },
@@ -284,6 +308,18 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html"
+      }
+    ]
+  },
+  {
+    "title": "Agentic AI: Πώς να δαμάσετε το απρόβλεπτο",
+    "date": "2026-07-16",
+    "topic": "AI Security",
+    "summary": "Η Dark Reading υποστηρίζει ότι το agentic AI εισάγει αρκετό νέο ρίσκο στους οργανισμούς ώστε οι ομάδες ασφαλείας να χρειάζεται να επαναδιατυπώσουν τον τρόπο που θέτουν ερωτήματα γι' αυτό, αντιμετωπίζοντας τους αυτόνομους agents ως ξεχωριστή κατηγορία κινδύνου και όχι ως προέκταση υπαρχόντων εργαλείων AI ή αυτοματισμού.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-untamable-ask-the-right-security-questions"
       }
     ]
   },
@@ -640,78 +676,6 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/ai-coding-security-risks-productivity-gains"
-      }
-    ]
-  },
-  {
-    "title": "Τα AI agents διευρύνουν το χάσμα ασφάλειας ταυτότητας, προειδοποιεί άρθρο",
-    "date": "2026-07-10",
-    "topic": "AI Security",
-    "summary": "Τα AI agents επιταχύνουν την αύξηση μη-ανθρώπινων ταυτοτήτων στην επιχείρηση, καθιστώντας δυσκολότερο για τους οργανισμούς να γνωρίζουν τι υπάρχει, ποιος το κατέχει και τι μπορεί να προσπελάσει — η Netwrix υποστηρίζει ότι απαιτείται ισχυρότερη διακυβέρνηση ταυτότητας.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/the-replicant-in-your-directory-ai-agents-and-the-identity-security-gap/"
-      }
-    ]
-  },
-  {
-    "title": "Η Apple μηνύει την OpenAI για εικαζόμενη κλοπή εμπορικών μυστικών",
-    "date": "2026-07-10",
-    "topic": "Incidents",
-    "summary": "Η Apple κατέθεσε αγωγή κατά της OpenAI, ισχυριζόμενη ότι υπεξαίρεσε εμπορικά μυστικά, με την κατηγορία ότι η παράνομη ενέργεια καθοδηγήθηκε από ανώτερα στελέχη της OpenAI, συμπεριλαμβανομένου πρώην μακροχρόνιου στελέχους της Apple.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets"
-      },
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/"
-      }
-    ]
-  },
-  {
-    "title": "Η Meta αποσύρει λειτουργία AI στο Instagram μετά από αντιδράσεις",
-    "date": "2026-07-10",
-    "topic": "Incidents",
-    "summary": "Η Meta απενεργοποίησε λειτουργία AI στο Instagram που επέτρεπε σε χρήστες να δημιουργούν εικόνες αναφερόμενες σε δημόσιο περιεχόμενο άλλων χρηστών, μετά από αντιδράσεις για τη χρήση της σε δημιουργία εικόνων τύπου deepfake χωρίς συναίνεση.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/metas-new-ai-image-tool-lets-others-use.html"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/"
       }
     ]
   }
