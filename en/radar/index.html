@@ -139,7 +139,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 20 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 21 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -165,8 +165,44 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-20";
+const GENERATED = "2026-07-21";
 const ITEMS = [
+  {
+    "title": "Anthropic's $1.5B AI Copyright Settlement Gets Final Court Approval",
+    "date": "2026-07-20",
+    "topic": "Incidents",
+    "summary": "A federal judge granted final approval to Anthropic's $1.5 billion settlement with a class of authors and publishers over the use of pirated books to train Claude, one of the largest AI copyright settlements to date. The approval resolves this particular case but leaves the broader legal question of whether training AI models on copyrighted works counts as fair use unresolved for other ongoing lawsuits.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+      }
+    ]
+  },
+  {
+    "title": "CISOs Feel the Heat Over AI Risk",
+    "date": "2026-07-20",
+    "topic": "AI Security",
+    "summary": "A new survey finds that job pressure on CISOs has intensified as companies rush to adopt AI, with 26% of top security executives saying they are considering leaving their position amid the mounting AI-related risk they are expected to manage.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/cisos-feel-heat-ai-risk"
+      }
+    ]
+  },
+  {
+    "title": "Sony Sues AI Music Generator Udio Over 30,000 Songs",
+    "date": "2026-07-20",
+    "topic": "Incidents",
+    "summary": "Sony Music Entertainment filed a new lawsuit against AI music generator Udio in a New York court, accusing it of infringing copyright on more than 30,000 songs -- from Elvis Presley's \"Hound Dog\" to Beyoncé's \"Say My Name\" and Harry Styles' \"As It Was\" -- which Sony says represent only a fraction of the works Udio allegedly used without permission. The suit follows a 2024 case Sony brought jointly with Universal Music Group and Warner Records against Udio and rival Suno, and comes after Sony gained access to Udio's training data through legal discovery.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright"
+      }
+    ]
+  },
   {
     "title": "Hugging Face Breached by an Autonomous AI Agent",
     "date": "2026-07-20",
@@ -448,6 +484,10 @@ const ITEMS = [
       {
         "name": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/google-gemini-cli-abused-as-a-hacking-agent-malware-botnet-operator/"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/russian-speaking-hacker-uses-google.html"
       }
     ]
   },
@@ -648,42 +688,6 @@ const ITEMS = [
       {
         "name": "Ars Technica",
         "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/"
-      }
-    ]
-  },
-  {
-    "title": "What Anthropic's 'J-Space' Discovery Does and Doesn't Show About Claude",
-    "date": "2026-07-13",
-    "topic": "General",
-    "summary": "Anthropic researchers identified a hidden internal space inside Claude, nicknamed the 'J-space,' filled with words that shape the model's reasoning but never appear in its visible output, seemingly tracking task progress and offering internal commentary on its own decisions. MIT Technology Review cautions that while the finding is a genuine step toward understanding how large language models work internally, proposed uses such as detecting deceptive or biased behavior remain theoretical, not proven capabilities.",
-    "sources": [
-      {
-        "name": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/"
-      }
-    ]
-  },
-  {
-    "title": "'Ghostcommit': Hidden Prompt Injection in Images Bypasses AI Code Reviewers and Steals Secrets",
-    "date": "2026-07-11",
-    "topic": "AI Security",
-    "summary": "Researchers demonstrated 'Ghostcommit', where a PNG file hides prompt injection instructions that bypass AI code review tools like CodeRabbit and Bugbot — which don't even open images — ultimately persuading an AI coding agent to read a repository's .env file and write all secrets as a list of numbers inside the code.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/"
-      }
-    ]
-  },
-  {
-    "title": "AI Coding Tools: Do the Security Risks Outweigh the Productivity Gains?",
-    "date": "2026-07-10",
-    "topic": "AI Security",
-    "summary": "A Dark Reading analysis examines how AI coding tools, priced at $19–$200 per user per month, hide additional costs in security scanning, remediation, and false positives — raising the question of whether productivity benefits justify the increased security risk.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/application-security/ai-coding-security-risks-productivity-gains"
       }
     ]
   }
