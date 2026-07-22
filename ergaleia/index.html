@@ -102,6 +102,27 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
   gtag('js', new Date());
   gtag('config', 'G-T8L6NJR1LC');
 </script>
+<!-- theta ai key events -->
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var path = location.pathname;
+  if (/^\/(en\/)?odigos\/efxaristo/.test(path)) { gtag('event', 'generate_lead'); }
+  var toolUsed = false;
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = t.closest ? t.closest('a') : null;
+    if (a && a.href) {
+      if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
+      if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
+    }
+    if (!toolUsed && /^\/(en\/)?ergaleia\/[^/]+/.test(path) && t.closest && t.closest('button')) {
+      toolUsed = true;
+      gtag('event', 'tool_use', { tool: path });
+    }
+  }, true);
+})();
+</script>
 </head>
 <body>
 <div class="neural-bg" aria-hidden="true"><canvas id="neural"></canvas></div>
