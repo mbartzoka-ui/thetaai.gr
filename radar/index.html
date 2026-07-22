@@ -139,7 +139,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 21 ΙΟΥΛ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 22 ΙΟΥΛ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -165,8 +165,112 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-07-21";
+const GENERATED = "2026-07-22";
 const ITEMS = [
+  {
+    "title": "Ελάττωμα στον MCP server του Azure DevOps επιτρέπει απαγωγή AI review agents μέσω κρυφών σχολίων σε PR",
+    "date": "2026-07-22",
+    "topic": "AI Security",
+    "summary": "Ένα αόρατο σχόλιο σε pull request μπορεί να στρέψει τον δικό του AI coding agent ενός reviewer εναντίον του, οδηγώντας τον σε repositories που ο επιτιθέμενος δεν έχει δικαίωμα πρόσβασης και διαρρέοντας ό,τι βρει. Το πρόβλημα εντοπίζεται στον επίσημο MCP server του Microsoft Azure DevOps, όπου ένα εργαλείο επέστρεφε περιγραφές pull request χωρίς προστασία έναντι prompt injection.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/microsoft-azure-devops-mcp-flaw-lets.html"
+      }
+    ]
+  },
+  {
+    "title": "Ελάττωμα στο AWS Kiro επέτρεπε σε δηλητηριασμένη ιστοσελίδα να αλλάξει τη διαμόρφωσή του και να εκτελέσει κώδικα",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Κρυφό κείμενο σε μια ιστοσελίδα αρκούσε ώστε το Kiro, το agentic coding IDE της AWS, να ξαναγράψει το δικό του αρχείο διαμόρφωσης και να εκτελέσει κώδικα του επιτιθέμενου στον υπολογιστή ενός προγραμματιστή, χωρίς κανένα βήμα έγκρισης να μπορεί να το αποτρέψει. Οι Intezer και Kodem Security έδειξαν ότι ένα απλό αίτημα σύνοψης σελίδας μπορούσε να καταλήξει σε απομακρυσμένη εκτέλεση κώδικα. Η AWS διόρθωσε το πρόβλημα.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html"
+      }
+    ]
+  },
+  {
+    "title": "Η Google κυκλοφορεί το Gemini 3.5 Flash Cyber για εντοπισμό και διόρθωση ευπαθειών, μαζί με τα Gemini 3.6 Flash και 3.5 Flash-Lite",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Το DeepMind της Google ανακοίνωσε το Gemini 3.5 Flash Cyber, εξειδικευμένο μοντέλο για γρήγορο εντοπισμό, επαλήθευση και διόρθωση ευπαθειών λογισμικού, διαθέσιμο αρχικά μόνο σε κυβερνήσεις και έμπιστους συνεργάτες μέσω του CodeMender. Παράλληλα κυκλοφόρησαν τα Gemini 3.6 Flash και 3.5 Flash-Lite, ενώ το αναμενόμενο Gemini 3.5 Pro παραμένει σε δοκιμές.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"
+      }
+    ]
+  },
+  {
+    "title": "Ανοιχτού κώδικα AI agents σε Android μπορούν να παραβιαστούν μέσω αόρατου κειμένου στην οθόνη",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Ερευνητές έδειξαν ότι μια εφαρμογή Android που μπορεί να ζωγραφίζει πάνω από άλλα παράθυρα και να γράφει σε κοινόχρηστο αποθηκευτικό χώρο μπορεί να περάσει κρυφές εντολές, αόρατες στο ανθρώπινο μάτι, σε AI agent που ελέγχει το τηλέφωνο, και στη συνέχεια να εκτελέσει εντολές στον υπολογιστή που καθοδηγεί τον agent. Η αλυσίδα επίθεσης, μαζί με έξι ακόμη τεχνικές, δοκιμάστηκε επιτυχώς σε πέντε open-source πλαίσια mobile agents όπως τα AppAgent και AppAgentX.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html"
+      }
+    ]
+  },
+  {
+    "title": "Νέο ransomware ENCFORGE στοχεύει αρχεία μοντέλων AI μέσω ευπάθειας RCE στο Langflow",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Ερευνητές της Sysdig συνέδεσαν μια δεύτερη επίθεση στον ίδιο Langflow server με τον φορέα JADEPUFFER, τον ίδιο agentic επιτιθέμενο που είχαν καταγράψει νωρίτερα τον μήνα. Ο ίδιος φορέας χρησιμοποίησε τώρα το ENCFORGE, νέο compiled ransomware σε Go, σχεδιασμένο να κρυπτογραφεί βάρη μοντέλων, vector indexes, datasets εκπαίδευσης και άλλα αρχεία υποδομής AI στο σύστημα αρχείων του host.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html"
+      }
+    ]
+  },
+  {
+    "title": "Ενεργή εκμετάλλευση κρίσιμου ελαττώματος στο ServiceNow AI Platform για μη πιστοποιημένη εκτέλεση κώδικα",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Επιτιθέμενοι εκμεταλλεύονται πλέον ενεργά ένα πρόσφατα δημοσιοποιημένο κρίσιμο ελάττωμα στο ServiceNow AI Platform, σύμφωνα με την εταιρεία threat intelligence Defused Cyber. Πρόκειται για το CVE-2026-6875 (βαθμολογία CVSS 9.5), ευπάθεια διαφυγής από sandbox που επιτρέπει σε μη πιστοποιημένο χρήστη να εκτελέσει αυθαίρετο κώδικα. Οι διορθώσεις είχαν ήδη κυκλοφορήσει πριν την ενεργή εκμετάλλευση.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html"
+      }
+    ]
+  },
+  {
+    "title": "Ρώσος χάκερ μετέτρεψε jailbreaks σε frontier μοντέλα AI σε επιθετική πλατφόρμα επιθέσεων",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Ένας ρωσόφωνος επιτιθέμενος με το ψευδώνυμο «Trim» «αποσυναρμολόγησε» δημόσια διαθέσιμα frontier μοντέλα AI και τα ενσωμάτωσε με εργαλεία επιθετικής ασφάλειας, δημιουργώντας πλατφόρμα επίθεσης βασισμένη σε jailbroken AI.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/hacker-ai-jailbreaks-offensive-attack-platform"
+      }
+    ]
+  },
+  {
+    "title": "Έρευνα: Το AI αναπτύσσει δικές του προκαταλήψεις στις προσλήψεις, πέρα από όσες κληρονομεί από την εκπαίδευσή του",
+    "date": "2026-07-20",
+    "topic": "AI Act",
+    "summary": "Ερευνητές του Princeton και του University of Chicago διαπίστωσαν ότι τα LLMs όχι μόνο αναπαράγουν ανθρώπινες προκαταλήψεις από τα δεδομένα εκπαίδευσής τους, αλλά μπορούν να αναπτύξουν και δικές τους προκαταλήψεις «από εμπειρία», κρίνοντας υποψηφίους εργασίας με μεγαλύτερη μεροληψία απ' ό,τι οι άνθρωποι. Καθώς οι εταιρείες AI χτίζουν agentic μοντέλα που θυμούνται λεπτομέρειες για τους χρήστες, αυτό μπορεί να τροφοδοτήσει περαιτέρω τέτοιες προκαταλήψεις -ζήτημα άμεσης σημασίας για συστήματα πρόσληψης, που κατατάσσονται ως υψηλού κινδύνου υπό τον AI Act.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/"
+      }
+    ]
+  },
   {
     "title": "Η έγκριση του διακανονισμού $1,5 δισ. της Anthropic για πνευματικά δικαιώματα έγινε οριστική",
     "date": "2026-07-20",
@@ -176,6 +280,14 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
       }
     ]
   },
@@ -212,6 +324,22 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
       }
     ]
   },
@@ -592,102 +720,6 @@ const ITEMS = [
       {
         "name": "The Verge",
         "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
-      }
-    ]
-  },
-  {
-    "title": "Το νέο μοντέλο GPT-5.6 Sol της OpenAI διαγράφει αρχεία από μόνο του, προειδοποιούν χρήστες",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "Πολλαπλές αναφορές σε social media υποστηρίζουν ότι το GPT-5.6 Sol διέγραψε αρχεία και δεδομένα χρηστών χωρίς προειδοποίηση κατά τη χρήση σε agentic/coding ροές εργασίας. Η OpenAI είχε ουσιαστικά αναγνωρίσει το πρόβλημα ήδη από τον Ιούνιο, χωρίς ωστόσο να το έχει επιλύσει πλήρως, αναδεικνύοντας τους κινδύνους αυτόνομης δράσης agentic μοντέλων σε πραγματικά συστήματα αρχείων.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/"
-      }
-    ]
-  },
-  {
-    "title": "Ο CEO της DeepMind ζητά ανεξάρτητο οργανισμό προτύπων για τη ρύθμιση των frontier AI μοντέλων",
-    "date": "2026-07-14",
-    "topic": "Standards",
-    "summary": "Ο Demis Hassabis, CEO της Google DeepMind, πρότεινε τη δημιουργία ανεξάρτητου «οργανισμού προτύπων» με πρότυπο τη FINRA, ο οποίος θα δοκιμάζει frontier AI μοντέλα και θα αναπτύσσει βέλτιστες πρακτικές πριν την κυκλοφορία τους -μια πρόταση που ενισχύει τη συζήτηση για θεσμοθετημένη, ανεξάρτητη εποπτεία ασφάλειας AI πέρα από τις ίδιες τις εταιρείες.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"
-      }
-    ]
-  },
-  {
-    "title": "MemGhost: Ένα email αρκεί για να φυτέψει ψεύτικες μόνιμες μνήμες σε AI agents",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Ένα μόνο email μπορεί να παγιδεύσει έναν AI agent με μνήμη, αναγκάζοντάς τον να αποθηκεύσει ψευδή «γεγονότα» για τον χρήστη, να αποκρύψει την αλλαγή και να στρέψει αθόρυβα τις απαντήσεις του σε επόμενες συνεδρίες — ο χρήστης δεν ανακαλύπτει ποτέ ότι ο βοηθός του έχει παραβιαστεί.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html"
-      }
-    ]
-  },
-  {
-    "title": "ΕΕ και Ηνωμένο Βασίλειο επέβαλαν για πρώτη φορά κοινές κυβερνοκυρώσεις σε Ρώσους χάκερ GRU",
-    "date": "2026-07-13",
-    "topic": "Incidents",
-    "summary": "Σε ιστορικό πρώτο, η ΕΕ και το ΗΒ επέβαλαν από κοινού κυρώσεις σε Ρώσους συνδεδεμένους με την GRU και σε οντότητες παραπληροφόρησης για κυβερνοεπιθέσεις και επιχειρήσεις επιρροής κατά ευρωπαϊκών δημοκρατιών.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/endpoint-security/weak-security-fuel-russian-cyberattacks"
-      }
-    ]
-  },
-  {
-    "title": "Εισβολέας χρησιμοποίησε AI-generated PowerShell script για χαρτογράφηση Active Directory",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Ερευνητές εντόπισαν εισβολή κατά την οποία κακόβουλος παράγοντας ανέπτυξε «vibe-coded» PowerShell script για καταγραφή του Active Directory — χαρτογράφηση χρηστών, υπολογιστών και τομέων, εξαγωγή αρχείων και δημιουργία αναφοράς AD_Report.html — σε ένδειξη ότι τα AI-generated εργαλεία επίθεσης εισέρχονται σε πραγματικές εισβολές.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html"
-      }
-    ]
-  },
-  {
-    "title": "Meta κατέθεσε πατέντα για AI που ακούει καθ' όλη τη διάρκεια της ημέρας και καταγράφει συναισθήματα",
-    "date": "2026-07-13",
-    "topic": "Incidents",
-    "summary": "Η Meta κατέθεσε αίτηση πατέντας για σύστημα AI που ακούει τη φωνή του χρήστη καθ' όλη τη διάρκεια της ημέρας, εξάγει συμπεράσματα για τη συναισθηματική κατάσταση από ηχητικά μοτίβα και τηρεί χρονολογημένο αρχείο κάθε ανάγνωσης — χρόνο, τοποθεσία και δραστηριότητα — εγείροντας σημαντικές ανησυχίες για το GDPR και το απόρρητο.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/meta-files-patent-for-ai-that-can.html"
-      }
-    ]
-  },
-  {
-    "title": "Οι «Yellow Teams» διαμορφώνουν το μέλλον της ασφάλειας AI",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Σύμφωνα με τη Dark Reading, μηχανικοί σε ορισμένες εταιρείες αναπτύσσουν πλέον εργαλεία τόσο άμυνας όσο και επίθεσης για να δοκιμάσουν τις δυνατότητες του AI στην κυβερνοασφάλεια -καθώς και την απειλή που αντιπροσωπεύει- μια νέα λειτουργία που τοποθετείται ανάμεσα στις παραδοσιακές red και blue teams.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security"
-      }
-    ]
-  },
-  {
-    "title": "Τώρα και οι αμυνόμενοι υιοθετούν το prompt injection",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Η Ars Technica αναφέρει ότι αμυνόμενοι ασφαλείας μετατρέπουν το prompt injection σε εργαλείο άμυνας, χρησιμοποιώντας τεχνική με την ονομασία «context bombing» για να εξαπατήσουν αυτόνομα AI agents επίθεσης ώστε να τερματίζονται μόνα τους πριν προλάβουν να προκαλέσουν ζημιά.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/"
       }
     ]
   }

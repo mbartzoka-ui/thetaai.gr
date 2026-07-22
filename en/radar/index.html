@@ -139,7 +139,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 21 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 22 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -165,8 +165,112 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-21";
+const GENERATED = "2026-07-22";
 const ITEMS = [
+  {
+    "title": "Microsoft Azure DevOps MCP Flaw Lets Hidden PR Comments Hijack AI Review Agents",
+    "date": "2026-07-22",
+    "topic": "AI Security",
+    "summary": "A single invisible comment in an Azure DevOps pull request can turn a reviewer's own AI coding agent against them, directing it into repositories the attacker has no access to and leaking whatever it finds. The flaw sits in Microsoft's official Azure DevOps MCP server, where a tool returned pull request descriptions without a prompt-injection guardrail.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/microsoft-azure-devops-mcp-flaw-lets.html"
+      }
+    ]
+  },
+  {
+    "title": "AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Hidden text on a web page was enough to make Kiro, AWS's agentic coding IDE, rewrite its own configuration file and run an attacker's code on a developer's machine, with no approval step able to stop it. Intezer, working with Kodem Security, found that a request as ordinary as asking Kiro to summarize a page could end in remote code execution. AWS has patched the issue.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html"
+      }
+    ]
+  },
+  {
+    "title": "Google Launches Gemini 3.5 Flash Cyber to Find and Fix Vulnerabilities, Alongside Gemini 3.6 Flash",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Google DeepMind announced Gemini 3.5 Flash Cyber, a specialized model built to discover, validate and patch software vulnerabilities quickly, available for now only to governments and trusted partners through CodeMender. Google also released Gemini 3.6 Flash and 3.5 Flash-Lite, while the anticipated Gemini 3.5 Pro remains in testing.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"
+      }
+    ]
+  },
+  {
+    "title": "Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Researchers demonstrated that an Android app able to draw over other windows and write to shared storage can slip hidden instructions, invisible to any human, to the AI agent controlling the phone, and from there run commands on the PC driving that agent. The attack chain, along with six other techniques, was proven against five open-source mobile agent frameworks including AppAgent and AppAgentX.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html"
+      }
+    ]
+  },
+  {
+    "title": "New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Researchers at Sysdig linked a second attack on the same Langflow server to JADEPUFFER, the AI-agent-driven operator it first documented earlier this month. The same operator has now deployed ENCFORGE, a new compiled Go ransomware built to encrypt model weights, vector indexes, training datasets and other AI infrastructure files across the host filesystem.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html"
+      }
+    ]
+  },
+  {
+    "title": "Critical ServiceNow AI Platform Flaw Exploited for Unauthenticated Code Execution",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "Threat actors are actively exploiting a recently disclosed critical flaw in ServiceNow AI Platform, according to threat intelligence firm Defused Cyber. The bug, CVE-2026-6875 (CVSS 9.5), is a sandbox escape vulnerability that lets an unauthenticated user run arbitrary code. Patches for the flaw had already been released before active exploitation began.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html"
+      }
+    ]
+  },
+  {
+    "title": "Hacker Turns AI Jailbreaks Into Offensive Attack Platform",
+    "date": "2026-07-21",
+    "topic": "AI Security",
+    "summary": "A Russian-speaking actor known as \"Trim\" dismantled publicly available frontier AI models and integrated them with offensive security tools, building an attack platform powered by jailbroken AI.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/hacker-ai-jailbreaks-offensive-attack-platform"
+      }
+    ]
+  },
+  {
+    "title": "Study: AI Can Develop Its Own Hiring Biases, Beyond What It Inherits From Training",
+    "date": "2026-07-20",
+    "topic": "AI Act",
+    "summary": "Researchers at Princeton and the University of Chicago found that LLMs don't just reproduce human biases from training data, they can also develop their own biases \"from experience,\" judging job applicants more harshly than humans do. As AI companies build agentic models that remember details about users, this could feed further bias, an issue directly relevant to hiring systems, which are classified as high-risk under the EU AI Act.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/"
+      }
+    ]
+  },
   {
     "title": "Anthropic's $1.5B AI Copyright Settlement Gets Final Court Approval",
     "date": "2026-07-20",
@@ -176,6 +280,14 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
       }
     ]
   },
@@ -212,6 +324,22 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
       }
     ]
   },
@@ -592,102 +720,6 @@ const ITEMS = [
       {
         "name": "The Verge",
         "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI's New Flagship Model Deletes Files on Its Own, People Keep Warning",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "A number of social media posts claim that GPT-5.6 Sol deleted files and user data without warning during agentic/coding workflows. OpenAI had essentially disclosed the problem back in June without having fully resolved it, underscoring the risks of autonomous action by agentic models operating on real file systems.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/"
-      }
-    ]
-  },
-  {
-    "title": "DeepMind CEO Calls for an Independent Standards Body to Regulate Frontier AI",
-    "date": "2026-07-14",
-    "topic": "Standards",
-    "summary": "Google DeepMind CEO Demis Hassabis proposed creating an independent AI 'standards body' modeled after FINRA, to test frontier models and develop best practices ahead of their release — a proposal that adds momentum to the debate over institutionalized, independent AI safety oversight beyond the labs themselves.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"
-      }
-    ]
-  },
-  {
-    "title": "New MemGhost Attack Plants Persistent False Memories in AI Agents Through One Email",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "A single email can trick an AI agent with persistent memory into saving a false 'fact' about the user, hiding the change, and quietly steering its answers in later sessions — the user never learns their assistant was tampered with.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html"
-      }
-    ]
-  },
-  {
-    "title": "UK and EU Impose Historic First Joint Cyber Sanctions on Russian GRU",
-    "date": "2026-07-13",
-    "topic": "Incidents",
-    "summary": "In a historic first, the United Kingdom and the European Union jointly sanctioned Russian GRU-linked individuals and disinformation entities for cyberattacks and influence operations targeting European democracies.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/endpoint-security/weak-security-fuel-russian-cyberattacks"
-      }
-    ]
-  },
-  {
-    "title": "Attacker Uses Suspected AI-Generated PowerShell Script to Map Active Directory",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Researchers flagged an intrusion where a threat actor deployed a 'vibe-coded' PowerShell script to enumerate Active Directory — mapping users, computers and domains, exporting files, and generating an AD_Report.html — a sign that AI-generated offensive tooling is entering real-world intrusions.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html"
-      }
-    ]
-  },
-  {
-    "title": "Meta Files Patent for AI That Can Listen All Day and Track How You're Feeling",
-    "date": "2026-07-13",
-    "topic": "Incidents",
-    "summary": "Meta filed a patent for an AI system that listens to voice throughout the day, infers the user's emotional state from speech patterns, and keeps a timestamped log of readings — including time, location, and activity — raising significant GDPR and privacy concerns.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/meta-files-patent-for-ai-that-can.html"
-      }
-    ]
-  },
-  {
-    "title": "'Yellow Teams' Are Defining the Future of AI Security",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "According to Dark Reading, engineers at some companies are now building both defensive and offensive tools to test AI's capabilities in cybersecurity — as well as the threat it represents — a new function positioned between traditional red and blue teams.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security"
-      }
-    ]
-  },
-  {
-    "title": "Now Defenders Are Embracing Prompt Injection Too",
-    "date": "2026-07-13",
-    "topic": "AI Security",
-    "summary": "Ars Technica reports that security defenders are turning prompt injection into a defensive tool, using a technique called 'context bombing' to trick autonomous AI attack agents into terminating themselves before they can cause damage.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/"
       }
     ]
   }
