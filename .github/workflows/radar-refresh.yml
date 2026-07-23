@@ -50,7 +50,7 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: claude -p "$(cat .github/radar-prompt.md)" --model claude-sonnet-5 --dangerously-skip-permissions
+        run: claude -p "$(cat .github/radar-prompt.md)" --model claude-haiku-4-5-20251001 --dangerously-skip-permissions
 
       - name: Sanity check radar pages
         if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
