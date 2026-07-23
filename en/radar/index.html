@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 22 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 23 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,13 +186,25 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-22";
+const GENERATED = "2026-07-23";
 const ITEMS = [
   {
-    "title": "Microsoft Azure DevOps MCP Flaw Lets Hidden PR Comments Hijack AI Review Agents",
+    "title": "Το Download: Νέο διαστημικό τηλεσκόπιο της NASA και ο αυτόνομος χάκερ της OpenAI",
+    "date": "2026-07-23",
+    "topic": "General",
+    "summary": "Το περιοδικό ηλεκτρονικών μηνυμάτων The Download του MIT Technology Review παρέχει ανάλυση του περιστατικού παραβίασης της Hugging Face από αυτόνομο AI agent, μαζί με άλλα τρέχοντα ζητήματα τεχνολογίας που σχετίζονται με την ασφάλεια του AI και το μέλλον των αυτόνομων συστημάτων.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/22/1140717/the-download-nasa-space-telescope-openai-hugging-face-hack"
+      }
+    ]
+  },
+  {
+    "title": "Ελάττωμα στον MCP server του Azure DevOps επιτρέπει απαγωγή AI review agents μέσω κρυφών σχολίων σε PR",
     "date": "2026-07-22",
     "topic": "AI Security",
-    "summary": "A single invisible comment in an Azure DevOps pull request can turn a reviewer's own AI coding agent against them, directing it into repositories the attacker has no access to and leaking whatever it finds. The flaw sits in Microsoft's official Azure DevOps MCP server, where a tool returned pull request descriptions without a prompt-injection guardrail.",
+    "summary": "Ένα αόρατο σχόλιο σε pull request μπορεί να στρέψει τον δικό του AI coding agent ενός reviewer εναντίον του, οδηγώντας τον σε repositories που ο επιτιθέμενος δεν έχει δικαίωμα πρόσβασης και διαρρέοντας ό,τι βρει. Το πρόβλημα εντοπίζεται στον επίσημο MCP server του Microsoft Azure DevOps, όπου ένα εργαλείο επέστρεφε περιγραφές pull request χωρίς προστασία έναντι prompt injection.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -201,10 +213,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code",
+    "title": "Ελάττωμα στο AWS Kiro επέτρεπε σε δηλητηριασμένη ιστοσελίδα να αλλάξει τη διαμόρφωσή του και να εκτελέσει κώδικα",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "Hidden text on a web page was enough to make Kiro, AWS's agentic coding IDE, rewrite its own configuration file and run an attacker's code on a developer's machine, with no approval step able to stop it. Intezer, working with Kodem Security, found that a request as ordinary as asking Kiro to summarize a page could end in remote code execution. AWS has patched the issue.",
+    "summary": "Κρυφό κείμενο σε μια ιστοσελίδα αρκούσε ώστε το Kiro, το agentic coding IDE της AWS, να ξαναγράψει το δικό του αρχείο διαμόρφωσης και να εκτελέσει κώδικα του επιτιθέμενου στον υπολογιστή ενός προγραμματιστή, χωρίς κανένα βήμα έγκρισης να μπορεί να το αποτρέψει. Οι Intezer και Kodem Security έδειξαν ότι ένα απλό αίτημα σύνοψης σελίδας μπορούσε να καταλήξει σε απομακρυσμένη εκτέλεση κώδικα. Η AWS διόρθωσε το πρόβλημα.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -213,10 +225,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Google Launches Gemini 3.5 Flash Cyber to Find and Fix Vulnerabilities, Alongside Gemini 3.6 Flash",
+    "title": "Η Google κυκλοφορεί το Gemini 3.5 Flash Cyber για εντοπισμό και διόρθωση ευπαθειών, μαζί με τα Gemini 3.6 Flash και 3.5 Flash-Lite",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "Google DeepMind announced Gemini 3.5 Flash Cyber, a specialized model built to discover, validate and patch software vulnerabilities quickly, available for now only to governments and trusted partners through CodeMender. Google also released Gemini 3.6 Flash and 3.5 Flash-Lite, while the anticipated Gemini 3.5 Pro remains in testing.",
+    "summary": "Το DeepMind της Google ανακοίνωσε το Gemini 3.5 Flash Cyber, εξειδικευμένο μοντέλο για γρήγορο εντοπισμό, επαλήθευση και διόρθωση ευπαθειών λογισμικού, διαθέσιμο αρχικά μόνο σε κυβερνήσεις και έμπιστους συνεργάτες μέσω του CodeMender. Παράλληλα κυκλοφόρησαν τα Gemini 3.6 Flash και 3.5 Flash-Lite, ενώ το αναμενόμενο Gemini 3.5 Pro παραμένει σε δοκιμές.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -233,10 +245,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Open-Source Android AI Agents Could Let Invisible Screen Text Run Code on Host PCs",
+    "title": "Ανοιχτού κώδικα AI agents σε Android μπορούν να παραβιαστούν μέσω αόρατου κειμένου στην οθόνη",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "Researchers demonstrated that an Android app able to draw over other windows and write to shared storage can slip hidden instructions, invisible to any human, to the AI agent controlling the phone, and from there run commands on the PC driving that agent. The attack chain, along with six other techniques, was proven against five open-source mobile agent frameworks including AppAgent and AppAgentX.",
+    "summary": "Ερευνητές έδειξαν ότι μια εφαρμογή Android που μπορεί να ζωγραφίζει πάνω από άλλα παράθυρα και να γράφει σε κοινόχρηστο αποθηκευτικό χώρο μπορεί να περάσει κρυφές εντολές, αόρατες στο ανθρώπινο μάτι, σε AI agent που ελέγχει το τηλέφωνο, και στη συνέχεια να εκτελέσει εντολές στον υπολογιστή που καθοδηγεί τον agent. Η αλυσίδα επίθεσης, μαζί με έξι ακόμη τεχνικές, δοκιμάστηκε επιτυχώς σε πέντε open-source πλαίσια mobile agents όπως τα AppAgent και AppAgentX.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -245,10 +257,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack",
+    "title": "Νέο ransomware ENCFORGE στοχεύει αρχεία μοντέλων AI μέσω ευπάθειας RCE στο Langflow",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "Researchers at Sysdig linked a second attack on the same Langflow server to JADEPUFFER, the AI-agent-driven operator it first documented earlier this month. The same operator has now deployed ENCFORGE, a new compiled Go ransomware built to encrypt model weights, vector indexes, training datasets and other AI infrastructure files across the host filesystem.",
+    "summary": "Ερευνητές της Sysdig συνέδεσαν μια δεύτερη επίθεση στον ίδιο Langflow server με τον φορέα JADEPUFFER, τον ίδιο agentic επιτιθέμενο που είχαν καταγράψει νωρίτερα τον μήνα. Ο ίδιος φορέας χρησιμοποίησε τώρα το ENCFORGE, νέο compiled ransomware σε Go, σχεδιασμένο να κρυπτογραφεί βάρη μοντέλων, vector indexes, datasets εκπαίδευσης και άλλα αρχεία υποδομής AI στο σύστημα αρχείων του host.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -257,10 +269,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Critical ServiceNow AI Platform Flaw Exploited for Unauthenticated Code Execution",
+    "title": "Ενεργή εκμετάλλευση κρίσιμου ελαττώματος στο ServiceNow AI Platform για μη πιστοποιημένη εκτέλεση κώδικα",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "Threat actors are actively exploiting a recently disclosed critical flaw in ServiceNow AI Platform, according to threat intelligence firm Defused Cyber. The bug, CVE-2026-6875 (CVSS 9.5), is a sandbox escape vulnerability that lets an unauthenticated user run arbitrary code. Patches for the flaw had already been released before active exploitation began.",
+    "summary": "Επιτιθέμενοι εκμεταλλεύονται πλέον ενεργά ένα πρόσφατα δημοσιοποιημένο κρίσιμο ελάττωμα στο ServiceNow AI Platform, σύμφωνα με την εταιρεία threat intelligence Defused Cyber. Πρόκειται για το CVE-2026-6875 (βαθμολογία CVSS 9.5), ευπάθεια διαφυγής από sandbox που επιτρέπει σε μη πιστοποιημένο χρήστη να εκτελέσει αυθαίρετο κώδικα. Οι διορθώσεις είχαν ήδη κυκλοφορήσει πριν την ενεργή εκμετάλλευση.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -269,10 +281,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Hacker Turns AI Jailbreaks Into Offensive Attack Platform",
+    "title": "Ρώσος χάκερ μετέτρεψε jailbreaks σε frontier μοντέλα AI σε επιθετική πλατφόρμα επιθέσεων",
     "date": "2026-07-21",
     "topic": "AI Security",
-    "summary": "A Russian-speaking actor known as \"Trim\" dismantled publicly available frontier AI models and integrated them with offensive security tools, building an attack platform powered by jailbroken AI.",
+    "summary": "Ένας ρωσόφωνος επιτιθέμενος με το ψευδώνυμο «Trim» «αποσυναρμολόγησε» δημόσια διαθέσιμα frontier μοντέλα AI και τα ενσωμάτωσε με εργαλεία επιθετικής ασφάλειας, δημιουργώντας πλατφόρμα επίθεσης βασισμένη σε jailbroken AI.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -281,66 +293,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Study: AI Can Develop Its Own Hiring Biases, Beyond What It Inherits From Training",
-    "date": "2026-07-20",
-    "topic": "AI Act",
-    "summary": "Researchers at Princeton and the University of Chicago found that LLMs don't just reproduce human biases from training data, they can also develop their own biases \"from experience,\" judging job applicants more harshly than humans do. As AI companies build agentic models that remember details about users, this could feed further bias, an issue directly relevant to hiring systems, which are classified as high-risk under the EU AI Act.",
-    "sources": [
-      {
-        "name": "MIT Technology Review",
-        "url": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic's $1.5B AI Copyright Settlement Gets Final Court Approval",
-    "date": "2026-07-20",
-    "topic": "Incidents",
-    "summary": "A federal judge granted final approval to Anthropic's $1.5 billion settlement with a class of authors and publishers over the use of pirated books to train Claude, one of the largest AI copyright settlements to date. The approval resolves this particular case but leaves the broader legal question of whether training AI models on copyrighted works counts as fair use unresolved for other ongoing lawsuits.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
-      },
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
-      }
-    ]
-  },
-  {
-    "title": "CISOs Feel the Heat Over AI Risk",
+    "title": "Παραβίαση της Hugging Face από αυτόνομο AI agent",
     "date": "2026-07-20",
     "topic": "AI Security",
-    "summary": "A new survey finds that job pressure on CISOs has intensified as companies rush to adopt AI, with 26% of top security executives saying they are considering leaving their position amid the mounting AI-related risk they are expected to manage.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/cisos-feel-heat-ai-risk"
-      }
-    ]
-  },
-  {
-    "title": "Sony Sues AI Music Generator Udio Over 30,000 Songs",
-    "date": "2026-07-20",
-    "topic": "Incidents",
-    "summary": "Sony Music Entertainment filed a new lawsuit against AI music generator Udio in a New York court, accusing it of infringing copyright on more than 30,000 songs -- from Elvis Presley's \"Hound Dog\" to Beyoncé's \"Say My Name\" and Harry Styles' \"As It Was\" -- which Sony says represent only a fraction of the works Udio allegedly used without permission. The suit follows a 2024 case Sony brought jointly with Universal Music Group and Warner Records against Udio and rival Suno, and comes after Sony gained access to Udio's training data through legal discovery.",
-    "sources": [
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright"
-      }
-    ]
-  },
-  {
-    "title": "Hugging Face Breached by an Autonomous AI Agent",
-    "date": "2026-07-20",
-    "topic": "AI Security",
-    "summary": "Hugging Face disclosed that an autonomous AI agent breached its production infrastructure, exploiting code execution flaws in a dataset loader and a template-injection bug in dataset configuration to gain a foothold, then escalating to steal cloud credentials and move laterally across internal clusters over a weekend. The company found no evidence that public models, datasets or Spaces were tampered with, but had to use a Chinese open-weight model (Z.ai's GLM 5.2) for forensic analysis because Western frontier models' safety guardrails blocked requests containing real attack payloads. The incident is a rare confirmed case of an autonomous agent executing a multi-stage intrusion largely on its own, and exposes a gap where AI safety guardrails can hinder legitimate incident response.",
+    "summary": "Η Hugging Face αποκάλυψε ότι αυτόνομος AI agent παραβίασε την υποδομή παραγωγής της, εκμεταλλευόμενος ελαττώματα εκτέλεσης κώδικα σε loader dataset και ένα template injection σε ρύθμιση dataset για αρχική πρόσβαση, κλιμακώνοντας στη συνέχεια σε κλοπή cloud credentials και πλευρική κίνηση σε εσωτερικά clusters μέσα σε ένα σαββατοκύριακο. Η εταιρεία δεν βρήκε ενδείξεις παραβίασης δημόσιων μοντέλων, datasets ή Spaces, αλλά αναγκάστηκε να χρησιμοποιήσει ένα κινεζικό open-weight μοντέλο (GLM 5.2 της Z.ai) για forensic ανάλυση, καθώς τα δυτικά frontier μοντέλα μπλόκαραν αιτήματα που περιείχαν πραγματικό υλικό επίθεσης λόγω των μηχανισμών ασφαλείας τους. Το περιστατικό αποτελεί σπάνια επιβεβαιωμένη περίπτωση όπου αυτόνομος agent εκτέλεσε πολυσταδιακή εισβολή σε μεγάλο βαθμό μόνος του, αναδεικνύοντας κενό όπου τα guardrails ασφαλείας AI μπορεί να εμποδίσουν τη νόμιμη απόκριση σε περιστατικά.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -361,14 +317,74 @@ const ITEMS = [
       {
         "name": "OpenAI",
         "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack"
       }
     ]
   },
   {
-    "title": "Google bets 'agentic defense' strategy can outpace AI attackers",
+    "title": "Έρευνα: Το AI αναπτύσσει δικές του προκαταλήψεις στις προσλήψεις, πέρα από όσες κληρονομεί από την εκπαίδευσή του",
+    "date": "2026-07-20",
+    "topic": "AI Act",
+    "summary": "Ερευνητές του Princeton και του University of Chicago διαπίστωσαν ότι τα LLMs όχι μόνο αναπαράγουν ανθρώπινες προκαταλήψεις από τα δεδομένα εκπαίδευσής τους, αλλά μπορούν να αναπτύξουν και δικές τους προκαταλήψεις «από εμπειρία», κρίνοντας υποψηφίους εργασίας με μεγαλύτερη μεροληψία απ' ό,τι οι άνθρωποι. Καθώς οι εταιρείες AI χτίζουν agentic μοντέλα που θυμούνται λεπτομέρειες για τους χρήστες, αυτό μπορεί να τροφοδοτήσει περαιτέρω τέτοιες προκαταλήψεις -ζήτημα άμεσης σημασίας για συστήματα πρόσληψης, που κατατάσσονται ως υψηλού κινδύνου υπό τον AI Act.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/"
+      }
+    ]
+  },
+  {
+    "title": "Η έγκριση του διακανονισμού $1,5 δισ. της Anthropic για πνευματικά δικαιώματα έγινε οριστική",
+    "date": "2026-07-20",
+    "topic": "Incidents",
+    "summary": "Ομοσπονδιακός δικαστής ενέκρινε οριστικά τον διακανονισμό $1,5 δισεκατομμυρίων της Anthropic με συγγραφείς και εκδότες για τη χρήση πειρατικών βιβλίων στην εκπαίδευση του Claude, έναν από τους μεγαλύτερους διακανονισμούς πνευματικών δικαιωμάτων AI μέχρι σήμερα. Η έγκριση κλείνει αυτή τη συγκεκριμένη υπόθεση, αλλά αφήνει ανοιχτό το ευρύτερο νομικό ερώτημα αν η εκπαίδευση μοντέλων AI σε προστατευόμενο υλικό συνιστά θεμιτή χρήση, καθώς εκκρεμούν κι άλλες σχετικές αγωγές.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
+      }
+    ]
+  },
+  {
+    "title": "Οι CISO νιώθουν την πίεση του ρίσκου AI",
+    "date": "2026-07-20",
+    "topic": "AI Security",
+    "summary": "Νέα έρευνα δείχνει ότι η πίεση στους CISO έχει αυξηθεί καθώς οι εταιρείες υιοθετούν βιαστικά το AI, με το 26% των κορυφαίων στελεχών ασφαλείας να δηλώνει ότι σκέφτεται να αποχωρήσει από τη θέση του λόγω του αυξανόμενου ρίσκου γύρω από το AI που καλείται να διαχειριστεί.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/cisos-feel-heat-ai-risk"
+      }
+    ]
+  },
+  {
+    "title": "Η Sony μηνύει τη γεννήτρια μουσικής AI Udio για 30.000 τραγούδια",
+    "date": "2026-07-20",
+    "topic": "Incidents",
+    "summary": "Η Sony Music κατέθεσε νέα αγωγή κατά της γεννήτριας μουσικής AI Udio σε δικαστήριο της Νέας Υόρκης, κατηγορώντας την για παραβίαση πνευματικών δικαιωμάτων σε πάνω από 30.000 τραγούδια -από το «Hound Dog» του Elvis Presley έως το «Say My Name» της Beyoncé και το «As It Was» του Harry Styles- τα οποία, σύμφωνα με τη Sony, αντιπροσωπεύουν μόνο ένα μικρό μέρος του υλικού που φέρεται να χρησιμοποίησε η Udio χωρίς άδεια. Η αγωγή έρχεται μετά από προηγούμενη υπόθεση του 2024 που είχε καταθέσει η Sony από κοινού με τις Universal Music Group και Warner Records κατά των Udio και Suno, και μετά την πρόσβαση της Sony στα δεδομένα εκπαίδευσης της Udio μέσω της νομικής διαδικασίας.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright"
+      }
+    ]
+  },
+  {
+    "title": "Η Google ποντάρει στην «Agentic Defense» στρατηγική ασφαλείας απέναντι σε επιθέσεις AI",
     "date": "2026-07-17",
     "topic": "AI Security",
-    "summary": "Google Cloud has folded key Wiz capabilities into a new agentic defense platform designed to automate threat detection and remediation against attacks on AI systems. The move reflects a broader shift among major cloud providers toward using AI agents to defend against adversaries who are themselves weaponizing AI.",
+    "summary": "Η Google Cloud ενσωμάτωσε βασικές δυνατότητες της Wiz σε μια νέα πλατφόρμα «agentic defense», με στόχο να αυτοματοποιήσει τον εντοπισμό απειλών και την αντιμετώπιση επιθέσεων εναντίον συστημάτων AI. Η κίνηση δείχνει πώς οι μεγάλοι πάροχοι cloud στρέφονται σε AI agents για άμυνα απέναντι σε άλλα AI agents που χρησιμοποιούνται επιθετικά.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -377,10 +393,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "San Francisco orders Apple, Google to remove AI 'nudify' apps from app stores",
+    "title": "Το Σαν Φρανσίσκο διατάζει Apple και Google να αφαιρέσουν εφαρμογές «nudify» από τα καταστήματά τους",
     "date": "2026-07-17",
     "topic": "Incidents",
-    "summary": "San Francisco's city attorney has demanded that Apple and Google stop distributing 'nudify' apps that use AI to generate non-consensual nude images, estimating the companies have made millions of dollars in related app fees. The case adds to a growing wave of legal and regulatory action against apps producing non-consensual AI-generated imagery.",
+    "summary": "Ο εισαγγελέας του Σαν Φρανσίσκο ζήτησε από την Apple και τη Google να σταματήσουν να διαθέτουν εφαρμογές «nudify» που χρησιμοποιούν AI για τη δημιουργία γυμνών εικόνων χωρίς συναίνεση, εκτιμώντας ότι οι δύο εταιρείες έχουν αποκομίσει εκατομμύρια δολάρια από τα σχετικά τέλη εφαρμογών. Η υπόθεση προστίθεται σε μια σειρά νομικών και ρυθμιστικών ενεργειών κατά εφαρμογών παραγωγής μη συναινετικού AI-generated περιεχομένου.",
     "sources": [
       {
         "name": "Ars Technica",
@@ -389,10 +405,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "New NadMesh Botnet Hunts Exposed AI Services for Cloud Keys and Kubernetes Tokens",
+    "title": "Το botnet NadMesh στοχεύει εκτεθειμένες υπηρεσίες AI για κλοπή cloud keys και Kubernetes tokens",
     "date": "2026-07-17",
     "topic": "AI Security",
-    "summary": "A Go-based botnet dubbed NadMesh has been scanning the internet since early July for exposed self-hosted AI tools, including ComfyUI, Ollama, n8n, Open WebUI, Langflow and Gradio, harvesting cloud credentials and Kubernetes tokens from instances teams deployed quickly but firewalled late. The operator's own dashboard reportedly already lists over 3,800 unique AWS keys, underlining how fast AI tool adoption is outpacing basic exposure hygiene.",
+    "summary": "Ένα botnet σε Go με την ονομασία NadMesh σαρώνει το διαδίκτυο από τις αρχές Ιουλίου αναζητώντας εκτεθειμένα, self-hosted εργαλεία AI όπως ComfyUI, Ollama, n8n, Open WebUI, Langflow και Gradio, συλλέγοντας cloud credentials και Kubernetes tokens από instances που στήθηκαν γρήγορα αλλά προστατεύτηκαν με καθυστέρηση. Το dashboard του ίδιου του επιτιθέμενου φέρεται να καταγράφει ήδη πάνω από 3.800 μοναδικά AWS keys, αναδεικνύοντας πόσο γρήγορα η υιοθέτηση εργαλείων AI ξεπερνά τη βασική υγιεινή έκθεσης στο διαδίκτυο.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -401,10 +417,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "The Real AI Risk Is Blind Trust in Autonomous Agents",
+    "title": "Ο πραγματικός κίνδυνος του AI είναι η τυφλή εμπιστοσύνη σε αυτόνομα agents",
     "date": "2026-07-17",
     "topic": "AI Security",
-    "summary": "A Dark Reading analysis warns that the biggest AI security problem isn't a specific exploit but the practice of letting AI models both interpret instructions and execute actions unchecked, which removes the human oversight step that traditionally catches mistakes or malicious commands. As organizations hand more operational control to AI agents, the piece argues that removing this checkpoint is itself what creates exposure.",
+    "summary": "Ανάλυση του Dark Reading προειδοποιεί ότι το μεγαλύτερο πρόβλημα ασφαλείας στο AI δεν είναι ένα συγκεκριμένο exploit, αλλά η πρακτική να αφήνονται τα μοντέλα AI να ερμηνεύουν εντολές και να τις εκτελούν χωρίς έλεγχο, κάτι που καταργεί το στάδιο ανθρώπινης εποπτείας που παραδοσιακά εντοπίζει λάθη ή κακόβουλες εντολές. Καθώς οι οργανισμοί δίνουν όλο και περισσότερο επιχειρησιακό έλεγχο σε AI agents, το άρθρο υποστηρίζει ότι η κατάργηση αυτού του σημείου ελέγχου είναι η ίδια η πηγή έκθεσης σε κίνδυνο.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -413,10 +429,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "The 'Zoom Hack' That Says: Don't Record Me",
+    "title": "Το «hack» στο Zoom που λέει: μη με καταγράφεις",
     "date": "2026-07-17",
     "topic": "General",
-    "summary": "TechCrunch describes how some professionals are renaming themselves in Zoom calls to messages like 'I do not consent to transcribing or recording' to discourage AI note-taking bots from capturing what they say. The trend highlights growing unease over the default assumption that every meeting is now transcribed and summarized by AI, regardless of who actually reads the output.",
+    "summary": "Το TechCrunch περιγράφει πώς ορισμένα στελέχη μετονομάζουν τον εαυτό τους σε κλήσεις Zoom με μηνύματα όπως «δεν συναινώ σε απομαγνητοφώνηση ή καταγραφή», για να αποθαρρύνουν τα AI εργαλεία σημειώσεων από το να καταγράφουν όσα λένε. Η τάση αναδεικνύει την αυξανόμενη ανησυχία γύρω από τη σιωπηρή παραδοχή ότι κάθε συνάντηση πλέον απομαγνητοφωνείται και συνοψίζεται από AI, ανεξαρτήτως αν κάποιος διαβάζει πραγματικά το αποτέλεσμα.",
     "sources": [
       {
         "name": "TechCrunch",
@@ -425,10 +441,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "OpenAI outlines why teens deserve access to safe AI",
+    "title": "OpenAI: Γιατί οι έφηβοι αξίζουν πρόσβαση σε ασφαλές AI",
     "date": "2026-07-16",
     "topic": "General",
-    "summary": "OpenAI detailed new measures to make ChatGPT safer for teenagers, including age-appropriate protections, learning tools, parental controls, and partnerships with outside experts. The announcement comes amid growing pressure on AI companies to demonstrate responsible design for younger users.",
+    "summary": "Η OpenAI περιέγραψε νέα μέτρα για να γίνει το ChatGPT πιο ασφαλές για εφήβους, με προστασίες ανάλογες της ηλικίας, εργαλεία μάθησης, γονικούς ελέγχους και συνεργασίες με ειδικούς. Η ανακοίνωση εντάσσεται στην ευρύτερη πίεση που δέχονται οι εταιρείες AI να αποδείξουν υπεύθυνη σχεδίαση για ανήλικους χρήστες.",
     "sources": [
       {
         "name": "OpenAI",
@@ -437,10 +453,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "New 'Agent Data Injection' Attack Can Make AI Agents Misclick or Run Attacker Commands",
+    "title": "Νέα επίθεση «agent data injection» μπορεί να κάνει AI agents να κάνουν λάθος κλικ ή να εκτελούν εντολές επιτιθέμενου",
     "date": "2026-07-16",
     "topic": "AI Security",
-    "summary": "Researchers described 'agent data injection,' a technique that forges trusted data fields across six different AI models, redirecting web and coding agents into unwanted actions, such as misclicking 'Buy Now' or running an attacker's command, while bypassing existing prompt injection defenses without ever hijacking the agent's original task.",
+    "summary": "Ερευνητές περιέγραψαν την τεχνική «agent data injection», η οποία πλαστογραφεί έμπιστα πεδία δεδομένων σε έξι διαφορετικά AI μοντέλα, ανακατευθύνοντας web και coding agents να εκτελούν ανεπιθύμητες ενέργειες -όπως λάθος κλικ σε «Αγορά τώρα» ή εκτέλεση εντολής επιτιθέμενου- παρακάμπτοντας τις υπάρχουσες άμυνες prompt injection, χωρίς ποτέ να παραβιάζει το αρχικό task του agent.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -449,10 +465,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "1M+ Emails Use Hidden Text to Dupe AI Security Filters",
+    "title": "Πάνω από 1 εκατομμύριο emails χρησιμοποιούν κρυφό κείμενο για να ξεγελάσουν φίλτρα ασφαλείας AI",
     "date": "2026-07-16",
     "topic": "AI Security",
-    "summary": "Dark Reading reports that phishing emails are slipping past AI- and LLM-based security filters using a technique called 'text salting' — embedding hidden or altered text — with more than a million such emails already found sliding undetected into targets' inboxes.",
+    "summary": "Η Dark Reading αναφέρει ότι phishing emails «περνούν» φίλτρα ασφαλείας βασισμένα σε AI και LLM μέσω τεχνικής «text salting» -ενσωμάτωσης κρυφού ή παραποιημένου κειμένου- με πάνω από ένα εκατομμύριο τέτοια emails να έχουν ήδη εντοπιστεί να καταφέρνουν να περάσουν απαρατήρητα στα inbox στόχων.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -461,10 +477,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Survey: 54% of Enterprises Have Already Had an AI Agent Security Incident",
+    "title": "Έρευνα: Το 54% των επιχειρήσεων έχει ήδη βιώσει περιστατικό ασφαλείας με AI agent",
     "date": "2026-07-16",
     "topic": "AI Security",
-    "summary": "A VentureBeat survey of 107 enterprises finds that AI agents are being given real access to systems and data while the controls meant to contain them lag behind: more than half of organizations have already had a confirmed agent security incident or near-miss, only about a third give every agent its own scoped identity (most agents still share credentials), and just three in ten isolate their highest-risk agents.",
+    "summary": "Έρευνα της VentureBeat σε 107 επιχειρήσεις δείχνει ότι τα AI agents αποκτούν πραγματική πρόσβαση σε συστήματα και δεδομένα ενώ οι μηχανισμοί ελέγχου υστερούν: πάνω από τους μισούς οργανισμούς έχουν ήδη βιώσει επιβεβαιωμένο περιστατικό ασφαλείας ή «παρ' ολίγον» περιστατικό με AI agent, μόλις το ένα τρίτο δίνει σε κάθε agent τη δική του διακριτή ταυτότητα -τα υπόλοιπα agents μοιράζονται διαπιστευτήρια μεταξύ τους- και μόνο τρεις στους δέκα απομονώνουν τους πιο υψηλού ρίσκου agents τους.",
     "sources": [
       {
         "name": "VentureBeat",
@@ -473,10 +489,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Protecting Privacy in an AI Era",
+    "title": "Προστασία της ιδιωτικότητας στην εποχή του AI: γιατί ο έλεγχος δεδομένων από τον χρήστη δεν αρκεί",
     "date": "2026-07-16",
     "topic": "AI Act",
-    "summary": "Legal scholar Daniel Solove argues in the Wall Street Journal, as covered by Bruce Schneier, that giving individuals control over their personal data is no longer an effective way to regulate privacy in the AI era. Instead he calls for holding companies accountable, similar to food and drug regulation, through rigorous data minimization, fiduciary duties, liability for negligent technological design, liability for harmful algorithms, and multi-stakeholder review of new technologies.",
+    "summary": "Ο νομικός Daniel Solove υποστηρίζει στο Wall Street Journal, όπως αναφέρει ο Bruce Schneier, ότι η παραχώρηση ελέγχου των προσωπικών δεδομένων στους χρήστες δεν αποτελεί πλέον αποτελεσματικό τρόπο ρύθμισης της ιδιωτικότητας στην εποχή του AI. Αντ' αυτού προτείνει λογοδοσία των εταιρειών -ανάλογη με αυτή σε τρόφιμα και φάρμακα- μέσω αυστηρής ελαχιστοποίησης δεδομένων, υποχρεώσεων εμπιστοσύνης, ευθύνης για αμελή σχεδιασμό τεχνολογίας, ευθύνης για αλγορίθμους που προκαλούν βλάβη, και πολυμερούς επισκόπησης νέων τεχνολογιών.",
     "sources": [
       {
         "name": "Schneier on Security",
@@ -485,10 +501,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "EU Officially Orders Google to Open Android Search Data and AI to Rivals",
+    "title": "Η ΕΕ διατάσσει επίσημα τη Google να ανοίξει το Android σε δεδομένα αναζήτησης και AI ανταγωνιστών",
     "date": "2026-07-16",
     "topic": "AI Act",
-    "summary": "The European Commission announced new Digital Markets Act (DMA) measures forcing Google to support interoperability and competition on Android, sharing search data and opening AI access to rivals. Google objects, arguing the changes could endanger user privacy and security, while securing a grace period for compliance, unlike Apple, which must make Siri AI compliant before it can even launch.",
+    "summary": "Η Ευρωπαϊκή Επιτροπή ανακοίνωσε νέα μέτρα βάσει του Digital Markets Act (DMA) που υποχρεώνουν τη Google να στηρίξει τη διαλειτουργικότητα και τον ανταγωνισμό στο Android, μοιράζοντας δεδομένα αναζήτησης και ανοίγοντας πρόσβαση σε AI ανταγωνιστές. Η Google αντιτίθεται, υποστηρίζοντας ότι οι αλλαγές μπορεί να θέσουν σε κίνδυνο την ιδιωτικότητα και την ασφάλεια των χρηστών, ενώ παράλληλα εξασφάλισε περίοδο χάριτος για συμμόρφωση -σε αντίθεση με την Apple, που πρέπει να καταστήσει το Siri AI συμβατό πριν καν κυκλοφορήσει.",
     "sources": [
       {
         "name": "Ars Technica",
@@ -505,22 +521,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Agentic AI: Taming the Unpredictable",
-    "date": "2026-07-16",
-    "topic": "AI Security",
-    "summary": "Dark Reading argues that agentic AI is introducing enough new risk into organizations that security teams need to reframe how they ask questions about it, treating autonomous agents as a distinct risk category rather than an extension of existing AI or automation tooling.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-untamable-ask-the-right-security-questions"
-      }
-    ]
-  },
-  {
-    "title": "TuxBot v3 Evolution Shows Signs of LLM-Assisted IoT Botnet Development",
+    "title": "TuxBot v3: Νέο IoT botnet δείχνει ενδείξεις ανάπτυξης με βοήθεια LLM",
     "date": "2026-07-15",
     "topic": "AI Security",
-    "summary": "Cybersecurity researchers disclosed a previously unreported IoT botnet framework dubbed TuxBot v3 Evolution that shows signs of being developed with assistance from a large language model, albeit with mixed results. While the AI complied with the request to generate botnet code, it included a safety disclaimer that the developer failed to remove, leaving a visible trace of AI-assisted malware development.",
+    "summary": "Ερευνητές κυβερνοασφάλειας αποκάλυψαν το πλαίσιο botnet IoT TuxBot v3 Evolution, το οποίο φέρει ενδείξεις ότι αναπτύχθηκε με τη βοήθεια large language model, αν και με αμφίβολα αποτελέσματα. Παρότι το AI συμμορφώθηκε με το αίτημα δημιουργίας κώδικα botnet, συμπεριέλαβε disclaimer ασφαλείας το οποίο ο προγραμματιστής παρέλειψε να αφαιρέσει, αποκαλύπτοντας το ίχνος της χρήσης AI στην ανάπτυξη κακόβουλου λογισμικού.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -529,10 +533,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Claude 'PromptFiction' Flaw Automatically Sent Malicious Prompts to AI Agents",
+    "title": "Ελάττωμα «PromptFiction» στο Claude έστελνε αυτόματα κακόβουλα prompts σε AI agents",
     "date": "2026-07-15",
     "topic": "AI Security",
-    "summary": "The 'PromptFiction' vulnerability in Claude, now fixed, could — when combined with another exploit — have enabled an end-to-end attack on a targeted system by automatically sending malicious prompts to other AI agents.",
+    "summary": "Η ευπάθεια «PromptFiction» στο Claude, η οποία πλέον έχει διορθωθεί, μπορούσε -σε συνδυασμό με άλλο exploit- να επιτρέψει επίθεση από άκρη σε άκρη σε στοχευμένο σύστημα, στέλνοντας αυτόματα κακόβουλα prompts σε άλλους AI agents.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -541,10 +545,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Separate 2-Click Cursor Exploit Enables Full Dev Environment Takeover",
+    "title": "Ξεχωριστό exploit «2 κλικ» στο Cursor επιτρέπει πλήρη κατάληψη dev περιβάλλοντος",
     "date": "2026-07-15",
     "topic": "AI Security",
-    "summary": "Security researchers identified another flaw in Cursor — distinct from the git.exe issue — where simple, age-old bugs give bad actors access to developers' secrets and source-code-rich environments through just two clicks of interaction.",
+    "summary": "Ερευνητές ασφαλείας εντόπισαν ένα ακόμη ελάττωμα στο Cursor -ανεξάρτητο από το ζήτημα git.exe- όπου απλά, παλιάς κοπής bugs επιτρέπουν σε κακόβουλους παράγοντες να αποκτήσουν πρόσβαση σε secrets προγραμματιστών και σε περιβάλλοντα πλούσια σε πηγαίο κώδικα, μέσω αλληλεπίδρασης μόλις δύο κλικ.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -553,10 +557,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "OpenAI Introduces GPT-Red, an 'LLM Super-Hacker' to Toughen Up Its Models",
+    "title": "Η OpenAI παρουσιάζει το GPT-Red, έναν «LLM υπερ-χάκερ» για να κάνει τα μοντέλα της πιο ανθεκτικά",
     "date": "2026-07-15",
     "topic": "AI Security",
-    "summary": "OpenAI built GPT-Red, an automated red-teaming system that acts as a sparring partner for its other models, using self-play to strengthen their defenses against cyberattacks and prompt injection. The company says training its recent GPT-5.6 against GPT-Red made it its most robust release yet.",
+    "summary": "Η OpenAI ανέπτυξε το GPT-Red, ένα αυτοματοποιημένο σύστημα red-teaming που λειτουργεί ως «σπαρινγκ παρτενέρ» για τα άλλα μοντέλα της, ενισχύοντας την άμυνά τους απέναντι σε κυβερνοεπιθέσεις και prompt injection μέσω self-play. Η εταιρεία δηλώνει ότι η εκπαίδευση του πρόσφατου GPT-5.6 απέναντι στο GPT-Red το έκανε το πιο ανθεκτικό μοντέλο που έχει κυκλοφορήσει μέχρι σήμερα.",
     "sources": [
       {
         "name": "MIT Technology Review",
@@ -573,10 +577,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "xAI Sues Man for Allegedly Using Grok to Generate CSAM",
+    "title": "Η xAI μηνύει άνδρα που φέρεται να χρησιμοποίησε το Grok για δημιουργία υλικού σεξουαλικής κακοποίησης ανηλίκων",
     "date": "2026-07-15",
     "topic": "Incidents",
-    "summary": "Elon Musk's xAI filed a lawsuit against a South Carolina man, claiming he used the Grok chatbot to circumvent safeguards, alter nonconsensual images, and generate and distribute child sexual abuse material, in breach of the company's terms of use.",
+    "summary": "Η xAI του Elon Musk κατέθεσε αγωγή κατά κατοίκου της Νότιας Καρολίνας, ισχυριζόμενη ότι χρησιμοποίησε το chatbot Grok για να παρακάμψει τα safeguards, να αλλοιώσει μη συναινετικές εικόνες και να δημιουργήσει και διανείμει υλικό σεξουαλικής κακοποίησης ανηλίκων (CSAM), παραβιάζοντας τους όρους χρήσης της εταιρείας.",
     "sources": [
       {
         "name": "The Verge",
@@ -589,10 +593,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Hack Suggests AI Music Generator Suno Scraped YouTube for Training Data",
+    "title": "Hack αποκαλύπτει ότι η γεννήτρια μουσικής AI Suno άντλησε δεδομένα εκπαίδευσης από το YouTube",
     "date": "2026-07-15",
     "topic": "Incidents",
-    "summary": "A hacker who accessed Suno's source code using an employee's credentials revealed evidence that the AI music generator scraped decades of audio content from YouTube to train its models, raising fresh copyright questions for AI music-generation tools.",
+    "summary": "Χάκερ που απέκτησε πρόσβαση σε πηγαίο κώδικα της Suno χρησιμοποιώντας διαπιστευτήρια εργαζομένου αποκάλυψε στοιχεία ότι η γεννήτρια μουσικής AI άντλησε δεκαετίες ηχητικού περιεχομένου από το YouTube για την εκπαίδευση των μοντέλων της, εγείροντας νέα ερωτήματα πνευματικών δικαιωμάτων για τα AI μοντέλα δημιουργίας μουσικής.",
     "sources": [
       {
         "name": "TechCrunch",
@@ -601,10 +605,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "OpenAI: The US Is Advancing AI Safety Through State and Federal Action",
+    "title": "OpenAI: Οι ΗΠΑ προωθούν την ασφάλεια AI μέσω πολιτειακής και ομοσπονδιακής δράσης",
     "date": "2026-07-15",
     "topic": "AI Act",
-    "summary": "OpenAI outlined a 'reverse federalism' approach to AI governance, where state-level laws help build toward a national framework for safe, democratic AI, amid growing US legislative activity around the regulation of frontier models.",
+    "summary": "Η OpenAI παρουσίασε προσέγγιση «αντίστροφου φεντεραλισμού» στη διακυβέρνηση AI, όπου οι νόμοι σε επίπεδο πολιτείας βοηθούν στη διαμόρφωση ενός εθνικού πλαισίου για ασφαλή, δημοκρατική χρήση AI, εν μέσω αυξανόμενης νομοθετικής δραστηριότητας στις ΗΠΑ γύρω από τη ρύθμιση frontier μοντέλων.",
     "sources": [
       {
         "name": "OpenAI",
@@ -613,10 +617,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Is 'Tech-xit' Imminent? UK Steps Up Sovereignty Push Amid AI Strife",
+    "title": "«Tech-xit» στον ορίζοντα; Το Ηνωμένο Βασίλειο εντείνει την ώθηση για τεχνολογική κυριαρχία εν μέσω αναταραχής στο AI",
     "date": "2026-07-15",
     "topic": "AI Act",
-    "summary": "US government restrictions on Anthropic's and OpenAI's frontier models have intensified calls in the UK and other countries to reduce their reliance on US tech companies, with significant cyber and AI-regulation implications.",
+    "summary": "Οι περιορισμοί της αμερικανικής κυβέρνησης στα frontier μοντέλα των Anthropic και OpenAI εντείνουν τις εκκλήσεις στο Ηνωμένο Βασίλειο και σε άλλες χώρες για μείωση της εξάρτησης από αμερικανικές εταιρείες τεχνολογίας, με σημαντικές επιπτώσεις στον κυβερνοχώρο και στη ρυθμιστική στρατηγική γύρω από το AI.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -625,10 +629,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Google Gemini CLI Abused as a Hacking Agent, Malware Botnet Operator",
+    "title": "Το Gemini CLI της Google χρησιμοποιήθηκε ως εργαλείο hacking και για τη λειτουργία botnet",
     "date": "2026-07-15",
     "topic": "AI Security",
-    "summary": "A Russian-speaking threat actor known as 'bandcampro' used Google's open-source Gemini CLI AI tool as a hacking agent and to operate a small-scale malware botnet, highlighting how developer-facing AI tools can be repurposed directly by attackers.",
+    "summary": "Ρωσόφωνος κακόβουλος παράγοντας γνωστός ως «bandcampro» χρησιμοποίησε το ανοιχτού κώδικα εργαλείο Gemini CLI της Google ως agent για επιθέσεις hacking, καθώς και για τη λειτουργία botnet μικρής κλίμακας, αναδεικνύοντας πώς εργαλεία AI που προορίζονται για προγραμματιστές μπορούν να αξιοποιηθούν απευθείας από επιτιθέμενους.",
     "sources": [
       {
         "name": "BleepingComputer",
@@ -641,10 +645,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Unpatched Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution",
+    "title": "Ανεπιδιόρθωτο ελάττωμα στο Cursor επιτρέπει εκτέλεση κώδικα με ένα απλό άνοιγμα repository στα Windows",
     "date": "2026-07-14",
     "topic": "AI Security",
-    "summary": "AI security firm Mindgard disclosed that on Windows, if a malicious file named git.exe sits in a repository's root, Cursor automatically executes it the moment the folder opens — no click, approval, or warning — granting full access to source code, SSH keys, and cloud tokens. The flaw was reported to Cursor in December 2025 but remains unpatched, without an advisory or CVE seven months later.",
+    "summary": "Η εταιρεία ασφάλειας AI Mindgard αποκάλυψε ότι στα Windows, αν ένα κακόβουλο αρχείο git.exe βρίσκεται στη ρίζα ενός repository, το Cursor το εκτελεί αυτόματα μόλις ανοίξει ο φάκελος -χωρίς κλικ, έγκριση ή προειδοποίηση- δίνοντας πλήρη πρόσβαση σε πηγαίο κώδικα, SSH keys και cloud tokens. Το ελάττωμα αναφέρθηκε στην Cursor τον Δεκέμβριο του 2025, αλλά παραμένει χωρίς patch ή advisory επτά μήνες μετά, ούτε έχει λάβει CVE.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -657,10 +661,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Frontier AI: The Genie's Out of the Bottle, but Where's the Rulebook?",
+    "title": "Frontier AI μοντέλα αναπτύσσονται με λιγότερη ανθρώπινη εποπτεία -πολιτείες των ΗΠΑ σπεύδουν να νομοθετήσουν διαφάνεια",
     "date": "2026-07-14",
     "topic": "AI Act",
-    "summary": "Cutting-edge AI models are being deployed with growing autonomy and less human oversight, while several US states are moving to legislate transparency requirements for their use, in the absence of a unified federal rulebook.",
+    "summary": "Τα πλέον προηγμένα μοντέλα AI αναπτύσσονται με ολοένα μεγαλύτερη αυτονομία και λιγότερο ανθρώπινο έλεγχο, ενώ αρκετές πολιτείες των ΗΠΑ προσπαθούν να νομοθετήσουν απαιτήσεις διαφάνειας για τη χρήση τους, εν απουσία ενιαίου ομοσπονδιακού πλαισίου κανόνων.",
     "sources": [
       {
         "name": "Dark Reading",
@@ -669,10 +673,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Lawsuit Claims Meta's Layoff Decisions Were Made by AI, Not Humans",
+    "title": "Αγωγή: Οι αποφάσεις απολύσεων της Meta λήφθηκαν από AI, όχι ανθρώπους",
     "date": "2026-07-14",
     "topic": "Incidents",
-    "summary": "A new lawsuit claims that Meta's decisions to lay off employees with disabilities and medical conditions were made by an AI system rather than by humans. Meta denies using AI to terminate these workers.",
+    "summary": "Νέα αγωγή κατά της Meta ισχυρίζεται ότι αποφάσεις απόλυσης εργαζομένων με αναπηρίες και ιατρικά προβλήματα λήφθηκαν από σύστημα AI και όχι από ανθρώπους. Η Meta αρνείται ότι χρησιμοποίησε AI για την απόλυση αυτών των εργαζομένων.",
     "sources": [
       {
         "name": "Ars Technica",
@@ -681,10 +685,10 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Microsoft Patches Record Number of Vulnerabilities in July, Citing AI-Assisted Discovery",
+    "title": "Ρεκόρ ενημερώσεων ασφαλείας από τη Microsoft τον Ιούλιο, χάρη στον εντοπισμό ευπαθειών με AI",
     "date": "2026-07-14",
     "topic": "AI Security",
-    "summary": "Microsoft fixed a record number of security vulnerabilities — reported between 570 and 622 depending on the counting methodology, including two zero-days under active exploitation — in July's Patch Tuesday, attributing much of the increase to its growing use of AI to find flaws in its own code, confirming the trend the company had flagged earlier in the month.",
+    "summary": "Η Microsoft διόρθωσε ρεκόρ εκατοντάδων ευπαθειών ασφαλείας -μεταξύ 570 και 622 ανάλογα με την πηγή καταμέτρησης, συμπεριλαμβανομένων δύο zero-days υπό ενεργή εκμετάλλευση- στο μηνιαίο Patch Tuesday του Ιουλίου, αποδίδοντας μεγάλο μέρος της αύξησης στην ενισχυμένη χρήση AI για τον εντοπισμό ελαττωμάτων στον δικό της κώδικα, επιβεβαιώνοντας την τάση που είχε προαναγγείλει η ίδια η εταιρεία νωρίτερα τον μήνα.",
     "sources": [
       {
         "name": "The Hacker News",
@@ -699,52 +703,9 @@ const ITEMS = [
         "url": "https://www.darkreading.com/vulnerabilities-threats/records-broken-patch-tuesday-raises-triage-stakes"
       }
     ]
-  },
-  {
-    "title": "Microsoft Maps Year-Long ShinyHunters-Linked Salesforce Data Theft Across Three Paths",
-    "date": "2026-07-14",
-    "topic": "Incidents",
-    "summary": "Attackers linked to ShinyHunters spent a year accessing corporate Salesforce environments by abusing OAuth connections to third-party apps and vendors, without exploiting a single platform vulnerability.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html"
-      }
-    ]
-  },
-  {
-    "title": "Researchers Say Claude for Chrome Flaw Lets Rogue Extensions Trigger Gmail Reads",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "Researchers found that any other browser extension able to run a script on claude.ai can still trigger Claude for Chrome tasks aimed at a user's Gmail, latest Google Doc and its comments, and Calendar. The flaw resembles the earlier ClaudeBleed issue, differing mainly in scope; Anthropic had restricted the arbitrary-prompt path in May as part of its response.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/claude-chrome-extension-flaw-lets-malicious-extensions-trigger-ai-actions/"
-      }
-    ]
-  },
-  {
-    "title": "xAI's Grok Build Coding Tool Was Uploading Entire Git Repositories to Company Cloud Storage",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "xAI's Grok Build coding CLI was uploading entire Git repositories — full commit history included — to a Google Cloud Storage bucket run by xAI, rather than only the files needed for a given task. A researcher publishing as cereblab, testing version 0.2.93, captured one such upload, cloned the git bundle out of the intercepted request, and recovered a file the agent had been explicitly told not to open. xAI disabled the behavior after the findings were published.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
-      }
-    ]
   }
 ];
+
 const TOPICS = ["AI Act","AI Security","Standards","Incidents","General"];
 const BADGE = {"AI Act":"b-act","AI Security":"b-sec","Standards":"b-std","Incidents":"b-inc","General":"b-gen"};
 const GROUP_LABEL = {"AI Act":"AI Act & Regulation","AI Security":"AI Security","Standards":"Standards (ISO / NIST)","Incidents":"Incidents & Data","General":"General"};

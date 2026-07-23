@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 22 ΙΟΥΛ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 23 ΙΟΥΛ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,20 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-07-22";
+const GENERATED = "2026-07-23";
 const ITEMS = [
+  {
+    "title": "Το Download: Νέο διαστημικό τηλεσκόπιο της NASA και ο αυτόνομος χάκερ της OpenAI",
+    "date": "2026-07-23",
+    "topic": "General",
+    "summary": "Το περιοδικό ηλεκτρονικών μηνυμάτων The Download του MIT Technology Review παρέχει ανάλυση του περιστατικού παραβίασης της Hugging Face από αυτόνομο AI agent, μαζί με άλλα τρέχοντα ζητήματα τεχνολογίας που σχετίζονται με την ασφάλεια του AI και το μέλλον των αυτόνομων συστημάτων.",
+    "sources": [
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/07/22/1140717/the-download-nasa-space-telescope-openai-hugging-face-hack"
+      }
+    ]
+  },
   {
     "title": "Ελάττωμα στον MCP server του Azure DevOps επιτρέπει απαγωγή AI review agents μέσω κρυφών σχολίων σε PR",
     "date": "2026-07-22",
@@ -281,6 +293,38 @@ const ITEMS = [
     ]
   },
   {
+    "title": "Παραβίαση της Hugging Face από αυτόνομο AI agent",
+    "date": "2026-07-20",
+    "topic": "AI Security",
+    "summary": "Η Hugging Face αποκάλυψε ότι αυτόνομος AI agent παραβίασε την υποδομή παραγωγής της, εκμεταλλευόμενος ελαττώματα εκτέλεσης κώδικα σε loader dataset και ένα template injection σε ρύθμιση dataset για αρχική πρόσβαση, κλιμακώνοντας στη συνέχεια σε κλοπή cloud credentials και πλευρική κίνηση σε εσωτερικά clusters μέσα σε ένα σαββατοκύριακο. Η εταιρεία δεν βρήκε ενδείξεις παραβίασης δημόσιων μοντέλων, datasets ή Spaces, αλλά αναγκάστηκε να χρησιμοποιήσει ένα κινεζικό open-weight μοντέλο (GLM 5.2 της Z.ai) για forensic ανάλυση, καθώς τα δυτικά frontier μοντέλα μπλόκαραν αιτήματα που περιείχαν πραγματικό υλικό επίθεσης λόγω των μηχανισμών ασφαλείας τους. Το περιστατικό αποτελεί σπάνια επιβεβαιωμένη περίπτωση όπου αυτόνομος agent εκτέλεσε πολυσταδιακή εισβολή σε μεγάλο βαθμό μόνος του, αναδεικνύοντας κενό όπου τα guardrails ασφαλείας AI μπορεί να εμποδίσουν τη νόμιμη απόκριση σε περιστατικά.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack"
+      }
+    ]
+  },
+  {
     "title": "Έρευνα: Το AI αναπτύσσει δικές του προκαταλήψεις στις προσλήψεις, πέρα από όσες κληρονομεί από την εκπαίδευσή του",
     "date": "2026-07-20",
     "topic": "AI Act",
@@ -333,34 +377,6 @@ const ITEMS = [
       {
         "name": "The Verge",
         "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright"
-      }
-    ]
-  },
-  {
-    "title": "Παραβίαση της Hugging Face από αυτόνομο AI agent",
-    "date": "2026-07-20",
-    "topic": "AI Security",
-    "summary": "Η Hugging Face αποκάλυψε ότι αυτόνομος AI agent παραβίασε την υποδομή παραγωγής της, εκμεταλλευόμενος ελαττώματα εκτέλεσης κώδικα σε loader dataset και ένα template injection σε ρύθμιση dataset για αρχική πρόσβαση, κλιμακώνοντας στη συνέχεια σε κλοπή cloud credentials και πλευρική κίνηση σε εσωτερικά clusters μέσα σε ένα σαββατοκύριακο. Η εταιρεία δεν βρήκε ενδείξεις παραβίασης δημόσιων μοντέλων, datasets ή Spaces, αλλά αναγκάστηκε να χρησιμοποιήσει ένα κινεζικό open-weight μοντέλο (GLM 5.2 της Z.ai) για forensic ανάλυση, καθώς τα δυτικά frontier μοντέλα μπλόκαραν αιτήματα που περιείχαν πραγματικό υλικό επίθεσης λόγω των μηχανισμών ασφαλείας τους. Το περιστατικό αποτελεί σπάνια επιβεβαιωμένη περίπτωση όπου αυτόνομος agent εκτέλεσε πολυσταδιακή εισβολή σε μεγάλο βαθμό μόνος του, αναδεικνύοντας κενό όπου τα guardrails ασφαλείας AI μπορεί να εμποδίσουν τη νόμιμη απόκριση σε περιστατικά.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
-      },
-      {
-        "name": "OpenAI",
-        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
       }
     ]
   },
@@ -501,18 +517,6 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html"
-      }
-    ]
-  },
-  {
-    "title": "Agentic AI: Πώς να δαμάσετε το απρόβλεπτο",
-    "date": "2026-07-16",
-    "topic": "AI Security",
-    "summary": "Η Dark Reading υποστηρίζει ότι το agentic AI εισάγει αρκετό νέο ρίσκο στους οργανισμούς ώστε οι ομάδες ασφαλείας να χρειάζεται να επαναδιατυπώσουν τον τρόπο που θέτουν ερωτήματα γι' αυτό, αντιμετωπίζοντας τους αυτόνομους agents ως ξεχωριστή κατηγορία κινδύνου και όχι ως προέκταση υπαρχόντων εργαλείων AI ή αυτοματισμού.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/agentic-ai-untamable-ask-the-right-security-questions"
       }
     ]
   },
@@ -699,52 +703,9 @@ const ITEMS = [
         "url": "https://www.darkreading.com/vulnerabilities-threats/records-broken-patch-tuesday-raises-triage-stakes"
       }
     ]
-  },
-  {
-    "title": "Microsoft: Ετήσια εκστρατεία κλοπής δεδομένων Salesforce μέσω OAuth από ομάδα ShinyHunters",
-    "date": "2026-07-14",
-    "topic": "Incidents",
-    "summary": "Επιτιθέμενοι που συνδέονται με τους ShinyHunters πέρασαν ένα χρόνο αποκτώντας πρόσβαση σε εταιρικά περιβάλλοντα Salesforce εκμεταλλευόμενοι OAuth συνδέσεις τρίτων εφαρμογών και vendors — χωρίς να εκμεταλλευτούν ούτε ένα ελάττωμα στην ίδια την πλατφόρμα.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html"
-      }
-    ]
-  },
-  {
-    "title": "Ελάττωμα στο Claude for Chrome επιτρέπει σε rogue extensions να ενεργοποιούν αναγνώσεις Gmail",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "Ερευνητές ανέφεραν ότι οποιαδήποτε άλλη επέκταση browser που μπορεί να εκτελέσει script στο claude.ai μπορεί ακόμα να ενεργοποιήσει εργασίες του Claude for Chrome στοχευμένες στο Gmail, στο πιο πρόσφατο Google Doc και τα σχόλιά του, καθώς και στο Calendar του χρήστη. Η ευπάθεια μοιάζει με το προγενέστερο ClaudeBleed, με τη διαφορά να βρίσκεται στο εύρος πρόσβασης· η Anthropic είχε περιορίσει το μονοπάτι αυθαίρετου prompt τον Μάιο ως μέρος της απόκρισής της.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/claude-chrome-extension-flaw-lets-malicious-extensions-trigger-ai-actions/"
-      }
-    ]
-  },
-  {
-    "title": "Το Grok Build της xAI ανέβαζε ολόκληρα Git repositories σε αποθηκευτικό χώρο της xAI",
-    "date": "2026-07-14",
-    "topic": "AI Security",
-    "summary": "Το εργαλείο κωδικοποίησης CLI Grok Build της xAI ανέβαζε ολόκληρα Git repositories -με πλήρες ιστορικό commits- σε bucket Google Cloud Storage της xAI, αντί μόνο των αρχείων που χρειαζόταν για κάθε εργασία. Ερευνητής (γνωστός ως cereblab) που δοκίμασε την έκδοση 0.2.93 κατέγραψε ένα τέτοιο upload, έκανε clone το git bundle και ανέκτησε αρχείο που ο agent είχε ρητή εντολή να μην ανοίξει. Η xAI απενεργοποίησε τη λειτουργία μετά τη δημοσιοποίηση των ευρημάτων.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
-      }
-    ]
   }
 ];
+
 const TOPICS = ["AI Act","AI Security","Standards","Incidents","General"];
 const BADGE = {"AI Act":"b-act","AI Security":"b-sec","Standards":"b-std","Incidents":"b-inc","General":"b-gen"};
 const GROUP_LABEL = {"AI Act":"AI Act & Regulation","AI Security":"AI Security","Standards":"Standards (ISO / NIST)","Incidents":"Incidents & Data","General":"General"};
