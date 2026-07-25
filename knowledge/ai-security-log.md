@@ -1030,3 +1030,18 @@ Append-only αρχείο γνώσης: κάθε νέα είδηση που μπ�
 - **Θέμα:** AI Security
 - **Τι έγινε:** Σύνθετη συζήτηση μέσα στην κοινότητα ασφάλειας AI: τα safety guardrails των frontier μοντέλων, αν και απαραίτητα για πρόληψη κακόβουλης χρήσης, ενδέχεται να εμποδίζουν νόμιμη ερευνητική εργασία και αμυντικές ενέργειες. Ερευνητές που προσπαθούν να ενισχύσουν την ασφάλεια του AI παρακάμπτουν αυτές τις προστασίες.
 - **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/24/how-ai-guardrails-are-impeding-offensive-cybersecurity/)
+## 2026-07-24 — Europe's Multilingual Reality Exposes AI Security Gaps
+- **Θέμα:** AI Security
+- **Τι έγινε:** A Dark Reading analysis reveals that Europe's language diversity creates unique AI security challenges. Non-English language processing in AI systems can introduce vulnerabilities that security teams may overlook, as testing and safety measures often prioritize English-language inputs.
+- **Πηγές:** [Dark Reading](https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps)
+
+## 2026-07-24 — How AI guardrails are impeding the work of offensive cybersecurity researchers
+- **Θέμα:** AI Security
+- **Τι έγινε:** TechCrunch examines a debate in the AI security community: safety guardrails designed to prevent harmful AI use often also block legitimate defensive security research. Researchers strengthening AI defenses against abuse find their own tools refusing to assist with necessary security work.
+- **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/)
+
+## 2026-07-20 — 25 Years After Code Red: What the Worm Era Can Teach Us About AI Security
+- **Θέμα:** AI Security
+- **Τι έγινε:** Dark Reading draws parallels between the Code Red worm era (2001) and current AI security challenges. Historical lessons from software vulnerabilities management suggest strategies for addressing emerging AI security risks, including the need for coordinated disclosure and rapid patching.
+- **Πηγές:** [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/25-years-after-code-red-what-the-worm-era-can-teach-us-about-ai-security-2)
+
