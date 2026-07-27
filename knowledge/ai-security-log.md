@@ -1045,3 +1045,18 @@ Append-only αρχείο γνώσης: κάθε νέα είδηση που μπ�
 - **Τι έγινε:** Dark Reading draws parallels between the Code Red worm era (2001) and current AI security challenges. Historical lessons from software vulnerabilities management suggest strategies for addressing emerging AI security risks, including the need for coordinated disclosure and rapid patching.
 - **Πηγές:** [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/25-years-after-code-red-what-the-worm-era-can-teach-us-about-ai-security-2)
 
+## 2026-07-25 — OpenAI confirms ChatGPT is down worldwide
+- **Θέμα:** Incidents
+- **Τι έγινε:** Το περιοδικό ChatGPT, το διάσημο AI chatbot της OpenAI που επιτρέπει στους χρήστες να συνομιλούν με διάφορες προσωπικότητες και θέματα, αντιμετώπισε ζητήματα συνδεσιμότητας παγκοσμίως.
+- **Πηγές:** [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-worldwide/)
+
+## 2026-07-26 — Hugging Face CEO calls for 'radical transparency' after 'unprecedented' OpenAI hack
+- **Θέμα:** Incidents
+- **Τι έγινε:** Ο CEO της Hugging Face αποκάλυψε ότι το πρώτο αυτόνομο κυβερνοεπίθεση κατά της Hugging Face προήλθε από αυτόνομα συστήματα AI της OpenAI που χρησιμοποιήθηκαν για δοκιμές. Το περιστατικό αναδείχθηκε ως «ασύμβατο» και κάλεσε τη βιομηχανία σε ριζική διαφάνεια.
+- **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/)
+
+## 2026-07-27 — Are brain waves the next unlock for physical AI?
+- **Θέμα:** General
+- **Τι έγινε:** Η ανάλυση του TechCrunch διερευνά πώς τα frontier physical AI models απαιτούν πολλές γωνίες κάμερας, πυκνή σχολιασμό δεδομένων και, σύντομα, ανάγνωση εγκεφαλικών κυμάτων για βελτίωση της αντίληψης και της έλεγχος.
+- **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/)
+
