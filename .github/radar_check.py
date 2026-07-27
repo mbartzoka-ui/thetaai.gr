@@ -28,16 +28,20 @@ for lang, path in PAGES.items():
     text = path.read_text(encoding="utf-8")
     if "render(" not in text:
         errors.append(f"{lang}: render() no longer present — page script damaged")
-    m = re.search(r"const ITEMS = (\[.*?\]);", text, re.S)
-    if not m:
+    idx = text.find("const ITEMS = [")
+    if idx == -1:
         errors.append(f"{lang}: could not locate `const ITEMS = [...];`")
         continue
     try:
-        items = json.loads(m.group(1))
+        decoder = json.JSONDecoder()
+        items, _ = decoder.raw_decode(text, idx + len("const ITEMS = "))
     except json.JSONDecodeError as e:
         errors.append(f"{lang}: ITEMS is not valid JSON: {e}")
         continue
-    if not isinstance(items, list) or len(items) < MIN_ITEMS:
+    if not isinstance(items, list):
+        errors.append(f"{lang}: ITEMS is not a JSON array")
+        continue
+    if len(items) < MIN_ITEMS:
         errors.append(f"{lang}: ITEMS has {len(items)} entries (< {MIN_ITEMS}) — refusing to publish")
         continue
     for i, item in enumerate(items):
