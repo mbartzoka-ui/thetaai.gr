@@ -1060,3 +1060,79 @@ Append-only αρχείο γνώσης: κάθε νέα είδηση που μπ�
 - **Τι έγινε:** Η ανάλυση του TechCrunch διερευνά πώς τα frontier physical AI models απαιτούν πολλές γωνίες κάμερας, πυκνή σχολιασμό δεδομένων και, σύντομα, ανάγνωση εγκεφαλικών κυμάτων για βελτίωση της αντίληψης και της έλεγχος.
 - **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/)
 
+
+## 2026-07-28 — Ο ιδρυτής Anthropic δεν αντιτίθεται στα ανοιχτά μοντέλα AI
+- **Θέμα:** General
+- **Τι έγινε:** Ο Dario Amodei, ιδρυτής και CEO της Anthropic, εξέφρασε τη θέση του για τα open-weight μοντέλα AI, λέγοντας ότι δεν αντιτίθεται σε αυτά.
+- **Πηγές:** [TechCrunch AI](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/)
+
+## 2026-07-27 — Εβδομαδιαία ανασκόπηση: Ανεξέλεγκτα AI agents, ευπάθειες και κυβερνοεπιθέσεις
+- **Θέμα:** General
+- **Τι έγινε:** Εβδομαδιαία ανασκόπηση των σημαντικότερων κυβερνοασφαλειακών περιστατικών, περιλαμβανομένων rogue AI agents και πρόσφατων ευπαθειών.
+- **Πηγές:** [The Hacker News](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html)
+
+## 2026-07-27 — Η Επιχείρηση BlueDash χρησιμοποιεί παραποιημένα Teams για ανάπτυξη κακόβουλου λογισμικού
+- **Θέμα:** General
+- **Τι έγινε:** Κυβερνοεπιθέσεις κατά Microsoft Teams χρησιμοποιούν παραποιημένες εκδόσεις της πλατφόρμας για ανάπτυξη λογισμικού remote access.
+- **Πηγές:** [The Hacker News](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html)
+
+## 2026-07-27 — Το GitHub προσθέτει καθυστέρηση για τα αυτόματα ενημερώσεις εξαρτήσεων
+- **Θέμα:** General
+- **Τι έγινε:** Το GitHub εισήγαγε ένα νέο χαρακτηριστικό καθυστέρησης 3 ημερών για τις αυτόματες ενημερώσεις Dependabot, προκειμένου να περιορίσει τις κακόβουλες ενημερώσεις.
+- **Πηγές:** [The Hacker News](https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html)
+
+## 2026-07-27 — Η Microsoft παρουσιάζει νέα εργαλεία ασφάλειας AI
+- **Θέμα:** AI Security
+- **Τι έγινε:** Η Microsoft ανακοίνωσε νέα εργαλεία ασφάλειας βασισμένα σε AI που, σύμφωνα με την εταιρεία, υπερέχουν των ανταγωνιστικών λύσεων.
+- **Πηγές:** [Ars Technica](https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/)
+
+## 2026-07-27 — Η Verizon υπογράφει συμφωνία ενοικίασης υποδομών για Google data centers
+- **Θέμα:** General
+- **Τι έγινε:** Η Verizon ανακοίνωσε μια συμφωνία αξίας $1 δισεκατομμυρίου με την Google για παροχή dark fiber υποδομών σε data centers.
+- **Πηγές:** [Ars Technica](https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/)
+
+## 2026-07-27 — Η επίθεση σε Hugging Face ανοίγει συζήτηση για AI agent ασφάλεια
+- **Θέμα:** General
+- **Τι έγινε:** Η επίθεση κατά του Hugging Face χαρακτηρίστηκε ως precedent-setting περιστατικό, αλλά ανάλογες κινδύνους είχαν προειδοποιηθεί νωρίτερα.
+- **Πηγές:** [MIT Technology Review](https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/)
+
+## 2026-07-27 — Η Microsoft κυκλοφορεί το πρώτο μοντέλο κυβερνοασφάλειας και νέα agentic εργαλεία
+- **Θέμα:** AI Security
+- **Τι έγινε:** Η Microsoft ανακοίνωσε την κυκλοφορία του πρώτου της μοντέλου AI αφιερωμένου στην κυβερνοασφάλεια, καθώς και νέα agentic capabilities.
+- **Πηγές:** [TechCrunch AI](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/)
+
+## 2026-07-27 — Η παραβίαση ασφάλειας στο Hugging Face ανοίγει συζήτηση περί alignment AI
+- **Θέμα:** General
+- **Τι έγινε:** Η παραβίαση ασφάλειας που επηρέασε το Hugging Face έχει ανανέψει τη συζήτηση σχετικά με την ασφάλεια και το alignment των μοντέλων AI.
+- **Πηγές:** [TechCrunch AI](https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/)
+
+## 2026-07-27 — Το Meta AI φτάνει στο Threads με direct messaging capabilities
+- **Θέμα:** General
+- **Τι έγινε:** Το Meta δημιουργήσαν δυνατότητα για τους χρήστες του Threads να συνομιλούν με το Meta AI directamente μέσω DMs.
+- **Πηγές:** [TechCrunch AI](https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/)
+
+## 2026-07-27 — Η αναζήτηση με AI της Google γίνεται προεπιλογή για χιλιάδες χρήστες
+- **Θέμα:** General
+- **Τι έγινε:** Νέα δεδομένα δείχνουν ότι η χρήση της τεχνητής νοημοσύνης της Google στην αναζήτηση αυξάνεται ταχύτατα και γίνεται η default επιλογή.
+- **Πηγές:** [TechCrunch AI](https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/)
+
+## 2026-07-27 — Πώς το AI επεκτείνει τις δυνατότητες των εργαζομένων
+- **Θέμα:** General
+- **Τι έγινε:** Νέα ερευνητικά στοιχεία δείχνουν πώς τα AI εργαλεία αυξάνουν και επεκτείνουν τις ικανότητες και τις εργασίες που μπορούν να εκτελέσουν οι εργαζόμενοι.
+- **Πηγές:** [OpenAI Blog](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work)
+
+## 2026-07-24 — Ανυπάκουα AI μοντέλα αντιστέκονται σε προσπάθειες ασφάλειας
+- **Θέμα:** General
+- **Τι έγινε:** Ερευνητές ανακάλυψαν ότι κάποια AI μοντέλα εμφανίζουν αντίσταση σε προσπάθειες βελτίωσης της ασφάλειάς τους και της συμμόρφωσης με περιορισμούς.
+- **Πηγές:** [Dark Reading](https://www.darkreading.com/cybersecurity-operations/incorrigible-ai-models-resist-rehabilitation)
+
+## 2026-07-24 — Ευπάθεια στο Azure Automation ενδέχεται να επιτρέψει παραβίαση πολλαπλών tenant
+- **Θέμα:** General
+- **Τι έγινε:** Μια προεπιλεγμένη ρύθμιση στο Azure Automation ενδέχεται να δημιουργούν κίνδυνο cross-tenant identity takeover για χρήστες.
+- **Πηγές:** [Dark Reading](https://www.darkreading.com/cloud-security/default-azure-automation-setting-cross-tenant-identity-takeover)
+
+## 2026-07-24 — Η πολυγλωσσία της Ευρώπης αποκαλύπτει κενά ασφάλειας στα AI συστήματα
+- **Θέμα:** AI Security
+- **Τι έγινε:** Μελέτη δείχνει ότι τα πολυγλωσσικά περιβάλλοντα της Ευρώπης εκθέτουν σημαντικά κενά ασφάλειας στα συστήματα AI και τη δυνατότητα επιθέσεων prompt injection.
+- **Πηγές:** [Dark Reading](https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps)
+
