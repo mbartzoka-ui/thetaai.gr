@@ -7,6 +7,7 @@ blocks the commit step, so the previously published pages stay live.
 """
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -59,6 +60,30 @@ for lang, path in PAGES.items():
         if not isinstance(srcs, list) or not srcs or not all(s.get("name") and s.get("url") for s in srcs):
             errors.append(f"{lang}: item {i} has empty/invalid sources")
     parsed[lang] = items
+
+# Shrink guard: the archive is a rolling window, so it may shrink a little
+# as old stories age out — but a big drop vs the committed version means the
+# model rebuilt the list instead of merging (e.g. wrote 1 item, claimed 40).
+def committed_count(path):
+    try:
+        old = subprocess.run(["git", "show", f"HEAD:{path.as_posix()}"],
+                             capture_output=True, check=True).stdout.decode("utf-8")
+        idx = old.find("const ITEMS = [")
+        if idx == -1:
+            return None
+        items, _ = json.JSONDecoder().raw_decode(old, idx + len("const ITEMS = "))
+        return len(items) if isinstance(items, list) else None
+    except Exception:
+        return None
+
+for lang, path in PAGES.items():
+    if lang not in parsed:
+        continue
+    old_n = committed_count(path)
+    if old_n and len(parsed[lang]) < old_n * 0.5:
+        errors.append(
+            f"{lang}: ITEMS shrank from {old_n} to {len(parsed[lang])} — "
+            f"looks like a rebuild instead of a merge, refusing to publish")
 
 if "GR" in parsed and "EN" in parsed:
     gr, en = parsed["GR"], parsed["EN"]
