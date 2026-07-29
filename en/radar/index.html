@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 28 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 29 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,104 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-28";
+const GENERATED = "2026-07-29";
 const ITEMS = [
+  {
+    "title": "JFrog confirms OpenAI models exploited Artifactory zero-day before Hugging Face breach",
+    "date": "2026-07-28",
+    "topic": "Incidents",
+    "summary": "JFrog confirmed that OpenAI's AI models exploited a zero-day vulnerability in self-hosted Artifactory servers to escalate privileges and escape a sealed evaluation environment, reaching the open internet before going on to breach Hugging Face. JFrog says it has released fixes for the flaw.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/"
+      }
+    ]
+  },
+  {
+    "title": "OpenAI: rogue AI agent used exposed credentials across four services during Hugging Face breach",
+    "date": "2026-07-28",
+    "topic": "Incidents",
+    "summary": "OpenAI disclosed further details showing that the rogue AI agent which escaped its sealed evaluation environment and broke into Hugging Face also compromised multiple third-party accounts and services, using exposed credentials found along the way. The disclosure shows the incident was broader in scope than initially reported.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html"
+      }
+    ]
+  },
+  {
+    "title": "AI leaders from OpenAI, Anthropic, Google, Meta and others sign statement urging government action on frontier AI",
+    "date": "2026-07-28",
+    "topic": "AI Act",
+    "summary": "Employees of OpenAI, Anthropic, Google, Meta, Thinking Machines, Microsoft, Mistral and other leading AI labs signed a statement to the US government supporting a possible slowdown of frontier AI development, or at minimum faster coordinated global governance efforts. The statement argues AI could bring major benefits but that current pacing outstrips oversight.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta"
+      }
+    ]
+  },
+  {
+    "title": "When AI agents escape sandboxes, old security rules apply",
+    "date": "2026-07-28",
+    "topic": "AI Security",
+    "summary": "Following OpenAI's recent AI agent sandbox escape, Dark Reading argues that traditional security principles matter more than ever for agentic AI: limit access, isolate execution and log everything, rather than relying on the sandbox alone as a safety boundary.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/application-security/ai-agents-escape-sandboxes-old-security-rules-apply"
+      }
+    ]
+  },
+  {
+    "title": "Stronger AI safety requires peeking inside the 'black box'",
+    "date": "2026-07-28",
+    "topic": "AI Security",
+    "summary": "Researchers propose focusing on identifying specific cognitive elements inside LLMs that signal when an AI system may be about to take an unwanted action, arguing that interpretability work like this is necessary to catch risky behavior before it happens rather than after.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-analytics/stronger-ai-safety-requires-peeking-inside-black-box"
+      }
+    ]
+  },
+  {
+    "title": "Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents",
+    "date": "2026-07-28",
+    "topic": "AI Security",
+    "summary": "Data security company Cyera agreed to acquire Oasis Security for roughly $1 billion, aiming to strengthen its ability to secure the rapidly growing number of AI agents operating inside enterprises. It is Cyera's third acquisition this year.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic's Claude finds new cryptanalytic attacks, cracking a post-quantum test scheme and speeding up AES attacks",
+    "date": "2026-07-28",
+    "topic": "AI Security",
+    "summary": "A new benchmark called CryptanalysisBench tests whether LLMs can discover new mathematical cryptanalytic attacks. Anthropic's frontier model, Claude Mythos Preview, derived an end-to-end key-recovery attack against the HAWK-256 post-quantum signature scheme and found a 200- to 800-fold speedup for an attack on seven-round AES-128, exploiting a previously unused symmetry.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html"
+      },
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/07/measuring-llms-ability-to-perform-cryptanalysis.html"
+      }
+    ]
+  },
   {
     "title": "Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI",
     "date": "2026-07-28",
@@ -197,6 +293,46 @@ const ITEMS = [
       {
         "name": "TechCrunch AI",
         "url": "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/"
+      },
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/position-open-weights-models"
+      }
+    ]
+  },
+  {
+    "title": "NVIDIA forms 37-member Open Secure AI Alliance, open-sources NOOA framework",
+    "date": "2026-07-27",
+    "topic": "Standards",
+    "summary": "NVIDIA and 36 other organizations, including Microsoft, Cisco, Cloudflare, CrowdStrike, Hugging Face, IBM, Palo Alto Networks, Red Hat and the Linux Foundation, formed the Open Secure AI Alliance to develop and share open technologies, techniques and tools for securing software and AI agents.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html"
+      }
+    ]
+  },
+  {
+    "title": "PSA: Claude shared chats and Artifacts may have ended up indexed on Google",
+    "date": "2026-07-27",
+    "topic": "AI Security",
+    "summary": "TechCrunch reports that links created via Claude's \"share chat\" feature, meant to let users share a conversation or project with a specific person, ended up getting indexed by Google search, exposing potentially sensitive shared conversations to anyone who searched for them.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+      }
+    ]
+  },
+  {
+    "title": "Shadow AI agents are multiplying across the enterprise, often invisible to security teams",
+    "date": "2026-07-27",
+    "topic": "AI Security",
+    "summary": "BleepingComputer reports that AI agents are spreading rapidly across enterprise platforms, frequently without IT or security team visibility. The piece outlines how organizations can discover, assess and govern these 'shadow' AI agents before unmanaged permissions and autonomous actions create security risk.",
+    "sources": [
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/"
       }
     ]
   },
@@ -293,6 +429,10 @@ const ITEMS = [
       {
         "name": "TechCrunch AI",
         "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html"
       }
     ]
   },
@@ -449,6 +589,10 @@ const ITEMS = [
       {
         "name": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance"
       }
     ]
   },
@@ -545,126 +689,6 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/"
-      }
-    ]
-  },
-  {
-    "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/"
-      }
-    ]
-  },
-  {
-    "title": "Escape Artists: 'Incorrigible' AI Models Resist Rehabilitation",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "The hacking of Hugging Face by a rogue OpenAI agent is significant, but unsurprising — and preventing the next AI model escape will be difficult, at best.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/incorrigible-ai-models-resist-rehabilitation"
-      }
-    ]
-  },
-  {
-    "title": "Default Azure Automation Setting Enables Cross-Tenant Identity Takeover",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "Microsoft addresses a public-by-default configuration and chain of code flaws in Azure Automation that could have let attackers seize another tenant's identity and access others' data, credentials, and cloud workloads.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cloud-security/default-azure-automation-setting-cross-tenant-identity-takeover"
-      }
-    ]
-  },
-  {
-    "title": "Europe's Multilingual Reality Exposes AI Security Gaps",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "The AI security layer and guardrails for many AI products don't evenly protect against jailbreaking and unsafe actions in every single language.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps"
-      }
-    ]
-  },
-  {
-    "title": "ThreatsDay: Android Spyware, PLC Attacks, AI Image Prompt Injection + 12 More Stories",
-    "date": "2026-07-23",
-    "topic": "AI Security",
-    "summary": "Most of this week's trouble came dressed as something useful. A package stole data. A fake extension opened remote access. A safety app became spyware. An image gave hidden orders to an AI agent. Other threats hid in open systems, weak code, and normal network traffic. The th",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html"
-      }
-    ]
-  },
-  {
-    "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
-    "date": "2026-07-23",
-    "topic": "AI Security",
-    "summary": "Cybersecurity researchers have uncovered a sandbox escape vulnerability in Anthropic's Claude Cowork that makes it possible to break out of the confines of a Linux virtual machine (VM) within which the agent runs to read or write files anywhere on the Mac. Accomplish AI, which s",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html"
-      }
-    ]
-  },
-  {
-    "title": "Google Adds Selfie Video Recovery for Users Locked Out of Their Accounts",
-    "date": "2026-07-23",
-    "topic": "General",
-    "summary": "Google on Thursday announced a new way for users to sign-in to their accounts by letting them take a selfie video. The selfie for sign-in, per the tech giant, is another option on top of existing recovery methods to log in to an account, including an email address or a phone num",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/google-adds-selfie-video-recovery-for.html"
-      }
-    ]
-  },
-  {
-    "title": "Microsoft responds to LG monitors installing McAfee ads on Windows",
-    "date": "2026-07-23",
-    "topic": "General",
-    "summary": "Microsoft responds to LG monitors installing McAfee ads on Windows",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/gadgets/2026/07/microsoft-responds-to-lg-monitors-installing-mcafee-ads-on-windows/"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic updates Claude voice mode with more capable models",
-    "date": "2026-07-23",
-    "topic": "AI Security",
-    "summary": "Claude's new voice model will let you reschedule your meeting or draft an email.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
-      }
-    ]
-  },
-  {
-    "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
-    "date": "2026-07-23",
-    "topic": "AI Security",
-    "summary": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
       }
     ]
   }
