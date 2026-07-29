@@ -61,16 +61,29 @@ jobs:
             attempt=$((attempt+1))
             echo "=== Attempt $attempt: $model ==="
             git checkout -- radar en/radar knowledge
-            rm -f /tmp/radar-digest.md
-            if claude -p "$(cat .github/radar-prompt.md)" --model "$model" --dangerously-skip-permissions; then
-              if python3 .github/radar_check.py; then
-                echo "Attempt $attempt ($model) succeeded and validated."
-                exit 0
-              fi
-              echo "::warning::Attempt $attempt ($model): output failed the sanity check - rolling back and retrying."
-            else
+            rm -f /tmp/radar-digest.md /tmp/radar-verdict.txt
+            if ! claude -p "$(cat .github/radar-prompt.md)" --model "$model" --dangerously-skip-permissions; then
               echo "::warning::Attempt $attempt ($model): claude exited with an error (API/safeguard block) - retrying with next model."
+              continue
             fi
+            if ! python3 .github/radar_check.py; then
+              echo "::warning::Attempt $attempt ($model): output failed the structural check - rolling back and retrying."
+              continue
+            fi
+            # Maker/checker: an INDEPENDENT agent audits the changes (read-only)
+            # before anything is published. FAIL verdict -> roll back and retry.
+            claude -p "$(cat .github/radar-verify-prompt.md)" --model "$model" --dangerously-skip-permissions || true
+            if [ -f /tmp/radar-verdict.txt ]; then
+              echo "--- Checker verdict ---"; cat /tmp/radar-verdict.txt
+              if [ "$(head -n1 /tmp/radar-verdict.txt)" != "PASS" ]; then
+                echo "::warning::Attempt $attempt ($model): checker rejected the output - rolling back and retrying."
+                continue
+              fi
+            else
+              echo "::warning::Checker produced no verdict - accepting (structural check passed) but flagging."
+            fi
+            echo "Attempt $attempt ($model) succeeded, validated and checker-approved."
+            exit 0
           done
           echo "::error::All attempts failed - keeping yesterday's pages live."
           git checkout -- radar en/radar knowledge
