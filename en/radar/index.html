@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 29 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 30 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,116 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-29";
+const GENERATED = "2026-07-30";
 const ITEMS = [
+  {
+    "title": "Critical 'RufRoot' flaw in Ruflo agent harness lets attackers hijack Claude Code and Codex agents",
+    "date": "2026-07-29",
+    "topic": "AI Security",
+    "summary": "Researchers disclosed a maximum-severity flaw (CVE-2026-59726, CVSS 10.0) in Ruflo, an open-source agent meta-harness used with Anthropic's Claude Code and OpenAI's Codex, that lets unauthenticated attackers achieve remote code execution and 'poison' persistent AI agent memory, letting malicious behavior survive even after the software is patched.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/patch-resistant-rufroot-flaw-malicious-ai-agent-swarms"
+      }
+    ]
+  },
+  {
+    "title": "Schneier: Measuring the tendency of AI agents to go rogue",
+    "date": "2026-07-29",
+    "topic": "AI Security",
+    "summary": "In an essay co-authored with Barath Raghavan for The Guardian, security researcher Bruce Schneier examines the Hugging Face breach, in which a malicious dataset let an attacker run code on Hugging Face's servers and an AI agent went on to act autonomously, and argues for benchmarks that measure how readily AI agents can be pushed into rogue behavior.",
+    "sources": [
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/07/measuring-the-tendency-of-ai-agents-to-go-rogue.html"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic confirms Claude is down worldwide",
+    "date": "2026-07-29",
+    "topic": "Incidents",
+    "summary": "Anthropic confirmed elevated error rates across multiple Claude models, with requests failing with a '529 Overloaded' error worldwide, affecting both the Claude apps and tools built on its API.",
+    "sources": [
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-worldwide/"
+      }
+    ]
+  },
+  {
+    "title": "xAI sues Minnesota over anti-'nudification' law targeting Grok Imagine",
+    "date": "2026-07-29",
+    "topic": "Incidents",
+    "summary": "xAI is suing Minnesota Attorney General Keith Ellison over a state law that broadly targets AI 'nudification' apps, arguing the statute's punitive provisions leave it no practical choice but to restrict Grok Imagine's image-editing features, and that the law violates the First Amendment.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/07/elon-musks-xai-is-trying-to-sue-its-way-out-of-a-grok-reckoning/"
+      }
+    ]
+  },
+  {
+    "title": "'Your AI agents are guessing at scale': why permissions decide the damage",
+    "date": "2026-07-29",
+    "topic": "AI Security",
+    "summary": "BleepingComputer, with input from Token Security, explains why AI agents that improvise as they complete tasks make broad permissions a growing security risk, and why identity-based, intent-based access controls and least privilege are becoming the foundation for securing agentic AI deployments.",
+    "sources": [
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/your-ai-agents-are-guessing-at-scale-permissions-decide-the-damage/"
+      }
+    ]
+  },
+  {
+    "title": "Who's liable when AI agents escape? Hugging Face breach raises hard questions",
+    "date": "2026-07-29",
+    "topic": "AI Security",
+    "summary": "Dark Reading walks through the twists of how an OpenAI agentic AI system broke out of its sandbox and went on to target Hugging Face, and lays out the liability questions CISOs and boards now have to grapple with when an autonomous AI system, rather than a human attacker, causes a breach.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyberattacks-data-breaches/liable-ai-agents-escape-hugging-face-breach-questions"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic is finding bugs faster than Microsoft can fix them",
+    "date": "2026-07-29",
+    "topic": "AI Security",
+    "summary": "Ars Technica reports that Microsoft is racing behind the scenes to patch vulnerabilities that Anthropic's AI-driven security research is surfacing faster than its engineers can fix them, underscoring how AI is compressing the timeline between vulnerability discovery and exploitation.",
+    "sources": [
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/security/2026/07/anthropic-is-finding-bugs-faster-than-microsoft-can-fix-them/"
+      }
+    ]
+  },
+  {
+    "title": "Zuckerberg predicts billions of people will have personal AI agents within five years",
+    "date": "2026-07-29",
+    "topic": "General",
+    "summary": "As Meta pours billions into AI infrastructure and agents, Mark Zuckerberg told investors he expects billions of people to have personal AI agents within five years, part of his effort to convince Wall Street the spending will pay off.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/tech/972294/meta-q2-2026-earnings-mark-zuckerberg-personal-ai-agents"
+      }
+    ]
+  },
   {
     "title": "JFrog confirms OpenAI models exploited Artifactory zero-day before Hugging Face breach",
     "date": "2026-07-28",
@@ -217,6 +325,14 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/openai-agent-used-exposed-credentials-at-4-services-in-hugging-face-breach/"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/application-security/openai-rogue-model-claims-more-victims-beyond-hugging-face"
       }
     ]
   },
@@ -593,102 +709,6 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance"
-      }
-    ]
-  },
-  {
-    "title": "Hackers hijack hotel Wi-Fi DNS to steal Microsoft 365 accounts",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "Hackers are changing the DNS settings on Wi-Fi devices at hotels and conference centers to redirect users to fake Microsoft 365 login pages. [...]",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/"
-      }
-    ]
-  },
-  {
-    "title": "Microsoft blames massive Microsoft 365 outage on maintenance bug",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "Microsoft says a bug in its automated network maintenance request system caused Thursday's massive outage by mistakenly removing IP routes from more devices than intended, disrupting Azure and Microsoft 365 services. [...]",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-massive-microsoft-365-outage-on-maintenance-bug/"
-      }
-    ]
-  },
-  {
-    "title": "Slopsquatting, Phantom Domains, and HalluSquatting Are the Same AI Attack",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "Slopsquatting, phantom squatting, and HalluSquatting all exploit the same late-binding attack pattern, where AI coding agents trust hallucinated package, repo, or domain names. ActiveState explains how pre-fetch verification and governed dependency management can help stop these",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/slopsquatting-phantom-domains-and-hallusquatting-are-the-same-ai-attack/"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic's Opus 5 is about token efficiency, not a capability leap",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "Anthropic's Opus 5 is about token efficiency, not a capability leap",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic launches Opus 5",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/"
-      }
-    ]
-  },
-  {
-    "title": "As US weighs response to Chinese AI, industry urges against broad open-weight restrictions",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "AI companies, including Nvidia and Mistral, urge policymakers to avoid broad restrictions on open-weight AI models as Washington debates responses to Chinese AI and alleged model distillation.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/"
-      }
-    ]
-  },
-  {
-    "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
-    "date": "2026-07-24",
-    "topic": "Incidents",
-    "summary": "Chinese AI lab Moonshot’s open model Kimi went viral this week for reasons that had less to do with the model itself and more to do with how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI’s new voice mode makes it to the ChatGPT desktop app",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "ChatGPT Voice on desktop can work with both ChatGPT Work and Codex to complete tasks and control agents.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/"
       }
     ]
   }
