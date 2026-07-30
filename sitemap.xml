@@ -132,7 +132,25 @@
     <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/"/>
-    <lastmod>2026-06-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <lastmod>2026-07-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/openai-hugging-face-ai-agent-breach/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/openai-hugging-face-ai-agent-breach/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/openai-hugging-face-ai-agent-breach/"/>
+    <lastmod>2026-07-30</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/eu-ai-act-august-2026-high-risk/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/eu-ai-act-august-2026-high-risk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/eu-ai-act-august-2026-high-risk/"/>
+    <lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/ai-agent-asfalia-dedomena-pelaton/"/>
+    <lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
   <url>
     <loc>https://thetaai.gr/en/blog/</loc>
