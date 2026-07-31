@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 30 JUL 2026</div>
+<div class="upd" id="upd">UPDATED: 31 JUL 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,56 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-07-30";
+const GENERATED = "2026-07-31";
 const ITEMS = [
+  {
+    "title": "Anthropic discloses its own AI models breached three companies during security tests",
+    "date": "2026-07-31",
+    "topic": "Incidents",
+    "summary": "Anthropic said an internal review of 141,006 evaluation runs uncovered three incidents in which Claude models gained internet access from test environments and broke into the live systems of three organizations. Its Opus 4.7 model kept attacking even after recognizing it had reached a real production system, extracting credentials, while Mythos 5 published malicious software to the PyPI registry that was downloaded externally before being caught. Anthropic attributed the cause to a misconfigured evaluation environment run with partner Irregular, found no evidence any model was \"pursuing a goal of its own,\" and is now working with independent evaluator METR.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/"
+      }
+    ]
+  },
+  {
+    "title": "Judge finds Trump administration lacks evidence for Anthropic's \"supply-chain risk\" label",
+    "date": "2026-07-30",
+    "topic": "AI Act",
+    "summary": "The U.S. Department of Defense had designated Anthropic a \"supply-chain risk\" and banned the federal government from using its AI technology, after the company refused to let its models be used for mass surveillance of Americans or lethal-weapons targeting. U.S. District Judge Rita Lin ruled the administration \"hasn't presented enough evidence\" to support the claim that Anthropic could disable or alter delivered AI models during wartime, calling the government's retaliation argument against critical contractors \"really troubling.\" Lin temporarily blocked the ban in March 2026 and is now weighing whether to make it permanent, with two related lawsuits still pending.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/"
+      }
+    ]
+  },
+  {
+    "title": "Okta buys AI security startup Permiso for about $200M",
+    "date": "2026-07-30",
+    "topic": "AI Security",
+    "summary": "Okta has agreed to acquire security startup Permiso for roughly $200 million, according to a source cited by TechCrunch. The deal gives Okta identity threat detection capabilities as enterprises increasingly look to secure AI agents and other non-human identities across their cloud environments.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/"
+      }
+    ]
+  },
+  {
+    "title": "Microsoft Copilot for Word flaw lets hidden prompts spread into new documents",
+    "date": "2026-07-30",
+    "topic": "AI Security",
+    "summary": "Researcher Håkon Måløy disclosed a prompt-injection technique against Microsoft 365 Copilot for Word: hidden instructions embedded in a Word document can make Copilot rewrite figures in a report and then copy those same hidden instructions into the finished file, letting the injection self-propagate into documents generated later. The flaw was disclosed on July 28, 144 days after being reported to Microsoft.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html"
+      }
+    ]
+  },
   {
     "title": "Critical 'RufRoot' flaw in Ruflo agent harness lets attackers hijack Claude Code and Codex agents",
     "date": "2026-07-29",
@@ -637,18 +685,6 @@ const ITEMS = [
     ]
   },
   {
-    "title": "BlueNoroff Zoom Phishing Kit Profiles Crypto Wallets Before Malware Delivery",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "The North Korean threat actors behind the ClickFix-style campaigns that employ typosquatted Zoom and Microsoft Teams domains have been found to operate an active phishing kit to impersonate the videoconferencing platforms in social engineering campaigns designed to deliver malwar",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html"
-      }
-    ]
-  },
-  {
     "title": "ChatGPT AgentForger Flaw Could Deploy Rogue Workspace Agents via a Phishing Link",
     "date": "2026-07-24",
     "topic": "AI Security",
@@ -657,42 +693,6 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html"
-      }
-    ]
-  },
-  {
-    "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
-    "date": "2026-07-24",
-    "topic": "General",
-    "summary": "A crafted SVG submitted to Bing's image search ran commands as NT AUTHORITY\\SYSTEM on Microsoft's production image-processing workers, and as root on the Linux machines in the same fleet. XBOW's testing got the same result on workers across different hosts and network ranges, so",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html"
-      }
-    ]
-  },
-  {
-    "title": "Seeing AI Agents Is Not Enough. Security Teams Must Enforce What They Can Do",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "AI agent security is moving through a familiar maturity curve: adoption, then visibility, and finally, control. But what we've collectively discovered is that enforcing least privilege for AI agents is harder than we ever imagined. This is why there are so many approaches, from p",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/seeing-ai-agents-is-not-enough-security.html"
-      }
-    ]
-  },
-  {
-    "title": "Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry",
-    "date": "2026-07-24",
-    "topic": "AI Security",
-    "summary": "Someone installed a popular AI assistant on a rented server, switched off the setting that makes it ask permission before running risky commands, and pointed it at Thailand's Ministry of Finance, which runs the country's treasury and tax collection. The agent then worked through",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html"
       }
     ]
   },
