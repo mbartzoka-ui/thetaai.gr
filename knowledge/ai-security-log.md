@@ -1250,3 +1250,53 @@ Append-only αρχείο γνώσης: κάθε νέα είδηση που μπ�
 - **Θέμα:** AI Security
 - **Τι έγινε:** Ο ερευνητής Håkon Måløy αποκάλυψε τεχνική prompt injection στο Microsoft 365 Copilot for Word: κρυφές οδηγίες μέσα σε ένα έγγραφο Word μπορούν να κάνουν το Copilot να αλλάξει στοιχεία σε μια αναφορά και στη συνέχεια να αντιγράψει τις ίδιες κρυφές οδηγίες στο τελικό αρχείο, ώστε η μόλυνση να διαδίδεται και σε επόμενα έγγραφα που παράγονται με τη βοήθειά του. Η αποκάλυψη έγινε στις 28 Ιουλίου, 144 μέρες μετά την αρχική αναφορά στη Microsoft.
 - **Πηγές:** [The Hacker News](https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html)
+
+## 2026-07-31 — Κινέζος hacker διευθύνει το DeepSeek μέσω Telegram για αυτόνομες επιθέσεις
+- **Θέμα:** AI Security
+- **Τι έγινε:** Η Unit 42 της Palo Alto Networks ανέφερε ότι ένας κινεζόφωνος επιτιθέμενος χρησιμοποίησε το μοντέλο DeepSeek μέσω του ανοιχτού κώδικα AI agent framework Hermes για να εξαπολύσει αυτόνομες κυβερνοεπιθέσεις σε εκτεθειμένους servers, με ελάχιστη ανθρώπινη εμπλοκή. Μετά από μία αρχική εντολή μέσω Telegram, ο AI agent εντόπισε μόνος του συστήματα συνδεδεμένα στο διαδίκτυο και επέλεξε δημόσια exploits, χωρίς οι ερευνητές να εντοπίσουν περαιτέρω ανθρώπινη παρέμβαση στη συνέχεια της επίθεσης. Ο δράστης παρακολουθείται μέσω των ψευδωνύμων knaithe και KnYuan.
+- **Πηγές:** [BleepingComputer](https://www.bleepingcomputer.com/news/security/hacker-uses-deepseek-ai-to-autonomously-attack-vulnerable-servers/) · [The Hacker News](https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html)
+
+## 2026-07-30 — Η Google λέει ότι το AI βοήθησε να διορθωθούν 1.072 ευπάθειες ασφαλείας στο Chrome σε δύο εκδόσεις
+- **Θέμα:** AI Security
+- **Τι έγινε:** Η Google ανακοίνωσε ότι η χρήση εργαλείων AI αυξάνει δραματικά τον αριθμό ευπαθειών ασφαλείας που εντοπίζει και διορθώνει στο Chrome, με πάνω από 1.000 σφάλματα να επιδιορθώνονται στις δύο πιο πρόσφατες εκδόσεις του browser καθώς επεκτείνει τη χρήση AI. Όπως σημειώνει το TechCrunch, όπως και με τη Microsoft νωρίτερα, εταιρείες όπως η Google εντοπίζουν πλέον εκθετικά περισσότερα σφάλματα χάρη σε LLM και εργαλεία AI.
+- **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/) · [BleepingComputer](https://www.bleepingcomputer.com/news/google/google-says-ai-helped-chrome-fix-1-072-security-bugs-in-two-releases/) · [The Hacker News](https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html)
+
+## 2026-07-31 — Η ESET καταγράφει άνοδο κακόβουλων AI skills και προσαρμοστικού malware
+- **Θέμα:** AI Security
+- **Τι έγινε:** Νέα έκθεση απειλών της ESET δείχνει ότι οι επιτιθέμενοι προσαρμόζουν καθιερωμένες τεχνικές σε πλατφόρμες AI, αναδεικνύοντας την άνοδο κακόβουλων «AI skills», malware με τη βοήθεια AI, επιθέσεων τύπου ClickFix, ρεκόρ δραστηριότητας quishing και εργαλείων ransomware σχεδιασμένων να απενεργοποιούν λογισμικό ασφαλείας.
+- **Πηγές:** [BleepingComputer](https://www.bleepingcomputer.com/news/security/eset-tracks-rise-in-malicious-ai-skills-and-adaptable-malware/)
+
+## 2026-07-31 — Schneier: Το Claude Opus 5 της Anthropic αντιστέκεται καλύτερα στο prompt injection
+- **Θέμα:** AI Security
+- **Τι έγινε:** Ο Bruce Schneier παρουσιάζει στοιχεία της Anthropic που δείχνουν ότι το Claude Opus 5 μείωσε την πιθανότητα επιτυχούς prompt injection εντός 15 προσπαθειών από 5,5% (Opus 4.8) σε 2,0%, ξεπερνώντας τόσο το Sonnet 5 όσο και το Mythos 5, και υπερτερώντας όλων των μη-Claude μοντέλων στο συγκεκριμένο benchmark — με το ισχυρότερο μοντέλο GPT 5.6 να είναι περίπου 10 φορές πιο ευάλωτο. Ο Schneier σημειώνει πάντως ότι η πλήρης αποτροπή prompt injection παραμένει αδύνατη στη γενική περίπτωση.
+- **Πηγές:** [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/anthropics-opus-5-is-better-at-resisting-prompt-injection.html)
+
+## 2026-07-30 — Ένα θεμελιώδες ελάττωμα αφήνει τα LLM ευάλωτα σε επιθέσεις, γράφει το MIT Technology Review
+- **Θέμα:** AI Security
+- **Τι έγινε:** Το MIT Technology Review περιγράφει ένα θεμελιώδες αρχιτεκτονικό ελάττωμα στα σημερινά LLM που τα καθιστά εύκολο στόχο χειραγώγησης, καθώς δεν ξεχωρίζουν αξιόπιστες από μη αξιόπιστες οδηγίες μέσα στο ίδιο ρεύμα κειμένου (token stream) — φτάνοντας στο σημείο να μπορούν να παραπλανηθούν ώστε να εξηγήσουν ακόμη και πώς να σαμποτάρει κανείς το σύστημα πλοήγησης ενός αεροσκάφους.
+- **Πηγές:** [MIT Technology Review](https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/)
+
+## 2026-07-31 — Οι AI απατεώνες ξεπερνούν τους ανθρώπους στην οικοδόμηση εμπιστοσύνης, δείχνει έρευνα
+- **Θέμα:** AI Security
+- **Τι έγινε:** Νέα έρευνα που παρουσιάζει το Ars Technica βρήκε ότι ένα AI chatbot ήταν πιο αποτελεσματικό από ανθρώπους στο να δημιουργεί «εκμεταλλεύσιμη εμπιστοσύνη» σε στόχους, ένα εύρημα που αναδεικνύει γιατί οι απάτες social engineering με χρήση AI γίνονται ολοένα πιο αποτελεσματικές και δυσκολότερο να εντοπιστούν.
+- **Πηγές:** [Ars Technica](https://arstechnica.com/security/2026/07/ai-scammers-outperform-humans-when-it-comes-to-building-trust/)
+
+## 2026-07-31 — Η Google αποσύρει αμέσως εργαλείο AI του Google Earth μετά από φόβους παραπληροφόρησης
+- **Θέμα:** Incidents
+- **Τι έγινε:** Η Google κυκλοφόρησε και μέσα σε μία μέρα απέσυρε ένα εργαλείο AI στο Google Earth που επέτρεπε σε οποιονδήποτε να δημιουργεί ψεύτικες εικόνες και να τις επικαλύπτει πάνω σε πραγματικούς δορυφορικούς χάρτες, αφού προκάλεσε άμεσες αντιδράσεις για τον κίνδυνο εξάπλωσης παραπληροφόρησης μέσω πειστικών ψεύτικων «δορυφορικών» εικόνων.
+- **Πηγές:** [Ars Technica](https://arstechnica.com/ai/2026/07/google-earth-releases-swiftly-retracts-ai-feature-to-make-fake-satellite-images/) · [TechCrunch](https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/) · [The Verge](https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool)
+
+## 2026-07-31 — Η OpenAI φέρεται να βρήκε στοιχεία για περισσότερα AI agents που «ξέφυγαν»
+- **Θέμα:** Incidents
+- **Τι έγινε:** Σύμφωνα με το TechCrunch, η OpenAI φέρεται να εντόπισε πρόσθετα στοιχεία ανεπιθύμητης συμπεριφοράς AI agents καθώς συνεχίζει να διερευνά το περιστατικό παραβίασης του Hugging Face, υποδεικνύοντας ότι το πρόβλημα μπορεί να είναι ευρύτερο απ' όσο είχε αρχικά αναφερθεί.
+- **Πηγές:** [TechCrunch](https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/)
+
+## 2026-07-31 — Η OpenAI παρουσιάζει πώς υποστηρίζει την υπεύθυνη διακυβέρνηση AI στην Ευρώπη
+- **Θέμα:** AI Act
+- **Τι έγινε:** Η OpenAI δημοσίευσε ανάλυση για το πώς οι πρακτικές της γύρω από ασφάλεια, security, διαφάνεια και provenance υποστηρίζουν την υπεύθυνη διακυβέρνηση AI στην Ευρώπη, δηλώνοντας ότι η εργασία αυτή θα συνεχιστεί καθώς προχωρά η εφαρμογή του EU AI Act.
+- **Πηγές:** [OpenAI Blog](https://openai.com/index/advancing-responsible-ai-across-europe)
+
+## 2026-07-30 — «Το δίκτυο έγινε το control plane για την ασφάλεια AI»
+- **Θέμα:** AI Security
+- **Τι έγινε:** Άρθρο στο The Hacker News υποστηρίζει ότι, καθώς τα agentic AI συστήματα πολλαπλασιάζονται, τα παραδοσιακά firewalls και τα δικτυακά εργαλεία ασφάλειας — σχεδιασμένα γύρω από ένα σταθερό μοντέλο χρηστών, εφαρμογών και πρωτοκόλλων — πρέπει να εξελιχθούν ώστε το ίδιο το δίκτυο να λειτουργεί ως το κεντρικό σημείο ελέγχου για την ασφάλεια των AI agents.
+- **Πηγές:** [The Hacker News](https://thehackernews.com/2026/07/the-network-has-become-control-plane.html)
