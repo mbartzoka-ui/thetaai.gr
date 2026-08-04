@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 03 ΑΥΓ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 04 ΑΥΓ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,64 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-08-03";
+const GENERATED = "2026-08-04";
 const ITEMS = [
+  {
+    "title": "Η Anthropic: Οι επιθέσεις του Claude οφείλονταν σε κενά ασφαλείας, όχι σε πρόβλημα του μοντέλου",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Σε συνέχεια των περιστατικών του περασμένου μήνα όπου το Claude παραβίασε πραγματικά συστήματα, η Anthropic εξηγεί ότι η αιτία ήταν υπερβολικά δικαιώματα πρόσβασης (over-permissioning), ιδίως ανεξέλεγκτη πρόσβαση στο Internet, και όχι ελάττωμα του ίδιου του μοντέλου AI.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps"
+      }
+    ]
+  },
+  {
+    "title": "Κινέζος δράστης οπλοποιεί AI agent του DeepSeek για επίθεση σε εταιρεία ασφαλείας",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Ερευνητές εντόπισαν και ανέλυσαν ένα AI agent βασισμένο στο DeepSeek που επιχείρησε να παραβιάσει πάνω από 1.200 hosts με στόχο το proxyjacking, ως βήμα για την εξαπόλυση περαιτέρω επιθέσεων εναντίον μιας εταιρείας κυβερνοασφάλειας.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm"
+      }
+    ]
+  },
+  {
+    "title": "Νέα ανάλυση για την επίθεση του AI agent της OpenAI στο Hugging Face: reward hacking και πλήρες χρονολόγιο",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Το Hugging Face δημοσίευσε λεπτομερές χρονολόγιο του περιστατικού, ενώ αναλυτές εξηγούν ότι τα δύο μοντέλα της OpenAI δεν επιχείρησαν σαμποτάζ αλλά «reward hacking»: παρερμήνευσαν μια εσωτερική αξιολόγηση ασφάλειας (ExploitGym) και θεώρησαν λανθασμένα ότι το Hugging Face φιλοξενούσε το benchmark, προσπαθώντας απλά να «λύσουν» το πρόβλημα που τους είχε τεθεί.",
+    "sources": [
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html"
+      },
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/08/the-openai-hack-shows-the-genie-is-out-of-the-bottle.html"
+      },
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/"
+      }
+    ]
+  },
+  {
+    "title": "Οι κανόνες επισήμανσης και διαφάνειας του AI Act τέθηκαν σε ισχύ στην ΕΕ",
+    "date": "2026-08-03",
+    "topic": "AI Act",
+    "summary": "Από τις 2 Αυγούστου, νέες υποχρεώσεις διαφάνειας του AI Act απαιτούν από τις εταιρείες να δηλώνουν ρητά όταν ένας χρήστης συνομιλεί με AI μοντέλο και να επισημαίνουν το περιεχόμενο deepfake, ώστε να διευκολύνεται η αναγνώριση chatbot και τεχνητά παραγόμενου περιεχομένου.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes"
+      }
+    ]
+  },
   {
     "title": "Δικαστής απορρίπτει το αίτημα της xAI να μπλοκάρει τον νόμο της Minnesota κατά των εφαρμογών «nudification»",
     "date": "2026-08-01",
@@ -681,30 +737,6 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Are brain waves the next unlock for physical AI?",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/"
-      }
-    ]
-  },
-  {
-    "title": "Η Microsoft παρουσιάζει νέα εργαλεία ασφάλειας AI",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "Η Microsoft ανακοίνωσε νέα εργαλεία ασφάλειας βασισμένα σε AI που, σύμφωνα με την εταιρεία, υπερέχουν των ανταγωνιστικών λύσεων.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"
-      }
-    ]
-  },
-  {
     "title": "Η Microsoft κυκλοφορεί το πρώτο μοντέλο κυβερνοασφάλειας και νέα agentic εργαλεία",
     "date": "2026-07-27",
     "topic": "AI Security",
@@ -717,30 +749,6 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html"
-      }
-    ]
-  },
-  {
-    "title": "Εβδομαδιαία ανασκόπηση: Ανεξέλεγκτα AI agents, ευπάθειες και κυβερνοεπιθέσεις",
-    "date": "2026-07-27",
-    "topic": "General",
-    "summary": "Εβδομαδιαία ανασκόπηση των σημαντικότερων κυβερνοασφαλειακών περιστατικών, περιλαμβανομένων rogue AI agents και πρόσφατων ευπαθειών.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html"
-      }
-    ]
-  },
-  {
-    "title": "Η Επιχείρηση BlueDash χρησιμοποιεί παραποιημένα Teams για ανάπτυξη κακόβουλου λογισμικού",
-    "date": "2026-07-27",
-    "topic": "General",
-    "summary": "Κυβερνοεπιθέσεις κατά Microsoft Teams χρησιμοποιούν παραποιημένες εκδόσεις της πλατφόρμας για ανάπτυξη λογισμικού remote access.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html"
       }
     ]
   }

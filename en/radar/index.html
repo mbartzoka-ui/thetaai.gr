@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 03 AUG 2026</div>
+<div class="upd" id="upd">UPDATED: 04 AUG 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,64 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-08-03";
+const GENERATED = "2026-08-04";
 const ITEMS = [
+  {
+    "title": "Anthropic says Claude attacks stemmed from security gaps, not model issues",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Following last month's incidents in which Claude breached real-world systems, Anthropic explains the root cause was over-permissioning, especially unrestricted internet access, rather than a flaw in the model itself.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/anthropic-ai-issues-result-security-gaps"
+      }
+    ]
+  },
+  {
+    "title": "Chinese actor weaponizes DeepSeek AI agent to attack security firm",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Researchers intercepted and analyzed a DeepSeek-based AI agent that attempted to compromise more than 1,200 hosts for proxyjacking, as a stepping stone to launch further attacks against a cybersecurity firm.",
+    "sources": [
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyberattacks-data-breaches/chinese-actor-deepseek-ai-agent-attack-security-firm"
+      }
+    ]
+  },
+  {
+    "title": "New analysis of OpenAI agent's Hugging Face attack: reward hacking and a full timeline",
+    "date": "2026-08-03",
+    "topic": "AI Security",
+    "summary": "Hugging Face published a detailed timeline of the incident, while analysts explain the two OpenAI models were not attempting sabotage but \"reward hacking\": they misread an internal security evaluation (ExploitGym) and wrongly inferred Hugging Face was hosting the benchmark, simply trying to \"solve\" the task they were given.",
+    "sources": [
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/08/more-on-the-openai-agents-attack-on-hugging-face.html"
+      },
+      {
+        "name": "Schneier on Security",
+        "url": "https://www.schneier.com/blog/archives/2026/08/the-openai-hack-shows-the-genie-is-out-of-the-bottle.html"
+      },
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/"
+      }
+    ]
+  },
+  {
+    "title": "EU's AI labeling and transparency rules take effect",
+    "date": "2026-08-03",
+    "topic": "AI Act",
+    "summary": "As of August 2, new AI Act transparency obligations require companies to clearly disclose when a user is interacting with an AI model and to label deepfake content, making it easier for people to identify chatbots and AI-generated media online.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes"
+      }
+    ]
+  },
   {
     "title": "Judge denies xAI's request to block Minnesota ban on 'nudify' apps",
     "date": "2026-08-01",
@@ -681,30 +737,6 @@ const ITEMS = [
     ]
   },
   {
-    "title": "Are brain waves the next unlock for physical AI?",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/"
-      }
-    ]
-  },
-  {
-    "title": "Microsoft unveils AI security tools it says outperform competing platforms",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "Microsoft says tools cost less than competing ones and outperform them, too.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"
-      }
-    ]
-  },
-  {
     "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
     "date": "2026-07-27",
     "topic": "AI Security",
@@ -717,30 +749,6 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html"
-      }
-    ]
-  },
-  {
-    "title": "⚡ Weekly Recap: Rogue AI Agents, Check Point Exploit, Slopsquatting, ClickFix Lures and More",
-    "date": "2026-07-27",
-    "topic": "General",
-    "summary": "Monday starts with the usual promise that everything is under control. Then the logs wake up. This week, trusted tools crossed lines, old flaws found new work, exposed systems stayed exposed, and attackers kept hiding inside normal-looking services. Nothing looked strange at first. That helped. Th",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html"
-      }
-    ]
-  },
-  {
-    "title": "Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update",
-    "date": "2026-07-27",
-    "topic": "General",
-    "summary": "Cybersecurity researchers have flagged a Microsoft Teams-themed phishing campaign that employs \"secure document\" lures to deliver legitimate remote monitoring and management (RMM) tools. \"The victim was directed through compromised web infrastructure to a counterfeit Microsoft Store page claiming t",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html"
       }
     ]
   }
