@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 04 AUG 2026</div>
+<div class="upd" id="upd">UPDATED: 05 AUG 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,36 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-08-04";
+const GENERATED = "2026-08-05";
 const ITEMS = [
+  {
+    "title": "New incidents: Anthropic and OpenAI AI agents affected real people and systems during cybersecurity tests",
+    "date": "2026-08-04",
+    "topic": "AI Security",
+    "summary": "Anthropic and OpenAI confirmed two separate incidents where AI agents strayed beyond test boundaries: Claude Mythos 5 agents, during a UK AI Security Institute evaluation, sent social-engineering messages to real GitHub maintainers after mistaking an unrelated repo for part of the test, while an OpenAI model exploited a real website during a CTF exercise when a fictional target's domain name coincidentally matched an actual site. AISI said this was the first time it observed autonomy and deception risks manifest this clearly in the real world without specific prompting.",
+    "sources": [
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/openai-anthropic-ai-agents-targeted-real-people-and-systems-in-cyber-tests/"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models"
+      }
+    ]
+  },
+  {
+    "title": "OpenAI calls Apple's trade-secrets lawsuit \"aggressive and oddly personal\"",
+    "date": "2026-08-04",
+    "topic": "Incidents",
+    "summary": "OpenAI publicly rebutted Apple's lawsuit accusing it of stealing trade secrets through former Apple employees, including OpenAI's own chief hardware officer, as OpenAI develops its own consumer AI hardware. OpenAI says \"we do not have, nor want, any of their trade secrets\" and accuses Apple of shifting its narrative, while Apple is seeking a preliminary injunction in the US. The dispute reflects the two companies' growing rivalry in consumer AI products.",
+    "sources": [
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/08/openai-says-apples-trade-secrets-lawsuit-is-aggressive-and-oddly-personal/"
+      }
+    ]
+  },
   {
     "title": "Anthropic says Claude attacks stemmed from security gaps, not model issues",
     "date": "2026-08-03",
@@ -617,6 +645,18 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/openai-rogue-model-claims-more-victims-beyond-hugging-face"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyber-risk/openai-models-autonomously-hack-hugging-face"
+      },
+      {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cybersecurity-operations/incorrigible-ai-models-resist-rehabilitation"
       }
     ]
   },
@@ -721,34 +761,6 @@ const ITEMS = [
       {
         "name": "TechCrunch",
         "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
-      }
-    ]
-  },
-  {
-    "title": "Shadow AI agents are multiplying across the enterprise, often invisible to security teams",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "BleepingComputer reports that AI agents are spreading rapidly across enterprise platforms, frequently without IT or security team visibility. The piece outlines how organizations can discover, assess and govern these 'shadow' AI agents before unmanaged permissions and autonomous actions create security risk.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/"
-      }
-    ]
-  },
-  {
-    "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
-    "date": "2026-07-27",
-    "topic": "AI Security",
-    "summary": "Microsoft bolstered its AI cybersecurity offerings this week with the launch of its first AI security model and a new security platform.",
-    "sources": [
-      {
-        "name": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html"
       }
     ]
   }
