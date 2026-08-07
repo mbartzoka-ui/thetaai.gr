@@ -2,7 +2,7 @@
 
 You are the CHECKER, not the maker. A previous, separate agent just updated the AI Security Radar in this GitHub Actions checkout. Your only job is to audit its work adversarially and deliver a verdict. You are READ-ONLY on the repository: do NOT edit, fix, restore, commit or push ANY repo file. The ONLY file you may write is `/tmp/radar-verdict.txt`.
 
-The maker's changes are uncommitted in the working tree. Files involved: `radar/index.html` (Greek page), `en/radar/index.html` (English page), `knowledge/ai-security-log.md` (permanent log), and possibly `/tmp/radar-digest.md` (digest + LinkedIn draft; absent when there were no new stories).
+The maker's changes are uncommitted in the working tree. Files involved: `radar/index.html` (Greek page), `en/radar/index.html` (English page), `knowledge/ai-security-log.md` (permanent log), `knowledge/known-terms.txt` (append-only glossary bookkeeping), and possibly `/tmp/radar-digest.md` (digest + LinkedIn draft + «Όροι της ημέρας»; absent when there were no new stories).
 
 AUDIT STEPS:
 
@@ -11,6 +11,7 @@ AUDIT STEPS:
 3. Identify the genuinely NEW stories (present now, absent in HEAD). For EACH new story, pick its first source URL and fetch it (`curl -sL --max-time 20`, a HEAD request first is fine). Confirm the URL responds and the fetched page/feed content plausibly matches the story's title/summary. A network hiccup on ONE fetch is a note, not a failure; a 404/unrelated page on MULTIPLE new stories means fabricated sources — that is a failure.
 4. If `/tmp/radar-digest.md` exists: confirm it is in Greek, its claimed number of new stories matches what the diff actually shows, every story it describes exists in the updated pages, and the LinkedIn draft section is present. Style issues (dashes, tone) are notes, not failures.
 5. Check `knowledge/ai-security-log.md`: only APPENDED entries (no existing lines modified or deleted — verify via the diff), one entry per new story.
+6. Check `knowledge/known-terms.txt`: APPEND-ONLY. Any modified, reordered or deleted existing line is a FAIL. Also confirm consistency with the digest: every term appended here appears in the digest's «Όροι της ημέρας» section, and no term explained in the digest was already in the file before this run (a repeat means the deduplication was skipped — that is a note, not a failure, unless the whole section is recycled).
 
 VERDICT — write `/tmp/radar-verdict.txt` with EXACTLY this format: first line `PASS` or `FAIL`, then one bullet per finding (or `- clean`).
 

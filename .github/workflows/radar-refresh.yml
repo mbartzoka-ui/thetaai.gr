@@ -2,8 +2,21 @@ name: Radar daily refresh
 
 on:
   schedule:
-    - cron: "50 3 * * *"   # ~06:50 Ελλάδας (θερινή ώρα)· με τη συνηθισμένη καθυστέρηση GitHub, email ως ~07:30-08:00
-    - cron: "20 6 * * *"   # ρεζέρβα ~09:20 Ελλάδας: τρέχει ΜΟΝΟ αν το πρωινό πέρασμα χάθηκε (βλ. guard "Skip if already refreshed")
+    # ΠΡΟΣΟΧΗ: οι ώρες είναι UTC και ΔΕΝ προσαρμόζονται στη θερινή/χειμερινή ώρα.
+    # Τον χειμώνα (UTC+2) το email θα φτάνει μία ώρα νωρίτερα σε τοπική ώρα.
+    #
+    # ΒΑΘΜΟΝΟΜΗΣΗ — μετρημένη 2026-08-07 σε 12 εκτελέσεις:
+    # Το GitHub δεν τρέχει τα scheduled workflows στην ώρα του cron· τα βάζει
+    # σε ουρά. Η μετρημένη καθυστέρηση ήταν 1:34 έως 3:01 (διάμεσος ~2:26).
+    # Δεν είναι εγγύηση — είναι παρατήρηση. Στόχος: email ~07:30 Ελλάδας.
+    # ΑΝ Η ΩΡΑ ΑΦΙΞΗΣ ΜΕΤΑΚΙΝΗΘΕΙ ΜΟΝΙΜΑ: ξαναμέτρα την καθυστέρηση
+    # (`gh run list --workflow=radar-refresh.yml --json createdAt`) πριν
+    # αλλάξεις τα νούμερα, και ενημέρωσε την ημερομηνία αυτού του σχολίου.
+    # Τα λεπτά είναι επίτηδες "άτακτα" (:57, :27) — τα :00 και :30 έχουν
+    # τη μεγαλύτερη ουρά στο GitHub.
+    - cron: "57 1 * * *"   # κύριο πέρασμα → email ~06:50-08:15 Ελλάδας (θερινή ώρα)
+    - cron: "27 2 * * *"   # ρεζέρβα 1: τρέχει ΜΟΝΟ αν χάθηκε το κύριο (βλ. guard "Skip if already refreshed")
+    - cron: "57 2 * * *"   # ρεζέρβα 2: τρέχει ΜΟΝΟ αν χάθηκαν και τα δύο προηγούμενα
   workflow_dispatch: {}
 
 permissions:
@@ -61,7 +74,7 @@ jobs:
             attempt=$((attempt+1))
             echo "=== Attempt $attempt: $model ==="
             git checkout -- radar en/radar knowledge
-            rm -f /tmp/radar-digest.md /tmp/radar-verdict.txt
+            rm -f /tmp/radar-digest.md /tmp/radar-verdict.txt /tmp/radar-run-info.md /tmp/radar-model.txt
             if ! claude -p "$(cat .github/radar-prompt.md)" --model "$model" --dangerously-skip-permissions; then
               echo "::warning::Attempt $attempt ($model): claude exited with an error (API/safeguard block) - retrying with next model."
               continue
@@ -82,6 +95,28 @@ jobs:
             else
               echo "::warning::Checker produced no verdict - accepting (structural check passed) but flagging."
             fi
+            # Γραμμή εμπιστοσύνης για τη Μαρία: ποιο μοντέλο έγραψε το digest και
+            # πώς πήγαν οι έλεγχοι. Χωρίς αυτό η πληροφορία μένει θαμμένη στα
+            # logs του run, όπου δεν έχει λόγο να κοιτάξει.
+            case "$model" in
+              *sonnet*) friendly="Sonnet" ;;
+              *haiku*)  friendly="Haiku" ;;
+              *)        friendly="$model" ;;
+            esac
+            if [ -f /tmp/radar-verdict.txt ]; then
+              verdict="$(head -n1 /tmp/radar-verdict.txt)"
+            else
+              verdict="δεν παρήχθη (έγινε δεκτό βάσει του δομικού ελέγχου)"
+            fi
+            {
+              echo "> **Πώς φτιάχτηκε:** $friendly · προσπάθεια $attempt από 3 · δομικός έλεγχος OK · ανεξάρτητος ελεγκτής $verdict"
+              if [ "$friendly" = "Haiku" ]; then
+                echo ">"
+                echo "> **Προσοχή:** έτρεξε με Haiku, γιατί το Sonnet απέτυχε ή μπλοκαρίστηκε. Τα γεγονότα πέρασαν τους ίδιους ελέγχους, αλλά το κείμενο για LinkedIn θέλει δούλεμα πριν το ποστάρεις."
+              fi
+              echo ""
+            } > /tmp/radar-run-info.md
+            printf '%s' "$friendly" > /tmp/radar-model.txt
             echo "Attempt $attempt ($model) succeeded, validated and checker-approved."
             exit 0
           done
@@ -94,7 +129,7 @@ jobs:
         run: |
           git config user.name "radar-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md
+          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md knowledge/known-terms.txt
           if git diff --cached --quiet; then
             echo "No changes to publish (feeds empty or nothing new)."
           else
@@ -108,9 +143,20 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -f /tmp/radar-digest.md ]; then
+            model="$(cat /tmp/radar-model.txt 2>/dev/null || true)"
+            [ -n "$model" ] || model="άγνωστο μοντέλο"
+            # Η γραμμή εμπιστοσύνης μπαίνει ΜΕΤΑ την πρώτη γραμμή του digest:
+            # η πρώτη γραμμή είναι το @mention που πυροδοτεί την ειδοποίηση email
+            # και πρέπει να μείνει πρώτη.
+            {
+              head -n 1 /tmp/radar-digest.md
+              echo ""
+              cat /tmp/radar-run-info.md 2>/dev/null || true
+              tail -n +2 /tmp/radar-digest.md
+            } > /tmp/radar-issue-body.md
             gh issue create --repo "$GITHUB_REPOSITORY" \
-              --title "AI Radar Digest — $(date +%d/%m/%Y)" \
-              --body-file /tmp/radar-digest.md
+              --title "AI Radar Digest — $(date +%d/%m/%Y) · $model" \
+              --body-file /tmp/radar-issue-body.md
           else
             echo "No new stories today - no digest."
           fi

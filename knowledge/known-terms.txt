@@ -1,0 +1,81 @@
+# Όροι που έχουν εξηγηθεί στη Μαρία — append-only. Μη διαγράφεις γραμμές.
+#
+# Ο αυτοματισμός του radar διαβάζει αυτό το αρχείο πριν γράψει την ενότητα
+# «Όροι της ημέρας» στο digest, και εξηγεί ΜΟΝΟ όρους που ΔΕΝ είναι εδώ.
+# Κάθε όρος που εξηγεί, τον προσθέτει στο τέλος. Η λίστα μεγαλώνει, η
+# ενότητα μικραίνει. Τις καλές μέρες θα λείπει τελείως.
+#
+# Αρχικοποιήθηκε 2026-08-07 από το γλωσσάρι του AI-Security-Path
+# (01-knowledge-base/glossary.md) και από τα 5 μαθήματα ορολογίας
+# (01-knowledge-base/radar-terms/).
+
+# --- από το γλωσσάρι του curriculum ---
+adversarial example
+ai act
+eu ai act
+ai bill of materials
+ai bom
+alignment
+cia triad
+context window
+embedding
+fine-tuning
+hallucination
+jailbreak
+llm
+large language model
+mitre atlas
+nist ai rmf
+owasp llm top 10
+prompt
+prompt injection
+indirect prompt injection
+rag
+retrieval-augmented generation
+defense in depth
+residual risk
+rlhf
+system prompt
+token
+provider
+deployer
+conformity assessment
+ce marking
+rbac
+access control
+
+# --- Μάθημα 1: ποιος επιτίθεται τώρα ---
+script kiddies
+vibe coding
+vibe hacking
+exploit
+
+# --- Μάθημα 2: πώς μπαίνει μέσα ---
+zero-click
+
+# --- Μάθημα 3: τι αφήνει πίσω ---
+backdoor
+malware dropper
+dropper
+force-push
+persona
+fake identity
+
+# --- Μάθημα 4: η ανατομία ενός συστήματος AI ---
+ai harness
+control plane
+api endpoint
+trust boundary
+agent-to-agent
+privileged agent
+triage agent
+ai agent
+
+# --- Μάθημα 5: τα λάθη τα δικά μας ---
+misconfiguration
+supply chain
+ctf
+capture the flag
+open source
+maintainer
+deepfake
