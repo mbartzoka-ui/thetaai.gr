@@ -79,3 +79,9 @@ capture the flag
 open source
 maintainer
 deepfake
+
+# --- 2026-08-08 ---
+cve
+cvss
+ci/cd
+sycophancy
