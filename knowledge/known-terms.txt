@@ -85,3 +85,7 @@ cve
 cvss
 ci/cd
 sycophancy
+
+# --- 2026-08-09 ---
+security theater
+offboarding
