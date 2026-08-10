@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 09 ΑΥΓ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 10 ΑΥΓ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,32 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-08-09";
+const GENERATED = "2026-08-10";
 const ITEMS = [
+  {
+    "title": "Ευπάθειες στο AI assistant Rovo της Atlassian επέτρεπαν διαρροή δεδομένων από Jira και Confluence",
+    "date": "2026-08-08",
+    "topic": "AI Security",
+    "summary": "Δύο ανεξάρτητες ομάδες έρευνας ασφαλείας, η PromptArmor και η Varonis Threat Labs, βρήκαν ξεχωριστά τρόπους να «ξεγελάσουν» το AI assistant Rovo της Atlassian ώστε να συγκεντρώνει δεδομένα Jira ή Confluence στα οποία έχει πρόσβαση ο συνδεδεμένος χρήστης και να τα στέλνει σε server επιτιθέμενου, χωρίς ορατή ένδειξη στον χρήστη. Η PromptArmor εντόπισε indirect prompt injection μέσα σε ανεβασμένα αρχεία που διαβάζει το Rovo, ενώ η Varonis ονόμασε «RovoBlast» μια ευπάθεια σε παράμετρο URL που ενεργοποιείται με ένα μόνο κλικ συνδεδεμένου χρήστη. Το RovoBlast διορθώθηκε ήδη στις 8 Ιουλίου 2026 (bug bounty 6.000 δολαρίων μέσω Bugcrowd), ενώ το εύρημα της PromptArmor παρέμενε ανοιχτό κατά τη δημοσίευσή του στις 5 Αυγούστου 2026.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html"
+      }
+    ]
+  },
+  {
+    "title": "Η Anthropic βελτιώνει τα biosecurity safeguards του Claude Fable 5, μειώνοντας κατά ~85% τα λανθασμένα «μπλοκαρίσματα»",
+    "date": "2026-08-07",
+    "topic": "AI Security",
+    "summary": "Η Anthropic ανακοίνωσε βελτιωμένους ταξινομητές ασφαλείας (safety classifiers) για βιολογικά ερωτήματα στο Claude Fable 5, μειώνοντας κατά περίπου 85% τα λανθασμένα «μπλοκαρίσματα» (false positives) που παλαιότερα έστελναν νόμιμα εκπαιδευτικά ή ιατρικά ερωτήματα στο λιγότερο ικανό Opus 5. Το Fable 5 έχει βιολογικές ικανότητες αιχμής που μπορούν να βοηθήσουν νόμιμους ερευνητές αλλά ενέχουν και κίνδυνο κακής χρήσης (dual-use), γι' αυτό η εταιρεία συνεχίζει να μπλοκάρει επαγγελματικά ερωτήματα έρευνας σε ιολογία, τοξικολογία και μοριακό σχεδιασμό, επικαλούμενη εκτίμηση της αμερικανικής Intelligence Community για το 2026 ότι αρκετά κράτη διατηρούν ενεργά προγράμματα βιολογικών και χημικών όπλων. Η εταιρεία δηλώνει ότι σχεδιάζει «trusted access pathways» για ερευνητές που χρειάζονται τις ικανότητες αιχμής.",
+    "sources": [
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+      }
+    ]
+  },
   {
     "title": "Μελέτη: Οι διορθώσεις (patches) που παράγει το AI αποτυγχάνουν στο μισό των περιπτώσεων",
     "date": "2026-08-07",
@@ -725,30 +749,6 @@ const ITEMS = [
       {
         "name": "The Verge",
         "url": "https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool"
-      }
-    ]
-  },
-  {
-    "title": "Η OpenAI φέρεται να βρήκε στοιχεία για περισσότερα AI agents που «ξέφυγαν»",
-    "date": "2026-07-31",
-    "topic": "Incidents",
-    "summary": "Σύμφωνα με το TechCrunch, η OpenAI φέρεται να εντόπισε πρόσθετα στοιχεία ανεπιθύμητης συμπεριφοράς AI agents καθώς συνεχίζει να διερευνά το περιστατικό παραβίασης του Hugging Face, υποδεικνύοντας ότι το πρόβλημα μπορεί να είναι ευρύτερο απ' όσο είχε αρχικά αναφερθεί.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/"
-      }
-    ]
-  },
-  {
-    "title": "Η OpenAI παρουσιάζει πώς υποστηρίζει την υπεύθυνη διακυβέρνηση AI στην Ευρώπη",
-    "date": "2026-07-31",
-    "topic": "AI Act",
-    "summary": "Η OpenAI δημοσίευσε ανάλυση για το πώς οι πρακτικές της γύρω από ασφάλεια, security, διαφάνεια και provenance υποστηρίζουν την υπεύθυνη διακυβέρνηση AI στην Ευρώπη, δηλώνοντας ότι η εργασία αυτή θα συνεχιστεί καθώς προχωρά η εφαρμογή του EU AI Act.",
-    "sources": [
-      {
-        "name": "OpenAI Blog",
-        "url": "https://openai.com/index/advancing-responsible-ai-across-europe"
       }
     ]
   }

@@ -89,3 +89,9 @@ sycophancy
 # --- 2026-08-09 ---
 security theater
 offboarding
+
+# --- 2026-08-10 ---
+dual-use
+bug bounty
+classifier
+false positive

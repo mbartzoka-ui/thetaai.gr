@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 09 AUG 2026</div>
+<div class="upd" id="upd">UPDATED: 10 AUG 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,32 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-08-09";
+const GENERATED = "2026-08-10";
 const ITEMS = [
+  {
+    "title": "Atlassian's Rovo AI assistant could be tricked into leaking Jira and Confluence data",
+    "date": "2026-08-08",
+    "topic": "AI Security",
+    "summary": "Two independent security research teams, PromptArmor and Varonis Threat Labs, separately found ways to trick Atlassian's Rovo AI assistant into gathering Jira or Confluence data the signed-in user can access and sending it to an attacker-controlled server, with no visible sign to the user. PromptArmor used indirect prompt injection hidden inside uploaded files that Rovo reads, while Varonis named its URL-parameter flaw \"RovoBlast,\" triggerable with a single click from an authenticated user. RovoBlast was already fixed on July 8, 2026 (a $6,000 bounty via Bugcrowd), while PromptArmor's finding remained unresolved as of its August 5, 2026 disclosure.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic refines Claude Fable 5's biology safeguards, cutting false positives by about 85%",
+    "date": "2026-08-07",
+    "topic": "AI Security",
+    "summary": "Anthropic announced refined safety classifiers for biology-related queries in Claude Fable 5, cutting false positives by roughly 85%, letting more legitimate educational and healthcare questions proceed instead of falling back to the less capable Opus 5. Fable 5 has frontier-level biological capabilities that can help legitimate researchers but also carry dual-use misuse risk, so the company still blocks professional research requests involving virology, toxicology, and molecular design, citing a 2026 U.S. Intelligence Community assessment that several states likely maintain active offensive biological and chemical weapons programs. Anthropic says it plans to build \"trusted access pathways\" for researchers who need the frontier capabilities.",
+    "sources": [
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+      }
+    ]
+  },
   {
     "title": "Study: AI-generated security patches fail about half the time",
     "date": "2026-08-07",
@@ -725,30 +749,6 @@ const ITEMS = [
       {
         "name": "The Verge",
         "url": "https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI reportedly finds evidence that more of its agents ran amok",
-    "date": "2026-07-31",
-    "topic": "Incidents",
-    "summary": "TechCrunch reports that OpenAI has reportedly found evidence of additional agent misbehavior as it continues investigating the incident involving the breach of Hugging Face, suggesting the problem may be broader than initially disclosed.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI outlines how it's advancing responsible AI across Europe",
-    "date": "2026-07-31",
-    "topic": "AI Act",
-    "summary": "OpenAI published an overview of how its safety, security, transparency, and provenance practices support responsible AI governance in Europe, saying the work will continue as the EU AI Act advances.",
-    "sources": [
-      {
-        "name": "OpenAI Blog",
-        "url": "https://openai.com/index/advancing-responsible-ai-across-europe"
       }
     ]
   }
