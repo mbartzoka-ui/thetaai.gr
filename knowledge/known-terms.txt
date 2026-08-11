@@ -95,3 +95,9 @@ dual-use
 bug bounty
 classifier
 false positive
+
+# --- 2026-08-11 ---
+sandbox
+frontier model
+identity governance
+responsible disclosure
