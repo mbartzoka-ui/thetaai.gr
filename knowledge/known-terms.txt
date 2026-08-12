@@ -101,3 +101,11 @@ sandbox
 frontier model
 identity governance
 responsible disclosure
+
+# --- 2026-08-12 ---
+rce
+remote code execution
+mcp
+model context protocol
+exfiltration
+watermarking
