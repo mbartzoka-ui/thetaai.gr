@@ -109,3 +109,9 @@ mcp
 model context protocol
 exfiltration
 watermarking
+
+# --- 2026-08-13 ---
+chain-of-thought
+guardrails
+model distillation
+open-weight models
