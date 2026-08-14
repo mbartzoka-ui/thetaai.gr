@@ -115,3 +115,10 @@ chain-of-thought
 guardrails
 model distillation
 open-weight models
+
+# --- 2026-08-14 ---
+rat
+remote access trojan
+infostealer
+multi-agent
+transparency code
