@@ -122,3 +122,7 @@ remote access trojan
 infostealer
 multi-agent
 transparency code
+
+# --- 2026-08-15 ---
+synthid
+privileged access
