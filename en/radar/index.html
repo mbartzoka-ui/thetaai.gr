@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 15 AUG 2026</div>
+<div class="upd" id="upd">UPDATED: 16 AUG 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,32 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-08-15";
+const GENERATED = "2026-08-16";
 const ITEMS = [
+  {
+    "title": "Woman alleges stepfather used Grok to turn a childhood photo into explicit imagery",
+    "date": "2026-08-15",
+    "topic": "Incidents",
+    "summary": "A new plaintiff, known as \"Jane Doe 4,\" joined an existing lawsuit against xAI, alleging her stepfather used the Grok chatbot to generate more than 7,000 sexually explicit images from a childhood photo of her taken at age 11. According to TechCrunch, citing a Washington Post report, the stepfather died by suicide two days after law enforcement discovered the images. The suit, which seeks class-action status, alleges xAI failed to implement basic safeguards to stop the chatbot from producing sexual imagery of real people, including minors, and cites earlier incidents in which X (formerly Twitter) was flooded with Grok-generated sexualized images. xAI has not publicly responded.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic reveals more technical details on how Claude's new watermark works",
+    "date": "2026-08-15",
+    "topic": "AI Act",
+    "summary": "Anthropic clarified how its new invisible text watermark for Claude works, based on the SynthID-Text method developed by Google DeepMind in 2024: the system embeds a pattern in \"low-stakes\" word choices (e.g., between synonyms), invisible to readers but detectable by anyone holding the right key, and the company plans to release a public detection API. According to TechCrunch, light edits likely won't fully remove the mark, while a complete rewrite of every word would erase it entirely, though Anthropic itself notes that in that case \"it's arguable whether the text can any longer be described as AI-generated.\" Generated code carries significantly less watermarking since the model must produce functional output with fewer arbitrary word choices, though some signal can remain in code comments with a negligible effect on the code's actual functionality.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/"
+      }
+    ]
+  },
   {
     "title": "Google now lets users turn off the visible watermark on Gemini's AI-generated images and video",
     "date": "2026-08-14",
@@ -325,6 +349,30 @@ const ITEMS = [
       {
         "name": "Ars Technica",
         "url": "https://arstechnica.com/tech-policy/2026/08/claudes-new-scarlet-letter-watermark-is-invisible-for-now/"
+      }
+    ]
+  },
+  {
+    "title": "Malicious LiteLLM releases tied to Trivy hack may have exposed thousands of organizations",
+    "date": "2026-08-12",
+    "topic": "AI Security",
+    "summary": "Two tampered releases (1.82.7 and 1.82.8) of LiteLLM, a popular open-source gateway that connects applications to multiple AI model providers, were uploaded to PyPI in March 2026 and stayed available for about 40 minutes before being quarantined, carrying credential-stealing malware capable of harvesting cloud API keys, SSH keys, Kubernetes tokens and database passwords. The incident is tied to the broader \"TeamPCP\" supply-chain campaign, which began with a breach of Aqua Security's Trivy scanner that let attackers obtain PyPI publishing tokens. According to threat intelligence firm CloudSEK, a dataset of roughly 434,000 files captured by the attackers maps to potential exposure at thousands of organizations, including NVIDIA, Cisco, Deloitte, Volkswagen and FedEx, though this reflects potential rather than confirmed compromise.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html"
+      }
+    ]
+  },
+  {
+    "title": "Amazon will train AI on Twitch streamers' content by default, unless they opt out",
+    "date": "2026-08-12",
+    "topic": "AI Act",
+    "summary": "Amazon announced it will use Twitch streamers' content to train generative AI models, automatically enrolling creators by default (opt-out) rather than asking for explicit consent (opt-in). Streamers can disable the collection by going to their channel settings' security and privacy tab and toggling the option off. Responding to user backlash on a livestream, Twitch Chief Product Officer Mike Minton candidly admitted: \"If this was opt-in, nobody would opt in. That's honestly the answer.\" Nearly 3,000 users watched the livestream in protest, and it remained unclear whether content had already been fed into Amazon's systems before the official announcement.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/"
       }
     ]
   },
@@ -689,54 +737,6 @@ const ITEMS = [
       {
         "name": "Dark Reading",
         "url": "https://www.darkreading.com/application-security/no-perfect-fix-ai-browser-prompt-injection-flaws"
-      }
-    ]
-  },
-  {
-    "title": "Flaws in Google's APK for Python unlocked agent-to-agent attacks",
-    "date": "2026-08-05",
-    "topic": "AI Security",
-    "summary": "Flaws in Google's APK for Python exploited a trust boundary between two AI agents with different privilege levels to trigger automation that could have compromised the software supply chain. Google has already fixed the issues.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/vulnerabilities-threats/flaws-google-apk-python-agent-to-agent-attack"
-      }
-    ]
-  },
-  {
-    "title": "'Poison Claude' sells discounted Claude access while its operator reads every customer prompt",
-    "date": "2026-08-05",
-    "topic": "AI Security",
-    "summary": "Security researchers found more than half a dozen underground services advertising illicit, discounted access to AI models. One, \"Poison Claude,\" claims to offer access to Anthropic's LLMs (Opus 4.8, 4.7, 4.6, Sonnet 4.6), while the service's operator can see every prompt its \"customers\" send, exposing their data.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/08/poison-claude-sells-discounted-claude.html"
-      }
-    ]
-  },
-  {
-    "title": "Paperclip AI flaws let attackers run host commands via malicious agent imports",
-    "date": "2026-08-05",
-    "topic": "AI Security",
-    "summary": "Two security flaws in Paperclip, an open-source control plane for teams of AI agents, let attackers execute commands on a network server or a developer's machine by importing and starting a malicious agent. A third flaw could expose sensitive data and control-plane details through its API routes.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/08/paperclip-ai-flaws-let-attackers-run.html"
-      }
-    ]
-  },
-  {
-    "title": "AI is sending organized crime into a fraud 'nirvana'",
-    "date": "2026-08-05",
-    "topic": "Incidents",
-    "summary": "Organized crime groups are now running convincing scams at scale, making billions thanks to AI-enabled voice cloning, real-time deepfake video overlays, LLM-driven persona management, and automated translation.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/threat-intelligence/ai-global-crime-syndicates-fraud-nirvana"
       }
     ]
   }

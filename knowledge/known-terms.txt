@@ -126,3 +126,9 @@ transparency code
 # --- 2026-08-15 ---
 synthid
 privileged access
+
+# --- 2026-08-16 ---
+pypi
+ai gateway
+opt-in
+opt-out
