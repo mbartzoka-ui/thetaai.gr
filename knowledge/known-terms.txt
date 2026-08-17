@@ -132,3 +132,7 @@ pypi
 ai gateway
 opt-in
 opt-out
+
+# --- 2026-08-17 ---
+superalignment
+regulatory capture

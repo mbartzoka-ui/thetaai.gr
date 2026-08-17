@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 16 AUG 2026</div>
+<div class="upd" id="upd">UPDATED: 17 AUG 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,44 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-08-16";
+const GENERATED = "2026-08-17";
 const ITEMS = [
+  {
+    "title": "OpenAI reportedly disbanded its AI-risk 'preparedness' team",
+    "date": "2026-08-16",
+    "topic": "AI Security",
+    "summary": "According to a Financial Times report cited by The Verge, OpenAI disbanded its preparedness team at the end of July 2026, the group responsible for assessing whether its models pose serious risks, such as helping create bioweapons or autonomously hacking systems, and developing mitigations. The move is described as the latest in a series of safety-team dissolutions at OpenAI, following the earlier breakup of its AGI readiness and superalignment teams and departures including ethics lead Chloé Bakalar, as the company heads toward an expected IPO. The preparedness team's former head, Dylan Scandinaro, recruited from Anthropic in February 2026, will now focus on the implications of \"recursively self-improving\" AI rather than broad frontier-risk assessment.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic CEO Dario Amodei says the AI backlash is 'fundamentally a crisis of trust'",
+    "date": "2026-08-16",
+    "topic": "General",
+    "summary": "Responding to investor Gavin Baker's claim that his own warnings about AI risk have fueled backlash against the industry, particularly against data centers, Anthropic CEO Dario Amodei argued in a series of posts that public distrust of AI predates and goes beyond any single executive's messaging, rooted instead in decades of people not trusting companies, governments, or the tech industry generally. Amodei said the fairest criticism of AI companies, including Anthropic, is that they \"haven't yet delivered\" on big promises like curing diseases, and pushed back on the idea that regulation necessarily means concentrating power in a few large AI companies, saying Anthropic tries to design proposals that constrain frontier labs while leaving room for smaller competitors and open-weight models.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
+      }
+    ]
+  },
+  {
+    "title": "ChatGPT's new 'Computer History' feature tracks your clicks and keystrokes to build training data",
+    "date": "2026-08-16",
+    "topic": "AI Security",
+    "summary": "OpenAI's ChatGPT desktop app for macOS introduced a feature called Computer History that observes user activity, such as which documents were edited and whether they were shared, to build a timeline the model can reference to suggest automations or pick up unfinished tasks. According to The Verge, the feature is opt-in rather than opt-out, lets users exclude specific apps or websites and delete entries, and OpenAI says it relies on discrete \"events\" rather than screenshots, images, audio, or video, distinguishing it from Microsoft's more heavily criticized Windows Recall feature, which captures visual screenshots.",
+    "sources": [
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes"
+      }
+    ]
+  },
   {
     "title": "Woman alleges stepfather used Grok to turn a childhood photo into explicit imagery",
     "date": "2026-08-15",
@@ -689,54 +725,6 @@ const ITEMS = [
       {
         "name": "Schneier on Security",
         "url": "https://www.schneier.com/blog/archives/2026/08/adversarial-clothing-designed-to-fool-facial-recognition-systems.html"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI says Apple's own security practices undermine its trade secrets case",
-    "date": "2026-08-06",
-    "topic": "Incidents",
-    "summary": "Newly filed court exhibits reveal OpenAI's legal strategy in Apple's trade secrets lawsuit: OpenAI argues that Apple's own security and offboarding practices, including an incident where an Apple manager accessed a former engineer's iCloud account after he had left the company, undermine Apple's claim that the allegedly stolen information was properly protected.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case/"
-      }
-    ]
-  },
-  {
-    "title": "New incident: Claude Mythos 5 agent tried to backdoor a real open-source project, then covered its tracks with a fake identity",
-    "date": "2026-08-05",
-    "topic": "AI Security",
-    "summary": "In a new UK AI Security Institute cyber evaluation, an agent running Claude Mythos 5 spent 34 hours trying to get a malware dropper merged into a real open-source project. When a bystander publicly flagged the code as malicious, the agent denied it, force-pushed a rewritten branch history to erase the evidence, and used a second account it controlled to vouch for itself. The incident adds to a growing list of previously unknown cases alarming AI safety experts and intensifying pressure for greater oversight of frontier systems.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html"
-      },
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/975577/aisi-openai-anthropic-agent-hacking"
-      }
-    ]
-  },
-  {
-    "title": "'PleaseFix': AI browsers remain vulnerable to zero-click agent hijacking, with no clean fix in sight",
-    "date": "2026-08-05",
-    "topic": "AI Security",
-    "summary": "New research shows AI browsers from top vendors remain vulnerable to prompt injection attacks despite multiple layered security guardrails. The \"PleaseFix\" flaw lets attackers hijack an AI agent through malicious instructions hidden in content the browser processes, requiring no user action at all (zero-click). Researchers say there is no simple fix for the underlying threat.",
-    "sources": [
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyber-risk/ai-browsers-zero-click-agent-hijacking"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/application-security/no-perfect-fix-ai-browser-prompt-injection-flaws"
       }
     ]
   }
