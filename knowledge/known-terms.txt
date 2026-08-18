@@ -136,3 +136,7 @@ opt-out
 # --- 2026-08-17 ---
 superalignment
 regulatory capture
+
+# --- 2026-08-18 ---
+mfa
+multi-factor authentication
