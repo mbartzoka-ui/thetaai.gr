@@ -1,0 +1,20 @@
+# Θέματα που έχουν ήδη γίνει LinkedIn draft — append-only. Μη διαγράφεις γραμμές.
+#
+# Ο αυτοματισμός διαβάζει αυτό το αρχείο ΠΡΙΝ διαλέξει θέμα για το καθημερινό
+# LinkedIn draft. Θέμα που υπάρχει εδώ ΔΕΝ ξαναγράφεται, ούτε όταν βγει νέο
+# ρεπορτάζ γι' αυτό. Νέο ρεπορτάζ παλιάς ιστορίας δεν είναι νέο θέμα.
+#
+# Μορφή:  YYYY-MM-DD | slug | τίτλος
+#
+# Αρχικοποιήθηκε 2026-08-19, μετά από ρητή εντολή της Maria. Αφορμή: η
+# παραβίαση του Hugging Face είχε 8 εγγραφές στο ημερολόγιο (20-28/07/2026)
+# και ξαναγράφτηκε ως «σημερινή λεπτομέρεια» στις 19/08.
+
+2026-05-20 | anthropic-managed-agents | Managed Agents: self-hosted sandboxes και MCP tunnels
+2026-07-20 | hugging-face-openai-agent-breach | Παραβίαση του Hugging Face από αυτόνομο agent της OpenAI (και όλα τα follow-up: JFrog, CEO transparency, alignment debate, μέτρα OpenAI)
+2026-08-13 | anthropic-multiagent-turf-war | Frontier Red Team: agents σε σύγκρουση, malware μεταξύ τους, συμπαιγνία τιμών
+2026-08-15 | ai-account-mfa-sessions | Έλεγχος λογαριασμών AI: MFA σε ChatGPT/Perplexity, όχι στο Claude, ενεργές συνεδρίες
+2026-08-17 | mcp-servers-enterprise-secrets | MCP servers και εταιρικά μυστικά (ΠΡΟΣΟΧΗ: η πηγή ήταν χορηγούμενη, Keeper Security)
+2026-08-18 | agent-to-agent-mind-viruses | Anthropic + EPFL: αυτο-αναπαραγόμενα payloads μεταξύ agents μέσω αρχείων μνήμης
+2026-08-18 | copilot-cosnitch | CoSnitch: διαρροή δεδομένων από το Microsoft Copilot Personal με ένα κλικ
+2026-08-19 | mlflow-ray-active-exploitation | MLflow και Ray υπό ενεργή εκμετάλλευση, CISA KEV, το Ray χωρίς ταυτοποίηση εξ αρχής

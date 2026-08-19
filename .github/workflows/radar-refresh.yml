@@ -149,7 +149,7 @@ jobs:
           [ -n "$model" ] || model="unknown"
           verdict="$(head -n1 /tmp/radar-verdict.txt 2>/dev/null || true)"
           [ -n "$verdict" ] || verdict="χωρίς ετυμηγορία"
-          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md knowledge/known-terms.txt
+          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md knowledge/known-terms.txt knowledge/posted-topics.txt
           if git diff --cached --quiet; then
             echo "No changes to publish (feeds empty or nothing new)."
           else

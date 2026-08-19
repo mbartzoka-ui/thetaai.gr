@@ -23,6 +23,13 @@ AI-vendor & AI-business feeds (cover Anthropic, OpenAI, xAI/Grok, Google, Meta, 
 
 STEP 2 — FILTER. Keep ONLY items relating to: EU AI Act / AI Act / Article 50 / high-risk AI / GPAI / AI regulation-governance-compliance; AI security / LLM security / prompt injection / jailbreak / adversarial AI / AI-agent security; ISO 42001 / ISO/IEC 42001 / ISO 27001+AI / AI management systems / AI standards; NIST AI / AI RMF / AI risk; GDPR+AI / DPIA+AI / AI data protection; AI incidents / chatbot liability / AI lawsuits / major data-breach fines; AND notable policy/safety/security announcements from major AI labs (Anthropic, OpenAI, xAI/Grok, Google DeepMind, Meta, Microsoft). Prefer items from the last ~3 weeks. When the SAME story is covered by multiple feeds, treat it as ONE story whose `sources` is the union of all covering channels. Do NOT fabricate; only include items whose source URL you actually have. Assign each a topic: exactly one of "AI Act", "AI Security", "Standards", "Incidents", "General". Call the result TODAY's new stories.
 
+ΑΠΟΚΛΕΙΣΜΟΣ ΧΟΡΗΓΟΥΜΕΝΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ — απόλυτος κανόνας, ρητή εντολή της Maria 19/08/2026: «δεν θέλουμε να γράφουμε για πληρωμένα άρθρα».
+Δεν αναδημοσιεύουμε διαφήμιση ως είδηση. Στις 17/08/2026 το κύριο θέμα της ημέρας ήταν κείμενο γραμμένο από content writer της Keeper Security, με δήλωση «contributed piece from one of our valued partners», που κατέληγε στο προϊόν τους. Πέρασε όλους τους ελέγχους επειδή το URL ζούσε και το περιεχόμενο ταίριαζε με τη σύνοψη. Αυτός ο κανόνας υπάρχει γι' αυτό ακριβώς.
+ΓΙΑ ΚΑΘΕ ΥΠΟΨΗΦΙΑ ΝΕΑ ΙΣΤΟΡΙΑ, πριν την προσθέσεις: κατέβασε τη σελίδα του πρώτου source URL (`curl -sL --max-time 20`) και ψάξε για ενδείξεις χορηγίας — sponsored, sponsored content, paid content, advertorial, contributed by, contributed piece, "from our partners", "our valued partners", promoted, "in partnership with" — ή συγγραφέα που δηλώνεται ως στέλεχος ή content writer εταιρείας της οποίας το προϊόν προτείνεται μέσα στο κείμενο.
+ΑΝ ΒΡΕΙΣ ΤΕΤΟΙΑ ΕΝΔΕΙΞΗ: ΑΠΟΡΡΙΨΕ την ιστορία εντελώς. ΔΕΝ μπαίνει στις σελίδες του radar, ΔΕΝ μπαίνει στο `knowledge/ai-security-log.md`, ΔΕΝ μπαίνει στο digest ως είδηση, ΔΕΝ μπαίνει στο LinkedIn draft.
+ΕΞΑΙΡΕΣΗ: αν η ΙΔΙΑ είδηση καλύπτεται και από ανεξάρτητη πηγή, κράτα την ιστορία με ΜΟΝΟ την ανεξάρτητη πηγή και πέταξε τη χορηγούμενη από το `sources`.
+ΔΙΑΦΑΝΕΙΑ: κάθε ιστορία που απέρριψες γι' αυτόν τον λόγο, κατέγραψέ την σε μία γραμμή στο τέλος του digest, σε ενότητα `## 🚫 Τι απορρίφθηκε`, με τον τίτλο, την πηγή και τον λόγο. Αν δεν απορρίφθηκε τίποτα, παράλειψε την ενότητα.
+
 STEP 3 — LOAD THE EXISTING ARCHIVE. Read BOTH current files and parse their existing `const ITEMS = [...]` arrays (use python3 for robust JSON parsing):
 - GREEK archive: `radar/index.html`
 - ENGLISH archive: `en/radar/index.html`
@@ -52,6 +59,16 @@ STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one gen
 - Then one section per NEW story: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
 - Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
 Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
+
+ΜΗΝ ΞΑΝΑΓΡΑΦΕΙΣ ΘΕΜΑ ΠΟΥ ΕΧΕΙ ΗΔΗ ΓΡΑΦΤΕΙ — απόλυτος κανόνας, ρητή εντολή της Maria 19/08/2026: «δεν θέλουμε να γράφουμε για άρθρα για τα οποία έχουμε ξαναγράψει».
+ΠΡΙΝ διαλέξεις θέμα για το draft, διάβασε `knowledge/posted-topics.txt` (μία γραμμή ανά θέμα, `#` = σχόλιο).
+ΑΠΑΓΟΡΕΥΕΤΑΙ draft για θέμα που υπάρχει ήδη εκεί — ακόμη κι αν σήμερα βγήκε φρέσκο ρεπορτάζ γι' αυτό, ακόμη κι αν το ρεπορτάζ προσθέτει νέα λεπτομέρεια. Νέο ρεπορτάζ παλιάς ιστορίας ΔΕΝ είναι νέο θέμα. (Παράδειγμα του τι πήγε στραβά: η παραβίαση του Hugging Face έχει 8 εγγραφές στο ημερολόγιο, 20-28/07/2026, και ξαναγράφτηκε στις 19/08.)
+ΔΙΑΛΕΞΕ ΕΝΑ ΘΕΜΑ, ΟΧΙ ΤΡΙΑ. Το draft στέκεται σε μία ιστορία και πάει βαθιά.
+ΠΑΡΕ ΘΕΣΗ. Πρέπει να υπάρχει κάτι που ισχυρίζεσαι, όχι μόνο κάτι που περιγράφεις: τι σημαίνει, τι είναι λάθος, τι πρέπει να αλλάξει, τι να ρωτήσει ο αναγνώστης και ποιον. Περίληψη ειδήσεων με γενικό δίδαγμα στο τέλος («το θέμα δεν είναι η τεχνολογία, είναι η εμπιστοσύνη») ΔΕΝ είναι post — είναι δελτίο.
+ΑΝ ΚΑΝΕΝΑ σημερινό θέμα δεν είναι καινούργιο, ή αν κανένα δεν σηκώνει θέση: ΜΗΝ γράψεις draft. Γράψε στη θέση του τη γραμμή «Σήμερα δεν υπάρχει θέμα που να σηκώνει ανάρτηση: <σύντομος λόγος>». Καμία ανάρτηση είναι καλύτερη από αδύναμη ανάρτηση, και η Maria το προτιμά ρητά.
+ΑΦΟΥ γράψεις draft, πρόσθεσε το θέμα στο ΤΕΛΟΣ του `knowledge/posted-topics.txt`, μία γραμμή στη μορφή:
+`YYYY-MM-DD | σύντομο-slug | ο τίτλος της ιστορίας`
+ΠΟΤΕ μη διαγράψεις, μην αλλάξεις και μην αναδιατάξεις υπάρχουσα γραμμή. Αν το αρχείο λείπει, φτιάξ' το με την επικεφαλίδα `# Θέματα που έχουν ήδη γίνει LinkedIn draft — append-only.`
 
 After the «Συνολική εικόνα» paragraph, add a horizontal rule and a section titled `## 📣 LinkedIn draft — copy & paste` containing ONE ready-to-post LinkedIn text in GREEK, authored for Maria's personal profile (AI security & compliance consultant, brand «θeta ai»). Format: 900-1600 characters, plain text (no markdown — LinkedIn doesn't render it). Write it as a short, well-crafted mini-article, not a news list: a strong opening hook (1-2 lines), then flowing prose that weaves the day's 2-4 stories into one narrative with a common thread, and a closing thought that leaves the reader with something to act on. PERSPECTIVE: strictly business-wise — every story is told from the side of the επιχειρηματίας/decision-maker (τι κινδυνεύει, τι απόφαση προκύπτει, τι κόστος ή ευκαιρία), not from the side of the researcher or the technology itself. LANGUAGE QUALITY: care about the prose — καλογραμμένα, ρέοντα ελληνικά με εικόνες και ρυθμό, όπως ένα καλό άρθρο γνώμης· still simple and jargon-free, but never dry or listy. End with EXACTLY these closing lines, in this order:
 
