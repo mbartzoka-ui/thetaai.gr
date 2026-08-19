@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  :root{
+    --cream:#F6F5F1;
+    --ink:#1B1E27;
+    --blue:#1d2846;
+    --blue-soft:#ECEFFD;
+    --muted:#6B6F7A;
+    --line:#DCDAD2;
+    --row:#ECEBE5;
+    --gray-box:#EEEDE8;
+  }
+  *{box-sizing:border-box;}
+  html{font-family:"Lato",sans-serif;}
+  body{margin:0;color:var(--ink);font-size:10.5pt;line-height:1.5;}
+
+  .page{
+    position:relative;
+    width:210mm;height:297mm;
+    background:var(--cream);
+    padding:22mm 20mm 18mm 20mm;
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto;}
+
+  /* logo */
+  .logo{display:flex;align-items:center;gap:7px;font-weight:900;font-size:15pt;letter-spacing:.2px;}
+  .logo .mark{width:26px;height:26px;}
+  .logo .ai{color:var(--blue);}
+
+  /* footer */
+  .footer{
+    position:absolute;left:20mm;right:20mm;bottom:13mm;
+    border-top:1px solid var(--line);padding-top:6px;
+    display:flex;justify-content:space-between;
+    font-size:8pt;color:var(--muted);
+  }
+  .footer .brand{font-weight:700;color:var(--ink);}
+
+  .eyebrow{color:var(--blue);font-weight:800;font-size:8.5pt;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:10px;}
+  h1.title{font-weight:900;font-size:34pt;line-height:1.06;margin:0 0 16px;letter-spacing:-.5px;}
+  h2{font-weight:900;font-size:21pt;line-height:1.12;margin:0 0 14px;letter-spacing:-.3px;}
+  h3{font-weight:800;font-size:12pt;margin:22px 0 7px;}
+  p{margin:0 0 11px;}
+  .lead{font-size:11pt;color:#3a3d47;}
+  b,strong{font-weight:800;}
+  .accent{color:var(--blue);}
+
+  /* cover */
+  .cover{display:flex;flex-direction:column;}
+  .cover .logo{margin-bottom:60px;}
+  .cover-sub{font-size:10.5pt;color:#3a3d47;max-width:118mm;margin-top:6px;}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:9.5pt;}
+  thead th{background:var(--ink);color:#fff;text-align:left;padding:8px 11px;font-weight:700;}
+  tbody td{padding:8px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tbody tr:nth-child(odd){background:var(--row);}
+
+  .callout{background:var(--blue-soft);border-left:3px solid var(--blue);padding:13px 16px;margin:14px 0;border-radius:2px;}
+  .callout .ct{font-weight:800;margin-bottom:5px;}
+  .box-gray{background:var(--gray-box);border-left:3px solid #9a9890;padding:13px 16px;margin:14px 0;border-radius:2px;}
+  .box-gray .ct{font-weight:800;margin-bottom:5px;}
+
+  ul.toc{list-style:none;padding:0;margin:18px 0 0;}
+  ul.toc li{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);}
+  ul.toc .num{color:var(--blue);font-weight:900;font-size:13pt;min-width:26px;}
+  ul.toc .tt{font-weight:800;font-size:11.5pt;}
+  ul.toc .td{color:var(--muted);font-size:9.5pt;}
+
+  .two{display:flex;gap:16px;margin:8px 0 12px;}
+  .two .col{flex:1;background:#fff;border:1px solid var(--line);border-radius:4px;padding:12px 14px;}
+  .two .col .h{font-weight:800;color:var(--blue);margin-bottom:4px;}
+  .two .col.you .h{color:var(--ink);}
+
+  .note-small{font-size:8.5pt;color:var(--muted);line-height:1.45;}
+
+  /* self-check list */
+  ol.checks{list-style:none;counter-reset:c;padding:0;margin:16px 0 0;}
+  ol.checks li{counter-increment:c;display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);}
+  ol.checks li::before{content:counter(c);background:var(--blue);color:#fff;font-weight:800;font-size:9pt;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 22px;margin-top:1px;}
+
+  /* myths */
+  .myth{margin:0 0 13px;}
+  .myth .m{font-weight:800;}
+  .myth .a{color:#3a3d47;}
+
+  /* closing page (light) */
+  .close-steps{margin:20px 0 8px;}
+  .close-steps .step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .close-steps .n{color:var(--blue);font-weight:900;font-size:14pt;min-width:24px;}
+  .close-steps .st{font-weight:800;font-size:11.5pt;}
+  .close-steps .sd{color:#3a3d47;font-size:9.5pt;}
+  .cta-band{background:var(--blue);color:#fff;border-radius:6px;padding:18px 22px;margin:18px 0 0;}
+  .cta-band .small{font-size:9pt;opacity:.85;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;}
+  .cta-band .url{font-weight:900;font-size:19pt;margin-top:4px;}
+  .legal{position:absolute;left:20mm;right:20mm;bottom:13mm;font-size:7.6pt;color:var(--muted);line-height:1.5;}
+  .legal .lt{font-weight:800;color:#3a3d47;}
+  .legal .cr{margin-top:7px;}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8L6NJR1LC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T8L6NJR1LC');
+</script>
+<!-- theta ai key events -->
+<script>
+(function(){
+  if (typeof gtag !== 'function') return;
+  var path = location.pathname;
+  if (/^\/(en\/)?odigos\/efxaristo/.test(path)) { gtag('event', 'generate_lead'); }
+  var toolUsed = false;
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = t.closest ? t.closest('a') : null;
+    if (a && a.href) {
+      if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
+      if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
+    }
+    if (!toolUsed && /^\/(en\/)?ergaleia\/[^/]+/.test(path) && t.closest && t.closest('button')) {
+      toolUsed = true;
+      gtag('event', 'tool_use', { tool: path });
+    }
+  }, true);
+})();
+</script>
+</head>
+<body>
+
+<!-- ===== PAGE 1 · COVER ===== -->
+<section class="page cover">
+  <div class="logo">
+    <svg class="mark" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="55" cy="55" r="38" fill="none" stroke="#1d2846" stroke-width="6"/>
+      <line x1="30" y1="55" x2="80" y2="55" stroke="#1d2846" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="106" cy="55" r="8" fill="#BE9A44"/>
+      <circle cx="4" cy="55" r="8" fill="#1d2846"/>
+    </svg>
+    <span>&#952;eta <span class="ai">ai</span></span>
+  </div>
+
+  <div style="margin-top:30px;">
+    <div class="eyebrow">A guide for small &amp; mid-sized businesses &middot; 2026</div>
+    <h1 class="title">EU AI Act:<br>what changes<br>for <span class="accent">your business</span></h1>
+    <p class="cover-sub">You already use AI: a chatbot, a voice agent, a text or image tool.
+    The European law applies to you <b>now</b>, not "someday". See what's in force, what
+    actually affects you, and what it could cost you.</p>
+  </div>
+
+  <div class="footer">
+    <div><span class="brand">&#920; as in shielding</span><br>EU AI Act compliance &amp; AI security for SMBs</div>
+    <div style="text-align:right;">thetaai.gr<br>Version 2.0 &middot; August 2026</div>
+  </div>
+</section>
+
+<!-- ===== PAGE 2 · CONTENTS ===== -->
+<section class="page">
+  <div class="eyebrow">Contents</div>
+  <h2>What's inside</h2>
+  <p class="lead">A clear map, from "I don't know what applies" to "I know what to ask".
+  Reads in 15 minutes.</p>
+
+  <ul class="toc">
+    <li><span class="num">01</span><span><span class="tt">Why you're reading this</span><br><span class="td">The law is already in force, clear-headed, no hype</span></span></li>
+    <li><span class="num">02</span><span><span class="tt">The risk pyramid</span><br><span class="td">Where your use of AI falls</span></span></li>
+    <li><span class="num">03</span><span><span class="tt">The timeline</span><br><span class="td">The dates that matter, updated August 2026</span></span></li>
+    <li><span class="num">04</span><span><span class="tt">The 3 obligations that bind you</span><br><span class="td">AI literacy, transparency, roles</span></span></li>
+    <li><span class="num">05</span><span><span class="tt">AI Act &amp; GDPR</span><br><span class="td">Two laws, one system, don't confuse them</span></span></li>
+    <li><span class="num">06</span><span><span class="tt">Fines &amp; liability</span><br><span class="td">The risk nobody tells you about</span></span></li>
+    <li><span class="num">07</span><span><span class="tt">5 myths that cost money</span><br><span class="td">What you hear that's simply wrong</span></span></li>
+    <li><span class="num">08</span><span><span class="tt">Self-check: 7 questions</span><br><span class="td">Where you stand today</span></span></li>
+    <li><span class="num">09</span><span><span class="tt">The limits of this guide</span><br><span class="td">What won't fit in an ebook</span></span></li>
+  </ul>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>2</div></div>
+</section>
+
+<!-- ===== PAGE 3 ===== -->
+<section class="page">
+  <div class="eyebrow">01 &middot; Why you're reading this</div>
+  <h2>Clear-headed, not hyped.</h2>
+
+  <p>If your business has put a chatbot on its website, uses a voice agent for calls, or simply
+  uses ChatGPT/Claude for copy and customer replies, you're already within the scope of
+  Regulation (EU) 2024/1689, the so-called EU AI Act.</p>
+
+  <p>This law is not in the future. Parts of it have applied since February 2025, and the most
+  critical deadline for most small and mid-sized businesses, the transparency rules,
+  <b>took effect on 2 August 2026</b>.</p>
+
+  <p>The good news: for the vast majority of SMBs, the AI Act does not mean heavy bureaucracy.
+  Most uses of AI are considered low or minimal risk. The point isn't whether you'll "pass an
+  audit". It's that a few specific obligations apply to you, and being unaware of them creates
+  a risk you can easily avoid.</p>
+
+  <h3>What you'll get from this guide</h3>
+  <p>A clear picture: which risk category you fall into, which deadlines affect you, what the 3
+  obligations are that probably already bind you, and a quick self-check to see where you stand.</p>
+
+  <p class="note-small">This guide is informational and does not constitute legal advice. Its goal is to take you from
+  "I don't even know what applies" to "I know what to ask".</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>3</div></div>
+</section>
+
+<!-- ===== PAGE 4 ===== -->
+<section class="page">
+  <div class="eyebrow">02 &middot; The risk pyramid</div>
+  <h2>Where your use of AI falls</h2>
+
+  <p>The AI Act does not treat all AI systems the same. It classifies them into four risk levels,
+  and your obligations depend entirely on where you sit.</p>
+
+  <table>
+    <thead><tr><th style="width:21%;">Level</th><th style="width:36%;">What it means</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td><b>Unacceptable</b></td><td>Prohibited practices, outlawed</td><td>Social scoring, manipulation, emotion recognition at work</td></tr>
+      <tr><td><b>High</b></td><td>Strict obligations before use</td><td>AI for hiring, loan assessment, biometrics</td></tr>
+      <tr><td><b>Limited</b></td><td>Transparency obligations</td><td>Chatbots, voice agents, deepfakes, AI text</td></tr>
+      <tr><td><b>Minimal</b></td><td>No obligations</td><td>Spam filters, AI in games, basic tools</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">Here's where you are (most likely)</div>
+    An informational chatbot or voice agent that answers customers falls under "limited risk".
+    You don't need certifications or a conformity assessment. You need <b>transparency</b>. That
+    changes everything about what you have to do.
+  </div>
+
+  <h3>When you move up a category without noticing</h3>
+  <p>The same tool can become "high-risk" depending on use. An AI that filters CVs for hiring,
+  grades students, or assesses creditworthiness moves into high risk, with entirely different
+  obligations. Many SMBs don't realise that an "innocent" HR tool puts them there.</p>
+
+  <p>The most common mistake: assuming that "since I don't build the AI myself, it doesn't concern
+  me". It does, just in a different role. We explain why in section 04.</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>4</div></div>
+</section>
+
+<!-- ===== PAGE 5 ===== -->
+<section class="page">
+  <div class="eyebrow">03 &middot; The timeline</div>
+  <h2>The dates that matter for you</h2>
+
+  <p>The AI Act didn't switch on all at once. It applies in phases. And in May 2026 the so-called
+  "AI omnibus" (a simplification package) pushed back several of the heavier obligations, which
+  buys you time, but doesn't undo what's already in force.</p>
+
+  <table>
+    <thead><tr><th style="width:18%;">Date</th><th>What applies</th><th style="width:24%;">Status</th></tr></thead>
+    <tbody>
+      <tr><td>Aug 2024</td><td>The regulation enters into force</td><td>Active</td></tr>
+      <tr><td>Feb 2025</td><td>Prohibited practices + AI literacy obligation</td><td>Already in force</td></tr>
+      <tr><td>Aug 2025</td><td>Rules for general-purpose models (GPAI), governance, fines</td><td>Already in force</td></tr>
+      <tr><td><b>2 Aug 2026</b></td><td><b>Transparency rules &mdash; Article 50 (chatbots, deepfakes)</b></td><td><b class="accent">Already in force</b></td></tr>
+      <tr><td>Dec 2027</td><td>High-risk systems (hiring, biometrics, etc.)</td><td>Postponed</td></tr>
+      <tr><td>Aug 2028</td><td>High risk embedded in products</td><td>Postponed</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The line to hold</h3>
+  <p>Two things <b>bind you already</b>: AI literacy (since Feb 2025) and chatbot transparency
+  (since 2 August 2026). Everything else is 2027&ndash;2028, and affects fewer SMBs.</p>
+
+  <p class="note-small">The AI omnibus was politically agreed on 7 May 2026 and, besides pushing back deadlines,
+  extended the SME simplifications to "small mid-cap" companies and added new prohibitions
+  (e.g. "nudification" apps).</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>5</div></div>
+</section>
+
+<!-- ===== PAGE 6 ===== -->
+<section class="page">
+  <div class="eyebrow">04 &middot; What actually affects you</div>
+  <h2>The 3 obligations that already bind you</h2>
+
+  <h3>1 &middot; AI literacy &mdash; your staff must understand what they're holding</h3>
+  <p>Since February 2025, anyone using AI in a professional context must ensure a "sufficient level
+  of AI literacy" among their staff (Article 4). In plain terms: the people handling your AI must
+  understand what it does, where it gets things wrong, and when not to trust it. No certification
+  is required. A documented effort is.</p>
+
+  <h3>2 &middot; Transparency &mdash; the user must know they're talking to a machine</h3>
+  <p><b>Since 2 August 2026 (Article 50)</b>, a chatbot or voice agent that communicates with
+  people must disclose that it is AI, unless it's obvious. AI-generated content (images, audio,
+  deepfakes) must be labelled. It's one of the simplest obligations, and one of the easiest to
+  forget.</p>
+
+  <h3>3 &middot; Roles &mdash; "provider" or "deployer"?</h3>
+  <p>This is where almost every SMB gets confused. The law separates who is responsible for what:</p>
+
+  <div class="two">
+    <div class="col"><div class="h">Provider</div>Builds or places the AI system on the market. E.g. the company that built your chatbot.</div>
+    <div class="col you"><div class="h">Deployer &mdash; you</div>Uses the system in your business, under your responsibility. Most SMBs are here.</div>
+  </div>
+
+  <p>As a deployer you have lighter obligations than the provider, but not zero: human oversight,
+  use in line with the instructions, and transparency toward end users. Who you are completely
+  changes what you owe.</p>
+
+  <p class="note-small"><b>Caution:</b> if you substantially modify an AI system or put it out under your own name, you
+  may turn from a deployer into a provider, with all the heavier obligations. The line is thinner
+  than it looks.</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>6</div></div>
+</section>
+
+<!-- ===== PAGE 7 ===== -->
+<section class="page">
+  <div class="eyebrow">05 &middot; Two laws, one system</div>
+  <h2>AI Act &amp; GDPR: don't confuse them</h2>
+
+  <p>"Since I'm fine with GDPR, I'm fine with the AI Act too, right?" No. They are two different
+  laws that, in practice, apply at the same time to the same system.</p>
+
+  <div class="two">
+    <div class="col you"><div class="h">GDPR</div>Protects personal data. It asks: "Do you have the right to process this data and are you protecting it properly?"</div>
+    <div class="col"><div class="h">AI Act</div>Regulates the AI system itself. It asks: "Is it safe, transparent and fit for the use you put it to?"</div>
+  </div>
+
+  <p>Your customer-facing chatbot touches both: it processes personal data (GDPR) and it is an AI
+  system with a transparency obligation (AI Act). Compliance with one does not cover the other.</p>
+
+  <h3>Where they intersect in practice</h3>
+  <p><b>Policies:</b> if you collect personal data through an AI agent, you probably need both an
+  updated privacy policy and an AI disclosure. The two often have to talk to each other, and
+  that's where most SMBs lose the thread.</p>
+  <p><b>Legal basis for processing:</b> if customer data feeds or "trains" your AI, you need a
+  GDPR basis. Using AI doesn't create one on its own.</p>
+  <p><b>Transparency:</b> GDPR wants the user to know how their data is used; the AI Act wants
+  them to know they're talking to a machine. Two notices, not one.</p>
+  <p><b>Automated decisions:</b> GDPR (Article 22) already restricts decisions that are "solely
+  automated" with significant effects, something your AI may trigger without you knowing.</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>7</div></div>
+</section>
+
+<!-- ===== PAGE 8 ===== -->
+<section class="page">
+  <div class="eyebrow">06 &middot; The real cost</div>
+  <h2>Fines &mdash; and the risk nobody tells you about</h2>
+
+  <p>The AI Act's fines sound enormous, and are often played up for shock value. Let's look at
+  what actually applies to an SMB.</p>
+
+  <table>
+    <thead><tr><th>Violation</th><th style="width:42%;">Maximum</th></tr></thead>
+    <tbody>
+      <tr><td>Prohibited practices</td><td>up to &euro;35M or 7% of global turnover</td></tr>
+      <tr><td>Non-compliance (e.g. transparency, high risk)</td><td>up to &euro;15M or 3%</td></tr>
+      <tr><td>Incorrect information to authorities</td><td>up to &euro;7.5M or 1%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">The detail that matters for SMBs</div>
+    For large companies the cap is "whichever is <b>higher</b>". For SMBs and startups, the
+    regulation explicitly says "whichever is <b>lower</b>". In other words, the fine risk is
+    proportionate to your size, not catastrophic.
+  </div>
+
+  <h3>The risk that isn't a fine</h3>
+  <p>The biggest practical risk for an SMB isn't the regulator's fine. It's <b>civil liability
+  toward your customer</b>, and it already applies, independent of the AI Act.</p>
+
+  <div class="box-gray">
+    <div class="ct">The Air Canada case (2024)</div>
+    The airline's chatbot "invented" a refund policy that didn't exist. When the customer claimed
+    it, the tribunal ruled that <b>the company is liable for whatever its chatbot says</b>, even if
+    the AI made it up. You don't get off the hook because "the bot said it".
+  </div>
+
+  <p>That's the lesson that counts: an AI that gives a wrong price, a wrong term, or a wrong
+  promise binds your business. Complying with the AI Act and properly "shielding" your agents
+  isn't bureaucracy. It's <b>risk management</b>.</p>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>8</div></div>
+</section>
+
+<!-- ===== PAGE 9 ===== -->
+<section class="page">
+  <div class="eyebrow">07 &middot; Clearing the noise</div>
+  <h2>5 AI Act myths that cost money</h2>
+
+  <p>There's a lot of noise around the AI Act. Some downplay it, others spread panic. Five of the
+  most common myths, and what's actually true.</p>
+
+  <div class="myth"><div class="m">Myth 1 &middot; "It only affects big tech companies."</div>
+  <div class="a"><b>Wrong.</b> If you use AI in a professional context, you're a "deployer" and you have obligations, regardless of your size.</div></div>
+
+  <div class="myth"><div class="m">Myth 2 &middot; "I don't build the AI, so I'm not liable."</div>
+  <div class="a"><b>Wrong.</b> You're liable for how you use it and for what it tells your customers (see Air Canada). The provider has its own liability, not all of it.</div></div>
+
+  <div class="myth"><div class="m">Myth 3 &middot; "I have years before it applies."</div>
+  <div class="a"><b>Wrong.</b> AI literacy has applied since February 2025; transparency <b>has applied since 2 August 2026</b>. Only high risk moved to 2027&ndash;2028.</div></div>
+
+  <div class="myth"><div class="m">Myth 4 &middot; "I'll get a huge fine on the first mistake."</div>
+  <div class="a"><b>Overblown.</b> For SMBs the cap is the lower amount, and authorities weigh good faith and remediation. The realistic risk is civil liability, not a mega-fine.</div></div>
+
+  <div class="myth"><div class="m">Myth 5 &middot; "I'm GDPR-compliant, so I'm covered."</div>
+  <div class="a"><b>Wrong.</b> Different law, different obligations. They apply in parallel (see section 05).</div></div>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>9</div></div>
+</section>
+
+<!-- ===== PAGE 10 ===== -->
+<section class="page">
+  <div class="eyebrow">08 &middot; Self-check</div>
+  <h2>7 questions: where do you stand today?</h2>
+
+  <p>Answer honestly. Every "no" or "I don't know" is a gap worth closing, before a customer, a
+  competitor, or an authority finds it.</p>
+
+  <ol class="checks">
+    <li>Do you know which AI Act risk level each AI tool you use falls into?</li>
+    <li>Does your chatbot/voice agent clearly state that it is AI?</li>
+    <li>Does your staff have basic training in what the AI they handle does, and what it doesn't do reliably?</li>
+    <li>Do you know whether you're a "deployer" or a "provider" for each of your AI systems?</li>
+    <li>Is there a person who oversees what your AI tells customers?</li>
+    <li>Do you have a written agreement with your AI provider on who is liable if it gives a wrong answer?</li>
+    <li>If your AI gave a customer a wrong, binding answer tomorrow, do you know who pays?</li>
+  </ol>
+
+  <div class="callout">
+    <div class="ct">If you struggled with 2 or more</div>
+    You're not the exception, you're the rule. Most SMBs that adopted AI fast fell behind on
+    shielding. The good news: closing these gaps is clearly cheaper and faster than you think.
+  </div>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>10</div></div>
+</section>
+
+<!-- ===== PAGE 11 ===== -->
+<section class="page">
+  <div class="eyebrow">09 &middot; The limits of this guide</div>
+  <h2>What we didn't tell you here &mdash; on purpose</h2>
+
+  <p>This guide gave you the map: where you are, what's in force, what affects you. What doesn't
+  fit in an ebook, because it depends on your specific case, is the route:</p>
+
+  <ol class="checks">
+    <li>How to classify each of your AI tools in practice and document the classification.</li>
+    <li>Exactly what your contract with your provider should say so that liability is allocated correctly.</li>
+    <li>How to set up your chatbot's transparency to cover Article 50 without ruining the customer experience.</li>
+    <li>How to build a light, realistic AI literacy programme for an SMB, not enterprise waffle.</li>
+    <li>How to "shield" your agents so they don't give binding or inaccurate answers.</li>
+  </ol>
+
+  <p>This isn't theory. It's the work that turns the AI Act into a <b>competitive advantage</b>,
+  because a customer trusts a business that knows what it's doing with its AI more readily.</p>
+
+  <div class="callout">
+    <div class="ct">The philosophy behind thetaai.gr</div>
+    "&#920; as in shielding." We don't sell worry, we build defence. The goal is for you to use AI
+    with <b>confidence</b>, knowing you're covered.
+  </div>
+
+  <div class="footer"><span class="brand">&#952;eta ai &middot; thetaai.gr &middot; Version 2.0</span><div>11</div></div>
+</section>
+
+<!-- ===== PAGE 12 · CLOSING (LIGHT) ===== -->
+<section class="page">
+  <div class="eyebrow">The next step</div>
+  <h2>Let's look at <span class="accent">your</span> case.</h2>
+
+  <p class="lead">You have the map. Now you need someone who knows the route for your own
+  business, not a generic template.</p>
+
+  <div class="close-steps">
+    <div class="step"><div class="n">1</div><div><div class="st">Mapping session (45 min) &mdash; free</div><div class="sd">We look together at which AI tools you use and where the real risk is.</div></div></div>
+    <div class="step"><div class="n">2</div><div><div class="st">Compliance &amp; shielding map</div><div class="sd">You get a concrete, prioritised list of actions: what's first, what's next.</div></div></div>
+    <div class="step"><div class="n">3</div><div><div class="st">Implementation without drama</div><div class="sd">Chatbot transparency, the right contracts, AI literacy for your team.</div></div></div>
+  </div>
+
+  <div class="cta-band">
+    <div class="small">Book your free check</div>
+    <div class="url">&rarr; thetaai.gr/en/#contact</div>
+  </div>
+
+  <div class="legal">
+    <span class="lt">Legal notice:</span> This is informational material and does not constitute legal advice nor guarantee
+    compliance. The information concerns Regulation (EU) 2024/1689 as in force in <b>August 2026</b> and may change. For
+    your own case, an individual assessment and, where needed, review by a lawyer are required. &#952;eta ai provides
+    advisory services, not legal services.
+    <div class="cr">&copy; 2026 thetaai.gr &middot; &#952;eta ai &mdash; EU AI Act compliance &amp; AI security for small and mid-sized businesses &middot; <b>Version 2.0 &middot; August 2026</b></div>
+  </div>
+</section>
+
+</body>
+</html>
