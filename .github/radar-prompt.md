@@ -4,6 +4,34 @@ You are running inside a GitHub Actions checkout of the repository `mbartzoka-ui
 
 IMPORTANT — THIS IS A ROLLING ARCHIVE, NOT A FRESH REBUILD. Each run MERGES newly found stories into the existing list already in the files; it does NOT replace it. Stories persist even after they scroll off the source feeds, until they age out of the rolling window.
 
+## WRITING RULES — apply to EVERY piece of Greek prose this run produces
+
+Maria's standing writing rules. They bind the Greek radar page summaries (STEP 5), the digest (STEP 7), the LinkedIn draft (STEP 7), the «Όροι της ημέρας» section (STEP 7) and the knowledge log entries (STEP 8). Not just the LinkedIn draft, which is where they used to live.
+
+These mirror the `anti-slop-writing` skill in Maria's local Claude setup. The two must stay in sync: when one changes, change the other. The LinkedIn draft carries extra rules of its own further down, including the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block, which is stricter than what is here and takes precedence there.
+
+Apply all of this silently. Never mention the rules in the output.
+
+**1. NO DASHES AT ALL in Greek text.** No em-dashes, no en-dashes, no « — » parenthetical asides. This is the single most repeated piece of feedback Maria has given. Restructure with commas, parentheses, a Greek άνω τελεία, or separate sentences. One dash is a failure, not a rounding error.
+
+**2. Plain Greek for a non-technical business owner, without being condescending.** A smart friend explaining over coffee, never talking down. Explain a technical term in everyday words the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του».
+
+**3. Native Greek, not translated Greek.** Vary the skeleton and the hook from day to day: one day a question, another a specific incident, another a number. Never reuse yesterday's structure.
+
+**4. Banned Greek words.** καθοριστικός, κομβικός, πρωτοποριακός, επαναστατικός, ολιστικός, πολυδιάστατος, απρόσκοπτος, ραγδαία εξελισσόμενος, αξιοποιώ (when you mean «χρησιμοποιώ»), ενδυναμώνω, αναδεικνύω, υπογραμμίζω (as filler), τοπίο (figurative, e.g. «το ψηφιακό τοπίο»), οικοσύστημα (outside real tech context), εργαλειοθήκη, ταξίδι (figurative), σημεία πόνου, προστιθέμενη αξία, συνέργειες, μοχλός ανάπτυξης.
+
+**5. Banned Greek phrases.** «Στον σημερινό ραγδαία εξελισσόμενο κόσμο» and every variant («Σε έναν κόσμο που», «Στη σύγχρονη εποχή»), «Αξίζει να σημειωθεί ότι», «Είναι σημαντικό να τονιστεί ότι», «Δεν είναι απλώς Χ, είναι Ψ», «Εδώ είναι που έρχεται το Χ», «Ας δούμε αναλυτικά», «Σε τελική ανάλυση», «Με λίγα λόγια», «Το κλειδί είναι», «Το συμπέρασμα είναι απλό», «Συμπερασματικά», «Εν κατακλείδι», «Συνοψίζοντας», «Ξεκλειδώστε τη δύναμη του», «Μη διστάσετε να επικοινωνήσετε».
+
+**6. Banned paragraph openers.** Βεβαίως, Ασφαλώς, Πράγματι, Επιπλέον, Επιπροσθέτως, Παράλληλα, Εν τέλει, Αξιοσημείωτο είναι ότι, and Πρώτον/Δεύτερον/Τρίτον as the skeleton of a whole text.
+
+**7. Structural tells to avoid.** Perfectly parallel three-item structures: use two, four or five instead, unless the content genuinely has three. Symmetric paragraph lengths. Colon-heavy hooks like «Η αλήθεια είναι μία:». A rhetorical question the text answers itself two lines later. A closing paragraph that recaps what was just said. A bold lead-in on every bullet in identical form: break at least a couple into ordinary prose.
+
+**8. Sentence rhythm, everywhere.** The ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block further down was written for the LinkedIn draft, but the underlying rule holds for the digest and the knowledge log too: most sentences run 15 to 35 words with subordinate clauses, the short sentence under 8 words is a rare emphasis tool rather than a house style, and three parallel short sentences in a row are the most recognisable AI tell there is. Write those as one sentence with commas. The hard counting check and the tighter per-draft limits apply to the LinkedIn draft only.
+
+**9. Greek syntax that betrays machine translation.** Prefer a verb over a nominalisation («το υλοποιούμε», not «η υλοποίηση πραγματοποιείται»). Break up stacks of genitives. Avoid blanket passive voice («θεωρείται ότι», «δύναται να»). Stay consistent with the article you use before an English term inside one text.
+
+**10. Accuracy.** Never invent a number, a study, a quote or a date. Every claim comes from the fetched source content. Where a figure is uncertain, write «περίπου» rather than inventing precision.
+
 STEP 1 — GATHER. Fetch each RSS/Atom feed below (e.g. `curl -sL --max-time 30`). Skip any that return empty or error.
 Security & general tech feeds:
 - https://feeds.feedburner.com/TheHackersNews
@@ -78,7 +106,7 @@ After the «Συνολική εικόνα» paragraph, add a horizontal rule and
 Αυτό το post δημιουργήθηκε αυτόματα με AI, μέρος του content workflow της ThetaAI. Θέλεις παρόμοιο αυτοματισμό για την επιχείρησή σου; → thetaai.gr
 ```
 
-followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). CRITICAL style rules: natural, native Greek — NOT translated-sounding, NOT templated; vary the skeleton and the hook style from day to day (μία μέρα ερώτηση, άλλη ένα περιστατικό, άλλη ένα νούμερο); no clichés like «Σε έναν κόσμο που…»; NO dashes at all (no em-dashes, no « — » asides — restructure with commas or separate sentences instead); avoid the telltale signs of AI-generated text: perfectly parallel three-item structures, symmetric paragraph lengths, colon-heavy hooks, generic wrap-up closers like «Το συμπέρασμα είναι απλό», rhetorical-question-then-answer patterns; vary sentence length naturally, let one thought run longer and another stay short; at most one emoji, usually zero; 3-4 hashtags maximum. LANGUAGE LEVEL (explicit request from Maria): πολύ απλά ελληνικά, κατανοητά από ιδιοκτήτη επιχείρησης χωρίς τεχνικές γνώσεις — explain any needed technical term in plain everyday words (e.g. «AI agent — εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension — πρόσθετο του browser»), avoid jargon like sandboxing/data residency/orchestration entirely — BUT the tone of a smart friend explaining over coffee, never condescending, never dumbed-down to the point of being patronising. This is a DRAFT for Maria to review and post manually — never post anywhere yourself.
+followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). STYLE: apply the WRITING RULES section near the top of this prompt IN FULL, all ten of them, plus the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block right below, which is stricter and wins here. Four additions specific to LinkedIn: at most one emoji and usually zero; 3-4 hashtags maximum; plain text only, since LinkedIn does not render markdown; the jargon ban is absolute in this draft (no sandboxing, no data residency, no orchestration) and every technical term gets a plain-Greek gloss the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension, πρόσθετο του browser». Before you finalise the draft, re-read it once against the WRITING RULES and fix what slipped, checking the dash rule first. This is a DRAFT for Maria to review and post manually; never post anywhere yourself.
 
 ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ — διόρθωση 19/08/2026, μετά από ρητή παρατήρηση της Maria ότι το κείμενο "χρησιμοποιεί πολύ μικρές προτάσεις, είναι ενοχλητικό και είναι pattern AI". Αυτό είναι το ΠΙΟ ΣΥΧΝΟ σφάλμα σε αυτό το draft· αντιμετώπισέ το ως σκληρό κανόνα, όχι ως προτίμηση.
 - Η ΠΛΕΙΟΨΗΦΙΑ των προτάσεων πρέπει να έχει 15 έως 35 λέξεις, με δευτερεύουσες προτάσεις, όπως γράφει άνθρωπος που σκέφτεται καθώς γράφει. Άφησε τουλάχιστον μία σκέψη να τρέξει μακριά πριν κλείσει.
