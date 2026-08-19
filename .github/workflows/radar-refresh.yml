@@ -85,7 +85,19 @@ jobs:
             fi
             # Maker/checker: an INDEPENDENT agent audits the changes (read-only)
             # before anything is published. FAIL verdict -> roll back and retry.
+            #
+            # Ο ελεγκτής ΔΕΝ επιτρέπεται να γράψει. Οι οδηγίες του το λένε, αλλά
+            # οδηγία δεν είναι κλειδαριά: τρέχει με παρακαμμένους ελέγχους
+            # δικαιωμάτων, άρα ΜΠΟΡΕΙ να γράψει. Δεν το ζητάμε - το ΕΛΕΓΧΟΥΜΕ.
+            # Αποτύπωμα του working tree πριν και μετά· αν διαφέρει, ο ελεγκτής
+            # παραβίασε τον ρόλο του και η μέρα απορρίπτεται.
+            tree_before="$(git status --porcelain=v1; git diff)"
             claude -p "$(cat .github/radar-verify-prompt.md)" --model "$model" --dangerously-skip-permissions || true
+            tree_after="$(git status --porcelain=v1; git diff)"
+            if [ "$tree_before" != "$tree_after" ]; then
+              echo "::warning::Attempt $attempt ($model): ο ΕΛΕΓΚΤΗΣ τροποποίησε αρχεία - παραβίαση ρόλου, rollback."
+              continue
+            fi
             if [ -f /tmp/radar-verdict.txt ]; then
               echo "--- Checker verdict ---"; cat /tmp/radar-verdict.txt
               if [ "$(head -n1 /tmp/radar-verdict.txt)" != "PASS" ]; then
@@ -109,7 +121,9 @@ jobs:
               verdict="δεν παρήχθη (έγινε δεκτό βάσει του δομικού ελέγχου)"
             fi
             {
-              echo "> **Πώς φτιάχτηκε:** $friendly · προσπάθεια $attempt από 3 · δομικός έλεγχος OK · ανεξάρτητος ελεγκτής $verdict"
+              echo "> **Πώς φτιάχτηκε:** $friendly · προσπάθεια $attempt από 3 · δομικός έλεγχος OK"
+              echo ">"
+              echo "> **Ανεξάρτητος ελεγκτής:** $verdict · ίδιο μοντέλο, καθαρή συνεδρία, επιβεβαιωμένα καμία εγγραφή"
               if [ "$friendly" = "Haiku" ]; then
                 echo ">"
                 echo "> **Προσοχή:** έτρεξε με Haiku, γιατί το Sonnet απέτυχε ή μπλοκαρίστηκε. Τα γεγονότα πέρασαν τους ίδιους ελέγχους, αλλά το κείμενο για LinkedIn θέλει δούλεμα πριν το ποστάρεις."
@@ -127,13 +141,19 @@ jobs:
       - name: Commit and push
         if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         run: |
-          git config user.name "radar-bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Διαχωρισμός καθηκόντων, γραμμένος στο ίδιο το ιστορικό.
+          # Το git ξεχωρίζει ήδη ΠΟΙΟΣ ΕΓΡΑΨΕ (author) από ΠΟΙΟΣ ΕΝΕΚΡΙΝΕ (committer).
+          # Ο συντάκτης έγραψε τις σελίδες· ο ελεγκτής τις ενέκρινε και μόνο τότε
+          # ανεβαίνουν. Δύο ρόλοι, δύο υπογραφές, ορατές σε κάθε commit.
+          model="$(cat /tmp/radar-model.txt 2>/dev/null || true)"
+          [ -n "$model" ] || model="unknown"
+          verdict="$(head -n1 /tmp/radar-verdict.txt 2>/dev/null || true)"
+          [ -n "$verdict" ] || verdict="χωρίς ετυμηγορία"
           git add radar/index.html en/radar/index.html knowledge/ai-security-log.md knowledge/known-terms.txt
           if git diff --cached --quiet; then
             echo "No changes to publish (feeds empty or nothing new)."
           else
-            git commit -m "Radar: daily refresh $(date -u +%F)"
+            GIT_AUTHOR_NAME="radar-maker ($model)"             GIT_AUTHOR_EMAIL="radar-maker@users.noreply.github.com"             GIT_COMMITTER_NAME="radar-checker ($model)"             GIT_COMMITTER_EMAIL="radar-checker@users.noreply.github.com"             git commit -m "Radar: daily refresh $(date -u +%F)"                        -m "Συντάκτης (author): $model - συνέταξε σελίδες, ημερολόγιο, digest."                        -m "Ελεγκτής (committer): $model - ανεξάρτητος έλεγχος σε καθαρή συνεδρία."                        -m "Ετυμηγορία: $verdict. Επιβεβαιώθηκε ότι ο ελεγκτής δεν τροποποίησε κανένα αρχείο."
             git push
           fi
 
@@ -160,3 +180,22 @@ jobs:
           else
             echo "No new stories today - no digest."
           fi
+
+      # Χωρίς αυτό το βήμα, μια ΑΠΟΤΥΧΙΑ μοιάζει ακριβώς με «δεν είχε νέα»:
+      # και στις δύο περιπτώσεις απλώς δεν έρχεται email. Η σιωπή πρέπει να
+      # ξεχωρίζει από την ησυχία, αλλιώς το σπάσιμο περνά απαρατήρητο για μέρες.
+      - name: Ειδοποίηση όταν ο radar δεν ολοκληρώθηκε
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "@mbartzoka-ui"
+            echo ""
+            echo "**Ο radar δεν ολοκληρώθηκε σήμερα.** Οι σελίδες στο site δείχνουν ό,τι έδειχναν χθες, δεν χάλασε τίποτα δημόσια."
+            echo ""
+            echo "Δεν χρειάζεται να κάνεις κάτι τώρα. Αν δεις αυτό το μήνυμα δεύτερη μέρα στη σειρά, τότε αξίζει έλεγχος."
+            echo ""
+            echo "Τεχνικές λεπτομέρειες: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > /tmp/radar-fail.md
+          gh issue create --repo "$GITHUB_REPOSITORY"             --title "AI Radar — ΔΕΝ ΕΤΡΕΞΕ $(date +%d/%m/%Y)"             --body-file /tmp/radar-fail.md
