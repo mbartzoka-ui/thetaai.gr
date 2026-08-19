@@ -140,3 +140,9 @@ regulatory capture
 # --- 2026-08-18 ---
 mfa
 multi-factor authentication
+
+# --- 2026-08-19 ---
+ssrf
+server-side request forgery
+kev
+known exploited vulnerabilities
