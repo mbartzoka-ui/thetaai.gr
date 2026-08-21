@@ -121,6 +121,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -217,7 +218,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="cta">
 <h3>Θέλετε να ξέρετε πού ακριβώς στέκεστε;</h3>
 <p>Ο Έλεγχος Θωράκισης χαρτογραφεί ένα σύστημα AI σας, το κατατάσσει σε κατηγορία ρίσκου και σας δείχνει τα κενά ασφάλειας και συμμόρφωσης με σειρά προτεραιότητας. Ξεκινά με δωρεάν συνεδρία 45 λεπτών.</p>
-<a class="btn" href="mailto:hello@thetaai.gr?subject=Έλεγχος Θωράκισης — δωρεάν συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+<a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Κλείστε δωρεάν συνεδρία</a>
 </div>
 
 <a class="back" href="/blog/">← Όλα τα άρθρα</a>

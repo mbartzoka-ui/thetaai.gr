@@ -136,6 +136,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -234,7 +235,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
 <div class="cta">
 <h3>Χρησιμοποιείτε ή σχεδιάζετε AI agents στην επιχείρησή σας;</h3>
 <p>Ο Έλεγχος Θωράκισης χαρτογραφεί ένα σύστημα AI σας, το κατατάσσει σε κατηγορία ρίσκου και σας δείχνει τα κενά με προτεραιότητα. Προηγείται δωρεάν συνεδρία 45 λεπτών.</p>
-<a class="btn" href="mailto:hello@thetaai.gr?subject=AI%20agent%20security%20—%20δωρεάν%20συνεδρία">Κλείστε δωρεάν συνεδρία</a>
+<a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Κλείστε δωρεάν συνεδρία</a>
 </div>
 
 <a class="back" href="/blog/">← Όλα τα άρθρα</a>

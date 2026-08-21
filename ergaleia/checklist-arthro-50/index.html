@@ -155,6 +155,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -269,7 +270,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
       present.forEach(function(c){ h += '<div class="r-item o"><div class="t">'+c.t+' · '+c.ref+'</div></div>'; });
     }
     h += '<div class="warn-box">⚠️ Τα σημεία με σήμανση «αν ισχύει» αφορούν μόνο agents που παράγουν περιεχόμενο/deepfakes — αν δεν σας αφορούν, αγνοήστε τα. Το checklist καλύπτει τις βασικές υποχρεώσεις διαφάνειας· η τελική διατύπωση και η πλήρης συμμόρφωση θέλουν έλεγχο από νομικό/σύμβουλο. Εργαλείο μείωσης ρίσκου — όχι εγγύηση.</div>';
-    h += '<div class="tool-actions"><a class="btn" href="mailto:hello@thetaai.gr?subject=Διαφάνεια Άρθρου 50 — chatbot/voice agent">Θέλω βοήθεια να το εφαρμόσω — δωρεάν συνεδρία 45&#8242;</a></div>';
+    h += '<div class="tool-actions"><a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Θέλω βοήθεια να το εφαρμόσω — δωρεάν συνεδρία 45&#8242;</a></div>';
     out.innerHTML = h; out.classList.add('show');
     out.scrollIntoView({ behavior:'smooth', block:'nearest' });
   }

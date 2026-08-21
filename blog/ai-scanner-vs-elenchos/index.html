@@ -143,6 +143,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -222,7 +223,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     <div class="cta">
       <h3>Έτρεξες έναν σαρωτή και δεν ξέρεις τι σημαίνει το αποτέλεσμα;</h3>
       <p>Ο <strong>Έλεγχος Ασφάλειας AI</strong> παίρνει τα ευρήματα, τα ερμηνεύει στο πλαίσιο της δικής σου επιχείρησης και δοκιμάζει τα κενά που τα αυτόματα εργαλεία δεν πιάνουν. Προηγείται μια δωρεάν συνεδρία 45 λεπτών.</p>
-      <a class="btn" href="mailto:hello@thetaai.gr?subject=Έλεγχος%20Ασφάλειας%20AI">Κλείστε δωρεάν συνεδρία →</a>
+      <a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Κλείστε δωρεάν συνεδρία →</a>
     </div>
 
     <a class="back" href="/blog/">← Όλα τα άρθρα</a>

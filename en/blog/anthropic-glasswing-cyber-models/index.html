@@ -127,6 +127,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -203,7 +204,7 @@ header .nav{display:flex;justify-content:space-between;align-items:center;paddin
     <div class="cta">
       <h3>Do you know where your business is exposed?</h3>
       <p>The Shielding Audit shows where you're exposed — on both EU AI Act compliance and security — in priority order. It starts with a free 45-minute session.</p>
-      <a class="btn" href="mailto:hello@thetaai.gr?subject=Shielding Audit — free session">Book a free session</a>
+      <a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Book a free session</a>
     </div>
 
     <a class="back" href="/en/blog/">← All articles</a>

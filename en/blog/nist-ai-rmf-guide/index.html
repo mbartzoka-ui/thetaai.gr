@@ -170,6 +170,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
+      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -230,7 +231,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     <div class="cta">
       <h3>Does your AI report look complete, or is it complete?</h3>
       <p>A Shielding Review delivers documentation with provenance — audit-ready, with a standards crosswalk. Free 45-min session.</p>
-      <a class="btn" href="mailto:hello@thetaai.gr?subject=Article:%20NIST%20AI%20RMF%20—%20free%20session">Book a free session</a>
+      <a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Book a free session</a>
     </div>
 
     <a class="back" href="/en/blog/">← All articles</a>
