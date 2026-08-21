@@ -411,4 +411,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/five-eyes-ai-cyber-crisis/"/>
     <lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://thetaai.gr/blog/aforame-eu-ai-act-epicheirisi/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/aforame-eu-ai-act-epicheirisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/aforame-eu-ai-act-epicheirisi/"/>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/kostos-symmetorfosis-eu-ai-act-mme/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/kostos-symmetorfosis-eu-ai-act-mme/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/kostos-symmetorfosis-eu-ai-act-mme/"/>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/blog/gdpr-ai-ergaleia-epicheirisi/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/blog/gdpr-ai-ergaleia-epicheirisi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/blog/gdpr-ai-ergaleia-epicheirisi/"/>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/ergaleia/prostimo-calculator/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/ergaleia/prostimo-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/ergaleia/prostimo-calculator/"/>
+    <lastmod>2026-08-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/radar/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/radar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/radar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/radar/"/>
+    <lastmod>2026-08-21</lastmod><changefreq>daily</changefreq><priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thetaai.gr/en/radar/</loc>
+    <xhtml:link rel="alternate" hreflang="el" href="https://thetaai.gr/radar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thetaai.gr/en/radar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thetaai.gr/radar/"/>
+    <lastmod>2026-08-21</lastmod><changefreq>daily</changefreq><priority>0.6</priority>
+  </url>
 </urlset>
