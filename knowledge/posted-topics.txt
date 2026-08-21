@@ -19,3 +19,4 @@
 2026-08-18 | copilot-cosnitch | CoSnitch: διαρροή δεδομένων από το Microsoft Copilot Personal με ένα κλικ
 2026-08-19 | mlflow-ray-active-exploitation | MLflow και Ray υπό ενεργή εκμετάλλευση, CISA KEV, το Ray χωρίς ταυτοποίηση εξ αρχής
 2026-08-20 | openai-anthropic-data-retention-privacy | OpenAI Private Safety Processing εναντίον της πολιτικής διατήρησης δεδομένων της Anthropic
+2026-08-21 | grok-cryptographic-context-injection | Νέα επίθεση κρυπτογραφημένης εντολής αδειάζει τα chat δεδομένα του Grok

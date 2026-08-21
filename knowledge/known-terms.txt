@@ -150,3 +150,7 @@ known exploited vulnerabilities
 # --- 2026-08-20 ---
 reinforcement learning
 rl training
+
+# --- 2026-08-21 ---
+cryptographic context injection
+insider threat
