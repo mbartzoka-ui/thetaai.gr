@@ -154,3 +154,9 @@ rl training
 # --- 2026-08-21 ---
 cryptographic context injection
 insider threat
+
+# --- 2026-08-22 ---
+plc
+programmable logic controller
+genie behavior
+contextual integrity
