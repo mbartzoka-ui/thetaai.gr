@@ -160,3 +160,9 @@ plc
 programmable logic controller
 genie behavior
 contextual integrity
+
+# --- 2026-08-23 ---
+ai skill
+universal skill format
+sb 53
+reverse federalism
