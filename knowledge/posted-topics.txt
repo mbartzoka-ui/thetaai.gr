@@ -22,3 +22,4 @@
 2026-08-21 | grok-cryptographic-context-injection | Νέα επίθεση κρυπτογραφημένης εντολής αδειάζει τα chat δεδομένα του Grok
 2026-08-22 | anthropic-opus-vulnerable-models-live | Opus 4.6 jailbreak για σεξουαλικό περιεχόμενο, παλαιότερα μοντέλα ζωντανά μέσω Azure/Bedrock
 2026-08-23 | openai-california-sb53-self-regulation | Η OpenAI ζητά από την Καλιφόρνια να ενισχύσει τον νόμο SB 53, αφότου η ίδια είχε αντιταχθεί σε αυτόν
+2026-08-24 | frontier-labs-rogue-model-containment | Μελέτη Guidelight AI Standards: οι μεγάλες εταιρείες AI δεν εξηγούν πώς θα σταματήσουν ένα μοντέλο που ξεφεύγει από τον έλεγχο

@@ -166,3 +166,9 @@ ai skill
 universal skill format
 sb 53
 reverse federalism
+
+# --- 2026-08-24 ---
+c2
+command and control
+containment plan
+fair use
