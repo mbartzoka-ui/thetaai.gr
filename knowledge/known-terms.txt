@@ -172,3 +172,9 @@ c2
 command and control
 containment plan
 fair use
+
+# --- 2026-08-25 ---
+rootkit
+edr
+endpoint detection and response
+malware as a service
