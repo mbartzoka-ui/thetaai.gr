@@ -178,3 +178,7 @@ rootkit
 edr
 endpoint detection and response
 malware as a service
+
+# --- 2026-08-26 ---
+dns rebinding
+chat template

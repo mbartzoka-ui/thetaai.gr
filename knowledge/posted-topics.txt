@@ -24,3 +24,4 @@
 2026-08-23 | openai-california-sb53-self-regulation | Η OpenAI ζητά από την Καλιφόρνια να ενισχύσει τον νόμο SB 53, αφότου η ίδια είχε αντιταχθεί σε αυτόν
 2026-08-24 | frontier-labs-rogue-model-containment | Μελέτη Guidelight AI Standards: οι μεγάλες εταιρείες AI δεν εξηγούν πώς θα σταματήσουν ένα μοντέλο που ξεφεύγει από τον έλεγχο
 2026-08-25 | instinct-ai-agent-broad-data-access-tos | Ο AI βοηθός Instinct και οι διαρκείς, ανέκκλητες άδειες πρόσβασης σε προσωπικά δεδομένα
+2026-08-26 | nemoclaw-local-ai-agent-network-exposure | Ευπάθεια NemoClaw: τοπικός AI agent εκτεθειμένος στο δίκτυο, μόνιμη «δηλητηρίαση» μνήμης
