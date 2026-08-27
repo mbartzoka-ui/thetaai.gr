@@ -84,12 +84,19 @@ MANDATORY VERIFICATION before you finish (do NOT skip this): run `python3 .githu
 
 STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one genuinely NEW story to the archive, write a Greek digest to `/tmp/radar-digest.md` (OUTSIDE the repo — this file must never be committed). Audience: Maria (θeta ai) — an AI security & compliance consultant in Greece who wants to genuinely understand the market, not just headlines. Content, all in natural Greek (keep tech terms/product names as-is):
 - Start with `@mbartzoka-ui` on its own line (guarantees the email notification), then a 2-3 sentence overview of the day's picture.
-- Then one section per NEW story: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
+- Then one section per NEW story. ΥΠΟΧΡΕΩΤΙΚΑ ξεκίνα κάθε ενότητα με τη ΓΡΑΜΜΗ ΗΜΕΡΟΜΗΝΙΑΣ της ιστορίας, σε δική της σειρά, ΠΡΙΝ το κείμενο:
+  `📅 <DD/MM> — <ΣΗΜΕΡΙΝΟ | ΧΘΕΣΙΝΟ | πριν N ημέρες>`
+  Η ημερομηνία είναι αυτή της ΔΗΜΟΣΙΕΥΣΗΣ της είδησης, όχι της ημέρας που τρέχεις. Είναι συχνό και φυσιολογικό να μην υπάρχει ΚΑΜΙΑ σημερινή ιστορία, ειδικά όταν το πέρασμα τρέχει νωρίς το πρωί και οι αμερικανικές πηγές δεν έχουν δημοσιεύσει ακόμα. ΜΗΝ παρουσιάζεις χθεσινές ειδήσεις σαν σημερινές, ούτε στο digest ούτε στο LinkedIn draft. Αν ΟΛΕΣ οι ιστορίες είναι παλιότερες από σήμερα, πες το ρητά στην εισαγωγή.
+  Μετά τη γραμμή ημερομηνίας: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
 - Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
 Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
 
 ΜΗΝ ΞΑΝΑΓΡΑΦΕΙΣ ΘΕΜΑ ΠΟΥ ΕΧΕΙ ΗΔΗ ΓΡΑΦΤΕΙ — απόλυτος κανόνας, ρητή εντολή της Maria 19/08/2026: «δεν θέλουμε να γράφουμε για άρθρα για τα οποία έχουμε ξαναγράψει».
 ΠΡΙΝ διαλέξεις θέμα για το draft, διάβασε `knowledge/posted-topics.txt` (μία γραμμή ανά θέμα, `#` = σχόλιο).
+ΔΕΥΤΕΡΟΣ, ΙΣΧΥΡΟΤΕΡΟΣ ΕΛΕΓΧΟΣ — διόρθωση 27/08/2026. Το `posted-topics.txt` καλύπτει μόνο ό,τι έγινε draft ΑΦΟΤΟΥ φτιάχτηκε το αρχείο. Δεν καλύπτει τα 361 περιστατικά που ήδη υπάρχουν στο `knowledge/ai-security-log.md`. Έτσι πέρασε η ιστορία του γυμναστηρίου: μπήκε 10/08 (TechCrunch) και ξαναγράφτηκε 27/08 (The Hacker News) ως καινούργια, με άλλον τίτλο και άλλη πηγή.
+ΠΡΙΝ γράψεις draft, ΨΑΞΕ ΚΑΙ ΜΕΣΑ ΣΤΟ `knowledge/ai-security-log.md` για το ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ. Ψάξε με λέξεις-κλειδιά της ουσίας (εταιρεία, προϊόν, τι συνέβη), ΟΧΙ με τον τίτλο — ο τίτλος αλλάζει, το περιστατικό όχι. Παράδειγμα: για μια ιστορία περί κρατήσεων γυμναστηρίου, `grep -i "γυμναστηρ" knowledge/ai-security-log.md`.
+ΑΝ ΒΡΕΙΣ ΤΟ ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ με προγενέστερη ημερομηνία, ΑΠΑΓΟΡΕΥΕΤΑΙ το draft, όση νέα λεπτομέρεια κι αν προσθέτει το σημερινό ρεπορτάζ. Διαφορετική εφημερίδα, διαφορετικός τίτλος και νέες λεπτομέρειες ΔΕΝ κάνουν ένα περιστατικό καινούργιο.
+
 ΑΠΑΓΟΡΕΥΕΤΑΙ draft για θέμα που υπάρχει ήδη εκεί — ακόμη κι αν σήμερα βγήκε φρέσκο ρεπορτάζ γι' αυτό, ακόμη κι αν το ρεπορτάζ προσθέτει νέα λεπτομέρεια. Νέο ρεπορτάζ παλιάς ιστορίας ΔΕΝ είναι νέο θέμα. (Παράδειγμα του τι πήγε στραβά: η παραβίαση του Hugging Face έχει 8 εγγραφές στο ημερολόγιο, 20-28/07/2026, και ξαναγράφτηκε στις 19/08.)
 ΔΙΑΛΕΞΕ ΕΝΑ ΘΕΜΑ, ΟΧΙ ΤΡΙΑ. Το draft στέκεται σε μία ιστορία και πάει βαθιά.
 ΠΑΡΕ ΘΕΣΗ. Πρέπει να υπάρχει κάτι που ισχυρίζεσαι, όχι μόνο κάτι που περιγράφεις: τι σημαίνει, τι είναι λάθος, τι πρέπει να αλλάξει, τι να ρωτήσει ο αναγνώστης και ποιον. Περίληψη ειδήσεων με γενικό δίδαγμα στο τέλος («το θέμα δεν είναι η τεχνολογία, είναι η εμπιστοσύνη») ΔΕΝ είναι post — είναι δελτίο.
