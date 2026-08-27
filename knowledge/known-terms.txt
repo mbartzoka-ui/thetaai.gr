@@ -182,3 +182,7 @@ malware as a service
 # --- 2026-08-26 ---
 dns rebinding
 chat template
+
+# --- 2026-08-27 ---
+idor
+insecure direct object reference
