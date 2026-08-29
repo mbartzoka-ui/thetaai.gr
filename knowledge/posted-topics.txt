@@ -40,3 +40,4 @@
 
 2026-08-10 | gym-booking-agent-incident | ΤΟ ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ με το claude-opus-gym-booking-idor της 27/08 — αρχική κάλυψη TechCrunch 10/08. Κάθε μελλοντικό follow-up για κρατήσεις γυμναστηρίου είναι ΕΠΑΝΑΛΗΨΗ.
 2026-08-28 | anthropic-court-ruling | Δικαστήριο ακύρωσε τον αποκλεισμό της Anthropic από το Πεντάγωνο
+2026-08-29 | anthropic-automated-alignment-researcher | Ερευνητής της Anthropic δείχνει πώς το AI μπορεί να ελέγχει μόνο του την ασφάλειά του
