@@ -186,3 +186,7 @@ chat template
 # --- 2026-08-27 ---
 idor
 insecure direct object reference
+
+# --- 2026-08-30 ---
+ai kill switch
+kill switch
