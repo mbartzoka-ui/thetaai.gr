@@ -154,7 +154,23 @@ jobs:
             echo "No changes to publish (feeds empty or nothing new)."
           else
             GIT_AUTHOR_NAME="radar-maker ($model)"             GIT_AUTHOR_EMAIL="radar-maker@users.noreply.github.com"             GIT_COMMITTER_NAME="radar-checker ($model)"             GIT_COMMITTER_EMAIL="radar-checker@users.noreply.github.com"             git commit -m "Radar: daily refresh $(date -u +%F)"                        -m "Συντάκτης (author): $model - συνέταξε σελίδες, ημερολόγιο, digest."                        -m "Ελεγκτής (committer): $model - ανεξάρτητος έλεγχος σε καθαρή συνεδρία."                        -m "Ετυμηγορία: $verdict. Επιβεβαιώθηκε ότι ο ελεγκτής δεν τροποποίησε κανένα αρχείο."
-            git push
+            # Το remote μπορεί να έχει προχωρήσει όσο τρέχαμε: δέκα λεπτά είναι
+            # αρκετά για να ανέβει μια αλλαγή στα prompts. Χωρίς ξαναδοκιμή, το
+            # push απορρίπτεται και ΧΑΝΕΤΑΙ ΟΛΗ Η ΜΕΡΑ, παρότι η δουλειά έχει
+            # γίνει και έχει εγκριθεί από τον ελεγκτή. Συνέβη 01/09/2026.
+            pushed=0
+            for try in 1 2 3; do
+              if git push; then pushed=1; break; fi
+              echo "::warning::Το push απορρίφθηκε (προσπάθεια $try/3) - κάνω rebase πάνω στο remote και ξαναδοκιμάζω."
+              if ! git pull --rebase origin main; then
+                echo "::error::Το rebase απέτυχε. Οι αλλαγές μένουν στο μηχάνημα και χάνονται."
+                break
+              fi
+            done
+            if [ "$pushed" != "1" ]; then
+              echo "::error::Δεν κατάφερα να ανεβάσω μετά από 3 προσπάθειες."
+              exit 1
+            fi
           fi
 
       - name: Send digest as GitHub issue
