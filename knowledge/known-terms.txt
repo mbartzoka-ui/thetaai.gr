@@ -190,3 +190,11 @@ insecure direct object reference
 # --- 2026-08-30 ---
 ai kill switch
 kill switch
+
+# --- 2026-09-02 ---
+dsa
+digital services act
+preparedness framework
+zero-day
+zero data retention
+zdr
