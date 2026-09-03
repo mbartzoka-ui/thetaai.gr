@@ -44,3 +44,4 @@
 2026-08-30 | anthropic-music-publishers-copyright-lawsuit | Η Sony Music και η Warner Chappell μηνύουν την Anthropic για πειρατεία μουσικού υλικού
 2026-08-31 | anthropic-claude-session-infostealer | Η Anthropic προειδοποιεί για κακόβουλο λογισμικό που κλέβει συνεδρίες Claude
 2026-09-02 | prompt-injection-legal-filing | Δικηγόρος έκρυψε εντολές prompt injection μέσα σε δικαστικό έγγραφο
+2026-09-03 | git-config-ai-coding-agent-rce | Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code

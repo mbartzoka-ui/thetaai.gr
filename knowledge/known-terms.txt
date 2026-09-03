@@ -198,3 +198,7 @@ preparedness framework
 zero-day
 zero data retention
 zdr
+
+# --- 2026-09-03 ---
+recurrent depth
+opaque recurrence
