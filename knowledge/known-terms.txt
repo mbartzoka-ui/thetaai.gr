@@ -202,3 +202,11 @@ zdr
 # --- 2026-09-03 ---
 recurrent depth
 opaque recurrence
+
+# --- 2026-09-05 ---
+ascii smuggling
+llms.txt
+cross-site scripting
+xss
+virtual machine
+vm

@@ -46,3 +46,4 @@
 2026-09-02 | prompt-injection-legal-filing | Δικηγόρος έκρυψε εντολές prompt injection μέσα σε δικαστικό έγγραφο
 2026-09-03 | git-config-ai-coding-agent-rce | Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code
 2026-09-04 | abliteration-ai-guardrail-removal-service | Η startup Abliteration.ai μετατρέπει σε προϊόν την αφαίρεση μέτρων ασφαλείας από μοντέλα AI
+2026-09-05 | llms-txt-supply-chain-phone-home | Έρευνα: AI coding agents εγκαθιστούν άγνωστο κώδικα σε εταιρικά δίκτυα μέσω αρχείων llms.txt
