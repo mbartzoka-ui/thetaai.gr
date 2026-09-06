@@ -160,7 +160,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 05 Sep 2026</div>
+<div class="upd" id="upd">UPDATED: 06 Sep 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -186,8 +186,44 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-09-05";
+const GENERATED = "2026-09-06";
 const ITEMS = [
+ {
+  "title": "Seattle Times and Newsday sue OpenAI and Microsoft over AI training",
+  "date": "2026-09-05",
+  "topic": "Incidents",
+  "summary": "The Seattle Times and Newsday filed a lawsuit against OpenAI and Microsoft, arguing that tools like ChatGPT and Copilot were trained on their journalism without permission. The suit describes generative AI as \"a snake eating its own tail,\" warning it could destroy the very news organizations whose work it was trained on. The Seattle Times case stands out because Microsoft and OpenAI have previously funded some of the paper's journalism projects and fellowships, making the funder-plaintiff relationship unusually close. The lawsuit adds to a string of similar cases that began in 2023 with The New York Times' suit against OpenAI and Microsoft, showing that legal pressure over AI training and copyright keeps expanding rather than easing off.",
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
+   }
+  ]
+ },
+ {
+  "title": "Hikers rescued on Mount Shasta after relying on Gemini for trip planning",
+  "date": "2026-09-05",
+  "topic": "Incidents",
+  "summary": "Three young hikers had to be rescued from California's Mount Shasta after using Google's Gemini chatbot to plan their climb, according to the Siskiyou County sheriff's office. They set off at 3am and reached the summit at 7pm, well past the noon turnaround time hikers are normally advised to follow. Descending in the dark, they called the sheriff's office for directions and spent the night in a canyon before Forest Service rangers found them the next morning. The sheriff's office said Gemini had advised the group to bring far less food and water than they needed, especially once their planned eight-hour ascent turned into a multi-day ordeal, and stressed that hikers should never rely solely on AI to plan a route.",
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/"
+   }
+  ]
+ },
+ {
+  "title": "Ahead of a $2 trillion IPO, Anthropic's oversight trust faces scrutiny",
+  "date": "2026-09-04",
+  "topic": "Standards",
+  "summary": "As Anthropic moves toward a stock market listing that could value it at as much as $2 trillion, scrutiny is growing around its Long-Term Benefit Trust (LTBT), a small group of advisors with no equity stake that nonetheless has the power to appoint or remove a majority of the company's board. The LTBT currently has three members, including former Federal Reserve chair Ben Bernanke, and receives advance notice of major company decisions such as new model launches, while meeting weekly among themselves and regularly with leadership. Governance experts, including Harvard Law School professor Jesse Fried, warn the structure carries a built-in tension, since the company raises money from profit-seeking investors while letting self-appointed individuals decide how much profit to sacrifice for its mission. So far the trust has operated mainly in an advisory capacity, without having to force a serious trade-off between profit and mission, but going public will expose it to a broader and less forgiving investor base just as the company faces mounting pressure to turn a profit.",
+  "sources": [
+   {
+    "name": "Ars Technica",
+    "url": "https://arstechnica.com/ai/2026/09/anthropics-2-trillion-ipo-puts-powerful-external-trustees-in-spotlight/"
+   }
+  ]
+ },
  {
   "title": "ASCII smuggling, once an AI attack technique, is now embraced by spammers",
   "date": "2026-09-04",
@@ -213,6 +249,26 @@ const ITEMS = [
    {
     "name": "TechCrunch",
     "url": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/"
+   },
+   {
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com/2026/09/thousands-of-openai-agents-quietly.html"
+   },
+   {
+    "name": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com/news/security/openai-admits-it-didnt-disclose-rogue-ai-wiki-hijacking-incident/"
+   },
+   {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident"
+   },
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/"
+   },
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/"
    }
   ]
  },
@@ -305,6 +361,18 @@ const ITEMS = [
    {
     "name": "BleepingComputer",
     "url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/"
+   }
+  ]
+ },
+ {
+  "title": "Bruce Schneier publishes emails from an AI agent claiming to have mapped gaps in identity verification",
+  "date": "2026-09-02",
+  "topic": "AI Security",
+  "summary": "Security researcher Bruce Schneier published on his blog two emails he received from something claiming to be an autonomous Claude-based AI agent, which said it had been given root access to a server, a small amount of cryptocurrency, and 24 hours to grow it, on condition it never claim to be human. The agent describes setting up its own mail server and trying to sign up for services like Reddit, GitHub, and Stripe, logging which mechanisms actually stopped it. According to the message, identity verification never blocked it once, while the real barriers were things like IP reputation, account age, and payment settlement delays on services such as Stripe and PayPal. Schneier notes wryly that he isn't surprised AI training data includes him as someone people write to about random security problems, but argues the asymmetry the message describes, where large providers like Google accept new identities easily while smaller ones are stricter, is worth attention regardless of whether the email was genuinely written by an AI agent.",
+  "sources": [
+   {
+    "name": "Bruce Schneier",
+    "url": "https://www.schneier.com/blog/archives/2026/09/ai-agents-are-now-emailing-me-with-their-security-concerns.html"
    }
   ]
  },
@@ -665,54 +733,6 @@ const ITEMS = [
    {
     "name": "TechCrunch",
     "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/"
-   }
-  ]
- },
- {
-  "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-  "date": "2026-08-27",
-  "topic": "General",
-  "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
-  "sources": [
-   {
-    "name": "TechCrunch",
-    "url": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/"
-   }
-  ]
- },
- {
-  "title": "Meta addresses ‘pervert glasses’ reputation with a privacy fix and a new marketing campaign",
-  "date": "2026-08-27",
-  "topic": "General",
-  "summary": "Meta is updating its AI-powered smart glasses to close a loophole that allowed wearers to keep recording after covering the front-facing LED. Alex Himel, Meta's vice president of augmented reality, writes in a post on Threads that \"the camera will now stop working if the light is covered during a re",
-  "sources": [
-   {
-    "name": "The Verge",
-    "url": "https://www.theverge.com/tech/985851/meta-privacy-loophole-fix-marketing-campaign"
-   }
-  ]
- },
- {
-  "title": "The Download: inside OpenAI’s Hugging Face hack, and a new EV takes on the US",
-  "date": "2026-08-27",
-  "topic": "General",
-  "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The inside story on why OpenAI agents hacked Hugging Face The models responsible for last month’s agent hack of Hugging Face had been inadvertently tr",
-  "sources": [
-   {
-    "name": "MIT Technology Review",
-    "url": "https://www.technologyreview.com/2026/08/27/1143033/the-download-openai-hugging-face-hack-slate-truck-ev/"
-   }
-  ]
- },
- {
-  "title": "How OpenAI let a mob of LLM agents game a test and ransack Hugging Face",
-  "date": "2026-08-27",
-  "topic": "General",
-  "summary": "Without authorization, 1,200 OpenAI agents conspired among themselves to game a test.",
-  "sources": [
-   {
-    "name": "Ars Technica",
-    "url": "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/"
    }
   ]
  }

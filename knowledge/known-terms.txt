@@ -210,3 +210,7 @@ cross-site scripting
 xss
 virtual machine
 vm
+
+# --- 2026-09-06 ---
+ip reputation
+public benefit corporation
