@@ -126,7 +126,8 @@ strong{font-weight:600;color:var(--navy)}
 .contact .row{margin-top:16px;padding-top:12px;border-top:0.5pt solid #3A4463;display:flex;gap:24px;flex-wrap:wrap;font-size:10pt;color:#fff;font-weight:500}
 .disc{font-size:7.5pt;color:var(--muted);margin-top:16px;line-height:1.5;max-width:140mm}
 
-/* ---------- web viewer ---------- */
+/* ---------- web viewer (screen only, ώστε να μη χαλά η εκτύπωση) ---------- */
+@media screen{
 html{-webkit-text-size-adjust:100%}
 body{background:#DEE1E8;padding:18px 0}
 #stage{display:flex;justify-content:center}
@@ -141,6 +142,7 @@ body{background:#DEE1E8;padding:18px 0}
   background:rgba(255,255,255,.07);transition:background .15s ease,color .15s ease;
 }
 .webpdf:hover{background:#fff;color:#1D2846;border-color:#fff}
+}
 </style>
 </head>
 <body>
