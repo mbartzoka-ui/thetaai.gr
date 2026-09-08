@@ -1,0 +1,71 @@
+# Φύλακας του radar.
+#
+# ΓΙΑΤΙ ΥΠΑΡΧΕΙ: η ειδοποίηση μέσα στο radar-refresh.yml πιάνει μόνο την
+# περίπτωση «ξεκίνησε και απέτυχε». Στις 27/08/2026 συνέβη κάτι άλλο: λόγω
+# incident του GitHub Billing δεν ξεκίνησε ΚΑΝΕΝΑ από τα τρία slots, οπότε
+# δεν υπήρχε διεργασία για να στείλει ειδοποίηση. Η μέρα πέρασε σιωπηλά.
+#
+# ΤΙ ΚΑΛΥΠΤΕΙ: το GitHub δουλεύει, αλλά ο radar δεν έτρεξε ή δεν δημοσίευσε.
+# ΤΙ ΔΕΝ ΚΑΛΥΠΤΕΙ: ολική πτώση του GitHub Actions. Τότε δεν τρέχει ούτε ο
+# φύλακας. Καμία λύση μέσα στο GitHub δεν καλύπτει πτώση του GitHub - αν
+# κάποια μέρα δεν έρθει ούτε digest ούτε ειδοποίηση, πρώτη σκέψη είναι
+# «μήπως έπεσε το GitHub», όχι «όλα καλά».
+
+name: Radar watchdog
+
+on:
+  schedule:
+    # 08:23 UTC ~= 11:23 Ελλάδας (θερινή). Αρκετά αργά ώστε να έχουν τρέξει
+    # και τα τρία slots του radar ακόμη και με τη μέγιστη μετρημένη ουρά.
+    - cron: "23 8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Έλεγχος αν ο radar ανανεώθηκε σήμερα
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          today="$(date -u +%F)"
+
+          if grep -q "const GENERATED = \"$today\"" radar/index.html; then
+            echo "OK: ο radar ανανεώθηκε σήμερα ($today)."
+            exit 0
+          fi
+
+          echo "::warning::Ο radar ΔΕΝ ανανεώθηκε σήμερα ($today)."
+
+          # Μην ανοίξεις δεύτερο issue αν υπάρχει ήδη σημερινή ειδοποίηση.
+          title="AI Radar — ΔΕΝ ΕΤΡΕΞΕ $(date -u +%d/%m/%Y)"
+          if gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "$title in:title" --json title \
+             | grep -qF "$title"; then
+            echo "Υπάρχει ήδη ανοιχτή ειδοποίηση για σήμερα - δεν ανοίγω δεύτερη."
+            exit 0
+          fi
+
+          last="$(grep -oE 'const GENERATED = "[0-9-]+"' radar/index.html | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1)"
+          {
+            echo "@mbartzoka-ui"
+            echo ""
+            echo "**Ο radar δεν ανανεώθηκε σήμερα.** Το site δείχνει ακόμη την ενημέρωση της ${last:-άγνωστης ημερομηνίας}."
+            echo ""
+            echo "Δεν χάλασε τίποτα δημόσια, απλώς λείπει η σημερινή ενημέρωση."
+            echo ""
+            echo "**Τι να κοιτάξεις, με αυτή τη σειρά:**"
+            echo "1. Έχει ανοιχτό πρόβλημα το GitHub; → https://www.githubstatus.com"
+            echo "2. Τα σημερινά περάσματα → $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/workflows/radar-refresh.yml"
+            echo ""
+            echo "Αν φταίει το GitHub, δεν χρειάζεται να κάνεις τίποτα, συνήθως συνέρχεται μόνο του."
+            echo "Αν θέλεις το σημερινό digest τώρα, τρέξε το χειροκίνητα από τη σελίδα των περασμάτων (κουμπί «Run workflow»)."
+          } > /tmp/watchdog.md
+
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file /tmp/watchdog.md

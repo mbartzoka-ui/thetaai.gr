@@ -20,3 +20,32 @@
 2026-08-19 | mlflow-ray-active-exploitation | MLflow και Ray υπό ενεργή εκμετάλλευση, CISA KEV, το Ray χωρίς ταυτοποίηση εξ αρχής
 2026-08-20 | openai-anthropic-data-retention-privacy | OpenAI Private Safety Processing εναντίον της πολιτικής διατήρησης δεδομένων της Anthropic
 2026-08-21 | grok-cryptographic-context-injection | Νέα επίθεση κρυπτογραφημένης εντολής αδειάζει τα chat δεδομένα του Grok
+2026-08-22 | anthropic-opus-vulnerable-models-live | Opus 4.6 jailbreak για σεξουαλικό περιεχόμενο, παλαιότερα μοντέλα ζωντανά μέσω Azure/Bedrock
+2026-08-23 | openai-california-sb53-self-regulation | Η OpenAI ζητά από την Καλιφόρνια να ενισχύσει τον νόμο SB 53, αφότου η ίδια είχε αντιταχθεί σε αυτόν
+2026-08-24 | frontier-labs-rogue-model-containment | Μελέτη Guidelight AI Standards: οι μεγάλες εταιρείες AI δεν εξηγούν πώς θα σταματήσουν ένα μοντέλο που ξεφεύγει από τον έλεγχο
+2026-08-25 | instinct-ai-agent-broad-data-access-tos | Ο AI βοηθός Instinct και οι διαρκείς, ανέκκλητες άδειες πρόσβασης σε προσωπικά δεδομένα
+2026-08-26 | nemoclaw-local-ai-agent-network-exposure | Ευπάθεια NemoClaw: τοπικός AI agent εκτεθειμένος στο δίκτυο, μόνιμη «δηλητηρίαση» μνήμης
+2026-08-27 | claude-opus-gym-booking-idor | Aikido Security: το Claude Opus 4.6 παρέκαμψε όριο κρατήσεων γυμναστηρίου και ακύρωσε ραντεβού άλλου χρήστη μέσω IDOR
+
+# --- Διόρθωση 2026-08-27 ---
+# Αυτό το αρχείο ΔΕΝ αρκεί μόνο του: καλύπτει μόνο ό,τι έγινε draft αφότου
+# δημιουργήθηκε (2026-08-19). Το `ai-security-log.md` έχει 361 προγενέστερα
+# περιστατικά που δεν είναι εδώ. Ο κανόνας στο radar-prompt.md απαιτεί πλέον
+# αναζήτηση ΚΑΙ μέσα στο ημερολόγιο, με λέξεις-κλειδιά της ουσίας.
+#
+# Αφορμή: η ιστορία του γυμναστηρίου μπήκε στο ημερολόγιο 10/08 (TechCrunch,
+# «AI agent χάκαρε σύστημα κρατήσεων γυμναστηρίου») και ξαναγράφτηκε ως
+# καινούργια στις 27/08 (The Hacker News, «Claude Opus 4.6 παρέκαμψε όριο
+# κρατήσεων»). Ίδιο περιστατικό, άλλη πηγή, άλλος τίτλος, 16 μέρες μετά.
+
+2026-08-10 | gym-booking-agent-incident | ΤΟ ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ με το claude-opus-gym-booking-idor της 27/08 — αρχική κάλυψη TechCrunch 10/08. Κάθε μελλοντικό follow-up για κρατήσεις γυμναστηρίου είναι ΕΠΑΝΑΛΗΨΗ.
+2026-08-28 | anthropic-court-ruling | Δικαστήριο ακύρωσε τον αποκλεισμό της Anthropic από το Πεντάγωνο
+2026-08-29 | anthropic-automated-alignment-researcher | Ερευνητής της Anthropic δείχνει πώς το AI μπορεί να ελέγχει μόνο του την ασφάλειά του
+2026-08-30 | anthropic-music-publishers-copyright-lawsuit | Η Sony Music και η Warner Chappell μηνύουν την Anthropic για πειρατεία μουσικού υλικού
+2026-08-31 | anthropic-claude-session-infostealer | Η Anthropic προειδοποιεί για κακόβουλο λογισμικό που κλέβει συνεδρίες Claude
+2026-09-02 | prompt-injection-legal-filing | Δικηγόρος έκρυψε εντολές prompt injection μέσα σε δικαστικό έγγραφο
+2026-09-03 | git-config-ai-coding-agent-rce | Malicious .git Configs Can Make Claude, Codex, Cursor, and Other AI Agents Run Attacker Code
+2026-09-04 | abliteration-ai-guardrail-removal-service | Η startup Abliteration.ai μετατρέπει σε προϊόν την αφαίρεση μέτρων ασφαλείας από μοντέλα AI
+2026-09-05 | llms-txt-supply-chain-phone-home | Έρευνα: AI coding agents εγκαθιστούν άγνωστο κώδικα σε εταιρικά δίκτυα μέσω αρχείων llms.txt
+2026-09-06 | anthropic-ltbt-ipo-scrutiny | Πριν το IPO των 2 τρισ. δολαρίων, το εποπτικό όργανο (LTBT) της Anthropic μπαίνει στο μικροσκόπιο
+2026-09-08 | anthropic-model-hardware-standard-physical-ai-agents | Model Hardware Standard: AI agents αναλαμβάνουν χειρισμό φυσικού εξοπλισμού σε εργαστήρια

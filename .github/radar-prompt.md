@@ -32,7 +32,13 @@ Apply all of this silently. Never mention the rules in the output.
 
 **10. Accuracy.** Never invent a number, a study, a quote or a date. Every claim comes from the fetched source content. Where a figure is uncertain, write «περίπου» rather than inventing precision.
 
-STEP 1 — GATHER. Fetch each RSS/Atom feed below (e.g. `curl -sL --max-time 30`). Skip any that return empty or error.
+STEP 1 — GATHER. Fetch each RSS/Atom feed below (e.g. `curl -sL --max-time 30`).
+
+ΥΓΕΙΑ ΤΩΝ ΠΗΓΩΝ — υποχρεωτικό, διόρθωση 08/09/2026. Για ΚΑΘΕ feed κατέγραψε: κωδικό HTTP, πλήθος `<item>`/`<entry>`, και ημερομηνία του νεότερου.
+Feed που επιστρέφει σφάλμα, μηδέν items, ή που το νεότερο του είναι πάνω από **3 ημέρες** παλιό, θεωρείται ΠΡΟΒΛΗΜΑΤΙΚΟ.
+ΚΑΘΕ προβληματικό feed γράφεται ΥΠΟΧΡΕΩΤΙΚΑ σε ενότητα `## 🔌 Πηγές εκτός λειτουργίας` στο ΤΕΛΟΣ του digest, μία γραμμή: όνομα, κωδικός ή πλήθος, ημερομηνία νεότερου. Αν όλες είναι υγιείς, παράλειψε την ενότητα.
+ΓΙΑΤΙ ΥΠΑΡΧΕΙ: μέχρι τις 08/09/2026 η οδηγία ήταν σκέτο «skip any that return empty or error». Το Euractiv επέστρεφε **403 Forbidden** και το VentureBeat **429**, σιωπηλά, για άγνωστο διάστημα. Το Euractiv ήταν η ΜΟΝΑΔΙΚΗ ευρωπαϊκή πηγή, δηλαδή η μόνη που κάλυπτε τον Κανονισμό AI, που είναι το κεντρικό θέμα της Maria. Ένα feed που πέθανε ήταν ολόιδιο με feed που δεν είχε νέα. Ίδιο μοτίβο με τα τρία κενά ειδοποίησης της 01/09: **η σιωπή δεν ξεχωρίζει**.
+Οι ΙΔΙΕΣ οι ιστορίες δεν αλλάζουν: προβληματικό feed απλώς παραλείπεται στη συλλογή. Αλλά η Maria το μαθαίνει την ίδια μέρα, όχι μετά από εβδομάδες.
 Security & general tech feeds:
 - https://feeds.feedburner.com/TheHackersNews
 - https://www.darkreading.com/rss.xml
@@ -41,15 +47,25 @@ Security & general tech feeds:
 - https://feeds.arstechnica.com/arstechnica/index
 - https://www.technologyreview.com/feed/
 - https://www.theverge.com/rss/index.xml
-- https://www.euractiv.com/sections/digital/feed/
+- https://digital-strategy.ec.europa.eu/en/rss.xml   (Ευρωπαϊκή Επιτροπή, ψηφιακή στρατηγική — ΠΡΩΤΟΓΕΝΗΣ πηγή για AI Act)
+- https://edpb.europa.eu/feed/news_en                (European Data Protection Board — ΠΡΩΤΟΓΕΝΗΣ για GDPR)
+- https://www.infosecurity-magazine.com/rss/news/
+- https://www.securityweek.com/feed/
+- https://therecord.media/feed
 AI-vendor & AI-business feeds (cover Anthropic, OpenAI, xAI/Grok, Google, Meta, Microsoft directly):
 - https://techcrunch.com/category/artificial-intelligence/feed/
-- https://venturebeat.com/category/ai/feed/
 - https://openai.com/blog/rss.xml
 - https://blog.google/technology/ai/rss/
 - https://www.anthropic.com/news
 
-STEP 2 — FILTER. Keep ONLY items relating to: EU AI Act / AI Act / Article 50 / high-risk AI / GPAI / AI regulation-governance-compliance; AI security / LLM security / prompt injection / jailbreak / adversarial AI / AI-agent security; ISO 42001 / ISO/IEC 42001 / ISO 27001+AI / AI management systems / AI standards; NIST AI / AI RMF / AI risk; GDPR+AI / DPIA+AI / AI data protection; AI incidents / chatbot liability / AI lawsuits / major data-breach fines; AND notable policy/safety/security announcements from major AI labs (Anthropic, OpenAI, xAI/Grok, Google DeepMind, Meta, Microsoft). Prefer items from the last ~3 weeks. When the SAME story is covered by multiple feeds, treat it as ONE story whose `sources` is the union of all covering channels. Do NOT fabricate; only include items whose source URL you actually have. Assign each a topic: exactly one of "AI Act", "AI Security", "Standards", "Incidents", "General". Call the result TODAY's new stories.
+STEP 2 — FILTER. Keep ONLY items relating to: EU AI Act / AI Act / Article 50 / high-risk AI / GPAI / AI regulation-governance-compliance; AI security / LLM security / prompt injection / jailbreak / adversarial AI / AI-agent security; ISO 42001 / ISO/IEC 42001 / ISO 27001+AI / AI management systems / AI standards; NIST AI / AI RMF / AI risk; GDPR+AI / DPIA+AI / AI data protection; AI incidents / chatbot liability / AI lawsuits / major data-breach fines; AND notable policy/safety/security announcements from major AI labs (Anthropic, OpenAI, xAI/Grok, Google DeepMind, Meta, Microsoft). Prefer items from the last ~3 weeks — αυτό ισχύει ΜΟΝΟ για το ΑΡΧΕΙΟ του site (STEP 3-6), όπου το βάθος είναι το ζητούμενο.
+
+ΟΡΙΣΜΟΣ ΦΡΕΣΚΟΥ — απόλυτος, ρητή εντολή της Maria 08/09/2026. ΦΡΕΣΚΙΑ ιστορία = δημοσιευμένη ΣΗΜΕΡΑ ή ΧΘΕΣ σε ώρα UTC. Τίποτα άλλο.
+Ο ορισμός δεν αφορά το αρχείο, αφορά ΤΟ EMAIL: το digest (STEP 7) και το LinkedIn draft δέχονται ΜΟΝΟ φρέσκιες ιστορίες.
+ΤΟ «ΚΑΙΝΟΥΡΓΙΟ ΓΙΑ ΤΟ ΑΡΧΕΙΟ» ΔΕΝ ΕΙΝΑΙ «ΦΡΕΣΚΟ». Μια ιστορία δώδεκα ημερών που δεν είχε μπει ποτέ στο αρχείο είναι νέα ΕΓΓΡΑΦΗ, δεν είναι ΕΙΔΗΣΗ της ημέρας. Αυτή ακριβώς η σύγχυση παρήγαγε το digest της 08/09/2026, με δύο ιστορίες 8 και 12 ημερών.
+ΑΠΑΓΟΡΕΥΕΤΑΙ να ψάξεις «πιο πίσω» σε οποιαδήποτε πηγή για να γεμίσεις το digest όταν οι φρέσκιες ιστορίες είναι λίγες ή καμία. Λιγότερα είναι σωστό. Τίποτα είναι σωστό.
+ΠΡΟΣΟΧΗ ΣΤΟ `https://www.anthropic.com/news`: ΔΕΝ είναι RSS feed, είναι απλή σελίδα χωρίς όριο ημερομηνίας, και επιστρέφει ό,τι υπάρχει εκεί ανεξαρτήτως παλαιότητας. Στις 08/09/2026 ΚΑΙ ΟΙ ΔΥΟ ιστορίες του digest ήρθαν από εκεί, ακριβώς γι' αυτόν τον λόγο. Κάθε ιστορία από αυτή την πηγή περνάει υποχρεωτικά από τον έλεγχο ημερομηνίας πριν μπει οπουδήποτε.
+ΜΟΝΟΠΗΓΙΑ: αν ΟΛΕΣ οι ιστορίες του digest προέρχονται από την ίδια εταιρεία ή πηγή, πες το ρητά στην εισαγωγή του digest. When the SAME story is covered by multiple feeds, treat it as ONE story whose `sources` is the union of all covering channels. Do NOT fabricate; only include items whose source URL you actually have. Assign each a topic: exactly one of "AI Act", "AI Security", "Standards", "Incidents", "General". Call the result TODAY's new stories.
 
 ΑΠΟΚΛΕΙΣΜΟΣ ΧΟΡΗΓΟΥΜΕΝΟΥ ΠΕΡΙΕΧΟΜΕΝΟΥ — απόλυτος κανόνας, ρητή εντολή της Maria 19/08/2026: «δεν θέλουμε να γράφουμε για πληρωμένα άρθρα».
 Δεν αναδημοσιεύουμε διαφήμιση ως είδηση. Στις 17/08/2026 το κύριο θέμα της ημέρας ήταν κείμενο γραμμένο από content writer της Keeper Security, με δήλωση «contributed piece from one of our valued partners», που κατέληγε στο προϊόν τους. Πέρασε όλους τους ελέγχους επειδή το URL ζούσε και το περιεχόμενο ταίριαζε με τη σύνοψη. Αυτός ο κανόνας υπάρχει γι' αυτό ακριβώς.
@@ -82,14 +98,27 @@ Sanity-check each: valid JSON array, every item has all 5 keys with a non-empty 
 
 MANDATORY VERIFICATION before you finish (do NOT skip this): run `python3 .github/radar_check.py` from the repo root and read its output. If it fails, your written files are wrong — fix them (or restore with `git checkout -- radar en/radar knowledge`) and try again until the check passes. The merged ITEMS count must be close to the pre-existing count (existing stories carried over + new ones − aged-out ones). It is FORBIDDEN to report success while the check fails or while the files contain fewer stories than the archive you loaded in STEP 3. Reporting «40 items written» without having verified it is the exact failure mode this paragraph exists to prevent.
 
-STEP 7 — DIGEST FOR MARIA. If (and ONLY if) today's run added at least one genuinely NEW story to the archive, write a Greek digest to `/tmp/radar-digest.md` (OUTSIDE the repo — this file must never be committed). Audience: Maria (θeta ai) — an AI security & compliance consultant in Greece who wants to genuinely understand the market, not just headlines. Content, all in natural Greek (keep tech terms/product names as-is):
+STEP 7 — DIGEST FOR MARIA.
+
+ΣΥΝΘΗΚΗ ΓΡΑΦΗΣ — διόρθωση 08/09/2026. Γράψε digest ΜΟΝΟ αν υπάρχει τουλάχιστον μία ιστορία που είναι ΚΑΙ νέα στο αρχείο ΚΑΙ ΦΡΕΣΚΙΑ (σημερινή ή χθεσινή, βλ. ΟΡΙΣΜΟ ΦΡΕΣΚΟΥ στο STEP 2).
+ΑΝ ΚΑΜΙΑ ΙΣΤΟΡΙΑ ΔΕΝ ΕΙΝΑΙ ΦΡΕΣΚΙΑ: ΜΗΝ δημιουργήσεις καθόλου το αρχείο `/tmp/radar-digest.md`. Το workflow στέλνει τότε μόνο του το μήνυμα «καμία νέα είδηση σήμερα», που είναι το σωστό αποτέλεσμα. Οι μη φρέσκιες ιστορίες μπαίνουν κανονικά στο αρχείο του site και στο `knowledge/ai-security-log.md`, απλώς ΔΕΝ πηγαίνουν στο email.
+ΕΛΕΓΧΟΣ ΕΠΑΝΑΛΗΨΗΣ ΣΕ ΚΑΘΕ ΙΣΤΟΡΙΑ ΤΟΥ DIGEST, όχι μόνο στο LinkedIn draft. Πριν μπει ιστορία στο digest, ψάξε το ίδιο ΠΕΡΙΣΤΑΤΙΚΟ στο `knowledge/ai-security-log.md` με λέξεις-κλειδιά της ουσίας. Αν υπάρχει με προγενέστερη ημερομηνία, ΔΕΝ μπαίνει στο digest, όση νέα λεπτομέρεια κι αν προσθέτει. Αυτό αστόχησε στις 08/09/2026: η ανακοίνωση της Anthropic της 31/08 ήταν η απάντηση της εταιρείας στο περιστατικό AISI και Hugging Face, που έχει ΟΚΤΩ τουλάχιστον εγγραφές στο ημερολόγιο, και πέρασε επειδή ο έλεγχος έτρεχε μόνο για το draft.
+
+Write a Greek digest to `/tmp/radar-digest.md` (OUTSIDE the repo — this file must never be committed). Audience: Maria (θeta ai) — an AI security & compliance consultant in Greece who wants to genuinely understand the market, not just headlines. Content, all in natural Greek (keep tech terms/product names as-is):
 - Start with `@mbartzoka-ui` on its own line (guarantees the email notification), then a 2-3 sentence overview of the day's picture.
-- Then one section per NEW story: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
+- Then one section per NEW story. ΥΠΟΧΡΕΩΤΙΚΑ ξεκίνα κάθε ενότητα με τη ΓΡΑΜΜΗ ΗΜΕΡΟΜΗΝΙΑΣ της ιστορίας, σε δική της σειρά, ΠΡΙΝ το κείμενο:
+  `📅 <DD/MM> — <ΣΗΜΕΡΙΝΟ | ΧΘΕΣΙΝΟ | πριν N ημέρες>`
+  Η ημερομηνία είναι αυτή της ΔΗΜΟΣΙΕΥΣΗΣ της είδησης, όχι της ημέρας που τρέχεις. Είναι συχνό και φυσιολογικό να μην υπάρχει ΚΑΜΙΑ σημερινή ιστορία, ειδικά όταν το πέρασμα τρέχει νωρίς το πρωί και οι αμερικανικές πηγές δεν έχουν δημοσιεύσει ακόμα. Τότε το digest στέκεται σε ΧΘΕΣΙΝΕΣ ιστορίες. Αν δεν υπάρχουν ούτε χθεσινές, ΔΕΝ γράφεται digest καθόλου. ΜΗΝ παρουσιάζεις χθεσινές ειδήσεις σαν σημερινές, ούτε στο digest ούτε στο LinkedIn draft. Αν ΟΛΕΣ οι ιστορίες είναι παλιότερες από σήμερα, πες το ρητά στην εισαγωγή.
+  Μετά τη γραμμή ημερομηνίας: a bold title, 3-5 sentences of substantiated summary — τι έγινε, γιατί έχει σημασία, και όπου ταιριάζει μία πρόταση «τι σημαίνει για την ελληνική αγορά / για πελάτες MME» — followed by the source links as markdown.
 - Close with a short «Συνολική εικόνα» paragraph connecting the day's items to broader trends.
 Base every claim ONLY on the fetched feed content — no speculation presented as fact. If there are NO new stories today, do NOT create the file at all.
 
 ΜΗΝ ΞΑΝΑΓΡΑΦΕΙΣ ΘΕΜΑ ΠΟΥ ΕΧΕΙ ΗΔΗ ΓΡΑΦΤΕΙ — απόλυτος κανόνας, ρητή εντολή της Maria 19/08/2026: «δεν θέλουμε να γράφουμε για άρθρα για τα οποία έχουμε ξαναγράψει».
 ΠΡΙΝ διαλέξεις θέμα για το draft, διάβασε `knowledge/posted-topics.txt` (μία γραμμή ανά θέμα, `#` = σχόλιο).
+ΔΕΥΤΕΡΟΣ, ΙΣΧΥΡΟΤΕΡΟΣ ΕΛΕΓΧΟΣ — διόρθωση 27/08/2026. Το `posted-topics.txt` καλύπτει μόνο ό,τι έγινε draft ΑΦΟΤΟΥ φτιάχτηκε το αρχείο. Δεν καλύπτει τα 361 περιστατικά που ήδη υπάρχουν στο `knowledge/ai-security-log.md`. Έτσι πέρασε η ιστορία του γυμναστηρίου: μπήκε 10/08 (TechCrunch) και ξαναγράφτηκε 27/08 (The Hacker News) ως καινούργια, με άλλον τίτλο και άλλη πηγή.
+ΠΡΙΝ γράψεις draft, ΨΑΞΕ ΚΑΙ ΜΕΣΑ ΣΤΟ `knowledge/ai-security-log.md` για το ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ. Ψάξε με λέξεις-κλειδιά της ουσίας (εταιρεία, προϊόν, τι συνέβη), ΟΧΙ με τον τίτλο — ο τίτλος αλλάζει, το περιστατικό όχι. Παράδειγμα: για μια ιστορία περί κρατήσεων γυμναστηρίου, `grep -i "γυμναστηρ" knowledge/ai-security-log.md`.
+ΑΝ ΒΡΕΙΣ ΤΟ ΙΔΙΟ ΠΕΡΙΣΤΑΤΙΚΟ με προγενέστερη ημερομηνία, ΑΠΑΓΟΡΕΥΕΤΑΙ το draft, όση νέα λεπτομέρεια κι αν προσθέτει το σημερινό ρεπορτάζ. Διαφορετική εφημερίδα, διαφορετικός τίτλος και νέες λεπτομέρειες ΔΕΝ κάνουν ένα περιστατικό καινούργιο.
+
 ΑΠΑΓΟΡΕΥΕΤΑΙ draft για θέμα που υπάρχει ήδη εκεί — ακόμη κι αν σήμερα βγήκε φρέσκο ρεπορτάζ γι' αυτό, ακόμη κι αν το ρεπορτάζ προσθέτει νέα λεπτομέρεια. Νέο ρεπορτάζ παλιάς ιστορίας ΔΕΝ είναι νέο θέμα. (Παράδειγμα του τι πήγε στραβά: η παραβίαση του Hugging Face έχει 8 εγγραφές στο ημερολόγιο, 20-28/07/2026, και ξαναγράφτηκε στις 19/08.)
 ΔΙΑΛΕΞΕ ΕΝΑ ΘΕΜΑ, ΟΧΙ ΤΡΙΑ. Το draft στέκεται σε μία ιστορία και πάει βαθιά.
 ΠΑΡΕ ΘΕΣΗ. Πρέπει να υπάρχει κάτι που ισχυρίζεσαι, όχι μόνο κάτι που περιγράφεις: τι σημαίνει, τι είναι λάθος, τι πρέπει να αλλάξει, τι να ρωτήσει ο αναγνώστης και ποιον. Περίληψη ειδήσεων με γενικό δίδαγμα στο τέλος («το θέμα δεν είναι η τεχνολογία, είναι η εμπιστοσύνη») ΔΕΝ είναι post — είναι δελτίο.

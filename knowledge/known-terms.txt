@@ -154,3 +154,67 @@ rl training
 # --- 2026-08-21 ---
 cryptographic context injection
 insider threat
+
+# --- 2026-08-22 ---
+plc
+programmable logic controller
+genie behavior
+contextual integrity
+
+# --- 2026-08-23 ---
+ai skill
+universal skill format
+sb 53
+reverse federalism
+
+# --- 2026-08-24 ---
+c2
+command and control
+containment plan
+fair use
+
+# --- 2026-08-25 ---
+rootkit
+edr
+endpoint detection and response
+malware as a service
+
+# --- 2026-08-26 ---
+dns rebinding
+chat template
+
+# --- 2026-08-27 ---
+idor
+insecure direct object reference
+
+# --- 2026-08-30 ---
+ai kill switch
+kill switch
+
+# --- 2026-09-02 ---
+dsa
+digital services act
+preparedness framework
+zero-day
+zero data retention
+zdr
+
+# --- 2026-09-03 ---
+recurrent depth
+opaque recurrence
+
+# --- 2026-09-05 ---
+ascii smuggling
+llms.txt
+cross-site scripting
+xss
+virtual machine
+vm
+
+# --- 2026-09-06 ---
+ip reputation
+public benefit corporation
+
+# --- 2026-09-08 ---
+model hardware standard
+mhs
