@@ -32,7 +32,13 @@ Apply all of this silently. Never mention the rules in the output.
 
 **10. Accuracy.** Never invent a number, a study, a quote or a date. Every claim comes from the fetched source content. Where a figure is uncertain, write «περίπου» rather than inventing precision.
 
-STEP 1 — GATHER. Fetch each RSS/Atom feed below (e.g. `curl -sL --max-time 30`). Skip any that return empty or error.
+STEP 1 — GATHER. Fetch each RSS/Atom feed below (e.g. `curl -sL --max-time 30`).
+
+ΥΓΕΙΑ ΤΩΝ ΠΗΓΩΝ — υποχρεωτικό, διόρθωση 08/09/2026. Για ΚΑΘΕ feed κατέγραψε: κωδικό HTTP, πλήθος `<item>`/`<entry>`, και ημερομηνία του νεότερου.
+Feed που επιστρέφει σφάλμα, μηδέν items, ή που το νεότερο του είναι πάνω από **3 ημέρες** παλιό, θεωρείται ΠΡΟΒΛΗΜΑΤΙΚΟ.
+ΚΑΘΕ προβληματικό feed γράφεται ΥΠΟΧΡΕΩΤΙΚΑ σε ενότητα `## 🔌 Πηγές εκτός λειτουργίας` στο ΤΕΛΟΣ του digest, μία γραμμή: όνομα, κωδικός ή πλήθος, ημερομηνία νεότερου. Αν όλες είναι υγιείς, παράλειψε την ενότητα.
+ΓΙΑΤΙ ΥΠΑΡΧΕΙ: μέχρι τις 08/09/2026 η οδηγία ήταν σκέτο «skip any that return empty or error». Το Euractiv επέστρεφε **403 Forbidden** και το VentureBeat **429**, σιωπηλά, για άγνωστο διάστημα. Το Euractiv ήταν η ΜΟΝΑΔΙΚΗ ευρωπαϊκή πηγή, δηλαδή η μόνη που κάλυπτε τον Κανονισμό AI, που είναι το κεντρικό θέμα της Maria. Ένα feed που πέθανε ήταν ολόιδιο με feed που δεν είχε νέα. Ίδιο μοτίβο με τα τρία κενά ειδοποίησης της 01/09: **η σιωπή δεν ξεχωρίζει**.
+Οι ΙΔΙΕΣ οι ιστορίες δεν αλλάζουν: προβληματικό feed απλώς παραλείπεται στη συλλογή. Αλλά η Maria το μαθαίνει την ίδια μέρα, όχι μετά από εβδομάδες.
 Security & general tech feeds:
 - https://feeds.feedburner.com/TheHackersNews
 - https://www.darkreading.com/rss.xml
@@ -41,10 +47,13 @@ Security & general tech feeds:
 - https://feeds.arstechnica.com/arstechnica/index
 - https://www.technologyreview.com/feed/
 - https://www.theverge.com/rss/index.xml
-- https://www.euractiv.com/sections/digital/feed/
+- https://digital-strategy.ec.europa.eu/en/rss.xml   (Ευρωπαϊκή Επιτροπή, ψηφιακή στρατηγική — ΠΡΩΤΟΓΕΝΗΣ πηγή για AI Act)
+- https://edpb.europa.eu/feed/news_en                (European Data Protection Board — ΠΡΩΤΟΓΕΝΗΣ για GDPR)
+- https://www.infosecurity-magazine.com/rss/news/
+- https://www.securityweek.com/feed/
+- https://therecord.media/feed
 AI-vendor & AI-business feeds (cover Anthropic, OpenAI, xAI/Grok, Google, Meta, Microsoft directly):
 - https://techcrunch.com/category/artificial-intelligence/feed/
-- https://venturebeat.com/category/ai/feed/
 - https://openai.com/blog/rss.xml
 - https://blog.google/technology/ai/rss/
 - https://www.anthropic.com/news
