@@ -214,3 +214,7 @@ vm
 # --- 2026-09-06 ---
 ip reputation
 public benefit corporation
+
+# --- 2026-09-08 ---
+model hardware standard
+mhs
