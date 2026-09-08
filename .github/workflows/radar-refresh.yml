@@ -42,8 +42,19 @@ jobs:
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # ΠΡΟΣΟΧΗ (διόρθωση 08/09/2026): χωρίς `ref` το checkout παίρνει το
+      # github.sha, δηλαδή το commit που ήταν HEAD ΤΗ ΣΤΙΓΜΗ ΠΟΥ ΤΟ ΠΕΡΑΣΜΑ ΜΠΗΚΕ
+      # ΣΤΗΝ ΟΥΡΑ, όχι όταν ξεκίνησε να τρέχει. Στις 08/09 ένα cron slot μπήκε
+      # στην ουρά 06:33, το concurrency το κράτησε, ξεκίνησε 06:38:32 (16
+      # δευτερόλεπτα ΜΕΤΑ το push του κύριου περάσματος) και πήρε την ΧΘΕΣΙΝΗ
+      # έκδοση. Ο έλεγχος «έτρεξε ήδη σήμερα;» δεν είδε τη σημερινή ημερομηνία,
+      # το πέρασμα δούλεψε 8 λεπτά άσκοπα, το push απορρίφθηκε, το rebase βρήκε
+      # conflict στα append-only αρχεία, και στάλθηκε ψεύτικος συναγερμός «ΔΕΝ
+      # ΕΤΡΕΞΕ» δέκα λεπτά αφού είχε ήδη φτάσει το digest της ημέρας.
       - uses: actions/checkout@v4
         if: steps.guard.outputs.skip != 'true'
+        with:
+          ref: main
 
       - name: Skip if already refreshed today (backup schedule only)
         id: fresh
@@ -230,6 +241,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # ΔΕΥΤΕΡΗ ΓΡΑΜΜΗ ΑΜΥΝΑΣ (08/09/2026). Αν άλλο πέρασμα έχει ήδη στείλει
+          # digest σήμερα, η αποτυχία αυτού εδώ δεν αφορά τη Maria: ο radar
+          # δούλεψε. Χωρίς αυτόν τον έλεγχο στάλθηκε «ΔΕΝ ΕΤΡΕΞΕ 08/09/2026»
+          # δέκα λεπτά μετά το κανονικό digest της ίδιας μέρας.
+          today="$(date +%d/%m/%Y)"
+          if gh issue list --repo "$GITHUB_REPOSITORY" --state all --limit 30                --json title --jq '.[].title' | grep -qF "AI Radar Digest — $today"; then
+            echo "::notice::Το digest της $today έχει ήδη σταλεί από άλλο πέρασμα. Δεν στέλνω ειδοποίηση αποτυχίας."
+            exit 0
+          fi
           {
             echo "@mbartzoka-ui"
             echo ""
