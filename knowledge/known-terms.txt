@@ -218,3 +218,6 @@ public benefit corporation
 # --- 2026-09-08 ---
 model hardware standard
 mhs
+
+# --- 2026-09-08 ---
+shadow ai

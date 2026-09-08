@@ -49,3 +49,4 @@
 2026-09-05 | llms-txt-supply-chain-phone-home | Έρευνα: AI coding agents εγκαθιστούν άγνωστο κώδικα σε εταιρικά δίκτυα μέσω αρχείων llms.txt
 2026-09-06 | anthropic-ltbt-ipo-scrutiny | Πριν το IPO των 2 τρισ. δολαρίων, το εποπτικό όργανο (LTBT) της Anthropic μπαίνει στο μικροσκόπιο
 2026-09-08 | anthropic-model-hardware-standard-physical-ai-agents | Model Hardware Standard: AI agents αναλαμβάνουν χειρισμό φυσικού εξοπλισμού σε εργαστήρια
+2026-09-08 | gtig-autonomous-ai-agent-attack-frameworks | Η Google αποκαλύπτει ότι χάκερς χτίζουν αυτόνομα AI agents για μαζική κλοπή διαπιστευτηρίων
