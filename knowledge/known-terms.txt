@@ -221,3 +221,6 @@ mhs
 
 # --- 2026-09-08 ---
 shadow ai
+
+# --- 2026-09-09 ---
+connected apps
