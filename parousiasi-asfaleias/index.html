@@ -3,6 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8L6NJR1LC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T8L6NJR1LC');
+</script>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || !a.href || typeof gtag !== 'function') return;
+    if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) {
+      gtag('event', 'presentation_download', { file: a.getAttribute('href'), page: location.pathname });
+      return;
+    }
+    if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: location.pathname }); }
+  }, true);
+})();
+</script>
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>θeta ai · Έλεγχος ασφάλειας AI</title>
 <meta name="description" content="θeta ai · ανεξάρτητος τεχνικός έλεγχος chatbot και εφαρμογών LLM, με τεκμήριο σε κάθε εύρημα.">
