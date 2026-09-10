@@ -224,3 +224,8 @@ shadow ai
 
 # --- 2026-09-09 ---
 connected apps
+
+# --- 2026-09-10 ---
+jwt
+json web token
+token replay
