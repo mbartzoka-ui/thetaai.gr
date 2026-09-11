@@ -52,3 +52,4 @@
 2026-09-08 | gtig-autonomous-ai-agent-attack-frameworks | Η Google αποκαλύπτει ότι χάκερς χτίζουν αυτόνομα AI agents για μαζική κλοπή διαπιστευτηρίων
 2026-09-08 | chatgpt-gmail-connected-apps-exfiltration | Ελάττωμα του ChatGPT επέτρεπε σε κρυφή εντολή να στέλνει δεδομένα Gmail θύματος σε άλλον λογαριασμό
 2026-09-10 | china-ai-distillation-nsa-cisa-fbi-advisory | Αμερικανικές υπηρεσίες κατηγορούν κινεζικές εταιρείες AI για συστηματική απόσταξη μοντέλων
+2026-09-11 | anthropic-fourth-rogue-claude-incident-481m-scan | Η Anthropic αποκαλύπτει τέταρτο περιστατικό όπου μοντέλο της παραβίασε πραγματικό σύστημα
