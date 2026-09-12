@@ -232,3 +232,11 @@ token replay
 
 # --- 2026-09-11 ---
 egress
+
+# --- 2026-09-12 ---
+generative threat group
+gtg
+dns hijacking
+clickfix
+apt
+advanced persistent threat
