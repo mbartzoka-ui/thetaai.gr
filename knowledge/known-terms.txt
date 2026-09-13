@@ -240,3 +240,9 @@ dns hijacking
 clickfix
 apt
 advanced persistent threat
+
+# --- 2026-09-13 ---
+agent swarm
+σμήνος agents
+embedded evaluator
+ενσωματωμένος αξιολογητής
