@@ -55,3 +55,4 @@
 2026-09-11 | anthropic-fourth-rogue-claude-incident-481m-scan | Η Anthropic αποκαλύπτει τέταρτο περιστατικό όπου μοντέλο της παραβίασε πραγματικό σύστημα
 2026-09-12 | syskit-ai-permissions-review-study | Μελέτη Syskit: 76% έχουν AI εργαλεία στα δεδομένα τους αλλά μόνο 43% έλεγξαν δικαιώματα πρόσβασης
 2026-09-13 | openai-agent-swarm-rubygems-rce | OpenAI agents συνδέθηκαν με επίθεση RCE στο RubyGems/RubyDoc
+2026-09-14 | nsa-ai-mission-center-reorg | Η NSA αναδιοργανώνεται σε πέντε «κέντρα αποστολής», ένα αποκλειστικά για AI
