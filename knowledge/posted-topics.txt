@@ -57,3 +57,4 @@
 2026-09-13 | openai-agent-swarm-rubygems-rce | OpenAI agents συνδέθηκαν με επίθεση RCE στο RubyGems/RubyDoc
 2026-09-14 | nsa-ai-mission-center-reorg | Η NSA αναδιοργανώνεται σε πέντε «κέντρα αποστολής», ένα αποκλειστικά για AI
 2026-09-15 | microsoft-ai-code-of-conduct-self-regulation | Η Microsoft δημοσιεύει κώδικα δεοντολογίας για τα μοντέλα AI, γιατί δεν αρκεί ως απόδειξη συμμόρφωσης
+2026-09-16 | nvidia-huang-no-ai-regulation-stance | Ο Jensen Huang της Nvidia λέει ότι δεν χρειάζεται νέα νομοθεσία για την AI

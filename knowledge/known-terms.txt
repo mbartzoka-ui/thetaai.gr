@@ -246,3 +246,7 @@ agent swarm
 σμήνος agents
 embedded evaluator
 ενσωματωμένος αξιολογητής
+
+# --- 2026-09-16 ---
+ai underwriting
+ασφάλιση κινδύνου ai
