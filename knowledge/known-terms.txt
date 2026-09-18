@@ -250,3 +250,9 @@ embedded evaluator
 # --- 2026-09-16 ---
 ai underwriting
 ασφάλιση κινδύνου ai
+
+# --- 2026-09-18 ---
+agi
+τεχνητή γενική νοημοσύνη
+agentic self-modification
+αυτοτροποποίηση agent
