@@ -60,3 +60,4 @@
 2026-09-16 | nvidia-huang-no-ai-regulation-stance | Ο Jensen Huang της Nvidia λέει ότι δεν χρειάζεται νέα νομοθεσία για την AI
 2026-09-17 | spain-agentic-ai-autonomous-breach-liability | Ισπανική αρχή προστασίας δεδομένων δέχεται πρώτη καταγγελία παραβίασης εξ ολοκλήρου από αυτόνομο AI agent
 2026-09-18 | instinct-meta-muse-ai-calling-agents | Οι AI βοηθοί Instinct και Muse της Meta μαθαίνουν να κάνουν τηλεφωνικές κλήσεις για λογαριασμό σου
+2026-09-19 | anthropic-accenture-embedded-evaluator-self-policing | Η Anthropic διαλέγει την Accenture ως πρώτο ανεξάρτητο αξιολογητή ασφάλειας, με δέσμευση 1 δισ. δολαρίων
