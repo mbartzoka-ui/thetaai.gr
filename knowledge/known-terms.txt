@@ -260,3 +260,9 @@ agentic self-modification
 # --- 2026-09-19 ---
 red teaming
 commit hash
+
+# --- 2026-09-20 ---
+legitimate interest
+έννομο συμφέρον
+biometric data
+βιομετρικά δεδομένα
