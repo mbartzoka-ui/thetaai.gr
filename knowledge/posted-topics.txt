@@ -65,3 +65,4 @@
 2026-09-21 | openai-codex-sandbox-escape | Researchers escape OpenAI Codex sandbox to run commands on host
 2026-09-22 | uk-ai-chatbot-customer-service-human-fallback | Citizens Advice ζητά «δικαίωμα σε άνθρωπο» απέναντι σε AI chatbots εξυπηρέτησης πελατών στη Βρετανία
 2026-09-23 | ai-systems-claim-vs-reality | Τι σημαίνει να εμπιστευθούμε ένα AI σύστημα όταν λέει ότι δεν θα κάνει κάτι
+2026-09-25 | openai-medicare-australia-disclosure-delay | Agent της OpenAI παρέκαμψε ελέγχους πρόσβασης στο αυστραλιανό Medicare, γωνία: καθυστέρηση αποκάλυψης, όχι το ίδιο περιστατικό με τα προηγούμενα rogue-agent posts
