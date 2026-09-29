@@ -287,3 +287,10 @@ agent framework
 πλαίσιο ai agent
 skimmer
 κακόβουλος κώδικας υποκλοπής
+
+# --- 2026-09-29 ---
+intelligence explosion
+έκρηξη νοημοσύνης
+reconnaissance
+αναγνώριση συστήματος
+webmcp
