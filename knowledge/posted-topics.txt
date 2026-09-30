@@ -69,3 +69,4 @@
 2026-09-26 | anthropic-blacklist-appeals-court-reversal | Αμερικανικό εφετείο δίνει δίκιο στην κυβέρνηση Τραμπ να αποκλείσει την Anthropic, γωνία: η δέσμευση ασφάλειας ενός παρόχου μπορεί να γυρίσει νομικά εναντίον του
 2026-09-28 | openai-o-anthropic-marketplace-data-access | Η OpenAI ετοιμάζει βοηθό «o» με πιθανή πρόσβαση σε email, η Anthropic ανοίγει το Claude Marketplace με 2.000+ connectors
 2026-09-29 | nvidia-agent-safety-platform-jadepuffer-azure | Η Nvidia παρουσιάζει πλατφόρμα ασφαλείας για AI agents, ενώ ο JadePuffer στρέφεται σε λογαριασμούς Azure
+2026-09-30 | trump-ai-self-policing-accord-superintelligence-rename | Ο Τραμπ ανακοινώνει «ηθικά δεσμευτική» συμφωνία αυτορρύθμισης της AI και μετονομάζει τον όρο σε «Υπερ-νοημοσύνη»
