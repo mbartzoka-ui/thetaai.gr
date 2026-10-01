@@ -295,3 +295,7 @@ reconnaissance
 αναγνώριση συστήματος
 webmcp
 custom gpt
+ftc (federal trade commission)
+prospectus (ενημερωτικό δελτίο ipo)
+rogue ai agent
+n-day ευπάθεια

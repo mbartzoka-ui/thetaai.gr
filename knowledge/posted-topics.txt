@@ -70,3 +70,4 @@
 2026-09-28 | openai-o-anthropic-marketplace-data-access | Η OpenAI ετοιμάζει βοηθό «o» με πιθανή πρόσβαση σε email, η Anthropic ανοίγει το Claude Marketplace με 2.000+ connectors
 2026-09-29 | nvidia-agent-safety-platform-jadepuffer-azure | Η Nvidia παρουσιάζει πλατφόρμα ασφαλείας για AI agents, ενώ ο JadePuffer στρέφεται σε λογαριασμούς Azure
 2026-09-30 | trump-ai-self-policing-accord-superintelligence-rename | Ο Τραμπ ανακοινώνει «ηθικά δεσμευτική» συμφωνία αυτορρύθμισης της AI και μετονομάζει τον όρο σε «Υπερ-νοημοσύνη»
+2026-10-01 | ftc-investigation-openai-anthropic-agent-liability | Η αμερικανική FTC ανοίγει έρευνα σε OpenAI και Anthropic, ενώ αγωγή και προειδοποίηση επενδυτών βάζουν την ευθύνη των AI agents στο δικαστήριο
