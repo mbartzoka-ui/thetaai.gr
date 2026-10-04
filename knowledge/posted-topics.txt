@@ -73,3 +73,4 @@
 2026-10-01 | ftc-investigation-openai-anthropic-agent-liability | Η αμερικανική FTC ανοίγει έρευνα σε OpenAI και Anthropic, ενώ αγωγή και προειδοποίηση επενδυτών βάζουν την ευθύνη των AI agents στο δικαστήριο
 2026-10-02 | pwc-ai-risk-ownership-governance-gap | Έρευνα της PwC: οι επιχειρήσεις δεν έχουν καταλήξει ποιος μέσα τους είναι υπεύθυνος για τους κινδύνους της AI
 2026-10-03 | apple-full-disk-access-ai-agents | Η Apple περιορίζει την πρόσβαση Full Disk Access στο macOS λόγω κινδύνων από AI agents
+2026-10-04 | openai-safety-culture-robinson-resignation | Στέλεχος ασφαλείας της OpenAI παραιτείται: «Η κουλτούρα της εταιρείας είναι σπασμένη»
