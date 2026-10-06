@@ -299,3 +299,6 @@ ftc (federal trade commission)
 prospectus (ενημερωτικό δελτίο ipo)
 rogue ai agent
 n-day ευπάθεια
+
+# --- 2026-10-06 ---
+protocol pivoting

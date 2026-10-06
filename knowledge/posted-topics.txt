@@ -75,3 +75,4 @@
 2026-10-03 | apple-full-disk-access-ai-agents | Η Apple περιορίζει την πρόσβαση Full Disk Access στο macOS λόγω κινδύνων από AI agents
 2026-10-04 | openai-safety-culture-robinson-resignation | Στέλεχος ασφαλείας της OpenAI παραιτείται: «Η κουλτούρα της εταιρείας είναι σπασμένη»
 2026-10-05 | anthropic-claude-voice-data-training-consent | Η Anthropic ζητά από χρήστες του Claude να μοιραστούν τη φωνή τους για εκπαίδευση μοντέλων
+2026-10-06 | openai-eu-watermark-easily-defeated | Η OpenAI προσθέτει αόρατο υδατογράφημα στο κείμενο της στην ΕΕ, αλλά τα δικά της τεστ δείχνουν πόσο εύκολα σπάει
