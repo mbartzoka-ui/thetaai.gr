@@ -302,3 +302,6 @@ n-day ευπάθεια
 
 # --- 2026-10-06 ---
 protocol pivoting
+
+# --- 2026-10-07 ---
+browser in the browser (bitb)

@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 06 OCT 2026</div>
+<div class="upd" id="upd">UPDATED: 07 OCT 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,36 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-10-06";
+const GENERATED = "2026-10-07";
 const ITEMS = [
+  {
+    "title": "Fake ChatGPT, Gemini and Claude ad portals steal credentials and MFA codes",
+    "date": "2026-10-06",
+    "topic": "AI Security",
+    "summary": "Security researchers at Island have exposed a human-operated phishing platform that impersonates ad-management tools for ChatGPT, Gemini, Claude, Perplexity, Meta Muse and Manus, targeting agency staff and ad account managers. Each fake site carries its own brand and pitch, such as museads.ai, which appeared days after Meta launched its Muse assistant, promising services like ad spend audits or Google Ads account linking. Clicking \"Connect\" triggers a browser-in-the-browser (BitB) attack, opening a fake sign-in window that displays a trusted address like accounts.google.com while the real browser stays on the phishing domain. The platform logs every password attempt, fingerprints the victim's device, and lets a human operator choose in real time which MFA challenge the victim sees next. Researchers found that several of these sites share the same technology stack, pointing to a coordinated operation behind the campaign.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fake-chatgpt-gemini-sites-steal-advertising-accounts-mfa-codes/"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic expands Cyber Verification Program to three access tiers for security professionals",
+    "date": "2026-10-06",
+    "topic": "AI Security",
+    "summary": "Anthropic has announced an expanded version of its Cyber Verification Program (CVP), giving vetted security professionals access to more capable Claude models with fewer automatic blocks on cybersecurity-related work. The program now has three tiers: a Defense Access tier for work like malware analysis and incident response, a Red Team Access tier that adds authorized penetration testing for teams with legal permission to test systems, and a Specialized Access tier, the strictest, for organizations testing systems that could affect human lives, such as power grids or interbank transfer networks, reviewed in collaboration with the US government. Anthropic says partners in its earlier Project Glasswing program found more than 129,000 verified software vulnerabilities over four months, more than 33,000 of them rated critical or high severity. Organizations that join the program must accept that Anthropic retains their usage data to monitor for misuse, until a new offering combining zero data retention with equivalent security controls becomes available later this year.",
+    "sources": [
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/cyber-verification-program"
+      }
+    ]
+  },
   {
     "title": "Anthropic tells Australian inquiry its agents didn't breach government websites, OpenAI apologizes again over Medicare",
     "date": "2026-10-06",
@@ -766,46 +794,6 @@ const ITEMS = [
       {
         "name": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/"
-      }
-    ]
-  },
-  {
-    "title": "Fake ChatGPT custom GPTs advertised on Google push malware via ClickFix",
-    "date": "2026-09-29",
-    "topic": "Incidents",
-    "summary": "According to BleepingComputer, attackers are building fake custom GPTs that impersonate popular products and promoting them through sponsored Google search results. Victims who click through are directed to sites using the ClickFix technique, which tricks users into copying and running a malicious command themselves, disguised as a simple fix. Running the command ultimately installs remote access trojan (RAT) malware on the victim's machine. SecurityWeek confirms the same campaign, noting that borrowing a recognizable name like ChatGPT inside a legitimate advertising channel makes the scam more convincing. For a business that relies on the ChatGPT name or recommends AI tools to customers, the case shows how easily the brand itself can be turned against users through legitimate ad channels.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/"
-      },
-      {
-        "name": "SecurityWeek",
-        "url": "https://www.securityweek.com/hackers-use-chatgpt-custom-gpts-in-clickfix-attacks/"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure"
-      },
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/chatgpt-feature-abuse-to-deliver/"
-      }
-    ]
-  },
-  {
-    "title": "Flaws in Amazon Bedrock AgentCore's SDK could have exposed AWS credentials",
-    "date": "2026-09-29",
-    "topic": "AI Security",
-    "summary": "Researchers at BeyondTrust found two vulnerabilities in the Python SDK for Amazon Bedrock AgentCore, the service that lets businesses run AI agents inside sandboxed environments on Amazon's cloud. The first flaw, tracked as CVE-2026-12530, let a carefully crafted package name bypass an incomplete character blocklist and turn into a command executed inside the sandbox. From there, researchers were able to read temporary credentials belonging to the tool's execution role. Amazon fixed the issue in SDK version 1.6.1 by replacing the blocklist with stricter validation. For a business running AI agents on cloud infrastructure, the case shows that the safety \"cage\" around an agent can itself have holes leading straight to account credentials.",
-    "sources": [
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/aws-agentcore-sdk-flaws-ai/"
       }
     ]
   }

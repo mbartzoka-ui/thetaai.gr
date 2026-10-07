@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>Τι κινείται στον EU AI Act, την ασφάλεια AI &amp; τα ISO πρότυπα</h1>
 <p class="sub">Παρακολουθούμε εξελίξεις σε ρύθμιση, ασφάλεια AI και πρότυπα, για να μένετε ενημερωμένοι χωρίς αναζήτηση. Επιλεγμένες πηγές · ανανέωση κάθε μέρα.</p>
-<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 06 ΟΚΤ 2026</div>
+<div class="upd" id="upd">ΕΝΗΜΕΡΩΘΗΚΕ: 07 ΟΚΤ 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>στοιχεία</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,36 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 </div>
 
 <script>
-const GENERATED = "2026-10-06";
+const GENERATED = "2026-10-07";
 const ITEMS = [
+  {
+    "title": "Ψεύτικες σελίδες διαφήμισης ChatGPT, Gemini και Claude κλέβουν κωδικούς και MFA",
+    "date": "2026-10-06",
+    "topic": "AI Security",
+    "summary": "Ερευνητές της εταιρείας ασφαλείας Island αποκάλυψαν οργανωμένη πλατφόρμα phishing που παριστάνει εργαλεία διαχείρισης διαφημίσεων των ChatGPT, Gemini, Claude, Perplexity, Meta Muse και Manus, στοχεύοντας διαχειριστές διαφημιστικών λογαριασμών. Κάθε ψεύτικη σελίδα έχει δικό της όνομα και σενάριο, όπως το museads.ai που εμφανίστηκε λίγες μέρες μετά την κυκλοφορία του Muse της Meta, υποσχόμενο υπηρεσίες όπως ανάλυση δαπανών ή σύνδεση λογαριασμών Google Ads. Το κουμπί «Connect» ανοίγει ψεύτικο παράθυρο σύνδεσης μέσα στον ίδιο τον browser, τεχνική γνωστή ως browser in the browser (BitB), που εμφανίζει αξιόπιστη διεύθυνση όπως accounts.google.com ενώ ο πραγματικός browser παραμένει στον ιστότοπο phishing. Το σύστημα καταγράφει κάθε προσπάθεια εισαγωγής κωδικού, αναγνωρίζει τη συσκευή του θύματος και επιτρέπει σε άνθρωπο στην άλλη άκρη να επιλέξει σε πραγματικό χρόνο ποια πρόκληση MFA θα δει στη συνέχεια. Οι ερευνητές εντόπισαν κοινό τεχνολογικό αποτύπωμα ανάμεσα σε πολλούς τέτοιους ιστότοπους, κάτι που δείχνει οργανωμένη υποδομή πίσω από την εκστρατεία.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/fake-chatgpt-gemini-sites-steal-advertising-accounts-mfa-codes/"
+      }
+    ]
+  },
+  {
+    "title": "Η Anthropic επεκτείνει το πρόγραμμα επαλήθευσης για ειδικούς κυβερνοασφάλειας, με τρία επίπεδα πρόσβασης",
+    "date": "2026-10-06",
+    "topic": "AI Security",
+    "summary": "Η Anthropic ανακοίνωσε διευρυμένη έκδοση του Cyber Verification Program (CVP), που δίνει σε ελεγμένους επαγγελματίες ασφαλείας πρόσβαση σε πιο ισχυρές δυνατότητες των μοντέλων Claude, με λιγότερους αυτόματους αποκλεισμούς γύρω από εργασίες κυβερνοασφάλειας. Το πρόγραμμα οργανώνεται πλέον σε τρία επίπεδα, ένα για αμυντική δουλειά όπως ανάλυση κακόβουλου λογισμικού, ένα που προσθέτει εξουσιοδοτημένο penetration testing για ομάδες με νομικό δικαίωμα να ελέγχουν συστήματα, και ένα τρίτο, το πιο αυστηρό, για οργανισμούς που δοκιμάζουν συστήματα κρίσιμα για ανθρώπινες ζωές, όπως δίκτυα ηλεκτρικής ενέργειας ή διατραπεζικές μεταφορές, το οποίο περνά από έλεγχο σε συνεργασία με την αμερικανική κυβέρνηση. Η εταιρεία αναφέρει ότι μέσα από το προηγούμενο πρόγραμμα Project Glasswing οι συνεργάτες της εντόπισαν πάνω από 129.000 επαληθευμένες ευπάθειες λογισμικού μέσα σε τέσσερις μήνες, από τις οποίες περισσότερες από 33.000 χαρακτηρίστηκαν κρίσιμες ή υψηλής σοβαρότητας. Όσοι ενταχθούν στο πρόγραμμα αποδέχονται ότι η Anthropic κρατά δεδομένα χρήσης τους για να παρακολουθεί πιθανή κατάχρηση, μέχρι να κυκλοφορήσει αργότερα φέτος νέα υπηρεσία που θα συνδυάζει μηδενική διατήρηση δεδομένων με αντίστοιχους ελέγχους ασφαλείας.",
+    "sources": [
+      {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/news/cyber-verification-program"
+      }
+    ]
+  },
   {
     "title": "Η Anthropic λέει ότι οι agents της δεν παραβίασαν αυστραλιανές κυβερνητικές ιστοσελίδες, η OpenAI ζητά ξανά συγγνώμη για το Medicare",
     "date": "2026-10-06",
@@ -766,46 +794,6 @@ const ITEMS = [
       {
         "name": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/"
-      }
-    ]
-  },
-  {
-    "title": "Παραποιημένα custom GPTs του ChatGPT διαφημίζονται στο Google και οδηγούν σε κακόβουλο λογισμικό",
-    "date": "2026-09-29",
-    "topic": "Incidents",
-    "summary": "Σύμφωνα με το BleepingComputer, επιτιθέμενοι δημιουργούν πλαστά custom GPTs που μιμούνται δημοφιλή προϊόντα και τα προωθούν μέσω χορηγούμενων αποτελεσμάτων αναζήτησης στο Google. Οι υποψήφιοι θύματα που κάνουν κλικ οδηγούνται σε ιστοσελίδες που χρησιμοποιούν την τεχνική ClickFix, η οποία πείθει τον χρήστη να αντιγράψει και να εκτελέσει ο ίδιος μια κακόβουλη εντολή, παρουσιάζοντάς την ως απλό βήμα επιδιόρθωσης. Η εκτέλεση της εντολής εγκαθιστά τελικά λογισμικό απομακρυσμένης πρόσβασης (RAT) στον υπολογιστή του θύματος. Το SecurityWeek επιβεβαιώνει την ίδια εκστρατεία, σημειώνοντας πως η χρήση αναγνωρίσιμου ονόματος όπως το ChatGPT μέσα σε νόμιμο κανάλι διαφήμισης κάνει την απάτη πιο πειστική. Για μια επιχείρηση που εμπιστεύεται το όνομα ChatGPT ή προτείνει εργαλεία AI σε πελάτες, η υπόθεση δείχνει πόσο εύκολο είναι το ίδιο το εμπορικό σήμα να χρησιμοποιηθεί εναντίον του χρήστη μέσα από νόμιμα κανάλια διαφήμισης.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/"
-      },
-      {
-        "name": "SecurityWeek",
-        "url": "https://www.securityweek.com/hackers-use-chatgpt-custom-gpts-in-clickfix-attacks/"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure"
-      },
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/chatgpt-feature-abuse-to-deliver/"
-      }
-    ]
-  },
-  {
-    "title": "Ευπάθειες στο SDK του Amazon Bedrock AgentCore θα μπορούσαν να εκθέσουν διαπιστευτήρια AWS",
-    "date": "2026-09-29",
-    "topic": "AI Security",
-    "summary": "Ερευνητές της BeyondTrust εντόπισαν δύο ευπάθειες στο Python SDK του Amazon Bedrock AgentCore, της υπηρεσίας που επιτρέπει σε επιχειρήσεις να τρέχουν AI agents μέσα σε απομονωμένα περιβάλλοντα (sandbox) στο cloud της Amazon. Το πρώτο ελάττωμα, με κωδικό CVE-2026-12530, επέτρεπε σε προσεκτικά διαμορφωμένο όνομα πακέτου λογισμικού να παρακάμψει ελλιπή λίστα αποκλεισμού χαρακτήρων και να μετατραπεί σε εντολή που εκτελούνταν μέσα στο sandbox. Από εκεί, οι ερευνητές μπόρεσαν να διαβάσουν προσωρινά διαπιστευτήρια που ανήκαν στον ρόλο εκτέλεσης του εργαλείου. Η Amazon διόρθωσε το πρόβλημα στην έκδοση 1.6.1 του SDK, αντικαθιστώντας τη λίστα αποκλεισμού με αυστηρότερο έλεγχο εγκυρότητας. Για μια επιχείρηση που τρέχει AI agents πάνω σε υποδομή cloud, η υπόθεση δείχνει ότι το ίδιο το «κλουβί» ασφαλείας γύρω από τον agent μπορεί να έχει τρύπες που οδηγούν κατευθείαν σε διαπιστευτήρια του λογαριασμού.",
-    "sources": [
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/aws-agentcore-sdk-flaws-ai/"
       }
     ]
   }
