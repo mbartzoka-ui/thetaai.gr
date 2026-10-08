@@ -77,3 +77,4 @@
 2026-10-05 | anthropic-claude-voice-data-training-consent | Η Anthropic ζητά από χρήστες του Claude να μοιραστούν τη φωνή τους για εκπαίδευση μοντέλων
 2026-10-06 | openai-eu-watermark-easily-defeated | Η OpenAI προσθέτει αόρατο υδατογράφημα στο κείμενο της στην ΕΕ, αλλά τα δικά της τεστ δείχνουν πόσο εύκολα σπάει
 2026-10-07 | anthropic-cvp-data-retention-tradeoff | Η Anthropic επεκτείνει το Cyber Verification Program, με αντάλλαγμα διατήρηση δεδομένων
+2026-10-08 | barracuda-ai-assistant-prompt-injection-phishing | Phishing emails στοχεύουν και τον AI βοηθό μέσω κρυφών εντολών prompt injection

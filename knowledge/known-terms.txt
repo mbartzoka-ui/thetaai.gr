@@ -305,3 +305,7 @@ protocol pivoting
 
 # --- 2026-10-07 ---
 browser in the browser (bitb)
+
+# --- 2026-10-08 ---
+adversary-in-the-middle (aitm) phishing
+aitm
