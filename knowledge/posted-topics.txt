@@ -79,3 +79,4 @@
 2026-10-07 | anthropic-cvp-data-retention-tradeoff | Η Anthropic επεκτείνει το Cyber Verification Program, με αντάλλαγμα διατήρηση δεδομένων
 2026-10-08 | barracuda-ai-assistant-prompt-injection-phishing | Phishing emails στοχεύουν και τον AI βοηθό μέσω κρυφών εντολών prompt injection
 2026-10-09 | uber-gdpr-automated-decision-fine | Η ολλανδική αρχή προστασίας δεδομένων επιβάλλει πρόστιμο 825 εκατ. ευρώ στην Uber για αυτοματοποιημένες αποφάσεις
+2026-10-10 | anthropic-internal-agents-internet-cutoff | Η Anthropic κόβει την πρόσβαση στο διαδίκτυο για τις εσωτερικές αξιολογήσεις της μετά το ψεύτικο στοιχείο στην αστυνομία της Φιλαδέλφειας

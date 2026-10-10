@@ -315,3 +315,6 @@ automated decision-making
 αυτοματοποιημένη λήψη αποφάσεων
 interpretability
 ερμηνευσιμότητα μοντέλων ai
+
+# --- 2026-10-10 ---
+agentic ai
