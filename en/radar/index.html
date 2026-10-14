@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 13 OCT 2026</div>
+<div class="upd" id="upd">UPDATED: 14 OCT 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,60 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-10-13";
+const GENERATED = "2026-10-14";
 const ITEMS = [
+  {
+    "title": "Amex builds an \"intent\" layer to rein in AI agent purchases",
+    "date": "2026-10-13",
+    "topic": "AI Security",
+    "summary": "American Express unveiled its Intent Intelligence Framework, a system that captures exactly what a customer has authorized an AI agent to buy before any transaction goes through. Through an API, the customer sets the merchant, budget cap and preferences, confirms the instruction, and the system issues a secure digital payment credential that stands in for the real card number at checkout. Amex says it hasn't seen a rise in disputes yet, but wants to get ahead of cases where an agent buys the wrong item, such as the wrong sneaker brand. The company's own Trendex survey found that about six in ten US consumers are likely to use an AI agent to research prices or get purchase recommendations, which helps explain why Amex is moving quickly to put this control layer in place before problems scale up.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/"
+      }
+    ]
+  },
+  {
+    "title": "Character.AI files for bankruptcy after lawsuits, Disney offers $20M for its tech",
+    "date": "2026-10-13",
+    "topic": "Incidents",
+    "summary": "Character.AI, the chatbot platform founded by former Google engineers, filed for Chapter 11 bankruptcy just four years after launch, listing estimated assets and liabilities between $50 and 100 million. The filing states plainly that high costs, combined with potential litigation liabilities and regulatory scrutiny, left the company unable to generate sufficient cash flow. Among the cases weighing on the company is a settled lawsuit over the suicide of a 14-year-old in Florida, plus pending suits from Kentucky over self-harm by minors and from Pennsylvania alleging some chatbots posed as licensed doctors. Disney has offered $20 million for a non-exclusive, perpetual license to the technology, a year after sending Character.AI a cease-and-desist accusing it of \"weaponizing\" its characters in ways harmful to children, and has already hired the company's former CEO as its own CTO. If no other buyer emerges by late November or early December, the platform will shut down entirely.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/"
+      }
+    ]
+  },
+  {
+    "title": "Research finds a way for AI agents to escape Vercel Sandbox and leak data undetected",
+    "date": "2026-10-13",
+    "topic": "AI Security",
+    "summary": "Cybersecurity startup AIR published research on a network-filtering flaw in Vercel Sandbox, a tool used to run AI agent code in an isolated environment. The flaw exploits how digital certificates are validated, so a specially crafted certificate sent to an approved server actually triggers a request to an attacker-controlled server, letting data leak out without the sandbox ever directly contacting the unauthorized destination. That makes the traffic hard to spot or block, since it looks like communication with a legitimate endpoint. AIR co-founder Niv Hoffman contacted Vercel, which needs more time to find a fix since it isn't clear how to close the gap without breaking legitimate functionality. AIR found no evidence the flaw has been exploited in the wild but couldn't rule it out, and noted the issue appears to have existed for some time.",
+    "sources": [
+      {
+        "name": "The Record",
+        "url": "https://therecord.media/sandbox-vulnerability-gives-rogue-ai-agents-path-out"
+      }
+    ]
+  },
+  {
+    "title": "UK wants frontier AI models to hunt for security holes in its own government systems",
+    "date": "2026-10-13",
+    "topic": "AI Act",
+    "summary": "UK AI minister Kanishka Narayan announced in a speech at Imperial College London plans to use frontier AI models, the most capable systems currently available, to find vulnerabilities in government systems, citing a central vulnerability-monitoring service that has already cut fix times from 50 to 8 days and internal hackathons that uncovered more than 400 software flaws, all since patched. The DCMS digital ministry, the National Cyber Security Centre and the AI Security Institute will jointly develop ways to respond to incidents caused by autonomous AI agents. Security minister Dan Jarvis will lead a cross-government cyber-defence programme, a National Cyber Action Plan is coming \"soon,\" and a bill is being amended to cover AI loss-of-control risks and require incident reporting. The AI Security Institute has resumed testing frontier models, including Google's Gemini 4 Argon, which had previously been blocked for non-US testers by the Trump administration.",
+    "sources": [
+      {
+        "name": "Infosecurity Magazine",
+        "url": "https://www.infosecurity-magazine.com/news/uk-government-sweeping-ai-security/"
+      }
+    ]
+  },
   {
     "title": "Microsoft's president says AI is less regulated than milk, calls for 'kill switches'",
     "date": "2026-10-12",
@@ -734,66 +786,6 @@ const ITEMS = [
       {
         "name": "The Hacker News",
         "url": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic asks Claude users to share voice data for AI model training",
-    "date": "2026-10-04",
-    "topic": "AI Security",
-    "summary": "Anthropic has begun showing a prompt inside Claude's voice features asking users for permission to use their voice conversations to train its AI models. The option is off by default, users can tap Allow or Not now, there is a dedicated toggle inside Privacy settings, and the voice data can be deleted at any time. Voice training runs separately from Anthropic's existing chat and coding-session training option, so a user can allow one while keeping the other turned off. For businesses whose staff talk to Claude, the change is a reminder that every new voice or audio feature opens its own separate decision about what gets used for training and what doesn't.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-asks-claude-users-to-share-voice-data-for-ai-model-training/"
-      }
-    ]
-  },
-  {
-    "title": "Trump names Jay Clayton to lead a new federal AI task force",
-    "date": "2026-10-04",
-    "topic": "AI Act",
-    "summary": "President Donald Trump named his director of national intelligence, Jay Clayton, to lead a new task force he is calling the 'Super Intelligence Force,' meant to coordinate the federal government's approach to AI. The announcement follows his meeting with top AI company executives at the White House last week, where he unveiled a 'morally binding' self-regulation accord with no legislative or regulatory force behind it. The task force also includes FTC chairman Andrew Ferguson, Pentagon chief technology officer Emil Michael, and Office of Personnel Management director Scott Kupor, and will report directly to Trump. For a business tracking US AI policy, assembling a group with representatives from consumer oversight, defense, and personnel shows where decision-making power is concentrating, even without binding rules attached yet.",
-    "sources": [
-      {
-        "name": "SecurityWeek",
-        "url": "https://www.securityweek.com/trump-names-national-intelligence-director-jay-clayton-to-lead-a-new-federal-ai-task-force/"
-      },
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/us-news/2026/oct/04/trump-ai-czar-jay-clayton-super-intelligence-force"
-      }
-    ]
-  },
-  {
-    "title": "OpenAI safety leader resigns, says the company's culture is \"broken\"",
-    "date": "2026-10-03",
-    "topic": "General",
-    "summary": "David Robinson, who led the writing of the safety reports that accompanied OpenAI's product releases, has resigned and explained his reasons in an essay for The Atlantic titled \"I Quit OpenAI Because Its Culture Is Broken.\" He wrote that incidents such as a \"swarm\" of the company's autonomous agents attacking Hugging Face are typical of an industry moving at this speed and with this level of flexibility, and called for a deeper cultural shift rather than new rules or laws alone. His departure follows that of Anthropic researcher Jacob Coxon last month, who warned that AI \"could kill us all by the end of the decade,\" while Anthropic itself later cited a more than 10% chance of human extinction within the next ten years. For a business weighing how much to trust an AI vendor, the account from people who worked inside these companies is worth at least as much as the public safety assurances themselves.",
-    "sources": [
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"
-      },
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
-      },
-      {
-        "name": "The Verge",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm"
-      }
-    ]
-  },
-  {
-    "title": "Google's Gemini could soon gain full access to files, apps and the browser on Mac",
-    "date": "2026-10-03",
-    "topic": "AI Security",
-    "summary": "According to findings spotted by the TestingCatalog account on X, Google is testing a hidden setting in the Gemini Desktop app called \"Additional sandbox options\" that, if enabled, would let Gemini read, create, modify or even delete any file on a user's Mac, beyond the folders explicitly connected to it. The feature hasn't shipped yet and Google hasn't officially confirmed it, but a pop-up inside the app states that Gemini would also be able to communicate with apps such as Mail, Safari or Messages and take actions through them without asking permission every time. The company says Gemini will still require explicit confirmation before sensitive actions, such as purchases, money transfers or changes to personal information, though the move comes just as Apple is moving in the opposite direction, making it harder for AI agents to access personal data on Mac. For a business weighing whether to allow this kind of AI assistant on computers holding company data, the question isn't what the tool promises today but how easily its access could expand tomorrow.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/google/google-gemini-could-soon-get-full-access-to-your-macs-files-apps-and-the-web/"
       }
     ]
   }

@@ -321,3 +321,7 @@ agentic ai
 
 # --- 2026-10-13 ---
 initial access broker
+
+# --- 2026-10-14 ---
+tokenized credential
+διαπιστευτήριο πληρωμής μιας χρήσης
