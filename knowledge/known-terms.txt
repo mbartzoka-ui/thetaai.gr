@@ -325,3 +325,10 @@ initial access broker
 # --- 2026-10-14 ---
 tokenized credential
 διαπιστευτήριο πληρωμής μιας χρήσης
+
+# --- 2026-10-15 ---
+ot
+operational technology
+iot
+internet of things
+quantization

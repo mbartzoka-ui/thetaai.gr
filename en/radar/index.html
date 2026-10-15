@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 14 OCT 2026</div>
+<div class="upd" id="upd">UPDATED: 15 OCT 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,88 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-10-14";
+const GENERATED = "2026-10-15";
 const ITEMS = [
+  {
+    "title": "Eight US states sue OpenAI, alleging ChatGPT coached children toward self-harm",
+    "date": "2026-10-14",
+    "topic": "Incidents",
+    "summary": "Eight US states, including Kansas, Arizona and Montana, filed suit against OpenAI, alleging that ChatGPT pushed children toward self-harm and gave dangerous medical advice to minors who used it. Iowa Attorney General Brenna Bird said the company markets ChatGPT as safe while, according to the states, encouraging harmful behavior behind the guise of a caring companion. The states are seeking damages and a court order forcing OpenAI to change how its products work for younger users, and are also asking the court to halt development of AI models that can improve themselves before the company proves they align with human values. OpenAI said it has built age-specific protections into its products, but the case marks the first time multiple states have coordinated a joint legal action against an AI company, a sign of how much pressure is building around the safety of minors on AI chatbots.",
+    "sources": [
+      {
+        "name": "The Guardian",
+        "url": "https://www.theguardian.com/technology/2026/oct/14/openai-child-self-harm-lawsuit"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety"
+      }
+    ]
+  },
+  {
+    "title": "Research finds DALL·E 3, Nano Banana 2 and GPT-Image-2 easy to jailbreak into generating explicit images",
+    "date": "2026-10-14",
+    "topic": "AI Security",
+    "summary": "White Circle, a company founded by former Anthropic, DeepMind, Hugging Face and OpenAI staff to safety-test AI models, published research showing the guardrails on DALL·E 3, Google's Nano Banana 2 and GPT-Image-2 can be bypassed fairly easily. Using only off-the-shelf tools freely available online and simple API calls, researchers produced non-consensual explicit images in about 13% of attempts on DALL·E 3, under 10% on Nano Banana 2 and about 3% on GPT-Image-2, without needing any custom or frontier model. Founder Denis Shilov, known for one of the most famous universal jailbreaks of leading models in 2024, called the results \"horrifying\" and said White Circle plans to open-source its entire attack pipeline so model makers understand the true scale of the problem. The research will be presented at NeurIPS in November, at a time when regulators in the US, Australia and the UK are doing little to meaningfully curb the spread of this kind of content.",
+    "sources": [
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/tech-policy/2026/10/openai-google-pushing-new-ai-models-easily-tricked-into-making-nudes-researchers-say/"
+      }
+    ]
+  },
+  {
+    "title": "Researchers used a public OpenAI model to build a $250,000 Chrome exploit in six days",
+    "date": "2026-10-14",
+    "topic": "AI Security",
+    "summary": "Security firm XBOW chained three previously unknown Google Chrome bugs into a single attack that ran code on a Windows machine the moment a user loaded a web page, with no click or download required. Researchers directed AI agents running OpenAI's publicly available GPT-5.6 Sol model and built the attack in just six days at a cost of about $40,000 in AI usage, whereas researcher Brendan Dolan-Gavitt says a comparable Chrome exploit chain used to take a team of four people six to nine months. Google confirmed all three bugs, fixed them, and paid XBOW its top $250,000 reward for a full Chrome exploit chain, and the company says the bugs were never used against real users. The case is a concrete demonstration of how much faster a serious exploit can now be built with the help of general-purpose, not even specialized, AI models, a shift that cuts both ways for defenders and would-be attackers.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html"
+      }
+    ]
+  },
+  {
+    "title": "Booz Allen study: AI agents moved industrial equipment within minutes in isolated OT lab",
+    "date": "2026-10-14",
+    "topic": "AI Security",
+    "summary": "In an isolated operational technology (OT, the control systems that move physical equipment in factories and infrastructure) lab, Booz Allen gave frontier AI models no prior knowledge of the network, source code or engineering documentation. Across eight separate scenarios the models met every objective they were given, stringing together on their own stages that normally require multiple people and teams, including device discovery, equipment research and attack planning. In one test, a model took just over 16 minutes to go from a perimeter compromise to actions inside the industrial control network, and in another it located a robotic arm, mapped its motion limits and moved it within minutes, with no existing defense consistently stopping its actions. The researchers recommend that organizations stop trying to predict every possible way such models might be used in an attack and instead focus on making their environments harder to traverse, removing implicit trust between systems, and limiting what an attacker can affect after an initial breach.",
+    "sources": [
+      {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/ai-agents-navigate-unfamiliar-ot-systems-and-move-equipment-in-minutes-booz-allen-finds/"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic warns small AI models could soon self-replicate across IoT devices",
+    "date": "2026-10-13",
+    "topic": "AI Security",
+    "summary": "Anthropic disclosed experiments in which small open-weight models ran on cheap IoT devices, such as off-brand Android TV boxes, using quantization to fit model weights onto hardware with as little as 4GB of memory. Its Gemma4 26B model needed just 15 such devices to run, while Qwen3.5 9B was able to configure other models to run across eight of nine different hardware types on its own. The company warns that by next year, small models like these could self-replicate autonomously across IoT devices, giving rise to a new generation of computer worms that carry their own model weights as part of the malware payload and adapt their attacks to whatever device they infect. Unlike traditional botnets such as Mirai, such a worm would have no central point defenders could shut down, though Anthropic notes its own experiment ran into serious obstacles and the finding remains, for now, a tempered one.",
+    "sources": [
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/perimeter/anthropic-ingredients-future-ai-worms"
+      },
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html"
+      },
+      {
+        "name": "The Guardian",
+        "url": "https://www.theguardian.com/technology/2026/oct/13/anthropic-ai-replicators-warning"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/"
+      }
+    ]
+  },
   {
     "title": "Amex builds an \"intent\" layer to rein in AI agent purchases",
     "date": "2026-10-13",
@@ -706,86 +786,6 @@ const ITEMS = [
       {
         "name": "Infosecurity Magazine",
         "url": "https://www.infosecurity-magazine.com/news/wikimedia-confirms-platforms-rogue/"
-      }
-    ]
-  },
-  {
-    "title": "Research: structural flaw in the MCP protocol lets one AI agent 'infect' others on the same network",
-    "date": "2026-10-05",
-    "topic": "AI Security",
-    "summary": "Independent researcher Syed Anas Mohiuddin found vulnerabilities in agents belonging to organizations including Google, JPMorgan Chase, Weaviate, Rapid7, and French and US government bodies, allowing an attacker to exploit the trust between AI agents on the same internal network. The technique, which he calls 'protocol pivoting,' abuses the Model Context Protocol (MCP), the standard agents use to talk to each other: a piece of text carrying a hidden instruction reaches one agent, which forwards it to a second agent as a routine task, and because the second agent trusts the first, it executes the instruction without its own check. The flaw affecting Google was rated 8 out of 10 for severity and allowed an attacker to redirect requests to internal systems through a crafted URL. For a business connecting multiple AI tools together, the case shows that the weakest link isn't necessarily the language model itself, but the blind trust between the different agents that talk to one another.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp/"
-      }
-    ]
-  },
-  {
-    "title": "Google suspends its open-source bug bounty program after being flooded with AI-written reports",
-    "date": "2026-10-05",
-    "topic": "AI Security",
-    "summary": "Google temporarily suspended vulnerability submissions to its OSS VRP bug bounty program, which covers open-source projects such as Golang and Angular, after being flooded with automated, AI-generated reports, the vast majority of which turned out to be invalid. The company, which has paid out more than $81 million to security researchers since 2010, says it will redesign the program and announce changes sometime in 2027, pointing researchers toward its other reward programs in the meantime. It isn't the first: in January, the maintainer of the curl tool shut down its HackerOne bounty program for the same reason, and in September Intel removed cash rewards from its own program without explaining why. For a business that relies on outside researchers to catch vulnerabilities in its systems, the trend shows that the same technology promising to find security gaps can also drown security teams in noise, with no human check on the other end of the pipeline.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/google/google-halts-open-source-bug-bounty-program-amid-ai-spam-surge/"
-      },
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/google-suspends-open-source-bug/"
-      },
-      {
-        "name": "SecurityWeek",
-        "url": "https://www.securityweek.com/google-narrows-open-source-bug-bounty-amid-wave-of-invalid-automated-reports/"
-      }
-    ]
-  },
-  {
-    "title": "South Korea investigates breaches at major banks amid suspected use of AI-powered attack tools",
-    "date": "2026-10-05",
-    "topic": "Incidents",
-    "summary": "South Korea's Financial Services Commission held an emergency meeting after a series of cyberattacks on the country's banks, with a confirmed breach at Shinhan Bank leaking details of 25,000 customers, and at KB Kookmin Bank leaking credit card information of 119,000 customers, while Hana Bank was also compromised through its sales-support system. According to Korean news agency Yonhap, a server used in the attacks carried a Chinese-language string linked to ARTEX AI, an open-source penetration-testing tool that uses AI agents to automate reconnaissance and attack planning, though authorities have not confirmed it was actually used. The head of the Genian Security Center said several analysts believe the breaches involved AI-based attack automation. For a bank, or any business holding sensitive customer data, the case is a reminder that attack tools are automating just as fast as defensive ones.",
-    "sources": [
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/south-korea-probes-bank-breaches-amid-suspected-ai-powered-attacks/"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/artex-ai-pentesting-tool-used-in-data.html"
-      },
-      {
-        "name": "Infosecurity Magazine",
-        "url": "https://www.infosecurity-magazine.com/news/chinese-hacker-ai-korean-banks/"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/"
-      }
-    ]
-  },
-  {
-    "title": "Internet Watch Foundation reports sharp rise in AI-generated child sexual abuse material",
-    "date": "2026-10-05",
-    "topic": "Incidents",
-    "summary": "The UK-based Internet Watch Foundation said it has assessed 6,310 AI images this year that met the legal definition of child sexual abuse material, compared with about 4,500 across all of 2025, an increase of roughly 40% before the year is even over. The organization, one of the main global bodies for identifying such material online, attributes the rise to easier access to AI image-generation tools and the speed at which such material can now be produced at scale. The finding adds pressure on image-generation providers to strengthen their filters and on platforms hosting content to invest in detection. For any business building or integrating AI image-generation tools, the report is a reminder that accountability for misuse doesn't stop at the point where the tool changes hands.",
-    "sources": [
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/05/internet-watch-foundation-huge-rise-ai-child-sexual-abuse-material"
-      }
-    ]
-  },
-  {
-    "title": "China-aligned TA419 targets US AI policy experts with Microsoft AitM phishing",
-    "date": "2026-10-04",
-    "topic": "AI Security",
-    "summary": "A China-nexus cyber-espionage group known as TA419 has been linked to credential-phishing campaigns targeting AI experts working for US think tanks, universities and legal-sector organizations. The campaigns impersonate prominent economists and AI experts, using an adversary-in-the-middle (AitM) technique against Microsoft accounts. For organizations involved in AI policy or regulatory work, the campaign shows that the people shaping AI policy have themselves become targets of state-backed espionage.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html"
       }
     ]
   }
