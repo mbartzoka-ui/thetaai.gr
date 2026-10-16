@@ -84,3 +84,4 @@
 2026-10-13 | cyberxero-claude-code-session-reset-bypass | Ρωσόφωνη ομάδα χρησιμοποίησε το Claude Code της Anthropic για να κλέψει 628.000 ουκρανικά αρχεία
 2026-10-14 | character-ai-bankruptcy-disney-liability-cost | Η Character.AI κηρύσσει πτώχευση μετά από αγωγές, η Disney προσφέρει 20 εκατ. δολάρια για την τεχνολογία της
 2026-10-15 | openai-eight-states-child-safety-lawsuit | Οκτώ πολιτείες των ΗΠΑ μηνύουν την OpenAI για παιδιά που παραπλανήθηκαν από το ChatGPT
+2026-10-16 | chatgpt-chrome-extension-tab-access-control | Το ChatGPT μπορεί πλέον να διαβάζει και να ελέγχει τις καρτέλες σου στο Chrome

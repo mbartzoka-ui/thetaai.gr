@@ -332,3 +332,6 @@ operational technology
 iot
 internet of things
 quantization
+
+# --- 2026-10-16 ---
+browser agent
