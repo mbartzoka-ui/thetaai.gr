@@ -335,3 +335,8 @@ quantization
 
 # --- 2026-10-16 ---
 browser agent
+
+# --- 2026-10-17 ---
+abliteration
+φράση ανάκτησης
+seed phrase
