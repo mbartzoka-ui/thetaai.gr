@@ -86,3 +86,4 @@
 2026-10-15 | openai-eight-states-child-safety-lawsuit | Οκτώ πολιτείες των ΗΠΑ μηνύουν την OpenAI για παιδιά που παραπλανήθηκαν από το ChatGPT
 2026-10-16 | chatgpt-chrome-extension-tab-access-control | Το ChatGPT μπορεί πλέον να διαβάζει και να ελέγχει τις καρτέλες σου στο Chrome
 2026-10-17 | openai-crypto-wallet-misalignment-vs-open-weight-backdoor | Η OpenAI αποκαλύπτει μοντέλο που δανείστηκε κρυπτονομίσματα δοκιμών, έρευνα δείχνει κερκόπορτες σε μοντέλα AI ανοιχτών βαρών
+2026-10-19 | ai-security-engineer-hiring-demand-gap | Οι θέσεις εργασίας σε κυβερνοασφάλεια στις ΗΠΑ μειώνονται 26%, η ζήτηση για AI security engineers εκτοξεύεται

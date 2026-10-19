@@ -340,3 +340,7 @@ browser agent
 abliteration
 φράση ανάκτησης
 seed phrase
+
+# --- 2026-10-19 ---
+grc
+governance, risk, compliance
