@@ -198,6 +198,7 @@ jobs:
           fi
 
       - name: Send digest as GitHub issue
+        id: digest
         if: steps.guard.outputs.skip != 'true' && steps.fresh.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -214,9 +215,11 @@ jobs:
               cat /tmp/radar-run-info.md 2>/dev/null || true
               tail -n +2 /tmp/radar-digest.md
             } > /tmp/radar-issue-body.md
-            gh issue create --repo "$GITHUB_REPOSITORY" \
+            issue_url="$(gh issue create --repo "$GITHUB_REPOSITORY" \
               --title "AI Radar Digest — $(date +%d/%m/%Y) · $model" \
-              --body-file /tmp/radar-issue-body.md
+              --body-file /tmp/radar-issue-body.md)"
+            echo "$issue_url"
+            echo "issue=$issue_url" >> "$GITHUB_OUTPUT"
           else
             # Μέρα χωρίς νέες ειδήσεις. Σωστό αποτέλεσμα, ΑΛΛΑ χωρίς μήνυμα η
             # μέρα αυτή είναι για τη Maria ίδια με τη μέρα που κάτι έσπασε:
@@ -242,6 +245,51 @@ jobs:
               gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file /tmp/radar-quiet.md
             fi
           fi
+
+      # Αυτόματη δημοσίευση του «LinkedIn draft» στο προσωπικό προφίλ της
+      # Maria, ρητή εντολή 19/10/2026: «μόλις βγει το digest». Ο κανόνας
+      # επιλογής (πότε ΔΕΝ ποστάρει) ζει στο .github/radar_linkedin.py.
+      #
+      # continue-on-error: μια αποτυχία του LinkedIn (π.χ. ληγμένο token) ΔΕΝ
+      # είναι αποτυχία του radar. Οι σελίδες και το digest έχουν ήδη βγει·
+      # δεν θέλουμε ψεύτικο «ΔΕΝ ΕΤΡΕΞΕ». Το αποτέλεσμα, καλό ή κακό, γράφεται
+      # ως σχόλιο στο σημερινό digest, για να το βλέπει η Maria στο email.
+      #
+      # Το token είναι ΤΟ ΙΔΙΟ με του repo linkedin-daily-poster και λήγει
+      # κάθε ~60 μέρες. Όταν ανανεώνεται εκεί, πρέπει να ανανεωθεί ΚΑΙ εδώ.
+      - name: Δημοσίευση του LinkedIn draft
+        if: steps.digest.outputs.issue != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ steps.digest.outputs.issue }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: |
+          marker="📣 Δημοσιεύτηκε στο LinkedIn"
+          # Ένα workflow_dispatch την ίδια μέρα παρακάμπτει τον έλεγχο
+          # «έτρεξε ήδη σήμερα;» και φτιάχνει δεύτερο digest. Χωρίς αυτόν τον
+          # έλεγχο θα έβγαινε και δεύτερο ποστ.
+          today="$(date +%d/%m/%Y)"
+          for n in $(gh issue list --repo "$GITHUB_REPOSITORY" --state all \
+                       --search "AI Radar Digest — $today in:title" \
+                       --json number --jq '.[].number'); do
+            if gh issue view "$n" --repo "$GITHUB_REPOSITORY" --json comments \
+                 --jq '.comments[].body' | grep -qF "$marker"; then
+              echo "Το σημερινό draft έχει ήδη δημοσιευτεί (#$n). Δεν ξαναποστάρω."
+              exit 0
+            fi
+          done
+
+          result="$(python3 .github/radar_linkedin.py /tmp/radar-issue-body.md)" || status=$?
+          echo "$result"
+          case "$result" in
+            POSTED*)  body="$marker: ${result#POSTED }" ;;
+            SKIPPED*) body="ℹ️ Το LinkedIn draft δεν δημοσιεύτηκε αυτόματα: ${result#SKIPPED }. Αν θέλεις, κάνε copy & paste από πάνω." ;;
+            *)        body="⚠️ Η αυτόματη δημοσίευση στο LinkedIn απέτυχε: ${result#ERROR }. Το draft είναι πάνω για copy & paste. Αν λέει 401, το token έληξε." ;;
+          esac
+          gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "$body"
+          exit "${status:-0}"
 
       # Χωρίς αυτό το βήμα, μια ΑΠΟΤΥΧΙΑ μοιάζει ακριβώς με «δεν είχε νέα»:
       # και στις δύο περιπτώσεις απλώς δεν έρχεται email. Η σιωπή πρέπει να
