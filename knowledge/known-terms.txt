@@ -344,3 +344,16 @@ seed phrase
 # --- 2026-10-19 ---
 grc
 governance, risk, compliance
+
+# --- 2026-10-20 ---
+εναρμονισμένο πρότυπο
+harmonised standard
+τεκμήριο συμμόρφωσης
+presumption of conformity
+σύστημα διαχείρισης ποιότητας
+quality management system
+εμπιστευτικός υπολογισμός
+confidential computing
+φέρουσα ταυτότητα
+bearer credential
+mitre att&ck
