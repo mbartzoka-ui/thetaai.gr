@@ -1,0 +1,77 @@
+# Ξυπνητήρι για τις δημοσιεύσεις στο LinkedIn.
+#
+# ΓΙΑΤΙ ΥΠΑΡΧΕΙ (21/10/2026): ο κώδικας και τα κλειδιά των δημοσιεύσεων
+# ζουν στο ΙΔΙΩΤΙΚΟ repo mbartzoka-ui/linkedin-daily-poster. Εκεί το
+# GitHub δεν ξεκίνησε ΚΑΜΙΑ προγραμματισμένη εκτέλεση από 19/05/2026, ούτε
+# μετά από επανενεργοποίηση, μετονομασία αρχείου και αλλαγή ώρας. Οι
+# χειροκίνητες εκτελέσεις εκεί δουλεύουν πάντα. Εδώ, στο thetaai.gr, το
+# πρόγραμμα του GitHub τρέχει κάθε μέρα (radar). Άρα το πρόγραμμα ζει εδώ
+# και απλώς ξεκινά τα workflows εκεί.
+#
+# ΓΙΑΤΙ ΟΧΙ ΜΕΤΑΦΟΡΑ ΟΛΟΥ ΤΟΥ ΚΩΔΙΚΑ: αυτό το repo είναι δημόσιο. Οι
+# σημειώσεις μελέτης και το ιστορικό δημοσιεύσεων μένουν ιδιωτικά, και τα
+# κλειδιά LinkedIn/Anthropic μένουν σε ΕΝΑ σημείο.
+#
+# ΧΡΕΙΑΖΕΤΑΙ: secret LINKEDIN_POSTER_DISPATCH_TOKEN, fine-grained token με
+# πρόσβαση ΜΟΝΟ στο linkedin-daily-poster και δικαίωμα Actions: Read and
+# write. Τίποτα άλλο. Αν λείπει, το βήμα το λέει και σταματά.
+#
+# ΔΙΠΛΕΣ ΔΗΜΟΣΙΕΥΣΕΙΣ: δεν γίνονται. Κάθε workflow εκεί ελέγχει το δικό
+# του ιστορικό και δεν ξαναποστάρει την ίδια μέρα. Γι' αυτό είναι ασφαλές
+# να υπάρχει και δεύτερη ώρα για το ποστ του radar.
+
+name: LinkedIn trigger
+
+on:
+  schedule:
+    # Ώρες UTC, χωρίς προσαρμογή θερινής/χειμερινής. Λεπτά «άτακτα», όπως
+    # στον radar: τα :00 και :30 έχουν τη μεγαλύτερη ουρά.
+    - cron: "17 6 * * 1-5"   # αγγλικό ποστ  ~09:17 Ελλάδας (θερινή)
+    - cron: "53 7 * * *"     # ποστ του radar ~10:53 Ελλάδας
+    - cron: "53 9 * * *"     # ρεζέρβα του radar, αν το digest άργησε
+  workflow_dispatch:
+    inputs:
+      which:
+        description: "daily = αγγλικό ποστ, radar = ελληνικό ποστ του radar"
+        type: choice
+        options: [daily, radar]
+        default: radar
+
+permissions:
+  contents: read
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ξεκίνημα δημοσίευσης στο linkedin-daily-poster
+        env:
+          TOKEN: ${{ secrets.LINKEDIN_POSTER_DISPATCH_TOKEN }}
+          SCHEDULE: ${{ github.event.schedule }}
+          WHICH: ${{ inputs.which }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::Λείπει το secret LINKEDIN_POSTER_DISPATCH_TOKEN. Δεν ξεκίνησε καμία δημοσίευση."
+            exit 1
+          fi
+          case "$SCHEDULE" in
+            "17 6 * * 1-5") WHICH=daily ;;
+            "53 7 * * *"|"53 9 * * *") WHICH=radar ;;
+          esac
+          case "$WHICH" in
+            daily) wf=linkedin-daily.yml ;;
+            radar) wf=radar-linkedin.yml ;;
+            *) echo "::error::Άγνωστη δημοσίευση: '$WHICH'"; exit 1 ;;
+          esac
+          echo "Ξεκινώ $wf"
+          code=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/mbartzoka-ui/linkedin-daily-poster/actions/workflows/$wf/dispatches" \
+            -d '{"ref":"main"}')
+          if [ "$code" != "204" ]; then
+            echo "::error::Το GitHub απάντησε $code: $(cat /tmp/resp.txt). Αν είναι 401, το token έληξε ή είναι λάθος."
+            exit 1
+          fi
+          echo "OK: το $wf ξεκίνησε. Το αποτέλεσμα φαίνεται στο linkedin-daily-poster."
