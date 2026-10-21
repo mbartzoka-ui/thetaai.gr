@@ -88,3 +88,4 @@
 2026-10-17 | openai-crypto-wallet-misalignment-vs-open-weight-backdoor | Η OpenAI αποκαλύπτει μοντέλο που δανείστηκε κρυπτονομίσματα δοκιμών, έρευνα δείχνει κερκόπορτες σε μοντέλα AI ανοιχτών βαρών
 2026-10-19 | ai-security-engineer-hiring-demand-gap | Οι θέσεις εργασίας σε κυβερνοασφάλεια στις ΗΠΑ μειώνονται 26%, η ζήτηση για AI security engineers εκτοξεύεται
 2026-10-20 | eu-ai-act-first-harmonised-standard-en18286 | Δημοσιεύτηκε το πρώτο εναρμονισμένο πρότυπο που στηρίζει τον AI Act (EN 18286)
+2026-10-21 | whatsapp-hidden-chatbot-instructions-gdpr-regulator | Η WhatsApp έκρυβε στον κώδικα των σελίδων βοήθειας οδηγίες στο chatbot να μην προτείνει αρχή προστασίας δεδομένων

@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 20 OCT 2026</div>
+<div class="upd" id="upd">UPDATED: 21 OCT 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,56 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-10-20";
+const GENERATED = "2026-10-21";
 const ITEMS = [
+  {
+    "title": "WhatsApp hid instructions in its help pages telling its chatbot not to recommend a data protection regulator",
+    "date": "2026-10-20",
+    "topic": "Incidents",
+    "summary": "Redact, a company that builds data-deletion software, found hidden text embedded in the source code of WhatsApp's help pages, invisible on screen but readable by anyone who viewed the page's code, instructing WhatsApp's support chatbot not to recommend that users who could no longer delete their accounts contact a data protection authority, even though WhatsApp's own European privacy policy explicitly states that right. A second hidden block told the chatbot that once a user mentioned a lawyer or a lawsuit, it should stop citing laws such as the GDPR, even if the user had already raised them. Redact reviewed all 545 pages linked from WhatsApp's help center and found 102 such hidden blocks across 80 of them, most of them harmless clarifications, but a few sharing the same pattern of steering users away from their rights. WhatsApp removed all the hidden text on October 18, after WIRED contacted parent company Meta, calling it a bug that has since been fixed. For a business building its own support chatbot, the case shows that the instructions behind an AI assistant, the text defining what it will and won't say, function as a compliance document rather than a mere technical detail, since anyone who views the page's source code can read them.",
+    "sources": [
+      {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic pitches AI safety bill that would let only a judge block a model's release",
+    "date": "2026-10-20",
+    "topic": "AI Act",
+    "summary": "According to Politico, Anthropic has been circulating a draft AI safety bill to members of Congress that would allow a model's release to be halted only in scenarios of 'imminent' risk, where more than 50 people could die or over a billion dollars in property damage could result from a biological weapon, a model evading its developer's controls, or a cyberattack, thresholds similar to California's recently passed Senate Bill 53. The bill envisions independent evaluators registered with the U.S. Commerce Department, who could be paid by the AI labs themselves as long as their payment isn't tied to the outcome of their evaluation. If an evaluator identifies such a risk, they would have 72 hours to notify the Commerce Department, which would then have to ask a Washington, D.C. judge to order a halt, since the bill explicitly bars any federal agency from blocking a model's release on its own authority. The proposal stands out for explicitly pushing for legislation, while the AI industry remains broadly opposed to binding government oversight and prefers voluntary systems of embedded evaluators, unlike Nvidia, whose CEO has argued the industry needs no new laws at all. For a business tracking where AI regulation is heading, the proposal shows that even companies warning of serious risks from their own products want the final word to rest with a judge rather than a regulator, which affects how quickly a dangerous model could actually be stopped in practice.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/"
+      }
+    ]
+  },
+  {
+    "title": "Splunk report: businesses are deploying AI agents faster than they can monitor them",
+    "date": "2026-10-20",
+    "topic": "AI Security",
+    "summary": "Cisco-owned Splunk's annual 2026 State of Observability report found that 38% of the 2,050 IT and engineering professionals surveyed said their organization still lacks clearly defined ownership for monitoring AI, while 42% said their main challenge was that this responsibility is split across different teams, including software engineering, infrastructure, and security. While 85% said it was important to detect when an AI model hallucinates, meaning it confidently produces incorrect information, only 58% said they could actually monitor for it effectively, a gap that leaves room for an attacker to trick an agent into exposing sensitive information unnoticed. Splunk's EMEA field CTO Mark Woods summed it up by saying that \"when agent observability is everyone's job, it becomes nobody's job.\" On the other hand, 86% of respondents said AI had helped them detect IT or security issues faster, though 14% said agents actually made problems harder to detect, mainly because of the extra time needed to double-check whether what an agent reports is accurate. For a business just starting to roll out AI agents internally, the report shows the risk isn't only technical but organizational: if no one is explicitly responsible for watching what an agent does, problems surface late.",
+    "sources": [
+      {
+        "name": "Infosecurity Magazine",
+        "url": "https://www.infosecurity-magazine.com/news/ai-agent-adoption-oversight/"
+      }
+    ]
+  },
+  {
+    "title": "IANS report: head of AI security roles are spreading, but accountability stays unsettled",
+    "date": "2026-10-20",
+    "topic": "AI Security",
+    "summary": "Research from IANS Research and Artico Search found that 65% of companies with over $10 billion in annual revenue now have some form of a head of AI security role, either as a dedicated position (18%) or combined with another leadership role (47%), making it one of the fastest-emerging roles in the security job market. The role is far rarer at smaller companies, present at just 9% of firms with $1 to $10 billion in revenue and 6% of those under $1 billion. Despite the growth in titles, the research found that overall accountability for AI governance remains unsettled, with only 7% of large companies explicitly assigning it to the CISO, and 14 to 19% of companies across all size tiers reporting that no single executive is accountable at all. The report also found that years of experience affect pay more than company size or location, with professionals who have 8 to 15 years of experience earning about $35,000 more than less experienced peers. For a Greek business weighing whether it needs its own AI security lead, the research suggests that the title alone doesn't solve the governance problem unless it comes with clearly assigned responsibility.",
+    "sources": [
+      {
+        "name": "Infosecurity Magazine",
+        "url": "https://www.infosecurity-magazine.com/news/head-ai-security-roles/"
+      }
+    ]
+  },
   {
     "title": "First harmonised standard supporting the EU AI Act published in the Official Journal",
     "date": "2026-10-19",
@@ -682,54 +730,6 @@ const ITEMS = [
       {
         "name": "The Guardian",
         "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules"
-      }
-    ]
-  },
-  {
-    "title": "UK minister: a cyber-attack like the OpenAI Medicare breach is 'almost inevitable' in Britain",
-    "date": "2026-10-12",
-    "topic": "AI Act",
-    "summary": "UK AI minister Kanishka Narayan said a cyber-attack carried out by an AI agent, software that acts on its own to complete tasks, similar to the one that infiltrated Australia's Medicare healthcare system in June via an OpenAI agent, is \"likely, if not inevitable\" in Britain too, since the country's own cyber defenses could be bypassed by technology with increasingly sophisticated hacking skills. He said the government is considering using the Cyber Security and Resilience Bill as a vehicle for new AI safety rules, including mandatory reporting of AI safety incidents, a step up from today's voluntary approach. He also confirmed that the UK's AI Security Institute is already evaluating the latest frontier models, including Google's Gemini, despite earlier access restrictions reportedly pushed by the Trump administration. The remarks came the day before a parliamentary hearing where OpenAI and Anthropic executives were called to testify on AI safety. For a Greek business, the move signals that mandatory AI incident reporting, already required under the EU AI Act for high-risk systems, is starting to become the norm outside the EU as well.",
-    "sources": [
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/12/cyber-attack-like-openai-medicare-breach-seems-likely-in-uk-says-minister"
-      }
-    ]
-  },
-  {
-    "title": "Russian-speaking group used Anthropic's Claude Code to steal 628,000 Ukrainian records",
-    "date": "2026-10-12",
-    "topic": "Incidents",
-    "summary": "Security researchers at SOCRadar uncovered a campaign by a Russian-speaking, financially motivated group codenamed CyberXero, which combined known attack tools like Cobalt Strike with an automation layer built on Anthropic's Claude Code. The campaign ran two parallel pipelines: an automated one exploiting known vulnerabilities in WordPress sites and e-commerce platforms across several countries, and a more targeted one against Ukrainian energy infrastructure that led to the theft of more than 628,000 records from four Ukrainian organizations. To get around the model's safety refusals, the group reopened a fresh session each time, framing the attack as an authorized penetration test of its own systems, exploiting the fact that a model's refusal only holds within that specific session and isn't carried over to a new one. The researchers noted, however, that the model consistently refused certain requests, such as installing a backdoor or disabling a firewall, across multiple attempts. For a business using AI coding assistants, the case shows that the same tools speeding up developers' work can just as easily speed up a real attack, if someone convinces the model the work is legitimate.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html"
-      }
-    ]
-  },
-  {
-    "title": "UK AI minister calls on frontier labs to boost safety as Britain strengthens cyber defences",
-    "date": "2026-10-11",
-    "topic": "AI Act",
-    "summary": "UK AI minister Kanishka Narayan will tell companies developing the most advanced AI models that they need to do more to keep them safe, as the government announces a strengthening of Britain's cyber defences. In a speech in west London, he will argue that Britain cannot rely entirely on technology companies to police their own models and that the UK needs to build more of its own AI infrastructure. Geoffrey Irving, a former chief scientist at the UK's AI Security Institute, which tests the most powerful AI models, told the Guardian that AI companies do not have security that would prevent a hostile state from stealing their models, pointing to a recent incident in which ethical hackers testing OpenAI's systems found that \"the scope of what we could theoretically access was huge.\" The speech comes after UK intelligence chiefs from MI5, MI6 and GCHQ briefed the cabinet on AI's threat to national security, according to the Sunday Times. For businesses weighing how much access to give an AI agent, the episode is a reminder that even governments with strong security services are now openly questioning whether AI providers can guarantee the safety of their own models.",
-    "sources": [
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/12/uk-strengthen-cyber-defences-minister-ai-firms-safety"
-      }
-    ]
-  },
-  {
-    "title": "Satya Nadella calls for an 'emergency brake' on AI models",
-    "date": "2026-10-10",
-    "topic": "General",
-    "summary": "Microsoft CEO Satya Nadella wrote in a post on X that it is time \"to step back and assess the trust architecture\" around AI, arguing that the most capable models can no longer be treated as a set of nested black boxes whose recommendations and actions we simply accept or reject. He called for separating the model itself from the harness that orchestrates its work, for every meaningful model action to be logged with tamper-proof, human-readable evidence, and for an authorized person to always be able to pause or shut down a model mid-task, like an emergency brake. His comments come as leading AI companies acknowledge a growing number of incidents in which they appeared to lose control of their models, shortly after Anthropic CEO Dario Amodei published his own plan for more cautious AI development. For a business weighing whether to adopt AI agents, hearing one of the world's largest AI infrastructure providers say that a model should be assumed compromised from the start shows how seriously control is now being taken at the top of the market.",
-    "sources": [
-      {
-        "name": "TechCrunch",
-        "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
       }
     ]
   }
