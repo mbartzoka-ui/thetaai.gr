@@ -361,3 +361,6 @@ mitre att&ck
 # --- 2026-10-21 ---
 ciso
 chief information security officer
+llmjacking
+ai honeypot
+oauth token
