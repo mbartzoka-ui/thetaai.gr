@@ -161,7 +161,7 @@ mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 
 <div class="eyebrow">AI SECURITY RADAR</div>
 <h1>What's moving in EU AI Act, AI Security &amp; ISO Standards</h1>
 <p class="sub">We track developments in AI regulation, AI security, and standards so you stay informed without searching. Curated sources · refreshed daily.</p>
-<div class="upd" id="upd">UPDATED: 22 OCT 2026</div>
+<div class="upd" id="upd">UPDATED: 23 OCT 2026</div>
 <div class="stat">
 <div><b id="s-total">0</b>items</div>
 <div><b id="s-act">0</b>AI Act</div>
@@ -187,8 +187,40 @@ Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, 
 </div>
 
 <script>
-const GENERATED = "2026-10-22";
+const GENERATED = "2026-10-23";
 const ITEMS = [
+  {
+    "title": "Microsoft links Chinese state group to ConnectWise supply chain attack via AI pentesting tool",
+    "date": "2026-10-22",
+    "topic": "AI Security",
+    "summary": "Microsoft said a China-aligned nation-state group known as Storm-0940 used ARTEX, an open-source penetration-testing tool that coordinates multiple AI agents to run an entire attack on its own, from reconnaissance to data exfiltration, to breach ConnectWise, an IT management software provider, and through it hundreds of other organizations worldwide since September. After gaining access to ConnectWise's multi-tenant application, the group used ARTEX to accelerate scanning, password spraying, and abuse of OAuth applications, reaching privileged access at some organizations in under three hours from initial targeting, with sign-in attempts against more than 2,250 customer tenants at up to 2,900 attempts per minute. Targets spanned aerospace, defense, energy, financial services, semiconductor manufacturing and think tanks, and ARTEX had already been linked, without official confirmation at the time, to earlier bank breaches in South Korea. For a business that depends on an IT management software vendor or any application with broad access to customer systems, the case shows how quickly an AI tool can turn one compromised application into a channel for hundreds of simultaneous attacks.",
+    "sources": [
+      {
+        "name": "Infosecurity Magazine",
+        "url": "https://www.infosecurity-magazine.com/news/microsoft-chinese-ai-connectwise/"
+      },
+      {
+        "name": "The Record",
+        "url": "https://therecord.media/china-cyber-connectwise-ai"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/cyberattacks-data-breaches/microsoft-storm-0940-connectwise-supply-chain-attack"
+      }
+    ]
+  },
+  {
+    "title": "Anthropic launches Claude Duet, an agent that connects to 6,000 tools and can shop on the user's behalf",
+    "date": "2026-10-22",
+    "topic": "AI Security",
+    "summary": "Anthropic launched Claude Duet, a new AI agent app (an AI tool that carries out tasks on its own) built on the Claude Opus 5.5 model, aimed at professionals and small businesses, competing with similar tools like Meta's Muse and OpenAI's Dots. The agent connects to over 6,000 tools and plug-ins through the Claude Marketplace, builds a daily briefing and suggests actions based on the user's data, and can complete tasks in the background through its own virtual machine before returning for approval. Its most sensitive feature is that Duet can make online purchases on the user's behalf through Stripe's Link digital wallet or Shopify's Shop Pay, with Anthropic saying sensitive steps like payments will require user approval and that the agent won't trade securities or move money between accounts. The company also added a classifier that checks every message to prevent sensitive information from leaking, rejecting by default requests for credit card numbers or government ID. Duet is launching in research preview through a waitlist for Pro and Max subscribers. For a business considering letting employees use such agents, the launch shows that connecting an AI tool to real payment systems has moved from pilot to shipped product, which deserves its own risk assessment before granting access.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/"
+      }
+    ]
+  },
   {
     "title": "LiteLLM compromised in supply chain attack stealing credentials",
     "date": "2026-10-21",
@@ -258,6 +290,38 @@ const ITEMS = [
       {
         "name": "SecurityWeek",
         "url": "https://www.securityweek.com/google-hardens-chrome-against-clickfix-attacks-insecure-http-connections/"
+      }
+    ]
+  },
+  {
+    "title": "New phishing-as-a-service platform uses AI Studio to craft lures and mask attacks",
+    "date": "2026-10-21",
+    "topic": "AI Security",
+    "summary": "Researchers at Abnormal AI identified a phishing-as-a-service (PhaaS) platform, a subscription service that gives anyone ready-made phishing tools without having to build them, called Athena StealthRoute, which features an 'AI Studio' offering six specialized workflows to generate customized phishing lures and benign-looking decoy content. Over six months to October 9, the firm identified roughly 89,700 attack messages carrying the platform's distinctive link pattern, across about 2,280 organizations in the US and Europe. The platform also includes a marketplace for ready-made campaign materials and link-cloaking tools that divert security scanners away from the real destination, without stealing credentials or tokens itself, it simply sells the package to others. Researchers note that AI Studio gives attackers a way to request content tailored to different pretexts and audiences, instead of writing every lure from scratch or relying solely on pre-made material. For a business training staff to spot phishing, the case shows that lures are becoming more targeted and harder to distinguish precisely because their production has now been automated with AI.",
+    "sources": [
+      {
+        "name": "Infosecurity Magazine",
+        "url": "https://www.infosecurity-magazine.com/news/new-phaas-uses-ai-phishing-lures/"
+      }
+    ]
+  },
+  {
+    "title": "Critical 'PHP2Shell' flaws, two decades old, found with help from OpenAI and Wiz AI tools",
+    "date": "2026-10-21",
+    "topic": "AI Security",
+    "summary": "The US National Security Agency issued a warning about two critical flaws in PHP, the programming language that powers roughly 70% of websites on the internet, flaws that had sat hidden in every version since 2004 and let an attacker break into a server's file system or database. The flaws, now known as PHP2Shell, were found with the help of AI: one by security testing firm Calif as part of OpenAI's 'Patch the Planet' initiative using the GPT-5.6 Sol model, and the rest by Wiz's team using its own Wiz Atlas security agent combined with the Gemini 4 Argon and GPT-5.6 Sol models. Both teams followed responsible disclosure, working with the PHP Foundation to prepare patches before anything was made public, while the NSA recommended immediately pulling offline any website that can't be updated right away to the current PHP 8.5.12 release. The case stands out because it shows the upside of using AI in security: tools like these found twenty-year-old flaws in a matter of weeks that no one had caught until now. For a business running a website or application on PHP, especially an older version like 8.1, the NSA's recommendation means updating immediately or taking the site offline temporarily, not waiting for the next scheduled maintenance cycle.",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/"
+      },
+      {
+        "name": "SecurityWeek",
+        "url": "https://www.securityweek.com/tech-and-security-companies-respond-to-php2shell-vulnerabilities/"
+      },
+      {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/application-security/php2shell-bugs-red-alert-security-industry"
       }
     ]
   },
@@ -662,78 +726,6 @@ const ITEMS = [
       {
         "name": "Ars Technica",
         "url": "https://arstechnica.com/tech-policy/2026/10/openai-google-pushing-new-ai-models-easily-tricked-into-making-nudes-researchers-say/"
-      }
-    ]
-  },
-  {
-    "title": "Researchers used a public OpenAI model to build a $250,000 Chrome exploit in six days",
-    "date": "2026-10-14",
-    "topic": "AI Security",
-    "summary": "Security firm XBOW chained three previously unknown Google Chrome bugs into a single attack that ran code on a Windows machine the moment a user loaded a web page, with no click or download required. Researchers directed AI agents running OpenAI's publicly available GPT-5.6 Sol model and built the attack in just six days at a cost of about $40,000 in AI usage, whereas researcher Brendan Dolan-Gavitt says a comparable Chrome exploit chain used to take a team of four people six to nine months. Google confirmed all three bugs, fixed them, and paid XBOW its top $250,000 reward for a full Chrome exploit chain, and the company says the bugs were never used against real users. The case is a concrete demonstration of how much faster a serious exploit can now be built with the help of general-purpose, not even specialized, AI models, a shift that cuts both ways for defenders and would-be attackers.",
-    "sources": [
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/researchers-used-public-openai-model-to.html"
-      }
-    ]
-  },
-  {
-    "title": "Booz Allen study: AI agents moved industrial equipment within minutes in isolated OT lab",
-    "date": "2026-10-14",
-    "topic": "AI Security",
-    "summary": "In an isolated operational technology (OT, the control systems that move physical equipment in factories and infrastructure) lab, Booz Allen gave frontier AI models no prior knowledge of the network, source code or engineering documentation. Across eight separate scenarios the models met every objective they were given, stringing together on their own stages that normally require multiple people and teams, including device discovery, equipment research and attack planning. In one test, a model took just over 16 minutes to go from a perimeter compromise to actions inside the industrial control network, and in another it located a robotic arm, mapped its motion limits and moved it within minutes, with no existing defense consistently stopping its actions. The researchers recommend that organizations stop trying to predict every possible way such models might be used in an attack and instead focus on making their environments harder to traverse, removing implicit trust between systems, and limiting what an attacker can affect after an initial breach.",
-    "sources": [
-      {
-        "name": "SecurityWeek",
-        "url": "https://www.securityweek.com/ai-agents-navigate-unfamiliar-ot-systems-and-move-equipment-in-minutes-booz-allen-finds/"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/ics-ot-security/ai-takes-control-robotic-arm-16-minutes"
-      }
-    ]
-  },
-  {
-    "title": "EDPB publishes statement on the data protection challenges of smart glasses",
-    "date": "2026-10-13",
-    "topic": "Standards",
-    "summary": "The European Data Protection Board (EDPB) adopted a statement and published a report titled \"The Connected Gaze\" on smart glasses, devices that look like ordinary glasses but contain an internet-connected camera and microphone. EDPB Chair Anu Talus warned that bystanders may be recorded without their knowledge, with greater risk in sensitive settings like hospitals, schools and workplaces, especially when children are involved. The statement clarifies that a user's responsibility as a data controller depends on how the device is used, posting to a public social media account or professional use creates liability, while recording family or friends in a personal context is generally exempt under the GDPR's household exemption. The EDPB is asking manufacturers to make recording obvious, for example through bright LED indicators or audio signals, so that anyone nearby knows they are being recorded. For a Greek business considering such devices, for instance for field technicians visiting customers or in retail settings, the statement shows regulators are already setting concrete transparency requirements even before dedicated legislation exists.",
-    "sources": [
-      {
-        "name": "EDPB",
-        "url": "https://www.edpb.europa.eu/news/edpb-publishes-statement-on-the-data-protection-challenges-of-smart-glasses_en"
-      }
-    ]
-  },
-  {
-    "title": "Anthropic warns small AI models could soon self-replicate across IoT devices",
-    "date": "2026-10-13",
-    "topic": "AI Security",
-    "summary": "Anthropic disclosed experiments in which small open-weight models ran on cheap IoT devices, such as off-brand Android TV boxes, using quantization to fit model weights onto hardware with as little as 4GB of memory. Its Gemma4 26B model needed just 15 such devices to run, while Qwen3.5 9B was able to configure other models to run across eight of nine different hardware types on its own. The company warns that by next year, small models like these could self-replicate autonomously across IoT devices, giving rise to a new generation of computer worms that carry their own model weights as part of the malware payload and adapt their attacks to whatever device they infect. Unlike traditional botnets such as Mirai, such a worm would have no central point defenders could shut down, though Anthropic notes its own experiment ran into serious obstacles and the finding remains, for now, a tempered one.",
-    "sources": [
-      {
-        "name": "Ars Technica",
-        "url": "https://arstechnica.com/security/2026/10/anthropic-warns-small-ai-models-could-self-replicate-through-iot-devices/"
-      },
-      {
-        "name": "Dark Reading",
-        "url": "https://www.darkreading.com/perimeter/anthropic-ingredients-future-ai-worms"
-      },
-      {
-        "name": "The Hacker News",
-        "url": "https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html"
-      },
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/13/anthropic-ai-replicators-warning"
-      },
-      {
-        "name": "BleepingComputer",
-        "url": "https://www.bleepingcomputer.com/news/security/anthropic-warns-self-replicating-ai-could-spread-to-your-smart-devices/"
-      },
-      {
-        "name": "The Guardian",
-        "url": "https://www.theguardian.com/technology/2026/oct/18/anthropic-ai-worm-worries"
       }
     ]
   }

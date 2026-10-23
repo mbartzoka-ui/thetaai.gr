@@ -364,3 +364,10 @@ chief information security officer
 llmjacking
 ai honeypot
 oauth token
+
+# --- 2026-10-23 ---
+password spraying
+phaas
+phishing ως υπηρεσία
+πολυ-ενοικιαστική εφαρμογή
+multi-tenant application
