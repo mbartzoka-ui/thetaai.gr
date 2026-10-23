@@ -102,7 +102,25 @@ def norm_url(u):
     return u.rstrip("/")
 
 
+_GREEK = dict(zip("αβγδεζηθικλμνξοπρσςτυφχψω",
+                  ["a", "v", "g", "d", "e", "z", "i", "th", "i", "k", "l", "m",
+                   "n", "x", "o", "p", "r", "s", "s", "t", "y", "f", "ch",
+                   "ps", "o"]))
+_GREEK.update({"ου": "ou", "αι": "ai", "ει": "ei", "οι": "oi", "μπ": "b",
+               "ντ": "nt", "γκ": "gk", "γγ": "ng"})
+
+
+def greeklish(text):
+    """Greek to Latin for URL slugs (ΕΛΟΤ-like, simplified)."""
+    text = unicodedata.normalize("NFD", text.lower())
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    for pair in ("ου", "αι", "ει", "οι", "μπ", "ντ", "γκ", "γγ"):
+        text = text.replace(pair, _GREEK[pair])
+    return "".join(_GREEK.get(c, c) for c in text)
+
+
 def slugify(text, limit=70):
+    text = greeklish(text)
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
     text = re.sub(r"[^a-zA-Z0-9]+", "-", text.lower()).strip("-")
     if len(text) > limit:
@@ -171,6 +189,66 @@ def merge_registry(registry, gr_items, en_items, generated):
     return today
 
 
+LOG = Path("knowledge/ai-security-log.md")
+_ENTRY_RE = re.compile(r"^## (\d{4}-\d{2}-\d{2}) — (.+?)\s*$", re.M)
+_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+
+
+def parse_log(text):
+    """Entries of the permanent knowledge log (635 of them on 23/10/2026,
+    back to 28/05/2026). Each has a date, title, topic, summary, sources."""
+    out = []
+    heads = list(_ENTRY_RE.finditer(text))
+    for n, h in enumerate(heads):
+        block = text[h.end(): heads[n + 1].start() if n + 1 < len(heads) else len(text)]
+        field = lambda k: (re.search(rf"^- \*\*{k}:\*\*\s*(.+)$", block, re.M) or [None, ""])[1].strip()
+        sources = [{"name": a, "url": u} for a, u in _LINK_RE.findall(field("Πηγές"))]
+        if not sources:
+            continue
+        out.append({"date": h.group(1), "title": h.group(2).strip(),
+                    "topic": field("Θέμα") if field("Θέμα") in BADGE else "General",
+                    "summary": field("Τι έγινε"), "sources": sources})
+    return out
+
+
+def is_greek(text):
+    letters = [c for c in text if c.isalpha()]
+    return bool(letters) and sum("Ͱ" <= c <= "Ͽ" or "ἀ" <= c <= "῿"
+                                 for c in letters) / len(letters) > 0.3
+
+
+def add_log_records(registry, entries):
+    """Older stories that left the radar window exist only in the log. Each
+    becomes a page in its OWN language only (early entries are English);
+    nothing is translated or invented. Stories already in the registry
+    (matched by any source URL) are left as they are."""
+    by_url = {u for rec in registry for u in rec["urls"]}
+    used = {rec["slug"] for rec in registry}
+    added = 0
+    for e in entries:
+        urls = [norm_url(s["url"]) for s in e["sources"]]
+        if any(u in by_url for u in urls) or not e["summary"]:
+            continue
+        lang = "el" if is_greek(e["title"] + " " + e["summary"]) else "en"
+        base = f"{e['date']}-{slugify(e['title'])}"
+        slug, n = base, 2
+        while slug in used:
+            slug, n = f"{base}-{n}", n + 1
+        used.add(slug)
+        registry.append({"slug": slug, "urls": urls, "first_seen": "log",
+                         "date": e["date"], "topic": e["topic"],
+                         lang: {"title": e["title"], "summary": e["summary"]},
+                         "sources": e["sources"]})
+        by_url.update(urls)
+        added += 1
+    registry.sort(key=lambda r: (r["date"], r["slug"]), reverse=True)
+    return added
+
+
+def langs_of(rec):
+    return [lang for lang in ("el", "en") if lang in rec]
+
+
 # ------------------------------------------------------------ page chrome
 
 def chrome(index_text):
@@ -209,8 +287,17 @@ h2.group-h,h3.it-title{font-size:inherit;margin:0}
 def lang_switch(header, lang, el_path, en_path):
     """Point the header's EL/EN switch at this page's counterpart."""
     target = en_path if lang == "el" else el_path
+    target = target or ("/en/radar/" if lang == "el" else "/radar/")
     return re.sub(r'(<span class="lang">.*?<a href=")[^"]*(")',
                   lambda m: m.group(1) + target + m.group(2), header, count=1, flags=re.S)
+
+
+def hreflang(el_path, en_path):
+    """Alternates only for the languages a page really exists in."""
+    tags = [f'<link rel="alternate" hreflang="{l}" href="{SITE}{p}">'
+            for l, p in (("el", el_path), ("en", en_path)) if p]
+    tags.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{el_path or en_path}">')
+    return "\n".join(tags)
 
 
 def page(lang, c, *, title, desc, path, el_path, en_path, body, jsonld,
@@ -224,9 +311,7 @@ def page(lang, c, *, title, desc, path, el_path, en_path, body, jsonld,
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
-<link rel="alternate" hreflang="el" href="{SITE}{el_path}">
-<link rel="alternate" hreflang="en" href="{SITE}{en_path}">
-<link rel="alternate" hreflang="x-default" href="{SITE}{el_path}">
+{hreflang(el_path, en_path)}
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="{og_type}">
@@ -271,7 +356,8 @@ def desc_of(summary, limit=158):
 def story_page(rec, lang, c):
     t = T[lang]
     txt = rec[lang]
-    el_path, en_path = f"/radar/{rec['slug']}/", f"/en/radar/{rec['slug']}/"
+    el_path = f"/radar/{rec['slug']}/" if "el" in rec else None
+    en_path = f"/en/radar/{rec['slug']}/" if "en" in rec else None
     path = el_path if lang == "el" else en_path
     radar = PREFIX[lang]
     srcs = "\n".join(
@@ -315,6 +401,7 @@ def archive_page(registry, lang, c):
     radar = PREFIX[lang]
     el_path, en_path = "/radar/archive/", "/en/radar/archive/"
     path = el_path if lang == "el" else en_path
+    registry = [r for r in registry if lang in r]
     months, parts = {}, []
     for rec in registry:
         months.setdefault(rec["date"][:7], []).append(rec)
@@ -420,13 +507,13 @@ def patch_index(text, records, items, lang):
 # ----------------------------------------------------------------- sitemap
 
 def url_block(el_path, en_path, lastmod, changefreq, priority):
-    alts = (f'<xhtml:link rel="alternate" hreflang="el" href="{SITE}{el_path}"/>'
-            f'<xhtml:link rel="alternate" hreflang="en" href="{SITE}{en_path}"/>'
-            f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{el_path}"/>')
+    alts = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{SITE}{p}"/>'
+                   for l, p in (("el", el_path), ("en", en_path)) if p)
+    alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{el_path or en_path}"/>'
     return "".join(
         f"<url><loc>{SITE}{p}</loc>{alts}<lastmod>{lastmod}</lastmod>"
         f"<changefreq>{changefreq}</changefreq><priority>{priority}</priority></url>\n"
-        for p in (el_path, en_path))
+        for p in (el_path, en_path) if p)
 
 
 def update_sitemap(registry, generated):
@@ -436,7 +523,8 @@ def update_sitemap(registry, generated):
     blocks = url_block("/radar/", "/en/radar/", generated, "daily", "0.7")
     blocks += url_block("/radar/archive/", "/en/radar/archive/", generated, "daily", "0.5")
     for r in registry:
-        blocks += url_block(f"/radar/{r['slug']}/", f"/en/radar/{r['slug']}/",
+        blocks += url_block(f"/radar/{r['slug']}/" if "el" in r else None,
+                            f"/en/radar/{r['slug']}/" if "en" in r else None,
                             r["date"], "monthly", "0.5")
     text = text.replace("</urlset>", blocks + "</urlset>", 1)
     return text
@@ -459,6 +547,8 @@ def main():
         raise RuntimeError("GR and EN pages have different item counts")
     registry = json.loads(REGISTRY.read_text(encoding="utf-8")) if REGISTRY.exists() else []
     records = merge_registry(registry, el_items, en_items, generated)
+    if LOG.exists():
+        add_log_records(registry, parse_log(LOG.read_text(encoding="utf-8")))
 
     # Everything is computed in memory first; files are written only after
     # nothing above has failed, so a crash never leaves a half-built site.
@@ -467,7 +557,7 @@ def main():
     out[PAGES["el"]] = patch_index(el_text, records, el_items, "el")
     out[PAGES["en"]] = patch_index(en_text, records, en_items, "en")
     for rec in registry:
-        for lang in ("el", "en"):
+        for lang in langs_of(rec):
             out[Path(PREFIX[lang].strip("/")) / rec["slug"] / "index.html"] = story_page(rec, lang, c[lang])
     for lang in ("el", "en"):
         out[Path(PREFIX[lang].strip("/")) / "archive" / "index.html"] = archive_page(registry, lang, c[lang])
