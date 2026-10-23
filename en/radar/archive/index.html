@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Security Radar Archive | θeta ai</title>
+<meta name="description" content="Every story from θeta ai&#x27;s AI Security Radar, by month: EU AI Act, AI security, incidents and standards.">
+<link rel="canonical" href="https://thetaai.gr/en/radar/archive/">
+<link rel="alternate" hreflang="el" href="https://thetaai.gr/radar/archive/">
+<link rel="alternate" hreflang="en" href="https://thetaai.gr/en/radar/archive/">
+<link rel="alternate" hreflang="x-default" href="https://thetaai.gr/radar/archive/">
+<meta property="og:title" content="AI Security Radar Archive | θeta ai">
+<meta property="og:description" content="Every story from θeta ai&#x27;s AI Security Radar, by month: EU AI Act, AI security, incidents and standards.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thetaai.gr/en/radar/archive/">
+<meta property="og:image" content="https://thetaai.gr/og-image-v2.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+--ink:#1d2846; --paper:#FAFAF9; --blue:#1d2846; --deep:#16203a;
+--stone:#78716C; --stone-d:#57534E; --line:#E7E5E4; --line-d:#D6D3D1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+a{color:var(--deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+header{border-bottom:1.5px solid var(--ink);background:var(--ink);color:var(--paper);}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;flex-wrap:wrap;}
+.brand{display:flex;align-items:center;gap:11px;font-weight:300;font-size:19px;letter-spacing:0.06em;color:var(--paper);}
+.brand:hover{text-decoration:none;}
+.brand .ai{color:#5B8DEF;}
+.hd .nav{font-size:13px;color:#a8a49b;display:flex;gap:16px;align-items:center;}
+.hd .nav a{color:#cfccc4;}
+.intro{padding:34px 0 6px;}
+.eyebrow{font-size:12px;letter-spacing:0.2em;color:var(--blue);font-weight:600;margin-bottom:10px;}
+h1{font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;}
+.sub{color:var(--stone-d);margin-top:12px;max-width:680px;font-size:15.5px;}
+.upd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:.12em;color:var(--stone);margin-top:14px;}
+.stat{display:flex;gap:26px;margin-top:20px;flex-wrap:wrap;}
+.stat div{font-size:13px;color:var(--stone);}
+.stat b{display:block;font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
+.disc{background:#fff;border:0.5px solid var(--line-d);border-left:3px solid var(--blue);border-radius:8px;padding:13px 16px;margin-top:22px;font-size:12.5px;color:var(--stone-d);line-height:1.55;}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 6px;position:sticky;top:0;background:var(--paper);padding:14px 0;z-index:5;border-bottom:0.5px solid var(--line);}
+.chip{font-size:13px;font-weight:500;padding:7px 15px;border-radius:999px;border:1px solid var(--line-d);background:#fff;color:var(--stone-d);cursor:pointer;transition:all .12s;user-select:none;}
+.chip:hover{border-color:var(--blue);color:var(--blue);}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+main{padding:8px 0 50px;}
+.group{margin-top:30px;}
+.group-h{font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--blue);font-weight:600;padding-bottom:10px;border-bottom:0.5px solid var(--line);margin-bottom:4px;}
+.item{display:block;padding:18px 0;border-bottom:0.5px solid var(--line);color:var(--ink);}
+.item:hover{text-decoration:none;}
+.item:hover .it-title{color:var(--deep);}
+.it-top{display:flex;gap:10px;align-items:center;margin-bottom:6px;flex-wrap:wrap;}
+.badge{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:5px;}
+.b-act{background:#EFF6FF;color:#16203a;}
+.b-sec{background:#FEF2F2;color:#B91C1C;}
+.b-std{background:#F0FDF4;color:#15803D;}
+.b-inc{background:#FFF7ED;color:#C2410C;}
+.b-gen{background:#F5F5F4;color:#57534E;}
+.it-src{font-size:12.5px;color:var(--stone);font-family:ui-monospace,monospace;}
+.it-title{font-size:18px;font-weight:600;line-height:1.32;letter-spacing:-0.01em;transition:color .12s;}
+.it-sum{color:var(--stone-d);font-size:14.5px;margin-top:6px;max-width:760px;}
+.it-link{font-size:12.5px;color:var(--deep);font-weight:500;margin-top:8px;display:inline-block;}
+.it-title-link{text-decoration:none;}
+.it-title-link:hover .it-title{color:var(--deep);}
+.it-refs{font-size:12px;color:var(--stone);margin-top:9px;}
+.it-refs a{color:var(--deep);text-decoration:none;}
+.it-refs a:hover{text-decoration:underline;}
+.cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:30px 28px;margin-top:44px;}
+.cta h3{font-size:20px;font-weight:600;margin-bottom:8px;color:var(--paper);}
+.cta p{color:#cfccc4;font-size:15px;margin-bottom:18px;max-width:620px;}
+.btn{display:inline-block;background:#5B8DEF;color:#0b1220;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;}
+.btn:hover{opacity:.9;text-decoration:none;color:#0b1220;}
+footer{border-top:0.5px solid var(--line);padding:26px 0 40px;}
+.foot{font-size:12.5px;color:var(--stone);line-height:1.6;}
+.foot b{color:var(--stone-d);}
+header .wrap{max-width:1060px;}
+header{position:sticky;top:0;background:rgba(250,250,249,0.92);backdrop-filter:blur(8px);border-bottom:0.5px solid var(--line);z-index:50;}
+header .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:300;font-size:18px;letter-spacing:0.06em;color:var(--ink);}
+.logo:hover{text-decoration:none;}
+.logo .ai{color:var(--blue);}
+.nav-links{display:flex;gap:20px;align-items:center;font-size:14px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{color:var(--stone-d);}
+.nav-links a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang{font-size:13px;color:var(--stone);letter-spacing:.04em;}
+.nav-links .lang a{color:var(--stone);}
+.nav-links .lang a:hover{color:var(--ink);text-decoration:none;}
+.nav-links .lang .on{color:var(--ink);font-weight:600;}
+.filters{top:57px;}
+
+</style>
+<style>
+.neural-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.89;
+-webkit-mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);
+mask-image:radial-gradient(ellipse at center, transparent 24%, rgba(0,0,0,0.45) 56%, #000 90%);}
+.neural-bg canvas{display:block;width:100%;height:100%;}
+@media (prefers-reduced-motion: reduce){.neural-bg{opacity:.8;}}
+.eyebrow,.topic-h{font-family:'IBM Plex Mono',monospace;}
+</style>
+<style>
+.crumbs{font-size:.85rem;margin:28px 0 8px;color:var(--stone,#6b7280)}
+.crumbs a{color:inherit}
+.story{padding:8px 0 24px}
+.story h1{font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.2;margin:14px 0 18px}
+.story .lead{font-size:1.08rem;line-height:1.75;max-width:760px}
+.story h2{font-size:1.05rem;margin:30px 0 10px}
+.story ul{padding-left:1.2em;line-height:1.8}
+.story .disc{margin-top:26px}
+.story time{font-size:.85rem;opacity:.75}
+.arch-month{margin:34px 0 8px;font-size:1.15rem}
+.arch-list{list-style:none;padding:0;margin:0}
+.arch-list li{padding:9px 0;border-bottom:1px solid rgba(29,40,70,.08);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.arch-list time{font-size:.8rem;opacity:.7;min-width:90px}
+.radar-archive-link{margin:10px 0 40px;font-weight:600}
+h2.group-h,h3.it-title{font-size:inherit;margin:0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "AI Security Radar Archive", "url": "https://thetaai.gr/en/radar/archive/", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "θeta ai", "alternateName": "Theta AI", "url": "https://thetaai.gr/", "logo": {"@type": "ImageObject", "url": "https://thetaai.gr/og-image-v2.png"}}, "hasPart": [{"@type": "NewsArticle", "headline": "Microsoft links Chinese state group to ConnectWise supply chain attack via AI pentesting tool", "url": "https://thetaai.gr/en/radar/2026-10-22-microsoft-links-chinese-state-group-to-connectwise-supply-chain/", "datePublished": "2026-10-22"}, {"@type": "NewsArticle", "headline": "Anthropic launches Claude Duet, an agent that connects to 6,000 tools and can shop on the user's behalf", "url": "https://thetaai.gr/en/radar/2026-10-22-anthropic-launches-claude-duet-an-agent-that-connects-to-6-000-tools/", "datePublished": "2026-10-22"}, {"@type": "NewsArticle", "headline": "Symantec uncovers autonomous AI agent hijacking models for full cyberattacks", "url": "https://thetaai.gr/en/radar/2026-10-21-symantec-uncovers-autonomous-ai-agent-hijacking-models-for-full/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "Study: Chinese AI model writes more hackable code when told it's for a US contractor", "url": "https://thetaai.gr/en/radar/2026-10-21-study-chinese-ai-model-writes-more-hackable-code-when-told-it-s-for-a/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "OpenAI agents disabled safety monitoring, one falsely denied doing so", "url": "https://thetaai.gr/en/radar/2026-10-21-openai-agents-disabled-safety-monitoring-one-falsely-denied-doing-so/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "New phishing-as-a-service platform uses AI Studio to craft lures and mask attacks", "url": "https://thetaai.gr/en/radar/2026-10-21-new-phishing-as-a-service-platform-uses-ai-studio-to-craft-lures-and/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "LiteLLM compromised in supply chain attack stealing credentials", "url": "https://thetaai.gr/en/radar/2026-10-21-litellm-compromised-in-supply-chain-attack-stealing-credentials/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "Critical 'PHP2Shell' flaws, two decades old, found with help from OpenAI and Wiz AI tools", "url": "https://thetaai.gr/en/radar/2026-10-21-critical-php2shell-flaws-two-decades-old-found-with-help-from-openai/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "Chrome adds Gemini-powered scam detection and ClickFix warnings", "url": "https://thetaai.gr/en/radar/2026-10-21-chrome-adds-gemini-powered-scam-detection-and-clickfix-warnings/", "datePublished": "2026-10-21"}, {"@type": "NewsArticle", "headline": "WhatsApp hid instructions in its help pages telling its chatbot not to recommend a data protection regulator", "url": "https://thetaai.gr/en/radar/2026-10-20-whatsapp-hid-instructions-in-its-help-pages-telling-its-chatbot-not/", "datePublished": "2026-10-20"}, {"@type": "NewsArticle", "headline": "Splunk report: businesses are deploying AI agents faster than they can monitor them", "url": "https://thetaai.gr/en/radar/2026-10-20-splunk-report-businesses-are-deploying-ai-agents-faster-than-they-can/", "datePublished": "2026-10-20"}, {"@type": "NewsArticle", "headline": "IANS report: head of AI security roles are spreading, but accountability stays unsettled", "url": "https://thetaai.gr/en/radar/2026-10-20-ians-report-head-of-ai-security-roles-are-spreading-but/", "datePublished": "2026-10-20"}, {"@type": "NewsArticle", "headline": "Anthropic pitches AI safety bill that would let only a judge block a model's release", "url": "https://thetaai.gr/en/radar/2026-10-20-anthropic-pitches-ai-safety-bill-that-would-let-only-a-judge-block-a/", "datePublished": "2026-10-20"}, {"@type": "NewsArticle", "headline": "US teens can access 'nudify' apps despite Apple and Google parental controls, study finds", "url": "https://thetaai.gr/en/radar/2026-10-19-us-teens-can-access-nudify-apps-despite-apple-and-google-parental/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "OpenCode Console breach exposes OpenAI, Anthropic and Google API keys", "url": "https://thetaai.gr/en/radar/2026-10-19-opencode-console-breach-exposes-openai-anthropic-and-google-api-keys/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "MITRE ATT&CK v20 formally adds AI abuse to its threat-tracking framework", "url": "https://thetaai.gr/en/radar/2026-10-19-mitre-att-ck-v20-formally-adds-ai-abuse-to-its-threat-tracking/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "Microsoft says frontier AI models 'cannot be trusted' and launches agent oversight tools", "url": "https://thetaai.gr/en/radar/2026-10-19-microsoft-says-frontier-ai-models-cannot-be-trusted-and-launches/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "Hugging Face's policy chief says embedded AI evaluators won't be an easy fix", "url": "https://thetaai.gr/en/radar/2026-10-19-hugging-face-s-policy-chief-says-embedded-ai-evaluators-won-t-be-an/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "First harmonised standard supporting the EU AI Act published in the Official Journal", "url": "https://thetaai.gr/en/radar/2026-10-19-first-harmonised-standard-supporting-the-eu-ai-act-published-in-the/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "Fake Web3 accelerator spread malware via npm packages and hijacked AI agent traffic", "url": "https://thetaai.gr/en/radar/2026-10-19-fake-web3-accelerator-spread-malware-via-npm-packages-and-hijacked-ai/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "Australian report calls for stronger workplace privacy protections against AI surveillance", "url": "https://thetaai.gr/en/radar/2026-10-19-australian-report-calls-for-stronger-workplace-privacy-protections/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "Anthropic acquires confidential-computing startup Opaque Systems", "url": "https://thetaai.gr/en/radar/2026-10-19-anthropic-acquires-confidential-computing-startup-opaque-systems/", "datePublished": "2026-10-19"}, {"@type": "NewsArticle", "headline": "US cybersecurity job postings fall 26% as demand for AI security engineers soars", "url": "https://thetaai.gr/en/radar/2026-10-18-us-cybersecurity-job-postings-fall-26-as-demand-for-ai-security/", "datePublished": "2026-10-18"}, {"@type": "NewsArticle", "headline": "UK ministers grow more anxious about AI as MI5 warns of bioweapon risk", "url": "https://thetaai.gr/en/radar/2026-10-17-uk-ministers-grow-more-anxious-about-ai-as-mi5-warns-of-bioweapon-risk/", "datePublished": "2026-10-17"}, {"@type": "NewsArticle", "headline": "When an AI agent causes a breach, who is liable? The answer isn't clear anywhere", "url": "https://thetaai.gr/en/radar/2026-10-16-when-an-ai-agent-causes-a-breach-who-is-liable-the-answer-isn-t-clear/", "datePublished": "2026-10-16"}, {"@type": "NewsArticle", "headline": "Research shows how easily a backdoor hides inside open-weight AI models", "url": "https://thetaai.gr/en/radar/2026-10-16-research-shows-how-easily-a-backdoor-hides-inside-open-weight-ai/", "datePublished": "2026-10-16"}, {"@type": "NewsArticle", "headline": "India's CERT-In finds AI agents read sensitive data at Indian organizations during testing", "url": "https://thetaai.gr/en/radar/2026-10-16-india-s-cert-in-finds-ai-agents-read-sensitive-data-at-indian/", "datePublished": "2026-10-16"}, {"@type": "NewsArticle", "headline": "Any.Run study: 1,258 attacks in six months impersonate Claude and ChatGPT to spread malware", "url": "https://thetaai.gr/en/radar/2026-10-16-any-run-study-1-258-attacks-in-six-months-impersonate-claude-and/", "datePublished": "2026-10-16"}, {"@type": "NewsArticle", "headline": "An OpenAI research model 'borrowed' a stranger's test cryptocurrency to finish a coding task, one of seven new", "url": "https://thetaai.gr/en/radar/2026-10-16-an-openai-research-model-borrowed-a-stranger-s-test-cryptocurrency-to/", "datePublished": "2026-10-16"}, {"@type": "NewsArticle", "headline": "US FTC sends subpoenas to Anthropic and OpenAI over AI agent security incidents", "url": "https://thetaai.gr/en/radar/2026-10-15-us-ftc-sends-subpoenas-to-anthropic-and-openai-over-ai-agent-security/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "Proofpoint research: AI is making many attackers worse, not better", "url": "https://thetaai.gr/en/radar/2026-10-15-proofpoint-research-ai-is-making-many-attackers-worse-not-better/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "Google adds AI defenses against voice-cloning scams on Android", "url": "https://thetaai.gr/en/radar/2026-10-15-google-adds-ai-defenses-against-voice-cloning-scams-on-android/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "Critical RCE flaw in Langflow already hit with 1,423 honeypot exploit attempts", "url": "https://thetaai.gr/en/radar/2026-10-15-critical-rce-flaw-in-langflow-already-hit-with-1-423-honeypot-exploit/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "Critical flaws in widely used LiteLLM gateway allowed full system takeover", "url": "https://thetaai.gr/en/radar/2026-10-15-critical-flaws-in-widely-used-litellm-gateway-allowed-full-system/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "ChatGPT can now read and control your Chrome tabs", "url": "https://thetaai.gr/en/radar/2026-10-15-chatgpt-can-now-read-and-control-your-chrome-tabs/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "Anthropic gives METR employee-level access for independent safety oversight", "url": "https://thetaai.gr/en/radar/2026-10-15-anthropic-gives-metr-employee-level-access-for-independent-safety/", "datePublished": "2026-10-15"}, {"@type": "NewsArticle", "headline": "'SneakPeek' flaw in Claude Code Desktop enabled silent credential theft", "url": "https://thetaai.gr/en/radar/2026-10-14-sneakpeek-flaw-in-claude-code-desktop-enabled-silent-credential-theft/", "datePublished": "2026-10-14"}, {"@type": "NewsArticle", "headline": "Research finds DALL·E 3, Nano Banana 2 and GPT-Image-2 easy to jailbreak into generating explicit images", "url": "https://thetaai.gr/en/radar/2026-10-14-research-finds-dalle-3-nano-banana-2-and-gpt-image-2-easy-to/", "datePublished": "2026-10-14"}, {"@type": "NewsArticle", "headline": "Nvidia donates $250m to UK for AI safety research", "url": "https://thetaai.gr/en/radar/2026-10-14-nvidia-donates-250m-to-uk-for-ai-safety-research/", "datePublished": "2026-10-14"}, {"@type": "NewsArticle", "headline": "Eight US states sue OpenAI, alleging ChatGPT coached children toward self-harm", "url": "https://thetaai.gr/en/radar/2026-10-14-eight-us-states-sue-openai-alleging-chatgpt-coached-children-toward/", "datePublished": "2026-10-14"}]}</script>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="logo" href="/en/" aria-label="θeta ai — home">
+<svg width="30" height="30" viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="38" fill="none" stroke="#1d2846" stroke-width="6"/><line x1="30" y1="55" x2="80" y2="55" stroke="#1d2846" stroke-width="6" stroke-linecap="round"/><circle cx="106" cy="55" r="8" fill="#BE9A44"/><circle cx="4" cy="55" r="8" fill="#1d2846"/></svg>
+<span>θeta <span class="ai">ai</span></span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/en/#services">Services</a>
+<a href="/en/#method">Method</a>
+<a href="/en/ergaleia/">Tools</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/#guide">Guide</a>
+<a href="/en/#faq">FAQ</a>
+<span class="lang"><a href="/radar/archive/">EL</a> · <span class="on">EN</span></span>
+</nav>
+</div>
+</header>
+<div class="wrap">
+<nav class="crumbs" aria-label="breadcrumb"><a href="/en/radar/">AI Security Radar</a> › Archive</nav>
+<section class="intro"><h1>AI Security Radar archive</h1><p class="sub">Every story that went through the radar, with its date and sources. The latest ones are on the radar page.</p></section>
+<h2 class="arch-month">October 2026 · 40 stories</h2>
+<ul class="arch-list">
+<li><time datetime="2026-10-22">22 Oct 2026</time><a href="/en/radar/2026-10-22-microsoft-links-chinese-state-group-to-connectwise-supply-chain/">Microsoft links Chinese state group to ConnectWise supply chain attack via AI pentesting tool</a></li>
+<li><time datetime="2026-10-22">22 Oct 2026</time><a href="/en/radar/2026-10-22-anthropic-launches-claude-duet-an-agent-that-connects-to-6-000-tools/">Anthropic launches Claude Duet, an agent that connects to 6,000 tools and can shop on the user&#x27;s behalf</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-symantec-uncovers-autonomous-ai-agent-hijacking-models-for-full/">Symantec uncovers autonomous AI agent hijacking models for full cyberattacks</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-study-chinese-ai-model-writes-more-hackable-code-when-told-it-s-for-a/">Study: Chinese AI model writes more hackable code when told it&#x27;s for a US contractor</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-openai-agents-disabled-safety-monitoring-one-falsely-denied-doing-so/">OpenAI agents disabled safety monitoring, one falsely denied doing so</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-new-phishing-as-a-service-platform-uses-ai-studio-to-craft-lures-and/">New phishing-as-a-service platform uses AI Studio to craft lures and mask attacks</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-litellm-compromised-in-supply-chain-attack-stealing-credentials/">LiteLLM compromised in supply chain attack stealing credentials</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-critical-php2shell-flaws-two-decades-old-found-with-help-from-openai/">Critical &#x27;PHP2Shell&#x27; flaws, two decades old, found with help from OpenAI and Wiz AI tools</a></li>
+<li><time datetime="2026-10-21">21 Oct 2026</time><a href="/en/radar/2026-10-21-chrome-adds-gemini-powered-scam-detection-and-clickfix-warnings/">Chrome adds Gemini-powered scam detection and ClickFix warnings</a></li>
+<li><time datetime="2026-10-20">20 Oct 2026</time><a href="/en/radar/2026-10-20-whatsapp-hid-instructions-in-its-help-pages-telling-its-chatbot-not/">WhatsApp hid instructions in its help pages telling its chatbot not to recommend a data protection regulator</a></li>
+<li><time datetime="2026-10-20">20 Oct 2026</time><a href="/en/radar/2026-10-20-splunk-report-businesses-are-deploying-ai-agents-faster-than-they-can/">Splunk report: businesses are deploying AI agents faster than they can monitor them</a></li>
+<li><time datetime="2026-10-20">20 Oct 2026</time><a href="/en/radar/2026-10-20-ians-report-head-of-ai-security-roles-are-spreading-but/">IANS report: head of AI security roles are spreading, but accountability stays unsettled</a></li>
+<li><time datetime="2026-10-20">20 Oct 2026</time><a href="/en/radar/2026-10-20-anthropic-pitches-ai-safety-bill-that-would-let-only-a-judge-block-a/">Anthropic pitches AI safety bill that would let only a judge block a model&#x27;s release</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-us-teens-can-access-nudify-apps-despite-apple-and-google-parental/">US teens can access &#x27;nudify&#x27; apps despite Apple and Google parental controls, study finds</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-opencode-console-breach-exposes-openai-anthropic-and-google-api-keys/">OpenCode Console breach exposes OpenAI, Anthropic and Google API keys</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-mitre-att-ck-v20-formally-adds-ai-abuse-to-its-threat-tracking/">MITRE ATT&amp;CK v20 formally adds AI abuse to its threat-tracking framework</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-microsoft-says-frontier-ai-models-cannot-be-trusted-and-launches/">Microsoft says frontier AI models &#x27;cannot be trusted&#x27; and launches agent oversight tools</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-hugging-face-s-policy-chief-says-embedded-ai-evaluators-won-t-be-an/">Hugging Face&#x27;s policy chief says embedded AI evaluators won&#x27;t be an easy fix</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-first-harmonised-standard-supporting-the-eu-ai-act-published-in-the/">First harmonised standard supporting the EU AI Act published in the Official Journal</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-fake-web3-accelerator-spread-malware-via-npm-packages-and-hijacked-ai/">Fake Web3 accelerator spread malware via npm packages and hijacked AI agent traffic</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-australian-report-calls-for-stronger-workplace-privacy-protections/">Australian report calls for stronger workplace privacy protections against AI surveillance</a></li>
+<li><time datetime="2026-10-19">19 Oct 2026</time><a href="/en/radar/2026-10-19-anthropic-acquires-confidential-computing-startup-opaque-systems/">Anthropic acquires confidential-computing startup Opaque Systems</a></li>
+<li><time datetime="2026-10-18">18 Oct 2026</time><a href="/en/radar/2026-10-18-us-cybersecurity-job-postings-fall-26-as-demand-for-ai-security/">US cybersecurity job postings fall 26% as demand for AI security engineers soars</a></li>
+<li><time datetime="2026-10-17">17 Oct 2026</time><a href="/en/radar/2026-10-17-uk-ministers-grow-more-anxious-about-ai-as-mi5-warns-of-bioweapon-risk/">UK ministers grow more anxious about AI as MI5 warns of bioweapon risk</a></li>
+<li><time datetime="2026-10-16">16 Oct 2026</time><a href="/en/radar/2026-10-16-when-an-ai-agent-causes-a-breach-who-is-liable-the-answer-isn-t-clear/">When an AI agent causes a breach, who is liable? The answer isn&#x27;t clear anywhere</a></li>
+<li><time datetime="2026-10-16">16 Oct 2026</time><a href="/en/radar/2026-10-16-research-shows-how-easily-a-backdoor-hides-inside-open-weight-ai/">Research shows how easily a backdoor hides inside open-weight AI models</a></li>
+<li><time datetime="2026-10-16">16 Oct 2026</time><a href="/en/radar/2026-10-16-india-s-cert-in-finds-ai-agents-read-sensitive-data-at-indian/">India&#x27;s CERT-In finds AI agents read sensitive data at Indian organizations during testing</a></li>
+<li><time datetime="2026-10-16">16 Oct 2026</time><a href="/en/radar/2026-10-16-any-run-study-1-258-attacks-in-six-months-impersonate-claude-and/">Any.Run study: 1,258 attacks in six months impersonate Claude and ChatGPT to spread malware</a></li>
+<li><time datetime="2026-10-16">16 Oct 2026</time><a href="/en/radar/2026-10-16-an-openai-research-model-borrowed-a-stranger-s-test-cryptocurrency-to/">An OpenAI research model &#x27;borrowed&#x27; a stranger&#x27;s test cryptocurrency to finish a coding task, one of seven new misalignment incidents</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-us-ftc-sends-subpoenas-to-anthropic-and-openai-over-ai-agent-security/">US FTC sends subpoenas to Anthropic and OpenAI over AI agent security incidents</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-proofpoint-research-ai-is-making-many-attackers-worse-not-better/">Proofpoint research: AI is making many attackers worse, not better</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-google-adds-ai-defenses-against-voice-cloning-scams-on-android/">Google adds AI defenses against voice-cloning scams on Android</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-critical-rce-flaw-in-langflow-already-hit-with-1-423-honeypot-exploit/">Critical RCE flaw in Langflow already hit with 1,423 honeypot exploit attempts</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-critical-flaws-in-widely-used-litellm-gateway-allowed-full-system/">Critical flaws in widely used LiteLLM gateway allowed full system takeover</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-chatgpt-can-now-read-and-control-your-chrome-tabs/">ChatGPT can now read and control your Chrome tabs</a></li>
+<li><time datetime="2026-10-15">15 Oct 2026</time><a href="/en/radar/2026-10-15-anthropic-gives-metr-employee-level-access-for-independent-safety/">Anthropic gives METR employee-level access for independent safety oversight</a></li>
+<li><time datetime="2026-10-14">14 Oct 2026</time><a href="/en/radar/2026-10-14-sneakpeek-flaw-in-claude-code-desktop-enabled-silent-credential-theft/">&#x27;SneakPeek&#x27; flaw in Claude Code Desktop enabled silent credential theft</a></li>
+<li><time datetime="2026-10-14">14 Oct 2026</time><a href="/en/radar/2026-10-14-research-finds-dalle-3-nano-banana-2-and-gpt-image-2-easy-to/">Research finds DALL·E 3, Nano Banana 2 and GPT-Image-2 easy to jailbreak into generating explicit images</a></li>
+<li><time datetime="2026-10-14">14 Oct 2026</time><a href="/en/radar/2026-10-14-nvidia-donates-250m-to-uk-for-ai-safety-research/">Nvidia donates $250m to UK for AI safety research</a></li>
+<li><time datetime="2026-10-14">14 Oct 2026</time><a href="/en/radar/2026-10-14-eight-us-states-sue-openai-alleging-chatgpt-coached-children-toward/">Eight US states sue OpenAI, alleging ChatGPT coached children toward self-harm</a></li>
+</ul>
+<div class="cta">
+<h3>Does any of this affect you?</h3>
+<p>If you run a chatbot, AI agent, or AI tools in your business, the Shielding Audit shows where you're exposed under the EU AI Act and security — with prioritization. Starts with a free 45-minute session.</p>
+<a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Book a free session</a>
+</div>
+<footer>
+<p class="foot">© 2026 <b>θeta ai</b> · Θ as a shield · <a href="/en/">thetaai.gr/en</a><br>
+Sources: The Hacker News, Dark Reading, BleepingComputer, Schneier on Security, Ars Technica, MIT Technology Review, The Verge, EURACTIV and others.</p>
+</footer>
+</div>
+</body>
+</html>

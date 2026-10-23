@@ -20,3 +20,5 @@ AUDIT STEPS:
 VERDICT — write `/tmp/radar-verdict.txt` with EXACTLY this format: first line `PASS` or `FAIL`, then one bullet per finding (or `- clean`).
 
 FAIL only on concrete, verifiable problems: collapsed/diverged ITEMS arrays, wrong language on either page, fabricated or systematically dead sources, digest contradicting the actual diff, modified/deleted history in the knowledge log, damaged page script (missing render()). If you are uncertain or a check was inconclusive, PASS and record the uncertainty as a note. Do not fail the day over cosmetics.
+
+NOTE (23/10/2026): the static story HTML between `<!-- RADAR-STATIC:START/END -->`, the archive link, `<script id="radar-slugs">` and the `radar-ld` JSON-LD are rebuilt from ITEMS by a deterministic step AFTER your verdict. It is normal for them to lag behind today's ITEMS. Do not judge them and never fail the run because of them.

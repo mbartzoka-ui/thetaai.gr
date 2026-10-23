@@ -173,7 +173,16 @@ jobs:
           [ -n "$model" ] || model="unknown"
           verdict="$(head -n1 /tmp/radar-verdict.txt 2>/dev/null || true)"
           [ -n "$verdict" ] || verdict="χωρίς ετυμηγορία"
-          git add radar/index.html en/radar/index.html knowledge/ai-security-log.md knowledge/known-terms.txt knowledge/posted-topics.txt
+          # Στατικές σελίδες για SEO/GEO (23/10/2026): ιστορίες μέσα στο HTML,
+          # σελίδα ανά ιστορία, αρχείο, sitemap. Τρέχει ΜΕΤΑ τον ελεγκτή, άρα
+          # δεν αλλάζει τίποτα σε αυτό που ελέγχθηκε· μόνο το παρουσιάζει.
+          # Ντετερμινιστικό, χωρίς AI. Αν αποτύχει, ο radar ανεβαίνει κανονικά
+          # όπως πριν· απλώς οι στατικές σελίδες μένουν της προηγούμενης μέρας.
+          if ! python3 .github/radar_build.py; then
+            echo "::warning::radar_build απέτυχε - ο radar ανεβαίνει χωρίς ανανέωση των στατικών σελίδων."
+            git checkout -- sitemap.xml radar/stories.json 2>/dev/null || true
+          fi
+          git add radar en/radar sitemap.xml knowledge/ai-security-log.md knowledge/known-terms.txt knowledge/posted-topics.txt
           if git diff --cached --quiet; then
             echo "No changes to publish (feeds empty or nothing new)."
           else
