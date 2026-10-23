@@ -6,6 +6,7 @@ Site languages: Greek (default, https://thetaai.gr/) and English (https://thetaa
 
 ## Services
 
+- [ISO/IEC 42001 consulting (EN)](https://thetaai.gr/en/iso-42001/): gap assessment, AI management system set-up, internal audit before certification ([EL](https://thetaai.gr/iso-42001/))
 - [θeta ai home (EN)](https://thetaai.gr/en/): EU AI Act compliance and AI security services for SMBs
 - [θeta ai home (EL)](https://thetaai.gr/): the same in Greek
 - [AI governance audit: what it includes](https://thetaai.gr/en/blog/ai-governance-audit-service/)
@@ -21,6 +22,7 @@ Daily, source-verified briefing on the EU AI Act, AI security incidents and stan
 
 ## Free tools
 
+- [ISO 42001 readiness test](https://thetaai.gr/en/ergaleia/iso-42001-test/): 10 questions, score and first gaps to close
 - [Does the EU AI Act apply to you? 2-minute test](https://thetaai.gr/en/ergaleia/ai-act-test/)
 - [AI usage policy generator](https://thetaai.gr/en/ergaleia/politiki-ai/)
 - [Check a file for prompt injection](https://thetaai.gr/en/ergaleia/elenchos-arxeiou/)

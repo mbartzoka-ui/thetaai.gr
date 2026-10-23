@@ -148,10 +148,13 @@ After the «Συνολική εικόνα» paragraph, add a horizontal rule and
 ```
 Καθημερινή ενημέρωση: thetaai.gr/radar
 
-Αυτό το post δημιουργήθηκε αυτόματα με AI, μέρος του content workflow της ThetaAI. Θέλεις παρόμοιο αυτοματισμό για την επιχείρησή σου; → thetaai.gr
-```
+Δωρεάν 45λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σου απέναντι στον AI Act και το ISO 42001 → thetaai.gr/iso-42001/
 
-followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). STYLE: apply the WRITING RULES section near the top of this prompt IN FULL, all ten of them, plus the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block right below, which is stricter and wins here. Four additions specific to LinkedIn: at most one emoji and usually zero; 3-4 hashtags maximum; plain text only, since LinkedIn does not render markdown; the jargon ban is absolute in this draft (no sandboxing, no data residency, no orchestration) and every technical term gets a plain-Greek gloss the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension, πρόσθετο του browser». Before you finalise the draft, re-read it once against the WRITING RULES and fix what slipped, checking the dash rule first. This is a DRAFT for Maria to review and post manually; never post anywhere yourself.
+Το κείμενο γράφτηκε αυτόματα με AI από το AI Radar της θeta ai (Theta AI), με βάση δημόσιες πηγές.
+```
+(Αλλαγή 23/10/2026, εντολή Maria: το κλείσιμο οδηγεί πλέον σε συμβουλευτική AI Act / ISO 42001, όχι σε «αυτοματισμούς». Η πρώτη γραμμή αντικαθίσταται αυτόματα, κατά τη δημοσίευση, με τη σελίδα της ιστορίας.)
+
+followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). STYLE: apply the WRITING RULES section near the top of this prompt IN FULL, all ten of them, plus the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block right below, which is stricter and wins here. Four additions specific to LinkedIn: at most one emoji and usually zero; 3-4 hashtags maximum; plain text only, since LinkedIn does not render markdown; the jargon ban is absolute in this draft (no sandboxing, no data residency, no orchestration) and every technical term gets a plain-Greek gloss the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension, πρόσθετο του browser». Before you finalise the draft, re-read it once against the WRITING RULES and fix what slipped, checking the dash rule first. A separate, later step publishes this draft to Maria's LinkedIn automatically, so write it ready to publish as is; never post anywhere yourself.
 
 ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ — διόρθωση 19/08/2026, μετά από ρητή παρατήρηση της Maria ότι το κείμενο "χρησιμοποιεί πολύ μικρές προτάσεις, είναι ενοχλητικό και είναι pattern AI". Αυτό είναι το ΠΙΟ ΣΥΧΝΟ σφάλμα σε αυτό το draft· αντιμετώπισέ το ως σκληρό κανόνα, όχι ως προτίμηση.
 - Η ΠΛΕΙΟΨΗΦΙΑ των προτάσεων πρέπει να έχει 15 έως 35 λέξεις, με δευτερεύουσες προτάσεις, όπως γράφει άνθρωπος που σκέφτεται καθώς γράφει. Άφησε τουλάχιστον μία σκέψη να τρέξει μακριά πριν κλείσει.
