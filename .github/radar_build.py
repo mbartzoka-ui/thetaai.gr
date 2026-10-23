@@ -253,8 +253,11 @@ def page(lang, c, *, title, desc, path, el_path, en_path, body, jsonld,
 
 
 def org():
-    return {"@type": "Organization", "name": BRAND, "alternateName": "Theta AI",
-            "url": SITE + "/",
+    # Same @id as the ProfessionalService on the home page, so search and AI
+    # engines treat every radar page as published by that one entity.
+    return {"@type": "Organization", "@id": SITE + "/#org", "name": BRAND,
+            "alternateName": "Theta AI", "url": SITE + "/",
+            "sameAs": ["https://www.linkedin.com/company/%CE%B8eta-ai/"],
             "logo": {"@type": "ImageObject", "url": OG_IMAGE}}
 
 

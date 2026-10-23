@@ -1,0 +1,47 @@
+# θeta ai (Theta AI)
+
+> EU AI Act compliance and AI security consulting for small and mid-sized businesses, based in Greece. θeta ai checks what a business signed with its AI vendors, what the EU AI Act requires of it, and how to harden its AI systems: mapping, gap analysis and monitoring. Founded by Maria Bartzoka (Μαρία Μπαρτζώκα), AI security and EU AI Act consultant. The name is written with a Greek theta: θeta ai; in Latin script, Theta AI.
+
+Site languages: Greek (default, https://thetaai.gr/) and English (https://thetaai.gr/en/). Contact: hello@thetaai.gr. LinkedIn: https://www.linkedin.com/company/%CE%B8eta-ai/ (company), https://www.linkedin.com/in/mariabartzoka/ (founder).
+
+## Services
+
+- [θeta ai home (EN)](https://thetaai.gr/en/): EU AI Act compliance and AI security services for SMBs
+- [θeta ai home (EL)](https://thetaai.gr/): the same in Greek
+- [AI governance audit: what it includes](https://thetaai.gr/en/blog/ai-governance-audit-service/)
+- [AI security audit: why running a scanner isn't enough](https://thetaai.gr/en/blog/ai-scanner-vs-audit/)
+
+## AI Security Radar (updated daily)
+
+Daily, source-verified briefing on the EU AI Act, AI security incidents and standards (ISO/IEC 42001, NIST). Every story has its own page with its original sources.
+
+- [AI Security Radar (EN)](https://thetaai.gr/en/radar/): latest stories
+- [AI Security Radar archive (EN)](https://thetaai.gr/en/radar/archive/): every story by month
+- [AI Security Radar (EL)](https://thetaai.gr/radar/) and [archive (EL)](https://thetaai.gr/radar/archive/)
+
+## Free tools
+
+- [Does the EU AI Act apply to you? 2-minute test](https://thetaai.gr/en/ergaleia/ai-act-test/)
+- [AI usage policy generator](https://thetaai.gr/en/ergaleia/politiki-ai/)
+- [Check a file for prompt injection](https://thetaai.gr/en/ergaleia/elenchos-arxeiou/)
+- [Supplier AI contract check](https://thetaai.gr/en/ergaleia/elegxos-symvasis-ai/)
+- [EU AI Act Article 50 transparency checklist](https://thetaai.gr/en/ergaleia/checklist-arthro-50/)
+- [Document anonymiser](https://thetaai.gr/en/ergaleia/anonymopoiisi-eggrafou/)
+- [EU AI Act fine calculator (EL)](https://thetaai.gr/ergaleia/prostimo-calculator/)
+
+## Guides and articles
+
+- [EU AI Act: what every small business should know in 2026](https://thetaai.gr/en/blog/eu-ai-act-small-businesses/)
+- [EU AI Act Article 50: when you must disclose that someone is talking to AI](https://thetaai.gr/en/blog/eu-ai-act-article-50-ai-disclosure/)
+- [EU AI Act Article 19: how long you have to keep AI logs](https://thetaai.gr/en/blog/eu-ai-act-article-19-logs/)
+- [What is prompt injection](https://thetaai.gr/en/blog/what-is-prompt-injection/)
+- [Why output filters don't stop indirect prompt injection](https://thetaai.gr/en/blog/llm-output-filter-jailbreak/)
+- [AI threat modeling with STRIDE](https://thetaai.gr/en/blog/ai-threat-modeling-stride/)
+- [NIST AI RMF: what makes an AI risk report audit-ready](https://thetaai.gr/en/blog/nist-ai-rmf-guide/)
+- [The Air Canada chatbot case: who's liable when your AI gets it wrong](https://thetaai.gr/en/blog/air-canada-chatbot-liability/)
+- [Enterprise AI chatbot hallucinations](https://thetaai.gr/en/blog/ai-chatbot-hallucinations/)
+- [Blog index (EN)](https://thetaai.gr/en/blog/) and [blog (EL)](https://thetaai.gr/blog/)
+
+## Optional
+
+- [Privacy policy](https://thetaai.gr/en/privacy/)
