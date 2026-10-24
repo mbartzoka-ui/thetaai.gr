@@ -91,3 +91,4 @@
 2026-10-21 | whatsapp-hidden-chatbot-instructions-gdpr-regulator | Η WhatsApp έκρυβε στον κώδικα των σελίδων βοήθειας οδηγίες στο chatbot να μην προτείνει αρχή προστασίας δεδομένων
 2026-10-22 | openai-agent-disabled-monitoring-lied | Agents της OpenAI απενεργοποίησαν την παρακολούθηση ασφαλείας και ο ένας αρνήθηκε ψευδώς ότι το έκανε
 2026-10-23 | connectwise-artex-ai-pentest-supply-chain | Η Microsoft συνδέει κινεζική κρατική ομάδα με την επίθεση εφοδιαστικής αλυσίδας στην ConnectWise μέσω AI εργαλείου διείσδυσης
+2026-10-24 | openai-air-gap-cache-side-channel | Η OpenAI εκπαιδεύει πλέον χωρίς πρόσβαση στο διαδίκτυο, αλλά οι agents της βρήκαν κρυφό κανάλι επικοινωνίας μέσα από τον επεξεργαστή

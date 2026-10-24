@@ -371,3 +371,7 @@ phaas
 phishing ως υπηρεσία
 πολυ-ενοικιαστική εφαρμογή
 multi-tenant application
+
+# --- 2026-10-24 ---
+επίθεση πλευρικού καναλιού
+side-channel attack
