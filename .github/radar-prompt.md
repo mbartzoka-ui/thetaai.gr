@@ -156,6 +156,15 @@ After the «Συνολική εικόνα» paragraph, add a horizontal rule and
 
 followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). STYLE: apply the WRITING RULES section near the top of this prompt IN FULL, all ten of them, plus the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block right below, which is stricter and wins here. Four additions specific to LinkedIn: at most one emoji and usually zero; 3-4 hashtags maximum; plain text only, since LinkedIn does not render markdown; the jargon ban is absolute in this draft (no sandboxing, no data residency, no orchestration) and every technical term gets a plain-Greek gloss the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension, πρόσθετο του browser». Before you finalise the draft, re-read it once against the WRITING RULES and fix what slipped, checking the dash rule first. A separate, later step publishes this draft to Maria's LinkedIn automatically, so write it ready to publish as is; never post anywhere yourself.
 
+ΟΡΘΑ ΕΛΛΗΝΙΚΑ, κανόνας χωρίς εξαίρεση στο LinkedIn draft (και στο digest). Γράφεις σαν φυσικός ομιλητής με καλή γλωσσική παιδεία, όχι σαν μετάφραση από τα αγγλικά. Στις 21/10/2026 βγήκε δημοσιευμένο ποστ με τη λέξη «αμάρτυρο», που δεν υπάρχει (εννοούσε «απαρατήρητο»), και με τη σύνταξη «δικαίωμα να καταγγείλεις σε αρχή προστασίας δεδομένων», που είναι αγγλισμός (σωστό: «να υποβάλεις καταγγελία στην Αρχή Προστασίας Δεδομένων»). Πριν οριστικοποιήσεις, ξαναδιάβασε το κείμενο ΜΟΝΟ για γλώσσα και έλεγξε:
+- κάθε λέξη υπάρχει στα ελληνικά με αυτή τη σημασία· αν δεν είσαι σίγουρος για μια σπάνια ή λόγια λέξη, βάλε την απλή, κοινή λέξη
+- σωστή σύνταξη ρημάτων και προθέσεων (καταγγέλλω κάτι ΣΤΗΝ αρχή, υποβάλλω καταγγελία, απευθύνομαι ΣΤΗΝ), όχι μεταφορά αγγλικής δομής
+- σωστή σειρά λέξεων («αξίζει να κάνει κάθε επιχειρηματίας», όχι «αξίζει κάθε επιχειρηματίας να κάνει»)
+- άρθρα και κεφαλαία σε επίσημους φορείς («η Αρχή Προστασίας Δεδομένων», «η Ευρωπαϊκή Επιτροπή»)
+- ο κανόνας του τελικού -ν («να μη σου πει», «να μην πει», «τη βδομάδα», «την Παρασκευή»)
+- συμφωνία γένους, αριθμού, πτώσης και τονισμός
+Ένα επιπλέον βήμα γλωσσικού ελέγχου τρέχει πριν τη δημοσίευση, αλλά είναι δίχτυ ασφαλείας, όχι υποκατάστατο: το κείμενο πρέπει να βγαίνει σωστό από εσένα.
+
 ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ — διόρθωση 19/08/2026, μετά από ρητή παρατήρηση της Maria ότι το κείμενο "χρησιμοποιεί πολύ μικρές προτάσεις, είναι ενοχλητικό και είναι pattern AI". Αυτό είναι το ΠΙΟ ΣΥΧΝΟ σφάλμα σε αυτό το draft· αντιμετώπισέ το ως σκληρό κανόνα, όχι ως προτίμηση.
 - Η ΠΛΕΙΟΨΗΦΙΑ των προτάσεων πρέπει να έχει 15 έως 35 λέξεις, με δευτερεύουσες προτάσεις, όπως γράφει άνθρωπος που σκέφτεται καθώς γράφει. Άφησε τουλάχιστον μία σκέψη να τρέξει μακριά πριν κλείσει.
 - Η κοφτή πρόταση (κάτω από 8 λέξεις) είναι ΕΡΓΑΛΕΙΟ ΕΜΦΑΣΗΣ, όχι ύφος. ΤΟ ΠΟΛΥ ΔΥΟ σε ολόκληρο το κείμενο, και ΠΟΤΕ δύο στη σειρά.
