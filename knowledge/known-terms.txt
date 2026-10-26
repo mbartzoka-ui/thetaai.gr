@@ -375,3 +375,7 @@ multi-tenant application
 # --- 2026-10-24 ---
 επίθεση πλευρικού καναλιού
 side-channel attack
+
+# --- 2026-10-26 ---
+κοινωνική μηχανική
+social engineering
