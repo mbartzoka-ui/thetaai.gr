@@ -4,9 +4,22 @@
 # ζουν στο ΙΔΙΩΤΙΚΟ repo mbartzoka-ui/linkedin-daily-poster. Εκεί το
 # GitHub δεν ξεκίνησε ΚΑΜΙΑ προγραμματισμένη εκτέλεση από 19/05/2026, ούτε
 # μετά από επανενεργοποίηση, μετονομασία αρχείου και αλλαγή ώρας. Οι
-# χειροκίνητες εκτελέσεις εκεί δουλεύουν πάντα. Εδώ, στο thetaai.gr, το
-# πρόγραμμα του GitHub τρέχει κάθε μέρα (radar). Άρα το πρόγραμμα ζει εδώ
+# χειροκίνητες εκτελέσεις εκεί δουλεύουν πάντα. Άρα το πρόγραμμα ζει εδώ
 # και απλώς ξεκινά τα workflows εκεί.
+#
+# ΠΩΣ ΞΕΚΙΝΑ (26/10/2026, απόφαση Μαρίας): από το radar, όχι από ρολόι.
+# Τα crons εδώ ξεκινούσαν με 4-6 ώρες καθυστέρηση ή καθόλου (26/10), ενώ
+# το «Radar daily refresh» τρέχει κάθε πρωί. Όταν τελειώνει, το
+# workflow_run ξεκινά το job "after-radar", που ΠΕΡΙΜΕΝΕΙ ως τις 11:00 ώρα
+# Ελλάδας (θερινή και χειμερινή, μέσω Europe/Athens) και τότε ξεκινά:
+#   - το ποστ του radar, κάθε μέρα
+#   - το αγγλικό ποστ, Δευτέρα με Παρασκευή
+# Αν το radar τελειώσει μετά τις 11:00, ξεκινούν αμέσως.
+# Το radar τρέχει έως τρεις φορές το πρωί· κάθε νέα αναμονή ακυρώνει την
+# προηγούμενη (concurrency), οπότε ξεκινά μία φορά.
+#
+# ΕΦΕΔΡΙΚΟ CRON: μία φορά μετά τις 11:00, αν δεν έτρεξε το radar. Δεν
+# αναρτά πριν τις 11:00 ακόμα κι αν το GitHub το ξεκινήσει στην ώρα του.
 #
 # ΓΙΑΤΙ ΟΧΙ ΜΕΤΑΦΟΡΑ ΟΛΟΥ ΤΟΥ ΚΩΔΙΚΑ: αυτό το repo είναι δημόσιο. Οι
 # σημειώσεις μελέτης και το ιστορικό δημοσιεύσεων μένουν ιδιωτικά, και τα
@@ -18,64 +31,85 @@
 #
 # ΔΙΠΛΕΣ ΔΗΜΟΣΙΕΥΣΕΙΣ: δεν γίνονται. Κάθε workflow εκεί ελέγχει το δικό
 # του ιστορικό και δεν ξαναποστάρει την ίδια μέρα. Γι' αυτό είναι ασφαλές
-# να υπάρχει και δεύτερη ώρα για το ποστ του radar.
+# να ξεκινούν και από το radar και από το εφεδρικό cron.
 
 name: LinkedIn trigger
 
 on:
+  workflow_run:
+    workflows: ["Radar daily refresh"]
+    types: [completed]
   schedule:
-    # Ώρες UTC, χωρίς προσαρμογή θερινής/χειμερινής. Λεπτά «άτακτα», όπως
-    # στον radar: τα :00 και :30 έχουν τη μεγαλύτερη ουρά.
-    # ΝΩΡΙΣ ΕΠΙΤΗΔΕΣ (23/10/2026): το GitHub ξεκίνησε τα slots των 06:17 και
-    # 07:53 UTC με ~6 ώρες καθυστέρηση (22/10), δηλαδή απόγευμα. Η ώρα εδώ
-    # είναι το νωρίτερο που επιτρέπουμε, όχι η ώρα ανάρτησης.
-    - cron: "47 3 * * 1-5"   # αγγλικό ποστ, όχι πριν τις ~06:47 Ελλάδας
-    - cron: "23 5 * * *"     # ποστ του radar, αφού βγει το digest (~03:10-08:20)
-    - cron: "53 6 * * *"     # ρεζέρβα 1 του radar
-    - cron: "53 8 * * *"     # ρεζέρβα 2 του radar, αν το digest άργησε πολύ
+    # 10:17 UTC = 12:17 Ελλάδας τον χειμώνα, 13:17 το καλοκαίρι. Εφεδρικό.
+    - cron: "17 10 * * *"
   workflow_dispatch:
     inputs:
       which:
-        description: "daily = αγγλικό ποστ, radar = ελληνικό ποστ του radar"
+        description: "daily = αγγλικό ποστ, radar = ελληνικό ποστ του radar, both = και τα δύο"
         type: choice
-        options: [daily, radar]
+        options: [both, daily, radar]
         default: radar
 
 permissions:
   contents: read
 
+concurrency:
+  group: linkedin-trigger-${{ github.event_name == 'workflow_dispatch' && github.run_id || 'auto' }}
+  cancel-in-progress: true
+
 jobs:
   trigger:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # Περιμένει έως ~4,5 ώρες (radar στις ~06:30 → 11:00). Δωρεάν σε
+    # δημόσιο repo.
+    timeout-minutes: 330
     steps:
-      - name: Ξεκίνημα δημοσίευσης στο linkedin-daily-poster
+      - name: Αναμονή ως τις 11:00 ώρα Ελλάδας
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          now=$(date +%s)
+          target=$(TZ=Europe/Athens date -d "$(TZ=Europe/Athens date +%F) 11:00" +%s)
+          wait=$(( target - now ))
+          echo "Στόχος: $(date -u -d @$target) (11:00 Ελλάδας)"
+          if [ "$wait" -gt 0 ]; then
+            echo "Περιμένω $((wait / 60)) λεπτά, ως τις 11:00 Ελλάδας."
+            sleep "$wait"
+          else
+            echo "Είναι ήδη μετά τις 11:00 Ελλάδας, ξεκινώ αμέσως."
+          fi
+
+      - name: Ξεκίνημα δημοσιεύσεων στο linkedin-daily-poster
         env:
           TOKEN: ${{ secrets.LINKEDIN_POSTER_DISPATCH_TOKEN }}
-          SCHEDULE: ${{ github.event.schedule }}
           WHICH: ${{ inputs.which }}
         run: |
           if [ -z "$TOKEN" ]; then
             echo "::error::Λείπει το secret LINKEDIN_POSTER_DISPATCH_TOKEN. Δεν ξεκίνησε καμία δημοσίευση."
             exit 1
           fi
-          case "$SCHEDULE" in
-            "47 3 * * 1-5") WHICH=daily ;;
-            "23 5 * * *"|"53 6 * * *"|"53 8 * * *") WHICH=radar ;;
-          esac
+          if [ -z "$WHICH" ]; then
+            # Αυτόματα: radar κάθε μέρα, αγγλικό μόνο Δευτέρα-Παρασκευή.
+            if [ "$(TZ=Europe/Athens date +%u)" -le 5 ]; then WHICH=both; else WHICH=radar; fi
+          fi
           case "$WHICH" in
-            daily) wf=linkedin-daily.yml ;;
-            radar) wf=radar-linkedin.yml ;;
+            daily) wfs="linkedin-daily.yml" ;;
+            radar) wfs="radar-linkedin.yml" ;;
+            both)  wfs="radar-linkedin.yml linkedin-daily.yml" ;;
             *) echo "::error::Άγνωστη δημοσίευση: '$WHICH'"; exit 1 ;;
           esac
-          echo "Ξεκινώ $wf"
-          code=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST \
-            -H "Authorization: Bearer $TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/mbartzoka-ui/linkedin-daily-poster/actions/workflows/$wf/dispatches" \
-            -d '{"ref":"main"}')
-          if [ "$code" != "204" ]; then
-            echo "::error::Το GitHub απάντησε $code: $(cat /tmp/resp.txt). Αν είναι 401, το token έληξε ή είναι λάθος."
-            exit 1
-          fi
-          echo "OK: το $wf ξεκίνησε. Το αποτέλεσμα φαίνεται στο linkedin-daily-poster."
+          fail=0
+          for wf in $wfs; do
+            echo "Ξεκινώ $wf"
+            code=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST \
+              -H "Authorization: Bearer $TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/mbartzoka-ui/linkedin-daily-poster/actions/workflows/$wf/dispatches" \
+              -d '{"ref":"main"}')
+            if [ "$code" != "204" ]; then
+              echo "::error::$wf: το GitHub απάντησε $code: $(cat /tmp/resp.txt). Αν είναι 401, το token έληξε ή είναι λάθος."
+              fail=1
+            else
+              echo "OK: το $wf ξεκίνησε. Το αποτέλεσμα φαίνεται στο linkedin-daily-poster."
+            fi
+          done
+          exit $fail
