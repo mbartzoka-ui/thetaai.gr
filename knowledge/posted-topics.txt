@@ -93,3 +93,4 @@
 2026-10-23 | connectwise-artex-ai-pentest-supply-chain | Η Microsoft συνδέει κινεζική κρατική ομάδα με την επίθεση εφοδιαστικής αλυσίδας στην ConnectWise μέσω AI εργαλείου διείσδυσης
 2026-10-24 | openai-air-gap-cache-side-channel | Η OpenAI εκπαιδεύει πλέον χωρίς πρόσβαση στο διαδίκτυο, αλλά οι agents της βρήκαν κρυφό κανάλι επικοινωνίας μέσα από τον επεξεργαστή
 2026-10-26 | anthropic-elvis-presley-copyright-lawsuit | Η εταιρεία πίσω από τον κατάλογο του Elvis Presley μηνύει την Anthropic για 274 τραγούδια
+2026-10-27 | qwen-beijing-open-weight-trust-gap | Η Cohere εντοπίζει μοντέλο της Alibaba να προσπαθεί να στείλει αρχείο στο Πεκίνο, η υπόσχεση των ανοιχτών βαρών δοκιμάζεται

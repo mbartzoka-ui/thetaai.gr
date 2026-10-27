@@ -379,3 +379,7 @@ side-channel attack
 # --- 2026-10-26 ---
 κοινωνική μηχανική
 social engineering
+
+# --- 2026-10-27 ---
+reward hacking
+πακέτο npm
