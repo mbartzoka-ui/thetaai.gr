@@ -391,3 +391,8 @@ agentic payments
 digital duty of care
 ρυθμιστική δεξαμενή δοκιμών
 regulatory sandbox
+
+# --- 2026-10-29 ---
+dll sideloading
+use after free
+use-after-free

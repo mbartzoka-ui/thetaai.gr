@@ -1,5 +1,56 @@
 [
  {
+  "slug": "2026-10-28-unreleased-anthropic-model-chains-security-flaws-into-working",
+  "urls": [
+   "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html"
+  ],
+  "first_seen": "2026-10-29",
+  "date": "2026-10-28",
+  "topic": "AI Security",
+  "el": {
+   "title": "Άγνωστο μοντέλο της Anthropic συνδύασε αδυναμίες λογισμικού σε πλήρη exploits για Chrome, Safari, Windows και Linux",
+   "summary": "Η ομάδα Frontier Red Team της Anthropic ανέφερε ότι ένα εσωτερικό, μη κυκλοφορημένο μοντέλο AI εντόπισε αδυναμίες ασφαλείας σε Chrome, Safari, Android, Windows και Linux και τις συνδύασε σε πέντε λειτουργικά exploits, χωρίς κανένα από αυτά να έχει παρατηρηθεί ποτέ σε πραγματική επίθεση. Στην αλυσίδα για το Chrome, το μοντέλο ένωσε τέσσερα ξεχωριστά σφάλματα, ένα ελάττωμα μνήμης στη μηχανή JavaScript V8, μια διαφυγή από το sandbox, ένα race condition στο CacheStorage και ένα use after free (σφάλμα όπου το λογισμικό συνεχίζει να χρησιμοποιεί μνήμη αφού την έχει ήδη ελευθερώσει) στο σύστημα σύνδεσης FedCM, ώστε να τρέξει κώδικα εκτός του sandbox του browser μόλις φορτωθεί μια κακόβουλη σελίδα. Η Anthropic ανέφερε συνολικά 62 ευπάθειες στη Google πριν τη δημοσίευση, όλες πλέον διορθωμένες, και η Apple με τη Google πιστώνουν επίσημα το μοντέλο, με ανθρώπινη επίβλεψη, για συγκεκριμένες διορθώσεις. Η ίδια η Anthropic παραμένει η μοναδική πηγή για το πόσο αυτόνομα δούλεψε το μοντέλο, καθώς δεν αποκαλύπτει ποιο μοντέλο ακριβώς χρησιμοποιήθηκε ούτε πόση ανθρώπινη καθοδήγηση χρειάστηκε σε κάθε βήμα. Για μια επιχείρηση που αξιολογεί πόσο ώριμη έχει γίνει η τεχνητή νοημοσύνη στις επιθετικές δοκιμές ασφαλείας, η είδηση δείχνει πόσο γρήγορα η ικανότητα εύρεσης και σύνδεσης ευπαθειών περνάει από εξειδικευμένες ομάδες σε αυτοματοποιημένα εργαλεία."
+  },
+  "en": {
+   "title": "Unreleased Anthropic model chains security flaws into working exploits for Chrome, Safari, Windows and Linux",
+   "summary": "Anthropic's Frontier Red Team says an unreleased, internal research model found security flaws across Chrome, Safari, Android, Windows and Linux and combined them into five working proof-of-concept exploit chains, none of which were observed in real-world attacks. In the Chrome chain, the model linked four separate bugs, a memory-corruption flaw in the V8 JavaScript engine, a sandbox escape, a CacheStorage race condition and a use-after-free (a bug where software keeps using a piece of memory after it has already been freed) in the FedCM sign-in feature, to run code outside the browser sandbox from a single page load. Anthropic reported 62 flaws to Google ahead of publication, all now patched, and both Apple and Google credit the model, with human oversight, for specific fixes. Anthropic remains the only source for how autonomous the work really was, since it declines to name the model or detail how much human guidance each step required. For businesses assessing how mature AI has become at offensive security testing, the report shows capabilities once limited to specialist teams are moving into automated tools."
+  },
+  "sources": [
+   {
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-28-google-unveils-gemini-4-carbon-with-a-cybersecurity-focus-but-keeps",
+  "urls": [
+   "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+   "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
+  ],
+  "first_seen": "2026-10-29",
+  "date": "2026-10-28",
+  "topic": "AI Security",
+  "el": {
+   "title": "Η Google παρουσιάζει το Gemini 4 Carbon με έμφαση στην κυβερνοασφάλεια, αλλά δεν το κυκλοφορεί ακόμη ευρέως",
+   "summary": "Η Google ανακοίνωσε το Gemini 4 Carbon, το νέο της μοντέλο αιχμής, μόλις δύο εβδομάδες μετά την κυκλοφορία του Gemini 4 Argon, με έμφαση στον εντοπισμό, την επαλήθευση και τη διόρθωση ευπαθειών λογισμικού. Η εταιρεία αναφέρει ότι το μοντέλο παράγει κώδικα χωρίς ευπάθειες διπλάσιες φορές συχνότερα από το Argon και πέτυχε μηδενική επιτυχία επίθεσης στις δοκιμές prompt injection της αξιολόγησης Grey Swan, καλύτερη επίδοση από τα ανταγωνιστικά μοντέλα της OpenAI και της Anthropic. Παρά τις επιδόσεις, η Google δεν δίνει ακόμη ευρεία πρόσβαση στο μοντέλο, το διαθέτει προς το παρόν μόνο σε επιλεγμένες εταιρείες κυβερνοάμυνας μέσω του προγράμματος Fairwind, ακολουθώντας την ίδια σταδιακή λογική κυκλοφορίας που εφαρμόστηκε και στο Argon. Για μια επιχείρηση που αξιολογεί ποιος πάροχος AI προσφέρει τα πιο αξιόπιστα εργαλεία κυβερνοασφάλειας, η σταδιακή κυκλοφορία δείχνει ότι οι ίδιες οι εταιρείες AI αντιμετωπίζουν τα δικά τους μοντέλα ως κάτι που χρειάζεται έλεγχο πριν τη γενική διάθεση."
+  },
+  "en": {
+   "title": "Google unveils Gemini 4 Carbon with a cybersecurity focus, but keeps wide release on hold",
+   "summary": "Google announced Gemini 4 Carbon, its newest frontier model, just two weeks after releasing Gemini 4 Argon, highlighting gains in vulnerability detection, validation and remediation. The company says Carbon produces vulnerability-free code twice as often as Argon and scored a 0 percent success rate against prompt-injection attacks in the Grey Swan evaluation, outperforming rival models from OpenAI and Anthropic. Despite the results, Google is not making the model broadly available yet, limiting initial access to select cybersecurity defense partners through its Fairwind program, following the same staged rollout it used for Argon. For businesses weighing which AI vendor offers the most trustworthy cybersecurity tooling, the staged release shows AI companies are treating their own frontier models as something to vet before wide deployment."
+  },
+  "sources": [
+   {
+    "name": "Ars Technica",
+    "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use/"
+   },
+   {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
+   }
+  ]
+ },
+ {
   "slug": "2026-10-28-australia-advances-law-banning-ai-chatbots-from-fostering-emotional",
   "urls": [
    "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics"
@@ -19,6 +70,29 @@
    {
     "name": "The Guardian",
     "url": "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-28-attackers-hide-malware-behind-signed-chatgpt-and-claude-binaries-in",
+  "urls": [
+   "https://www.infosecurity-magazine.com/news/attackers-hide-malware-behind"
+  ],
+  "first_seen": "2026-10-29",
+  "date": "2026-10-28",
+  "topic": "Incidents",
+  "el": {
+   "title": "Επιτιθέμενοι κρύβουν κακόβουλο λογισμικό πίσω από πλαστές εφαρμογές ChatGPT και Claude με υπογεγραμμένα αρχεία",
+   "summary": "Η εταιρεία ασφαλείας Check Point εντόπισε εκστρατεία με την ονομασία Yoba, στην οποία πλαστές εφαρμογές που μιμούνταν το ChatGPT, το Claude Opus και άλλα δημοφιλή μοντέλα AI φιλοξενούνταν σε αποθετήρια GitHub με σελίδες προσγείωσης που εμφανίζονταν ψηλά στα αποτελέσματα αναζήτησης της Google. Τα προγράμματα εγκατάστασης περιείχαν γνήσια, ψηφιακά υπογεγραμμένα εκτελέσιμα αρχεία της OpenAI και της Anthropic μαζί με μια κακόβουλη βιβλιοθήκη, που φορτωνόταν μέσω DLL sideloading (τεχνική όπου ένα κακόβουλο αρχείο φορτώνεται μέσα από ένα γνήσιο, υπογεγραμμένο πρόγραμμα, ώστε οι έλεγχοι ασφαλείας να το εμπιστεύονται), με αποτέλεσμα να παρακάμπτονται οι συνήθεις έλεγχοι. Το κακόβουλο λογισμικό έλεγχε το πληκτρολόγιο για να αποφύγει υπολογιστές σε χώρες της πρώην ΕΣΣΔ εκτός Ουκρανίας, ένδειξη πιθανής ρωσικής προέλευσης, και χρησιμοποιούσε Telegram και κρυπτογραφημένα αιτήματα DNS αντί για τυπική υποδομή διοίκησης και ελέγχου. Το φορτίο που εντοπίστηκε ήταν εργαλείο εξόρυξης κρυπτονομισμάτων, όμως οι ερευνητές σημειώνουν ότι ο ίδιος φορτωτής θα μπορούσε να παραδώσει οποιοδήποτε άλλο κακόβουλο λογισμικό σε επόμενο κύμα. Για μια επιχείρηση που επιτρέπει στο προσωπικό της να κατεβάζει εργαλεία AI από το διαδίκτυο, η υπόθεση δείχνει ότι η δημοτικότητα ενός ονόματος όπως ChatGPT ή Claude έχει γίνει από μόνη της δόλωμα, ανεξάρτητα από το αν ο πραγματικός πάροχος έχει οποιαδήποτε ανάμειξη."
+  },
+  "en": {
+   "title": "Attackers hide malware behind signed ChatGPT and Claude binaries in GitHub campaign",
+   "summary": "Check Point uncovered a campaign dubbed Yoba in which fake desktop apps impersonating ChatGPT, Claude Opus and other popular AI models were hosted on GitHub repositories with landing pages that ranked highly in Google search results. The installers bundled genuine, digitally signed OpenAI and Anthropic executables with a malicious library loaded through DLL sideloading, a technique where malware is loaded through a genuine, signed program so that security checks trust it, letting the malware slip past standard checks. The malware checked keyboard layouts to avoid machines in former Soviet countries other than Ukraine, a sign of likely Russian origin, and used Telegram and encrypted DNS lookups instead of traditional command-and-control infrastructure. The payload observed so far was a cryptominer, but researchers warn the same loader could deliver any other malware in future waves. For businesses that let staff download AI tools from the open internet, the case shows that a recognizable brand name like ChatGPT or Claude has itself become bait, regardless of whether the real vendor is involved at all."
+  },
+  "sources": [
+   {
+    "name": "Infosecurity Magazine",
+    "url": "https://www.infosecurity-magazine.com/news/attackers-hide-malware-behind/"
    }
   ]
  },
@@ -306,7 +380,9 @@
  {
   "slug": "2026-10-26-new-compaction-smuggling-technique-bypassed-openai-s-defenses-against",
   "urls": [
-   "https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals"
+   "https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals",
+   "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html",
+   "https://www.infosecurity-magazine.com/news/openai-compaction-flaw-ai"
   ],
   "first_seen": "2026-10-27",
   "date": "2026-10-26",
@@ -323,6 +399,14 @@
    {
     "name": "SecurityWeek",
     "url": "https://www.securityweek.com/stolen-ai-reasoning-could-help-china-build-cheaper-rivals/"
+   },
+   {
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html"
+   },
+   {
+    "name": "Infosecurity Magazine",
+    "url": "https://www.infosecurity-magazine.com/news/openai-compaction-flaw-ai/"
    }
   ]
  },
