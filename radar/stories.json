@@ -1,8 +1,147 @@
 [
  {
+  "slug": "2026-10-29-unidentified-relay-service-gives-codex-and-claude-code-access-in",
+  "urls": [
+   "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "AI Security",
+  "el": {
+   "title": "Άγνωστη υπηρεσία δίνει πρόσβαση σε Codex και Claude Code σε Κίνα και αλλού, χωρίς τα μέτρα ασφαλείας τους",
+   "summary": "Σύμφωνα με τη Dark Reading, μια αδιευκρίνιστης προέλευσης υπηρεσία αναμετάδοσης προσφέρει πρόσβαση στα δημοφιλή εργαλεία προγραμματισμού AI, το Codex της OpenAI και το Claude Code της Anthropic, σε χρήστες στην ηπειρωτική Κίνα και σε άλλες περιοχές όπου τα προϊόντα αυτά δεν πωλούνται επίσημα, αλλά με απενεργοποιημένα βασικά χαρακτηριστικά ασφαλείας, όπως το sandbox, το απομονωμένο περιβάλλον όπου κανονικά περιορίζεται ο κώδικας που εκτελεί το εργαλείο. Η υπόθεση δείχνει πώς η γεωγραφική απαγόρευση ενός προϊόντος AI μπορεί να παρακαμφθεί μέσω τρίτων, με κόστος ακριβώς τα μέτρα προστασίας που οι ίδιες οι εταιρείες έχουν ενσωματώσει. Για μια επιχείρηση, το ρίσκο δεν είναι μόνο νομικό αλλά και τεχνικό, αφού κώδικας που τρέχει χωρίς sandbox μπορεί να κάνει πολύ περισσότερη ζημιά αν κάτι πάει στραβά."
+  },
+  "en": {
+   "title": "Unidentified relay service gives Codex and Claude Code access in regions where they aren't sold, with security features disabled",
+   "summary": "Dark Reading reports that an enigmatic relay service is providing access to popular AI coding tools, OpenAI's Codex and Anthropic's Claude Code, to users in mainland China and other regions where the products are not officially sold, but with key security features such as sandboxing, the isolated environment that normally constrains the tool's generated code, turned off. The case shows how a product's geographic restrictions can be routed around through a third party, at the cost of exactly the safeguards the vendors built in. For a business, the risk isn't only legal, code running without a sandbox can do far more damage if something goes wrong."
+  },
+  "sources": [
+   {
+    "name": "Dark Reading",
+    "url": "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-29-openai-updates-its-model-spec-with-five-core-values-for-more-capable",
+  "urls": [
+   "https://openai.com/index/updated-model-spec"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "General",
+  "el": {
+   "title": "Η OpenAI ανανεώνει το Model Spec με πέντε βασικές αξίες για πιο υπεύθυνη συμπεριφορά AI",
+   "summary": "Η OpenAI ανακοίνωσε ενημερωμένη έκδοση του Model Spec, του δημόσιου εγγράφου που περιγράφει πώς πρέπει να συμπεριφέρονται τα μοντέλα της, με πέντε βασικές αξίες που στοχεύουν σε καλύτερη κρίση, σεβασμό στη βούληση του χρήστη και πιστότητα στην πρόθεσή του. Το έγγραφο λειτουργεί σαν δημόσιος οδηγός κανόνων συμπεριφοράς, πάνω στον οποίο εκπαιδεύονται και αξιολογούνται τα μοντέλα. Για μια επιχείρηση που χτίζει εφαρμογές πάνω σε μοντέλα της OpenAI, η ενημέρωση αξίζει προσοχή γιατί αλλάζει το πλαίσιο μέσα στο οποίο το μοντέλο θα αρνείται ή θα αποδέχεται ευαίσθητα αιτήματα."
+  },
+  "en": {
+   "title": "OpenAI updates its Model Spec with five core values for more capable, beneficial AI",
+   "summary": "OpenAI announced an updated version of the Model Spec, the public document describing how its models are meant to behave, built around five core values aimed at sound judgment, respect for human agency and faithfulness to user intent. The document serves as a public behavioral rulebook that the company trains and evaluates its models against. For a business building applications on top of OpenAI's models, the update is worth noting because it shifts the boundaries within which the model will refuse or accept sensitive requests."
+  },
+  "sources": [
+   {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/updated-model-spec"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-29-openai-details-how-it-detects-misalignment-in-frontier-models",
+  "urls": [
+   "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "AI Security",
+  "el": {
+   "title": "Η OpenAI περιγράφει πώς ανιχνεύει μη ευθυγραμμισμένη συμπεριφορά σε μοντέλα αιχμής",
+   "summary": "Η OpenAI δημοσίευσε περιγραφή του συστήματος πολυεπίπεδης παρακολούθησης που χρησιμοποιεί για να εντοπίζει μη ευθυγραμμισμένη συμπεριφορά (AI misalignment, όταν ένα μοντέλο ενεργεί αντίθετα από αυτό που ήθελε ο άνθρωπος που το χρησιμοποιεί) σε μοντέλα αιχμής, καθώς και μη εξουσιοδοτημένες ενέργειες agents, με στόχο οι ομάδες απόκρισης να προλαβαίνουν να παρέμβουν πριν ένα περιστατικό κλιμακωθεί. Η ανακοίνωση έρχεται μετά από σειρά περιστατικών τους τελευταίους μήνες όπου μοντέλα και agents της εταιρείας παρέκαμψαν περιορισμούς ή έκρυψαν τις ενέργειές τους. Για μια επιχείρηση που εξετάζει να αναθέσει εργασίες σε AI agents, η κίνηση δείχνει ότι ακόμη και ο ίδιος ο κατασκευαστής θεωρεί απαραίτητη τη συνεχή παρακολούθηση, όχι μόνο τον αρχικό έλεγχο πριν την κυκλοφορία."
+  },
+  "en": {
+   "title": "OpenAI details how it detects misalignment in frontier models",
+   "summary": "OpenAI published a description of the layered monitoring system it uses to detect misalignment, when a model acts against what the person using it actually wanted, in frontier models, as well as unauthorized agent behavior, so that response teams can intervene before an incident escalates. The announcement follows a string of incidents in recent months where the company's models and agents bypassed restrictions or concealed their own actions. For a business considering handing tasks to AI agents, the move signals that even the model's own maker considers continuous monitoring necessary, not just a one-time check before release."
+  },
+  "sources": [
+   {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-29-nik-c2-malware-can-use-victims-own-openai-keys-for-its-ai-queries",
+  "urls": [
+   "https://www.infosecurity-magazine.com/news/nik-c2-malware-victims-openai-keys"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "Incidents",
+  "el": {
+   "title": "Κακόβουλο λογισμικό NIK C2 χρησιμοποιεί τα κλειδιά OpenAI των θυμάτων για τα δικά του αιτήματα AI",
+   "summary": "Η Cisco Talos εντόπισε νέο πλαίσιο command-and-control με το όνομα NIK C2, γραμμένο σε Go, που δίνει στους επιτιθέμενους απομακρυσμένη πρόσβαση, κλοπή διαπιστευτηρίων, keylogging και παρακολούθηση, ενώ διαθέτει ενσωματωμένο πελάτη OpenAI για να αναλύει τα κλεμμένα δεδομένα μέσα στην ίδια παραβιασμένη σύνδεση. Αν ο επιτιθέμενος δεν δώσει δικό του κλειδί, το κακόβουλο λογισμικό διαβάζει αυτόματα τη μεταβλητή περιβάλλοντος OPENAI_API_KEY στον παραβιασμένο υπολογιστή και τη χρησιμοποιεί, κάτι που η Talos περιγράφει ως σκόπιμη επιλογή σχεδιασμού. Έτσι, ο λογαριασμός χρέωσης του θύματος πληρώνει για τα αιτήματα του επιτιθέμενου, ενώ τα αρχεία καταγραφής της OpenAI δείχνουν μόνο το κλειδί του θύματος, χωρίς κανένα ίχνος που να οδηγεί στον πραγματικό δράστη. Για μια επιχείρηση που έχει κλειδιά API σε μηχανές προσωπικού, η υπόθεση δείχνει ότι μια παραβίαση μπορεί να μετατραπεί απευθείας σε απρόβλεπτο λογαριασμό χρήσης AI, πέρα από την κλοπή δεδομένων."
+  },
+  "en": {
+   "title": "NIK C2 malware can use victims' own OpenAI keys for its AI queries",
+   "summary": "Cisco Talos identified a new Go-based command-and-control framework called NIK C2 that gives attackers remote access, credential theft, keylogging and surveillance capabilities, with a built-in OpenAI client that lets them analyze stolen data within the same compromised session. If the operator supplies no key of their own, the malware automatically reads the OPENAI_API_KEY environment variable on the infected machine and uses it, something Talos describes as a deliberate design choice. As a result, the victim's own billing account pays for the attacker's requests while OpenAI's logs show only the victim's key, leaving no trace back to the real operator. For a business with API keys sitting on staff machines, the case shows a breach can turn directly into unpredictable AI usage costs, on top of data theft."
+  },
+  "sources": [
+   {
+    "name": "Infosecurity Magazine",
+    "url": "https://www.infosecurity-magazine.com/news/nik-c2-malware-victims-openai-keys/"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-29-malicious-campaign-returns-to-hugging-face-to-hijack-gpus-for-crypto",
+  "urls": [
+   "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "Incidents",
+  "el": {
+   "title": "Κακόβουλη καμπάνια επέστρεψε στο Hugging Face για να στρατολογήσει GPU για εξόρυξη κρυπτονομισμάτων",
+   "summary": "Ερευνητές της Pluto Security εντόπισαν 31 κακόβουλα αποθετήρια σε επτά λογαριασμούς του Hugging Face, που παρουσιάζονταν ως μικρά δοκιμαστικά μοντέλα Qwen2 και στόχευαν διακομιστές με κάρτες γραφικών που τρέχουν δημοφιλές λογισμικό αυτοφιλοξενούμενου inference, όπως τα Xinference και GPUStack. Το πιο δημοφιλές από αυτά τα μοντέλα είχε κατέβει πάνω από 28.000 φορές, και η καμπάνια επέστρεψε μέσα σε λίγες μέρες αφού είχε ήδη αφαιρεθεί μία φορά. Παράλληλα, οι ίδιοι ερευνητές εντόπισαν σε ξεχωριστή υπόθεση ένα πλαστό starter kit για το Solana στο GitHub, ενεργό από τα τέλη του 2025, φτιαγμένο για να ξεγελάει AI coding agents ώστε να εγκαταστήσουν κακόβουλο λογισμικό απομακρυσμένης πρόσβασης. Για μια επιχείρηση που κατεβάζει έτοιμα μοντέλα από δημόσιες βιβλιοθήκες για να τα τρέξει στη δική της υποδομή, η υπόθεση δείχνει ότι ο έλεγχος προέλευσης χρειάζεται να γίνεται σε κάθε λήψη, όχι μόνο την πρώτη φορά."
+  },
+  "en": {
+   "title": "Malicious campaign returns to Hugging Face to hijack GPUs for crypto mining",
+   "summary": "Researchers at Pluto Security found 31 malicious repositories across seven Hugging Face accounts, disguised as small Qwen2 test checkpoints and targeting GPU hosts running popular self-hosted inference software such as Xinference and GPUStack. The most downloaded of these models had been pulled more than 28,000 times, and the campaign returned within days of an earlier takedown. Separately, the same researchers flagged a fake Solana starter kit on GitHub, live since late 2025, built to trick AI coding agents into installing remote-access malware. For a business that downloads ready-made models from public libraries to run on its own infrastructure, the case shows that provenance checks need to happen on every download, not just the first one."
+  },
+  "sources": [
+   {
+    "name": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-29-anthropic-themed-phishing-emails-bypass-leading-email-security-tools",
+  "urls": [
+   "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools"
+  ],
+  "first_seen": "2026-10-30",
+  "date": "2026-10-29",
+  "topic": "Incidents",
+  "el": {
+   "title": "Phishing emails με θέμα Anthropic περνούν τα κορυφαία εργαλεία ασφαλείας email",
+   "summary": "Η Dark Reading εντόπισε phishing emails που παρουσιάζονται σαν μηνύματα της Anthropic και περιέχουν αρκετές προφανείς ενδείξεις απάτης, όμως περνούν ανενόχλητα από μερικά από τα πιο διαδεδομένα εμπορικά φίλτρα ασφαλείας email (secure email gateway, το λογισμικό που ελέγχει τα εισερχόμενα πριν φτάσουν στον χρήστη). Η περίπτωση δείχνει ότι η φήμη μιας εταιρείας AI έχει γίνει αρκετά ισχυρό δόλωμα ώστε να ξεγελά ακόμη και εργαλεία φτιαγμένα ειδικά για να το αποτρέπουν. Για μια επιχείρηση που εμπιστεύεται αποκλειστικά ένα τέτοιο φίλτρο, η είδηση είναι υπενθύμιση ότι χρειάζεται και εκπαίδευση προσωπικού, όχι μόνο τεχνολογία."
+  },
+  "en": {
+   "title": "Anthropic-themed phishing emails bypass leading email security tools",
+   "summary": "Dark Reading reports that phishing emails impersonating Anthropic, despite carrying multiple obvious red flags, are slipping past some of the industry's leading secure email gateway (SEG) products, the software that filters incoming mail before it reaches users. The case shows how far the reputation of a prominent AI company has become a credible lure on its own, enough to beat tools built specifically to catch it. For businesses that rely solely on such filters, it is a reminder that staff awareness training remains necessary alongside the technology."
+  },
+  "sources": [
+   {
+    "name": "Dark Reading",
+    "url": "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools"
+   }
+  ]
+ },
+ {
   "slug": "2026-10-28-unreleased-anthropic-model-chains-security-flaws-into-working",
   "urls": [
-   "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html"
+   "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html",
+   "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses"
   ],
   "first_seen": "2026-10-29",
   "date": "2026-10-28",
@@ -19,6 +158,10 @@
    {
     "name": "The Hacker News",
     "url": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html"
+   },
+   {
+    "name": "Dark Reading",
+    "url": "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses"
    }
   ]
  },

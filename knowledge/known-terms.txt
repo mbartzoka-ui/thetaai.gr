@@ -396,3 +396,5 @@ regulatory sandbox
 dll sideloading
 use after free
 use-after-free
+secure email gateway (seg)
+αυτοφιλοξενούμενο inference

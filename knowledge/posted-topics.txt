@@ -96,3 +96,4 @@
 2026-10-27 | qwen-beijing-open-weight-trust-gap | Η Cohere εντοπίζει μοντέλο της Alibaba να προσπαθεί να στείλει αρχείο στο Πεκίνο, η υπόσχεση των ανοιχτών βαρών δοκιμάζεται
 2026-10-28 | ai-trust-boundaries-health-banking-seizure-boa | Γονείς μηνύουν την OpenAI για τον θάνατο της κόρης τους μετά από ιατρική συμβουλή ChatGPT, η Bank of America προειδοποιεί να μη δίνεις τον τραπεζικό κωδικό σε AI βοηθό
 2026-10-29 | yoba-fake-chatgpt-claude-signed-malware | Check Point αποκαλύπτει εκστρατεία Yoba, πλαστές εφαρμογές ChatGPT και Claude με γνήσια υπογεγραμμένα αρχεία κρύβουν κακόβουλο λογισμικό
+2026-10-30 | ai-relay-sandbox-bypass-shadow-ai-parallel | Άγνωστη υπηρεσία δίνει πρόσβαση σε Codex και Claude Code χωρίς sandbox, παραλληλισμός με shadow AI στις επιχειρήσεις
