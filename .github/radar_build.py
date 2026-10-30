@@ -93,8 +93,24 @@ T = {
 TAGLINE = {"el": "Θ όπως θωράκιση", "en": "Θ as in shielding"}
 OLD_TAGLINE = {"el": "Θ ως ασπίδα", "en": "Θ as a shield"}
 
+# CTA στο πρώτο viewport (30/10/2026). Ο μέσος χρόνος παραμονής στο /radar
+# είναι ~7s: το CTA στο τέλος της λίστας δεν το βλέπει σχεδόν κανείς. Μία
+# γραμμή κάτω από τον υπότιτλο, πριν τη λίστα. Το booking_click το στέλνει
+# ήδη ο γενικός click handler της σελίδας για κάθε link προς zohobookings.
+BOOKING_URL = "https://thetaai.zohobookings.eu/265335000000040045"
+CTA_TOP = {
+    "el": "Δωρεάν 45λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σας απέναντι στον AI Act και το ISO 42001 →",
+    "en": "Free 45-minute mapping session: where your business stands on the AI Act and ISO 42001 →",
+}
+CTA_CSS = (".cta-top{margin-top:16px;}"
+           ".cta-top a{display:inline-block;background:#fff;border:0.5px solid var(--line-d);"
+           "border-left:3px solid var(--blue);border-radius:8px;padding:11px 16px;"
+           "font-size:14.5px;font-weight:600;line-height:1.45;color:var(--deep);}"
+           ".cta-top a:hover{border-color:var(--blue);text-decoration:none;}")
+
 STATIC_START, STATIC_END = "<!-- RADAR-STATIC:START -->", "<!-- RADAR-STATIC:END -->"
 ARCH_START, ARCH_END = "<!-- RADAR-ARCHIVE-LINK:START -->", "<!-- RADAR-ARCHIVE-LINK:END -->"
+CTA_START, CTA_END = "<!-- RADAR-CTA-TOP:START -->", "<!-- RADAR-CTA-TOP:END -->"
 
 
 # ---------------------------------------------------------------- helpers
@@ -476,6 +492,15 @@ def patch_index(text, records, items, lang):
             f'{t["all_stories"]} → {t["archive"]}</a></p>{ARCH_END}')
     text = re.sub(r"\n?" + re.escape(ARCH_START) + r".*?" + re.escape(ARCH_END), "", text, flags=re.S)
     text = text.replace(f"{STATIC_END}</main>", f"{STATIC_END}</main>\n{link}", 1)
+
+    # 2b. Booking CTA right under the intro subtitle, above the list.
+    cta = (f'{CTA_START}<style>{CTA_CSS}</style><p class="cta-top">'
+           f'<a href="{BOOKING_URL}" target="_blank" rel="noopener">{CTA_TOP[lang]}</a></p>{CTA_END}')
+    text = re.sub(r"\n?" + re.escape(CTA_START) + r".*?" + re.escape(CTA_END), "", text, flags=re.S)
+    text, n = re.subn(r'(<section class="intro">.*?<p class="sub">.*?</p>)',
+                      lambda m: m.group(1) + "\n" + cta, text, count=1, flags=re.S)
+    if n != 1:
+        raise RuntimeError(f"{lang}: intro subtitle not found for the CTA")
 
     # 3. Story URLs for render(): window.RADAR_SLUGS maps a source URL to
     #    its story page, so the JavaScript view links to it too.
