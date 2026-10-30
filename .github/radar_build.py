@@ -87,6 +87,12 @@ T = {
     },
 }
 
+# Το tagline του site (30/10/2026). Ο radar έγραφε «Θ ως ασπίδα», το υπόλοιπο
+# site «Θ όπως θωράκιση». Ο build το διορθώνει στη σελίδα του radar, και από
+# εκεί περνά σε κάθε σελίδα ιστορίας και αρχείου μέσω του chrome().
+TAGLINE = {"el": "Θ όπως θωράκιση", "en": "Θ as in shielding"}
+OLD_TAGLINE = {"el": "Θ ως ασπίδα", "en": "Θ as a shield"}
+
 STATIC_START, STATIC_END = "<!-- RADAR-STATIC:START -->", "<!-- RADAR-STATIC:END -->"
 ARCH_START, ARCH_END = "<!-- RADAR-ARCHIVE-LINK:START -->", "<!-- RADAR-ARCHIVE-LINK:END -->"
 
@@ -540,9 +546,14 @@ def write_if_changed(path, content):
     return True
 
 
+def fix_tagline(text, lang):
+    return text.replace(OLD_TAGLINE[lang], TAGLINE[lang])
+
+
 def main():
     el_text, el_items, generated = read_items(PAGES["el"])
     en_text, en_items, _ = read_items(PAGES["en"])
+    el_text, en_text = fix_tagline(el_text, "el"), fix_tagline(en_text, "en")
     if len(el_items) != len(en_items):
         raise RuntimeError("GR and EN pages have different item counts")
     registry = json.loads(REGISTRY.read_text(encoding="utf-8")) if REGISTRY.exists() else []
