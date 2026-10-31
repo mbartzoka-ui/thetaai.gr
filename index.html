@@ -279,7 +279,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     var t = e.target;
     var a = t.closest ? t.closest('a') : null;
     if (a && a.href) {
-      if (a.href.indexOf('zohobookings') > -1) { gtag('event', 'booking_click', { page: path }); return; }
+      if (a.href.indexOf('zohobookings') > -1 || a.href.indexOf('calendar.app.google') > -1) { gtag('event', 'booking_click', { page: path }); return; }
       if (a.href.indexOf('mailto:') === 0) { gtag('event', 'contact_click', { page: path }); return; }
       if (a.hasAttribute('download') || /\.pdf(\?|#|$)/i.test(a.href)) { gtag('event', 'guide_download', { file: a.getAttribute('href') }); return; }
     }
@@ -320,7 +320,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     <h1>Βάλατε AI στην επιχείρησή σας. Ποιος ευθύνεται όταν κάνει λάθος;</h1>
     <p>Ελέγχουμε τι υπογράψατε με τον πάροχο του AI, τι απαιτεί ο EU AI Act από εσάς, και πώς θωρακίζεστε — πριν το μάθετε με τον δύσκολο τρόπο.</p>
     <div class="hero-cta">
-      <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn">Συνεδρία χαρτογράφησης 45&#8242;</a>
+      <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn">Συνεδρία χαρτογράφησης 45&#8242;</a>
       <a href="#method" class="btn btn-ghost">Πώς δουλεύουμε →</a>
       <a href="#guide" class="btn btn-ghost">Δωρεάν οδηγός EU AI Act</a>
     </div>
@@ -520,7 +520,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
           <li>Τα 5 σημαντικότερα κενά, με προτεραιότητα</li>
           <li>60&#8242; συνάντηση αποτελεσμάτων</li>
         </ul>
-        <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn btn-ghost">Ξεκινήστε εδώ</a>
+        <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn btn-ghost">Ξεκινήστε εδώ</a>
       </div>
       <div class="tier featured">
         <div class="badge">Η πλήρης εικόνα</div>
@@ -535,7 +535,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
           <li>Πλάνο αποκατάστασης με εκτίμηση κόστους</li>
           <li>Executive summary για τη διοίκηση</li>
         </ul>
-        <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn">Ζητήστε διαθεσιμότητα</a>
+        <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn">Ζητήστε διαθεσιμότητα</a>
       </div>
       <div class="tier">
         <h3>Σύστημα Διαχείρισης AI</h3>
@@ -550,7 +550,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
           <li>ISO/IEC 27001 στο ίδιο αντικείμενο</li>
         </ul>
         <p style="margin:0 0 10px"><a href="/iso-42001/">Τι περιλαμβάνει το ISO 42001 →</a></p>
-        <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn btn-ghost">Ας μιλήσουμε</a>
+        <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn btn-ghost">Ας μιλήσουμε</a>
       </div>
       <div class="tier">
         <h3>Συνεχής Εποπτεία</h3>
@@ -563,7 +563,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
           <li>Έλεγχος κάθε νέου AI εργαλείου πριν μπει σε χρήση</li>
           <li>Προτεραιότητα σε ερωτήσεις</li>
         </ul>
-        <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn btn-ghost">Ας μιλήσουμε</a>
+        <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn btn-ghost">Ας μιλήσουμε</a>
       </div>
       <div class="tier">
         <h3>AI Literacy Workshop</h3>
@@ -575,7 +575,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
           <li>Πρακτικά σενάρια από τον δικό σας κλάδο</li>
           <li>Βεβαίωση εκπαίδευσης για τον φάκελο συμμόρφωσης</li>
         </ul>
-        <a href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener" class="btn btn-ghost">Κλείστε ημερομηνία</a>
+        <a href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener" class="btn btn-ghost">Κλείστε ημερομηνία</a>
       </div>
     </div>
     <p class="fine">* Τα συμβατικά ευρήματα παραδίδονται ως τεχνική ανάλυση κινδύνου και επικυρώνονται από δικηγόρο πριν από οποιαδήποτε νομική χρήση. Η θeta ai παρέχει συμβουλευτικές — όχι νομικές — υπηρεσίες.</p>
@@ -736,7 +736,7 @@ h1,h2,.ta-guide h2{font-weight:700 !important;letter-spacing:-.02em;}
     <h2>Συνεδρία χαρτογράφησης: 45 λεπτά, δωρεάν.</h2>
     <p class="sub">Περιγράψτε μας τα συστήματα AI που χρησιμοποιείτε ή σχεδιάζετε. Θα αποτυπώσουμε μια πρώτη εικόνα των υποχρεώσεων και της έκθεσής σας — και θα σας πούμε ευθέως αν χρειάζεστε περαιτέρω έλεγχο.</p>
     <div class="hero-cta">
-      <a class="btn" href="https://thetaai.zohobookings.eu/265335000000040045" target="_blank" rel="noopener">Δείτε διαθέσιμες ώρες →</a>
+      <a class="btn" href="https://calendar.app.google/6C5eXMiNmEHWMqxN9" target="_blank" rel="noopener">Δείτε διαθέσιμες ώρες →</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/company/%CE%B8eta-ai/" target="_blank" rel="noopener">LinkedIn εταιρείας</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/mariabartzoka/" target="_blank" rel="noopener">Προσωπικό LinkedIn</a>
     </div>

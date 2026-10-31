@@ -96,8 +96,8 @@ OLD_TAGLINE = {"el": "Θ ως ασπίδα", "en": "Θ as a shield"}
 # CTA στο πρώτο viewport (30/10/2026). Ο μέσος χρόνος παραμονής στο /radar
 # είναι ~7s: το CTA στο τέλος της λίστας δεν το βλέπει σχεδόν κανείς. Μία
 # γραμμή κάτω από τον υπότιτλο, πριν τη λίστα. Το booking_click το στέλνει
-# ήδη ο γενικός click handler της σελίδας για κάθε link προς zohobookings.
-BOOKING_URL = "https://thetaai.zohobookings.eu/265335000000040045"
+# ήδη ο γενικός click handler της σελίδας για κάθε link προς το Google Calendar booking (calendar.app.google).
+BOOKING_URL = "https://calendar.app.google/6C5eXMiNmEHWMqxN9"
 CTA_TOP = {
     "el": "Δωρεάν 45λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σας απέναντι στον AI Act και το ISO 42001 →",
     "en": "Free 45-minute mapping session: where your business stands on the AI Act and ISO 42001 →",
