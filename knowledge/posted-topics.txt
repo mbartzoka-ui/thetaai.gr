@@ -97,3 +97,4 @@
 2026-10-28 | ai-trust-boundaries-health-banking-seizure-boa | Γονείς μηνύουν την OpenAI για τον θάνατο της κόρης τους μετά από ιατρική συμβουλή ChatGPT, η Bank of America προειδοποιεί να μη δίνεις τον τραπεζικό κωδικό σε AI βοηθό
 2026-10-29 | yoba-fake-chatgpt-claude-signed-malware | Check Point αποκαλύπτει εκστρατεία Yoba, πλαστές εφαρμογές ChatGPT και Claude με γνήσια υπογεγραμμένα αρχεία κρύβουν κακόβουλο λογισμικό
 2026-10-30 | ai-relay-sandbox-bypass-shadow-ai-parallel | Άγνωστη υπηρεσία δίνει πρόσβαση σε Codex και Claude Code χωρίς sandbox, παραλληλισμός με shadow AI στις επιχειρήσεις
+2026-10-31 | cursor-claude-code-trojan-extension-supply-chain | Δούρειος ίππος στην επίσημη επέκταση Claude Code για το Cursor, κερκόπορτα SSH μέσα από επίσημο marketplace

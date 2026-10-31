@@ -1,5 +1,181 @@
 [
  {
+  "slug": "2026-10-30-us-justice-department-seeks-privacy-protections-before-character-ai",
+  "urls": [
+   "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "Incidents",
+  "el": {
+   "title": "Το αμερικανικό υπουργείο Δικαιοσύνης ζητά προστασία απορρήτου πριν πουληθούν οι συνομιλίες χρηστών της Character.AI",
+   "summary": "Καθώς η Character.AI περνά από διαδικασία πτώχευσης, το αμερικανικό υπουργείο Δικαιοσύνης ζητά από το δικαστήριο να ορίσει ανεξάρτητο «ombudsman» απορρήτου καταναλωτών που θα συμβουλεύει πώς πρέπει να ρυθμιστεί η πιθανή πώληση δεδομένων εκατομμυρίων χρηστών. Η πλατφόρμα έχει 12 εκατομμύρια ενεργούς μηνιαίους χρήστες που περνούν κατά μέσο όρο δύο ώρες την ημέρα σε συνομιλίες με chatbot χαρακτήρες, συχνά ευαίσθητου περιεχομένου και μερικές φορές με ανήλικους. Η δικαστική κατάθεση του υπουργείου σημειώνει ότι η πολιτική απορρήτου της εταιρείας είναι «ασαφής» και αφήνει ανοιχτό το ενδεχόμενο πώλησης τουλάχιστον μέρους του ιστορικού συνομιλιών, παρότι το ίδιο το chatbot διαβεβαιώνει τους χρήστες πως δεν θα μοιραστεί τίποτα χωρίς ρητή άδειά τους. Ο δικαστής έχει την εξουσία να μπλοκάρει την πώληση αυτών των δεδομένων. Για κάθε επιχείρηση που αναρωτιέται τι θα συμβεί με τα δεδομένα των πελατών της αν ο προμηθευτής AI που εμπιστεύεται πτωχεύσει, η υπόθεση δείχνει ότι η πολιτική απορρήτου δεν έχει καμία αξία αν δεν την υπερασπιστεί κανείς τη στιγμή που μετράει περισσότερο."
+  },
+  "en": {
+   "title": "US Justice Department seeks privacy protections before Character.AI chats can be sold",
+   "summary": "As Character.AI goes through bankruptcy, the US Department of Justice is asking the court to appoint an independent consumer privacy ombudsman to advise on how any sale of millions of users' data should be regulated. The platform has 12 million monthly active users who spend an average of two hours a day in conversations with chatbot characters, often of a sensitive nature and sometimes involving minors. The DOJ's court filing notes that the company's privacy policy is \"ambiguous\" and leaves open the possibility of selling at least part of users' chat histories, even though the chatbot itself assures users it will not share anything without their explicit permission. The judge has the power to block the sale of this data. For any business wondering what happens to its customers' data if the AI vendor it relies on goes bankrupt, the case shows that a privacy policy is worth nothing unless someone defends it at the moment it matters most."
+  },
+  "sources": [
+   {
+    "name": "The Record",
+    "url": "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-openai-strengthens-violence-prevention-in-chatgpt-commits-to-public",
+  "urls": [
+   "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "AI Security",
+  "el": {
+   "title": "Η OpenAI ενισχύει την πρόληψη βίας στο ChatGPT και δεσμεύεται σε δημόσια αναφορά περιστατικών ασφαλείας",
+   "summary": "Η OpenAI δημοσίευσε έκθεση κοινοτικής ασφάλειας και ανακοίνωσε νέες προστασίες για εφήβους, με έμφαση στην πρόληψη βίας μέσα στο ChatGPT. Η εταιρεία περιγράφει διευρυμένες δικλείδες ασφαλείας, παρεμβάσεις σε πιο πρώιμο στάδιο μιας συνομιλίας που δείχνει ενδείξεις κινδύνου, και νέα δέσμευση για δημόσια αναφορά περιστατικών ασφαλείας, κάτι που μέχρι τώρα δεν αποτελούσε πάγια πρακτική του κλάδου. Η κίνηση έρχεται μέσα σε μήνα γεμάτο δικαστικές αγωγές και ανεξάρτητες έρευνες που αμφισβητούν πόσο αποτελεσματικά προστατεύουν τα συστήματα ασφαλείας των chatbot τους νεότερους χρήστες. Για μια επιχείρηση που αξιολογεί προμηθευτή AI για προϊόντα που θα φτάσουν σε νεότερο κοινό, η δέσμευση για δημόσια αναφορά δίνει έναν πρώτο, μετρήσιμο δείκτη για να ελέγχει τις υποσχέσεις του προμηθευτή στην πράξη, αντί να τις εμπιστεύεται άκριτα."
+  },
+  "en": {
+   "title": "OpenAI strengthens violence prevention in ChatGPT, commits to public safety incident reporting",
+   "summary": "OpenAI published a community safety report and announced new protections for teens, with an emphasis on violence prevention inside ChatGPT. The company describes expanded safeguards, earlier interventions when a conversation shows signs of risk, and a new commitment to public safety reporting, something that has not so far been standard practice in the industry. The move comes in a month full of lawsuits and independent research questioning how effectively chatbot safety systems protect younger users. For a business evaluating an AI vendor for products that will reach a younger audience, the public-reporting commitment offers a first, measurable way to check a vendor's promises in practice instead of taking them on faith."
+  },
+  "sources": [
+   {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-openai-google-microsoft-and-anthropic-adopt-a-shared-robots-txt",
+  "urls": [
+   "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+   "https://openai.com/index/helping-websites-express-ai-training-preferences"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "General",
+  "el": {
+   "title": "OpenAI, Google, Microsoft και Anthropic υιοθετούν κοινό σήμα στο robots.txt για τις προτιμήσεις εκπαίδευσης AI",
+   "summary": "Τέσσερις από τις μεγαλύτερες εταιρείες AI, η OpenAI, η Google, η Microsoft και η Anthropic, ανακοίνωσαν ότι θα υιοθετήσουν κοινό πρότυπο που θα επιτρέπει σε εκδότες ιστοσελίδων να εκφράζουν τις προτιμήσεις τους για εκπαίδευση AI μία φορά, αντί να ρυθμίζουν κάθε εταιρεία ξεχωριστά. Το σήμα, που προτείνει ο Kevin Kelley, τεχνικός υπεύθυνος προτύπων στην Anthropic, μέσα από το Internet Engineering Task Force (IETF), θα ζει μέσα στο γνωστό αρχείο robots.txt κάθε ιστοσελίδας, με τη μορφή ενός «policy token». Οι τέσσερις εταιρείες δεσμεύονται να εμποδίζουν τους crawlers τους να επισκέπτονται μια σελίδα αν συναντήσουν αυτό το σήμα, ενώ η Microsoft προσθέτει ξεχωριστό έλεγχο ανάμεσα σε εκπαίδευση μοντέλου και «AI grounding», τη χρήση περιεχομένου ως επαληθευμένης πηγής για να μειωθούν οι παραισθήσεις των μοντέλων. Η Meta εξέφρασε υποστήριξη στην ιδέα χωρίς να δεσμευτεί ότι θα τη σεβαστεί. Η Anthropic έχει ήδη υιοθετήσει το σήμα, η Google και η Microsoft το τοποθετούν για του χρόνου και η OpenAI «μέσα στους επόμενους μήνες». Για κάθε επιχείρηση ή δημιουργό περιεχομένου στην Ελλάδα, η κίνηση σημαίνει ότι για πρώτη φορά θα υπάρχει τρόπος να πεις «όχι» σε όλους τους μεγάλους παρόχους AI μαζί, αντί να κυνηγάς ξεχωριστή ρύθμιση σε κάθε πάροχο."
+  },
+  "en": {
+   "title": "OpenAI, Google, Microsoft and Anthropic adopt a shared robots.txt signal for AI training preferences",
+   "summary": "Four of the biggest AI companies, OpenAI, Google, Microsoft and Anthropic, announced they will adopt a shared standard letting website publishers express their AI training preferences once, instead of configuring each company separately. The signal, proposed by Kevin Kelley, a technical lead for standards at Anthropic, through the Internet Engineering Task Force (IETF), will live inside the familiar robots.txt file of a website, in the form of a \"policy token\". The four companies commit to blocking their crawlers from a page if they encounter this signal, while Microsoft adds a separate control between model training and \"AI grounding\", the use of content as a verified source to reduce model hallucinations. Meta voiced support for the idea without committing to honor it. Anthropic has already adopted the signal, Google and Microsoft plan to support it next year, and OpenAI says \"in the coming months\". For any business or content creator in Greece, the move means that for the first time there will be a way to say \"no\" to all major AI providers at once, instead of chasing a separate setting with each one."
+  },
+  "sources": [
+   {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
+   },
+   {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/helping-websites-express-ai-training-preferences"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-official-claude-code-extension-on-cursor-trojanized-with-persistent",
+  "urls": [
+   "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor",
+   "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "AI Security",
+  "el": {
+   "title": "Δούρειος ίππος στην επίσημη επέκταση Claude Code για το Cursor, εγκατέστησε κερκόπορτες SSH",
+   "summary": "Για περίπου έντεκα ώρες στις 29 Οκτωβρίου, μια παραποιημένη έκδοση της επίσημης επέκτασης Claude Code της Anthropic κυκλοφόρησε μέσα από το Marketplace του Cursor, του AI editor κώδικα που βασίζεται στο Visual Studio Code, εκθέτοντας έως και 5.000 προγραμματιστές. Το Cursor ανέφερε ότι η Anthropic δεν έφτιαξε την κακόβουλη έκδοση, χωρίς όμως να εξηγήσει πώς οι επιτιθέμενοι κατάφεραν να διανείμουν το πακέτο με το όνομά της. Ερευνητές των Phorion και OpenSourceMalware εντόπισαν κώδικα JavaScript στην αρχή του αρχείου extension.js που συνέλεγε στοιχεία χρήστη και IP, πρόσθετε κλειδί SSH ελεγχόμενο από τον επιτιθέμενο και προσπαθούσε να ανοίξει μόνιμη ανάστροφη σήραγγα, με μηχανισμούς επιμονής τόσο σε macOS όσο και σε Windows. Λάθη στον κώδικα της κερκόπορτας φαίνεται να εμπόδισαν τελικά τους επιτιθέμενους να αποκτήσουν πραγματική απομακρυσμένη πρόσβαση στα περισσότερα μηχανήματα. Για επιχειρήσεις που εμπιστεύονται επεκτάσεις AI μέσα στο περιβάλλον ανάπτυξης λογισμικού τους, το περιστατικό δείχνει ότι ακόμη και ένα «επίσημο» όνομα σε ένα marketplace δεν εγγυάται τίποτα χωρίς ανεξάρτητη επαλήθευση υπογραφής."
+  },
+  "en": {
+   "title": "Official Claude Code extension on Cursor trojanized with persistent SSH backdoor",
+   "summary": "For roughly eleven hours on October 29, a tampered version of Anthropic's official Claude Code extension was distributed through the Cursor Marketplace, the AI code editor built on Visual Studio Code, exposing up to 5,000 developers. Cursor said Anthropic did not create the malicious build but did not explain how attackers managed to distribute a package under its name. Researchers at Phorion and OpenSourceMalware found a malicious JavaScript loader prepended to the extension's extension.js file that collected user and IP data, added an attacker-controlled SSH key, and attempted to open a persistent reverse tunnel, with persistence mechanisms on both macOS and Windows. Coding errors in the backdoor appear to have ultimately prevented attackers from gaining real remote access on most affected machines. For businesses trusting AI extensions inside their development environment, the incident shows that even an \"official\" name on a marketplace guarantees nothing without independent signature verification."
+  },
+  "sources": [
+   {
+    "name": "Dark Reading",
+    "url": "https://www.darkreading.com/cyberattacks-data-breaches/devs-trojanized-claude-code-extension-cursor"
+   },
+   {
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html"
+   },
+   {
+    "name": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-new-free-raid-ai-framework-helps-businesses-measure-resilience-to",
+  "urls": [
+   "https://www.infosecurity-magazine.com/news/framework-ransomware-resilience-ai"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "Standards",
+  "el": {
+   "title": "Νέο δωρεάν πλαίσιο RAID-AI βοηθά επιχειρήσεις να μετρήσουν την ανθεκτικότητά τους σε ransomware που στοχεύει συστήματα AI",
+   "summary": "Το Ransomware Assessment and Incident Defense Framework for AI Systems (RAID-AI), που ανέπτυξαν επί δύο χρόνια η Behnaz Karimi και ο Yuvaraj Govindarajulu, συν-επικεφαλής της πρωτοβουλίας AI Bill of Materials του OWASP, διατίθεται πλέον δωρεάν online για όποιον θέλει να το χρησιμοποιήσει. Η προσέγγισή του είναι πρακτική, ζητά από τις ομάδες ασφαλείας να αξιολογήσουν οι ίδιες τους δικούς τους ελέγχους αντί να συνδεθεί το εργαλείο με τα συστήματά τους για σάρωση. Η Karimi εξήγησε ότι το πλαίσιο καλύπτει επιθέσεις ransomware εναντίον συστημάτων AI ανεξάρτητα από το αν ο επιτιθέμενος χρησιμοποιεί ο ίδιος AI, αναφέροντας ως παραδείγματα τεχνικές δηλητηρίασης δεδομένων και μια καταγγελλόμενη επίθεση στη Novo Nordisk τον Ιούνιο όπου οι χάκερ ισχυρίστηκαν ότι έκλεψαν μοντέλα AI της φαρμακευτικής εταιρείας. Για μια επιχείρηση που βασίζεται σε μοντέλα AI για κρίσιμες λειτουργίες, το πλαίσιο δίνει για πρώτη φορά έναν συγκεκριμένο κατάλογο ελέγχου αντί για γενικές συστάσεις."
+  },
+  "en": {
+   "title": "New free RAID-AI framework helps businesses measure resilience to ransomware targeting AI systems",
+   "summary": "The Ransomware Assessment and Incident Defense Framework for AI Systems (RAID-AI), developed over two years by Behnaz Karimi and Yuvaraj Govindarajulu, co-leads of OWASP's AI Bill of Materials initiative, is now freely available online for anyone to use. Its approach is hands-on, asking security teams to assess their own controls rather than connecting the tool to their systems for scanning. Karimi said the framework covers ransomware attacks against AI systems regardless of whether the attacker itself uses AI, citing data-poisoning techniques and an alleged June attack on Novo Nordisk in which hackers claimed to have stolen the pharmaceutical company's AI models. For a business relying on AI models for critical operations, the framework offers, for the first time, a concrete checklist instead of general recommendations."
+  },
+  "sources": [
+   {
+    "name": "Infosecurity Magazine",
+    "url": "https://www.infosecurity-magazine.com/news/framework-ransomware-resilience-ai/"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-ex-doge-startup-says-its-ai-agents-breached-anthropic-s-internal",
+  "urls": [
+   "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "AI Security",
+  "el": {
+   "title": "Σφάλμα ρύθμισης στο Cloudflare Workers AI διέρρευσε απαντήσεις μοντέλου ανάμεσα σε διαφορετικούς πελάτες",
+   "summary": "Η Cloudflare ανακοίνωσε ότι ανάμεσα στις 27 Αυγούστου και τις 9 Σεπτεμβρίου, 155 απαντήσεις του μοντέλου GLM 5.3 στην πλατφόρμα Workers AI περιείχαν δεδομένα από πρόσφατα αιτήματα άλλων πελατών προς το ίδιο μοντέλο, σε όλες τις περιπτώσεις με prompts μάκρους άνω των 681.280 tokens. Η διαρροή προήλθε από λάθος ρύθμιση που άφηνε την προσωρινή μνήμη KV του μοντέλου μικρότερη από το δηλωμένο παράθυρο context, σε συνδυασμό με σφάλμα στη μηχανή inference SGLang που επέτρεπε σε υπερμεγέθη αιτήματα να διαβάζουν δεδομένα cache που είχαν αφήσει πίσω τους προηγούμενες συνεδρίες άλλων χρηστών. Η Cloudflare διόρθωσε το πρόβλημα αφού το ανέφερε ερευνητής της Knostic μέσω HackerOne, δεν βρήκε ενδείξεις σκόπιμης εκμετάλλευσης, και συνιστά στους χρήστες του SGLang να αναβαθμίσουν σε έκδοση 0.5.22 ή νεότερη. Για κάθε επιχείρηση που εμπιστεύεται ευαίσθητα prompts σε κοινόχρηστη υποδομή inference, το περιστατικό δείχνει ότι η απομόνωση ανάμεσα σε πελάτες ενός μοντέλου AI δεν είναι αυτονόητη, είναι θέμα συγκεκριμένης ρύθμισης που μπορεί να αστοχήσει."
+  },
+  "en": {
+   "title": "Misconfiguration in Cloudflare Workers AI leaked model responses across different customers",
+   "summary": "Cloudflare said that between August 27 and September 9, 155 responses from the GLM 5.3 model on its Workers AI platform contained data from other customers' recent requests to the same model, all involving prompts longer than 681,280 tokens. The leak stemmed from a configuration mismatch that left the model's KV cache smaller than its advertised context window, combined with a bug in the SGLang inference engine that let over-length requests read cache data left behind by other users' earlier sessions. Cloudflare fixed the issue after a Knostic researcher reported it via HackerOne, found no evidence of deliberate exploitation, and recommends SGLang operators upgrade to version 0.5.22 or later. For any business trusting sensitive prompts to shared AI inference infrastructure, the incident shows that isolation between customers of a model is not a given, it is a specific configuration that can fail."
+  },
+  "sources": [
+   {
+    "name": "SecurityWeek",
+    "url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/"
+   }
+  ]
+ },
+ {
+  "slug": "2026-10-30-chinese-group-vapor-panda-uses-ai-tool-artex-against-more-than-200",
+  "urls": [
+   "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html"
+  ],
+  "first_seen": "2026-10-31",
+  "date": "2026-10-30",
+  "topic": "AI Security",
+  "el": {
+   "title": "Κινεζική ομάδα «Vapor Panda» χρησιμοποιεί το εργαλείο AI ARTEX εναντίον πάνω από 200 οργανισμών παγκοσμίως",
+   "summary": "Η CrowdStrike απέδωσε σε κινεζική κρατική ομάδα που παρακολουθεί ως Vapor Panda, γνωστή και ως VexatiousTemper και συνδεδεμένη με το σύμπλεγμα Earth Estries, καμπάνια που από τις 17 Οκτωβρίου χρησιμοποίησε το ARTEX, το αυτόνομο εργαλείο AI για δοκιμές διείσδυσης που είχε ήδη συνδεθεί με επιθέσεις σε τράπεζες της Νότιας Κορέας και στην ConnectWise, εναντίον πάνω από 200 διαφορετικών οργανισμών σε όλο τον κόσμο, ανάμεσά τους υπουργεία εξωτερικών σε Λατινική Αμερική, Ευρώπη, Ασία και Μέση Ανατολή, καθώς και εταιρείες ημιαγωγών, άμυνας και τηλεπικοινωνιών στις ΗΠΑ. Η CrowdStrike σημειώνει ότι «εργαλεία τύπου agent όπως το ARTEX επιτρέπουν σε μικρή ομάδα να κυνηγήσει ευρύτερο σύνολο στόχων ταχύτερα», χωρίς να αλλάζει ριζικά τη στρατηγική της ομάδας. Η υπόθεση δείχνει ότι το ίδιο εργαλείο AI διείσδυσης πλέον χρησιμοποιείται παράλληλα από τουλάχιστον δύο ξεχωριστές κινεζικές ομάδες, σημάδι ότι τέτοια εργαλεία διαδίδονται πολύ πιο γρήγορα απ' όσο οι αμυντικές δικλείδες ασφαλείας."
+  },
+  "en": {
+   "title": "Chinese group \"Vapor Panda\" uses AI tool ARTEX against more than 200 organizations worldwide",
+   "summary": "CrowdStrike attributed to a China-based state group it tracks as Vapor Panda, also known as VexatiousTemper and linked to the Earth Estries cluster, a campaign that since October 17 has used ARTEX, the autonomous AI penetration-testing tool already linked to attacks on South Korean banks and on ConnectWise, against more than 200 distinct organizations worldwide, including foreign ministries in Latin America, Europe, Asia and the Middle East, as well as semiconductor, defense and telecommunications firms in the US. CrowdStrike notes that \"agentic tooling like ARTEX enables this scale of expansion at speed\" for a small team, without marking a wholesale shift in the group's strategy. The case shows the same AI pentesting tool is now being used in parallel by at least two separate Chinese groups, a sign that such tools spread far faster than the defenses built against them."
+  },
+  "sources": [
+   {
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html"
+   }
+  ]
+ },
+ {
   "slug": "2026-10-29-unidentified-relay-service-gives-codex-and-claude-code-access-in",
   "urls": [
    "https://www.darkreading.com/threat-intelligence/ai-relay-service-openai-codex-claude-code-sandboxes"

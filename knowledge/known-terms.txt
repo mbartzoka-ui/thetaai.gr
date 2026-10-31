@@ -398,3 +398,10 @@ use after free
 use-after-free
 secure email gateway (seg)
 αυτοφιλοξενούμενο inference
+
+# --- 2026-10-31 ---
+ανάστροφη σήραγγα
+reverse tunnel
+δηλητηρίαση δεδομένων
+data poisoning
+ai grounding
