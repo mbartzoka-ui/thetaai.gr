@@ -148,11 +148,13 @@ After the «Συνολική εικόνα» paragraph, add a horizontal rule and
 ```
 Καθημερινή ενημέρωση: thetaai.gr/radar
 
-Δωρεάν 45λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σου απέναντι στον AI Act και το ISO 42001 → thetaai.gr/iso-42001/
+Δωρεάν 45λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σου απέναντι στον AI Act και το ISO 42001 → https://thetaai.gr/iso-42001/?utm_source=linkedin&utm_medium=social&utm_campaign=<YYYY-MM>-radar&utm_content=<YYYY-MM-DD>-<el|en>
 
 Το κείμενο γράφτηκε αυτόματα με AI από το AI Radar της θeta ai (Theta AI), με βάση δημόσιες πηγές.
 ```
 (Αλλαγή 23/10/2026, εντολή Maria: το κλείσιμο οδηγεί πλέον σε συμβουλευτική AI Act / ISO 42001, όχι σε «αυτοματισμούς». Η πρώτη γραμμή αντικαθίσταται αυτόματα, κατά τη δημοσίευση, με τη σελίδα της ιστορίας.)
+
+UTM στο link του /iso-42001/ (31/10/2026, εντολή Maria): συμπλήρωσε τα placeholders με την ημερομηνία δημοσίευσης του post, δηλαδή τη σημερινή ημερομηνία του run (ώρα Ελλάδας), και τη γλώσσα του post. Το draft είναι στα ελληνικά, άρα `el`. Παράδειγμα για ελληνικό post της 31/10/2026: `https://thetaai.gr/iso-42001/?utm_source=linkedin&utm_medium=social&utm_campaign=2026-10-radar&utm_content=2026-10-31-el`. Γράψε το URL ολόκληρο, με `https://`, χωρίς κενά και χωρίς να αφήσεις `<` ή `>`.
 
 followed by 3-4 hashtags (#AISecurity #AIAct plus topical ones). STYLE: apply the WRITING RULES section near the top of this prompt IN FULL, all ten of them, plus the ΡΥΘΜΟΣ ΚΑΙ ΜΗΚΟΣ ΠΡΟΤΑΣΕΩΝ block right below, which is stricter and wins here. Four additions specific to LinkedIn: at most one emoji and usually zero; 3-4 hashtags maximum; plain text only, since LinkedIn does not render markdown; the jargon ban is absolute in this draft (no sandboxing, no data residency, no orchestration) and every technical term gets a plain-Greek gloss the first time it appears, e.g. «AI agent, εργαλείο AI που εκτελεί εργασίες μόνο του» or «browser extension, πρόσθετο του browser». Before you finalise the draft, re-read it once against the WRITING RULES and fix what slipped, checking the dash rule first. A separate, later step publishes this draft to Maria's LinkedIn automatically, so write it ready to publish as is; never post anywhere yourself.
 
