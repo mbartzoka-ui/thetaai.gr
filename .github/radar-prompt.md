@@ -143,14 +143,14 @@ Base every claim ONLY on the fetched feed content — no speculation presented a
 `YYYY-MM-DD | σύντομο-slug | ο τίτλος της ιστορίας`
 ΠΟΤΕ μη διαγράψεις, μην αλλάξεις και μην αναδιατάξεις υπάρχουσα γραμμή. Αν το αρχείο λείπει, φτιάξ' το με την επικεφαλίδα `# Θέματα που έχουν ήδη γίνει LinkedIn draft — append-only.`
 
-After the «Συνολική εικόνα» paragraph, add a horizontal rule and a section titled `## 📣 LinkedIn draft — copy & paste` containing ONE ready-to-post LinkedIn text in GREEK, authored for Maria's personal profile (AI security & compliance consultant, brand «sphragisAI»). Format: 900-1600 characters, plain text (no markdown — LinkedIn doesn't render it). Write it as a short, well-crafted mini-article, not a news list: a strong opening hook (1-2 lines), then flowing prose that weaves the day's 2-4 stories into one narrative with a common thread, and a closing thought that leaves the reader with something to act on. PERSPECTIVE: strictly business-wise — every story is told from the side of the επιχειρηματίας/decision-maker (τι κινδυνεύει, τι απόφαση προκύπτει, τι κόστος ή ευκαιρία), not from the side of the researcher or the technology itself. LANGUAGE QUALITY: care about the prose — καλογραμμένα, ρέοντα ελληνικά με εικόνες και ρυθμό, όπως ένα καλό άρθρο γνώμης· still simple and jargon-free, but never dry or listy. End with EXACTLY these closing lines, in this order:
+After the «Συνολική εικόνα» paragraph, add a horizontal rule and a section titled `## 📣 LinkedIn draft — copy & paste` containing ONE ready-to-post LinkedIn text in GREEK, authored for Maria's personal profile (AI security & compliance consultant, brand «SphragisAI»). Format: 900-1600 characters, plain text (no markdown — LinkedIn doesn't render it). Write it as a short, well-crafted mini-article, not a news list: a strong opening hook (1-2 lines), then flowing prose that weaves the day's 2-4 stories into one narrative with a common thread, and a closing thought that leaves the reader with something to act on. PERSPECTIVE: strictly business-wise — every story is told from the side of the επιχειρηματίας/decision-maker (τι κινδυνεύει, τι απόφαση προκύπτει, τι κόστος ή ευκαιρία), not from the side of the researcher or the technology itself. LANGUAGE QUALITY: care about the prose — καλογραμμένα, ρέοντα ελληνικά με εικόνες και ρυθμό, όπως ένα καλό άρθρο γνώμης· still simple and jargon-free, but never dry or listy. End with EXACTLY these closing lines, in this order:
 
 ```
 Καθημερινή ενημέρωση: sphragisai.com/radar
 
 Δωρεάν 20λεπτη χαρτογράφηση: πού στέκεται η επιχείρησή σου απέναντι στον AI Act και το ISO 42001 → https://sphragisai.com/iso-42001/?utm_source=linkedin&utm_medium=social&utm_campaign=<YYYY-MM>-radar&utm_content=<YYYY-MM-DD>-<el|en>
 
-Το κείμενο γράφτηκε αυτόματα με AI από το AI Radar της sphragisAI, με βάση δημόσιες πηγές.
+Το κείμενο γράφτηκε αυτόματα με AI από το AI Radar της SphragisAI, με βάση δημόσιες πηγές.
 ```
 (Αλλαγή 23/10/2026, εντολή Maria: το κλείσιμο οδηγεί πλέον σε συμβουλευτική AI Act / ISO 42001, όχι σε «αυτοματισμούς». Η πρώτη γραμμή αντικαθίσταται αυτόματα, κατά τη δημοσίευση, με τη σελίδα της ιστορίας.)
 
