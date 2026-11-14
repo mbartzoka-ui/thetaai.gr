@@ -88,8 +88,8 @@ jobs:
             exit 1
           fi
           if [ -z "$WHICH" ]; then
-            # Αυτόματα: radar κάθε μέρα, αγγλικό μόνο Δευτέρα-Παρασκευή.
-            if [ "$(TZ=Europe/Athens date +%u)" -le 5 ]; then WHICH=both; else WHICH=radar; fi
+            # Αυτόματα: radar κάθε μέρα, αγγλικό μόνο Δευτέρα, Τετάρτη, Παρασκευή (απόφαση 14/11).
+            case "$(TZ=Europe/Athens date +%u)" in 1|3|5) WHICH=both ;; *) WHICH=radar ;; esac
           fi
           case "$WHICH" in
             daily) wfs="linkedin-daily.yml" ;;
